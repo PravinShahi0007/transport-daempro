@@ -26,7 +26,7 @@
 							<asp:Label ID="LblCode" runat="server" Text="اسم المستخدم"></asp:Label>
 						</td>
 						<td style="width: 250px">
-							<asp:TextBox ID="txtName" Width="250px" runat="server" MaxLength="20"></asp:TextBox>
+							<asp:TextBox ID="txtName" CssClass="form-control" runat="server" MaxLength="20"></asp:TextBox>
 							<asp:RequiredFieldValidator ID="ValName" runat="server" ControlToValidate="txtName"
 								ErrorMessage="يجب إدخال اسم المستخدم" ForeColor="Red" SetFocusOnError="True"
 								ValidationGroup="1">*</asp:RequiredFieldValidator>
@@ -56,10 +56,10 @@
 					</tr>
 					<tr id="tr2" align="right">
 						<td style="width: 100px;">
-							<asp:Label ID="Label2" runat="server" Text="كلمة المرور"></asp:Label>
+							<asp:Label ID="Label2" runat="server"  Text="كلمة المرور"></asp:Label>
 						</td>
 						<td style="width: 250px;">
-							<asp:TextBox ID="txtPassword" Width="250px" runat="server" TextMode="Password" MaxLength="20"></asp:TextBox>
+							<asp:TextBox ID="txtPassword" CssClass="form-control" runat="server" TextMode="Password" MaxLength="20"></asp:TextBox>
 						</td>
 						<td style="width: 75px;">
 							&nbsp;
@@ -68,10 +68,10 @@
 					</tr>
 					<tr id="tr3" align="right">
 						<td style="width: 100px;">
-							<asp:Label ID="Label1" runat="server" Text="تأكيد كلمة المرور"></asp:Label>
+							<asp:Label ID="Label1"  runat="server" Text="تأكيد كلمة المرور"></asp:Label>
 						</td>
 						<td style="width: 250px;">
-							<asp:TextBox ID="txtPassword2" Width="250px" runat="server" TextMode="Password" MaxLength="20"></asp:TextBox>
+							<asp:TextBox ID="txtPassword2" CssClass="form-control" runat="server" TextMode="Password" MaxLength="20"></asp:TextBox>
 						</td>
 						<td style="width: 75px;">
 							&nbsp;
@@ -82,7 +82,7 @@
 							<asp:Label ID="Label3" runat="server" Text="الاسم بالكامل"></asp:Label>
 						</td>
 						<td style="width: 250px;">
-							<asp:TextBox ID="txtFName" Width="250px" runat="server" MaxLength="50"></asp:TextBox>
+							<asp:TextBox ID="txtFName" CssClass="form-control" runat="server" MaxLength="50"></asp:TextBox>
 						</td>
 						<td style="width: 75px;">
 							&nbsp;
@@ -93,7 +93,7 @@
 							<asp:Label ID="Label8" runat="server" Text="الايميل"></asp:Label>
 						</td>
 						<td style="width: 250px;">
-							<asp:TextBox ID="txtEmail" Width="250px" runat="server" MaxLength="50"></asp:TextBox>
+							<asp:TextBox ID="txtEmail" CssClass="form-control" runat="server" MaxLength="50"></asp:TextBox>
 						</td>
 						<td style="width: 75px;">
 							&nbsp;
@@ -104,7 +104,7 @@
 							<asp:Label ID="Label35" runat="server" Text="الفرع الرئيسي"></asp:Label>
 						</td>
 						<td style="width: 250px;">
-							<asp:DropDownList ID="ddlMainBran" Width="250px" runat="server">
+							<asp:DropDownList ID="ddlMainBran" CssClass="form-control" runat="server">
 							</asp:DropDownList>
 						</td>
 						<td style="width: 75px;">
@@ -126,7 +126,7 @@
 							<asp:Label ID="Label36" runat="server" Text="الصلاحية البديلة"></asp:Label>
 						</td>
 						<td style="width: 250px;">
-							<asp:DropDownList ID="ddlBranRoll" Width="250px" runat="server">
+							<asp:DropDownList ID="ddlBranRoll" CssClass="form-control" runat="server">
 							</asp:DropDownList>
 						 </td>
 						<td style="width: 75px;">
@@ -149,7 +149,7 @@
 							
 						</td>
 						<td style="width: 250px">
-							<asp:TextBox ID="txtMobile" runat="server" MaxLength="50" Width="250px"></asp:TextBox>
+							<asp:TextBox ID="txtMobile" runat="server" MaxLength="50" CssClass="form-control"></asp:TextBox>
 						</td>
 						<td style="width: 75px;">
 						</td>
@@ -163,7 +163,7 @@
                         <asp:Label ID="Label9" runat="server" Text="التوقيع الالكتروني"></asp:Label>
 						</td>
 						<td style="width: 250px;" colspan="2">
-							<asp:FileUpload ID="FileUpload1" Width="80px" runat="server" />
+							<asp:FileUpload ID="FileUpload1" CssClass="form-control" runat="server" />
 						    <asp:Button ID="BtnSign" runat="server" Text="تحميل" OnClick="BtnSign_Click" />
 						</td>
 					</tr>
@@ -172,14 +172,14 @@
 							<asp:Label ID="Label10" runat="server" Text="حسابات متاحة 1"></asp:Label>							
 						</td>
 						<td style="width: 250px">
-							<asp:DropDownList ID="ddlAccount1" Width="250px" runat="server">
+							<asp:DropDownList ID="ddlAccount1" CssClass="form-control" runat="server">
 							</asp:DropDownList>
 						</td>
 						<td style="width: 75px;">
                            <asp:Label ID="Label12" runat="server" Text="حسابات متاحة 2"></asp:Label>							
 						</td>
 						<td style="width: 250px;" colspan="2">
-							<asp:DropDownList ID="ddlAccount2" Width="250px" runat="server">
+							<asp:DropDownList ID="ddlAccount2" CssClass="form-control" runat="server">
 							</asp:DropDownList>
 						</td>
 					</tr>
@@ -188,14 +188,14 @@
 							<asp:Label ID="Label13" runat="server" Text="حسابات متاحة 3"></asp:Label>							
 						</td>
 						<td style="width: 250px">
-							<asp:DropDownList ID="ddlAccount3" Width="250px" runat="server">
+							<asp:DropDownList ID="ddlAccount3" CssClass="form-control" runat="server">
 							</asp:DropDownList>
 						</td>
 						<td style="width: 75px;">
                            <asp:Label ID="Label14" runat="server" Text="حسابات متاحة 4"></asp:Label>							
 						</td>
 						<td style="width: 250px;" colspan="2">
-							<asp:DropDownList ID="ddlAccount4" Width="250px" runat="server">
+							<asp:DropDownList ID="ddlAccount4" CssClass="form-control" runat="server">
 							</asp:DropDownList>
 						</td>
 					</tr>
@@ -204,14 +204,14 @@
 							<asp:Label ID="Label15" runat="server" Text="مدير حساب 1"></asp:Label>							
 						</td>
 						<td style="width: 250px">
-							<asp:DropDownList ID="ddlAccount5" Width="250px" runat="server">
+							<asp:DropDownList ID="ddlAccount5" CssClass="form-control" runat="server">
 							</asp:DropDownList>
 						</td>
 						<td style="width: 75px;">
                            <asp:Label ID="Label16" runat="server" Text="مدير حساب 2"></asp:Label>							
 						</td>
 						<td style="width: 250px;" colspan="2">
-							<asp:DropDownList ID="ddlAccount6" Width="250px" runat="server">
+							<asp:DropDownList ID="ddlAccount6" CssClass="form-control" runat="server">
 							</asp:DropDownList>
 						</td>
 					</tr>
@@ -220,14 +220,14 @@
 							<asp:Label ID="Label4" runat="server" Text="إدخلت بواسطة"></asp:Label>
 						</td>
 						<td style="width: 250px;">
-							<asp:TextBox ID="txtUserName" Width="235px" runat="server" MaxLength="50" BackColor="#E8E8E8"
+							<asp:TextBox ID="txtUserName" CssClass="form-control" runat="server" MaxLength="50" BackColor="#E8E8E8"
 								Enabled="false"></asp:TextBox>
 						</td>
 						<td style="width: 75px;">
 							<asp:Label ID="Label7" runat="server" Text="بتاريخ"></asp:Label>
 						</td>
 						<td style="width: 250px;" colspan="2">
-							<asp:TextBox ID="txtUserDate" Width="150px" runat="server" MaxLength="50" BackColor="#E8E8E8"
+							<asp:TextBox ID="txtUserDate" CssClass="form-control" runat="server" MaxLength="50" BackColor="#E8E8E8"
 								Enabled="false"></asp:TextBox>
 						</td>
 					</tr>
@@ -236,7 +236,7 @@
 								<asp:Label ID="lblReason" runat="server" Visible="false" Text="سبب التعديل/الغاء"></asp:Label>
 						 </td>
 							<td style="width: 250px;">
-								<asp:TextBox ID="txtReason" Width="235px" Visible="false" runat="server" MaxLength="100"></asp:TextBox>
+								<asp:TextBox ID="txtReason" CssClass="form-control" Visible="false" runat="server" MaxLength="100"></asp:TextBox>
 								<asp:RequiredFieldValidator ID="ValReason" Enabled="false" runat="server" ControlToValidate="txtReason"
 									ErrorMessage="يجب إدخال سبب التعديل/الالغاء" ForeColor="Red" Display="Dynamic" SetFocusOnError="True"
 									ValidationGroup="1">*</asp:RequiredFieldValidator>
@@ -283,7 +283,7 @@
 						</td>
 						<td id="td1" runat="server" style="width: 200px; text-align: right">
 							<asp:Label ID="Label11" runat="server" Text="بحث :"></asp:Label>
-							<asp:TextBox ID="txtSearch" MaxLength="200" Width="130px" runat="server"></asp:TextBox>
+							<asp:TextBox ID="txtSearch" MaxLength="200" CssClass="form-control" runat="server"></asp:TextBox>
 						</td>
 					</tr>
 				</table>

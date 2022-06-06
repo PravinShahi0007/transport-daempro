@@ -68,27 +68,107 @@
         }
     </script>
     <center dir="rtl">
-        <asp:Panel ID="Panel1" runat="server" CssClass="ColorRounded4Corners">
-            <center>
-                <table id="Table1" dir="rtl" width="99%" cellpadding="2" style="color:Black">
-                    <tr id="tr1" align="right">
-                        <td style="width: 150px;">
-                            <asp:Label ID="LblCode" runat="server" Text="اسم مجموعة العمل"></asp:Label>
-                        </td>
-                        <td style="width: 280px">
-                            <asp:TextBox ID="txtRoleName" Width="150px" runat="server" MaxLength="50"></asp:TextBox>
+        <asp:Panel ID="Panel1" runat="server" CssClass="ColorRounded4Corners" >
+        <center>
+                <table id="Table1" dir="rtl"  cellpadding="2" style="color:Black">
+                
+                    <tr id="tr1">
+                     
+                        <td >
+                             <asp:Label ID="LblCode" runat="server" Text="اسم مجموعة العمل"></asp:Label>
+                       
+                            <asp:TextBox ID="txtRoleName" CssClass="form-control"  runat="server" MaxLength="50"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="ValRoleName" runat="server" ControlToValidate="txtRoleName"
                                 ErrorMessage="يجب إدخال اسم مجموعة العمل" ForeColor="Red" SetFocusOnError="True"
                                 ValidationGroup="1">*</asp:RequiredFieldValidator>
                         </td>
+                     
+                        
+                    </tr>
+                        <tr id="tr005" >
+                       
+                        <td style="width: 280px">
+                              <asp:Label ID="Label2" runat="server" Text="نوع الواجهة"></asp:Label>
+                       
+                            <asp:DropDownList ID="ddlInterface" CssClass="form-control" runat="server" AutoPostBack="True" 
+                                onselectedindexchanged="ddlInterface_SelectedIndexChanged">
+                                <asp:ListItem Value="0">عام</asp:ListItem>
+                                <asp:ListItem Value="1">دعم فني</asp:ListItem>
+                                <asp:ListItem Value="2">موردين</asp:ListItem>
+                                <asp:ListItem Value="3">عملاء</asp:ListItem>
+                            </asp:DropDownList>
+                        </td>
+                        
+                        </tr>
+                        <tr id="tr2" align="right">
+                      
+                        <td style="width: 280px">
+                                <asp:Label ID="Label4" runat="server" Text="نسخ مجموعة العمل"></asp:Label>
+                     
+                            <asp:DropDownList ID="ddlRoles" CssClass="form-control" runat="server" AutoPostBack="True" 
+                                onselectedindexchanged="ddlRoles_SelectedIndexChanged">
+                            </asp:DropDownList>
+                        </td>
                         <td style="width: 100px;">
                             &nbsp;
                         </td>
-                        <td style="width: 300px" rowspan="4">
-                            <div style="width: 100%; height: 235px">
+                        </tr>
+                       <tr id="tr5" align="right">
+                        <td  colspan="2" style="width: 200px;">
+                            <div class="list_collapse" style="width:50%">
+                                <asp:CheckBoxList ID="ChkPass" Width="100%" runat="server" CssClass="chicklist">
+                                </asp:CheckBoxList>
+                            </div>
+                            <div class="card-footer">
+                            <input id="Button1" type="button" value="أختيار الجميع" class="btn btn-primary" onclick="ChangeState(true);" />
+                            <input id="Button2" type="button" value="مسـح الجميع" class="btn btn-primary" onclick="ChangeState(false);" />
+                       </div> </td>
+                        <td style="width: 100px;">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr id="tr4" align="right">
+                        <td style="width: 100px;">
+                            <asp:Label ID="Label1" runat="server" Text="إدخلت بواسطة"></asp:Label>
+                        </td>
+                        <td >
+                            <asp:TextBox ID="txtUserName" CssClass="form-control" style="width: 105px;" runat="server" MaxLength="50" BackColor="#E8E8E8"
+                                Enabled="false"></asp:TextBox>
+                        </td>
+                        <td >
+                            <asp:Label ID="Label3" runat="server" Text="بتاريخ"></asp:Label>
+                        </td>
+                        <td >
+                            <asp:TextBox ID="txtUserDate" CssClass="form-control" style="width: 105px;"  runat="server" MaxLength="50" BackColor="#E8E8E8"
+                                Enabled="false"></asp:TextBox>
+                        </td>
+                    </tr>
+                     <tr align="right">
+                         <td style="width: 100px;">
+                                <asp:Label ID="lblReason" runat="server" Visible="false" Text="سبب التعديل/الغاء"></asp:Label>
+                         </td>
+                            <td style="width: 300px;">
+                                <asp:TextBox ID="txtReason" CssClass="form-control" Visible="false" runat="server" MaxLength="100"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="ValReason" Enabled="false" runat="server" ControlToValidate="txtReason"
+                                    ErrorMessage="يجب إدخال سبب التعديل/الالغاء" ForeColor="Red" Display="Dynamic" SetFocusOnError="True"
+                                    ValidationGroup="1">*</asp:RequiredFieldValidator>
+                            </td>
+                          
+                        
+                        </tr>
+
+                    <tr id="tr3" align="right">
+                    
+                        <td >
+                            <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ValidationGroup="1" />
+                            <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
+                        </td>
+                       
+                        <td  rowspan="4">
+                            <div  >
                                 <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" EmptyDataText="لا توجد بيانات"
                                     GridLines="None" AutoGenerateColumns="False" DataKeyNames="RoleName" AllowPaging="True"
-                                    ShowFooter="True" PageSize="5" Width="100%" OnPageIndexChanging="grdCodes_PageIndexChanging"
+                                    ShowFooter="True" PageSize="5"  OnPageIndexChanging="grdCodes_PageIndexChanging"
                                     OnSelectedIndexChanging="grdCodes_SelectedIndexChanging">
                                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                                     <Columns>
@@ -120,95 +200,10 @@
                                 </asp:GridView>
                             </div>
                         </td>
-                    </tr>
-                        <tr id="tr005" align="right">
-                        <td style="width: 150px;">
-                            <asp:Label ID="Label2" runat="server" Text="نوع الواجهة"></asp:Label>
-                        </td>
-                        <td style="width: 280px">
-                            <asp:DropDownList ID="ddlInterface" runat="server" AutoPostBack="True" 
-                                onselectedindexchanged="ddlInterface_SelectedIndexChanged">
-                                <asp:ListItem Value="0">عام</asp:ListItem>
-                                <asp:ListItem Value="1">دعم فني</asp:ListItem>
-                                <asp:ListItem Value="2">موردين</asp:ListItem>
-                                <asp:ListItem Value="3">عملاء</asp:ListItem>
-                            </asp:DropDownList>
-                        </td>
-                        <td style="width: 100px;">
-                            &nbsp;
-                        </td>
-                        </tr>
-                        <tr id="tr2" align="right">
-                        <td style="width: 150px;">
-                            <asp:Label ID="Label4" runat="server" Text="نسخ مجموعة العمل"></asp:Label>
-                        </td>
-                        <td style="width: 280px">
-                            <asp:DropDownList ID="ddlRoles" runat="server" AutoPostBack="True" 
-                                onselectedindexchanged="ddlRoles_SelectedIndexChanged">
-                            </asp:DropDownList>
-                        </td>
-                        <td style="width: 100px;">
-                            &nbsp;
-                        </td>
-                        </tr>
-                       <tr id="tr5" align="right">
-                        <td  colspan="2" style="width: 400px;">
-                            <div class="list_collapse" style="width:100%">
-                                <asp:CheckBoxList ID="ChkPass" Width="100%" runat="server" CssClass="chicklist">
-                                </asp:CheckBoxList>
-                            </div>
-                            <input id="Button1" type="button" value="أختيار الجميع" style="width: 120px" onclick="ChangeState(true);" />
-                            <input id="Button2" type="button" value="مسـح الجميع" style="width: 120px" onclick="ChangeState(false);" />
-                        </td>
-                        <td style="width: 100px;">
-                            &nbsp;
-                        </td>
-                    </tr>
-                    <tr id="tr4" align="right">
-                        <td style="width: 100px;">
-                            <asp:Label ID="Label1" runat="server" Text="إدخلت بواسطة"></asp:Label>
-                        </td>
-                        <td style="width: 300px">
-                            <asp:TextBox ID="txtUserName" Width="285px" runat="server" MaxLength="50" BackColor="#E8E8E8"
-                                Enabled="false"></asp:TextBox>
-                        </td>
-                        <td style="width: 100px;">
-                            <asp:Label ID="Label3" runat="server" Text="بتاريخ"></asp:Label>
-                        </td>
-                        <td style="width: 300px">
-                            <asp:TextBox ID="txtUserDate" Width="150px" runat="server" MaxLength="50" BackColor="#E8E8E8"
-                                Enabled="false"></asp:TextBox>
-                        </td>
-                    </tr>
-                     <tr align="right">
-                         <td style="width: 100px;">
-                                <asp:Label ID="lblReason" runat="server" Visible="false" Text="سبب التعديل/الغاء"></asp:Label>
-                         </td>
-                            <td style="width: 300px;">
-                                <asp:TextBox ID="txtReason" Width="285px" Visible="false" runat="server" MaxLength="100"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="ValReason" Enabled="false" runat="server" ControlToValidate="txtReason"
-                                    ErrorMessage="يجب إدخال سبب التعديل/الالغاء" ForeColor="Red" Display="Dynamic" SetFocusOnError="True"
-                                    ValidationGroup="1">*</asp:RequiredFieldValidator>
-                            </td>
-                            <td style="width: 100px;">
-                            </td>
-                            <td style="width: 300px;">
-                            </td>
-                        </tr>
 
-                    <tr id="tr3" align="right">
-                        <td style="width: 100px;">
-                        </td>
-                        <td style="width: 300px">
-                            <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ValidationGroup="1" />
-                            <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
-                        </td>
-                        <td style="width: 100px;">
-                        </td>
-                        <td style="width: 300px">
-                        </td>
                     </tr>
-                </table>
+                </table></center>
+        
                 <table id="Table2" dir="rtl" width="100%" cellpadding="0" cellspacing="0">
                     <tr align="center">
                         <td style="width: 200px;">
@@ -230,13 +225,13 @@
                                 ImageUrl="~/images/binoculars_642.png"   ToolTip="البحث عن بيانات مجموعة عمل"
                                 OnClick="BtnSearch_Click" />
                         </td>
-                        <td id="td1" runat="server" style="width: 200px; text-align: right">
+                         <td id="td1" runat="server" style="width: 200px; text-align: right">
                             <asp:Label ID="Label11" runat="server" Text="بحث :"></asp:Label>
-                            <asp:TextBox ID="txtSearch" Width="130px" MaxLength="200" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtSearch" CssClass="form-control" MaxLength="200" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                 </table>
-            </center>
+          
         </asp:Panel>
         <br />
     </center>
