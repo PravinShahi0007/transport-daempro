@@ -1,0 +1,98 @@
+.content {
+    bottom: 10%;
+    height: 80%;
+    left: 10%;
+    margin-right: 24%;
+    right: 10%;
+    top: 10%;
+    width: 90%;
+}
+.content2 {
+    bottom: 10%;
+    height: 80%;
+    left: 10%;
+    margin-left: 24%;
+    right: 10%;
+    top: 10%;
+    width: 90%;
+}
+.login {
+    background-attachment: scroll;
+    background-image: url("../images/login-box-backg1.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    float: right;
+    height: 410px;
+    width: 485px;
+}
+.login .fields {
+    height: 200px;
+    margin: 206px 70px 70px;
+}
+.login .fields .login-box-field {
+    display: inline;
+    float: left;
+    margin: -1px 0 7px;
+    width: 276px;
+}
+.login1 .fields a {
+    display: inline;
+    float: left;
+    margin-right: 320px;
+    margin-top: 5px;
+}
+.login .fields .login-box-field .form-login {
+    background-attachment: scroll;
+    background-color: #333333;
+    background-position: center center;
+    background-repeat: repeat;
+    border-color: #333333 #333333 #666666;
+    border-style: solid;
+    border-width: 1px;
+    color: #666666;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    padding: 5px;
+    text-align: center;
+    width: 230px;
+}
+.login2 {
+    background-attachment: scroll;
+    background-image: url("../images/login-box-backg2.png");
+    background-position: center center;
+    background-repeat: no-repeat;     
+    float: left;
+    height: 410px;
+    width: 485px;
+}
+.login2 .fields2 {
+    height: 200px;
+    margin: 205px 111px 70px;
+}
+.login2 .fields2 .login-box-field2 {
+    display: inline;
+    float: left;
+    margin: -1px 0 7px;
+    width: 276px;
+}
+.login20 .fields2 a {
+    display: inline;
+    float: left;
+    margin-right: 320px;
+    margin-top: 5px;
+}
+.login2 .fields2 .login-box-field2 .form-login2 {
+    background-attachment: scroll;
+    background-color: #333333;
+    background-position: center center;
+    background-repeat: repeat;
+    border-color: #333333 #333333 #666666;
+    border-style: solid;
+    border-width: 1px;
+    color: #666666;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    padding: 5px;
+    text-align: left;
+    width: 230px;
+}

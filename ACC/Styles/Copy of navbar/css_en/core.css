@@ -1,0 +1,74 @@
+
+.menu, .menu ul {
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+.menu li, .menu ul a {
+    position: relative;
+}
+.menu > li {
+    float: left;
+}
+.menu > li.floatr {
+    float: right;
+}
+.menu li > a {
+    display: block;
+}
+.menu ul {
+    display: none;
+    position: absolute;
+    width: 125px;
+}
+.menu ul ul {
+    left: 125px;
+    top: 0;
+}
+.menu > li.floatr > ul {
+    right: 0;
+}
+.menu > li.floatr > ul ul {
+    left: -125px;
+}
+.menu li:hover > ul {
+    display: block;
+}
+.menu .cols1, .menu .cols2, .menu .cols3, .menu .cols4, .menu .cols5 {
+    display: none;
+    overflow-x: auto;
+    overflow-y: auto;
+    position: absolute;
+}
+.menu .cols1, .menu .col1 {
+    width: 160px;
+}
+.menu .cols2, .menu .col2 {
+    width: 320px;
+}
+.menu .cols3, .menu .col3 {
+    width: 480px;
+}
+.menu .cols4, .menu .col4 {
+    width: 640px;
+}
+.menu .cols5, .menu .col5 {
+    width: 800px;
+}
+.menu > li.floatr > div {
+    right: 0;
+}
+.menu > li:hover > div {
+    display: block;
+}
+.menu .col1, .menu .col2, .menu .col3, .menu .col4, .menu .col5 {
+    float: left;
+}

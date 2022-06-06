@@ -1,0 +1,149 @@
+﻿.chicklist {
+    border: 2px solid #77CC22;
+    border-radius:15px;
+    padding:20px;
+    height : 300px;
+    overflow-y:scroll;
+ }
+.chicklist tr td{
+    width:250px;
+}
+
+ .chicklist tr:nth-child(1),.chicklist tr:nth-child(2),.chicklist tr:nth-child(6),.chicklist tr:nth-child(10),.chicklist tr:nth-child(14),.chicklist tr:nth-child(18),
+ .chicklist tr:nth-child(22),.chicklist tr:nth-child(26),.chicklist tr:nth-child(30),.chicklist tr:nth-child(34),.chicklist tr:nth-child(39),.chicklist tr:nth-child(44),
+ .chicklist tr:nth-child(50),.chicklist tr:nth-child(56),.chicklist tr:nth-child(62),.chicklist tr:nth-child(68),.chicklist tr:nth-child(74),.chicklist tr:nth-child(80),
+ .chicklist tr:nth-child(86),.chicklist tr:nth-child(90),.chicklist tr:nth-child(92),
+ .chicklist tr:nth-child(93),.chicklist tr:nth-child(94),.chicklist tr:nth-child(95),.chicklist tr:nth-child(96),.chicklist tr:nth-child(97),.chicklist tr:nth-child(98),
+ .chicklist tr:nth-child(99),.chicklist tr:nth-child(100),.chicklist tr:nth-child(101),.chicklist tr:nth-child(102),.chicklist tr:nth-child(103),.chicklist tr:nth-child(104),
+ .chicklist tr:nth-child(105),.chicklist tr:nth-child(106),.chicklist tr:nth-child(107),.chicklist tr:nth-child(108),.chicklist tr:nth-child(109),.chicklist tr:nth-child(110),
+ .chicklist tr:nth-child(111),.chicklist tr:nth-child(115),.chicklist tr:nth-child(119),
+ .chicklist tr:nth-child(123),.chicklist tr:nth-child(127),.chicklist tr:nth-child(132),.chicklist tr:nth-child(137),.chicklist tr:nth-child(142),.chicklist tr:nth-child(146),
+ .chicklist tr:nth-child(151),.chicklist tr:nth-child(156),.chicklist tr:nth-child(163),.chicklist tr:nth-child(170),.chicklist tr:nth-child(177),.chicklist tr:nth-child(184),
+ .chicklist tr:nth-child(190),.chicklist tr:nth-child(196),.chicklist tr:nth-child(202),.chicklist tr:nth-child(208),.chicklist tr:nth-child(208),
+ .chicklist tr:nth-child(214),
+ .chicklist tr:nth-child(216),.chicklist tr:nth-child(217),.chicklist tr:nth-child(218),.chicklist tr:nth-child(219),
+ .chicklist tr:nth-child(226),.chicklist tr:nth-child(230),.chicklist tr:nth-child(233),.chicklist tr:nth-child(236),.chicklist tr:nth-child(239)
+ .chicklist tr:nth-child(242),.chicklist tr:nth-child(245),.chicklist tr:nth-child(248),
+ .chicklist tr:nth-child(250),.chicklist tr:nth-child(253),.chicklist tr:nth-child(254),.chicklist tr:nth-child(256),.chicklist tr:nth-child(257),.chicklist tr:nth-child(258),
+ .chicklist tr:nth-child(262),.chicklist tr:nth-child(267),.chicklist tr:nth-child(272),.chicklist tr:nth-child(276),.chicklist tr:nth-child(280),.chicklist tr:nth-child(284),.chicklist tr:nth-child(288),
+ .chicklist tr:nth-child(292),.chicklist tr:nth-child(294),.chicklist tr:nth-child(299),
+ .chicklist tr:nth-child(305),.chicklist tr:nth-child(311),.chicklist tr:nth-child(317),.chicklist tr:nth-child(323),.chicklist tr:nth-child(329),.chicklist tr:nth-child(335),
+ .chicklist tr:nth-child(341),.chicklist tr:nth-child(347),.chicklist tr:nth-child(353),.chicklist tr:nth-child(359),.chicklist tr:nth-child(365),.chicklist tr:nth-child(371),
+ .chicklist tr:nth-child(377),.chicklist tr:nth-child(383),.chicklist tr:nth-child(389),.chicklist tr:nth-child(395),.chicklist tr:nth-child(401),.chicklist tr:nth-child(402),
+ .chicklist tr:nth-child(403),.chicklist tr:nth-child(404),.chicklist tr:nth-child(405),.chicklist tr:nth-child(406),.chicklist tr:nth-child(407),.chicklist tr:nth-child(408),
+ .chicklist tr:nth-child(409),.chicklist tr:nth-child(414),.chicklist tr:nth-child(419),.chicklist tr:nth-child(423),.chicklist tr:nth-child(428),.chicklist tr:nth-child(433),
+ .chicklist tr:nth-child(438),.chicklist tr:nth-child(439),.chicklist tr:nth-child(445),.chicklist tr:nth-child(451),.chicklist tr:nth-child(452),.chicklist tr:nth-child(453),.chicklist tr:nth-child(454),.chicklist tr:nth-child(455),.chicklist tr:nth-child(456){
+    color:#5FA31B;
+    border-top:2px solid rgb(62, 87, 6);
+    border-bottom:2px solid rgb(62, 87, 6);
+}
+
+.chicklist tr{
+    color:#333333;
+    border:none;
+    padding-right:-30px;    
+}
+
+.chicklist tr td 
+{
+    padding-right:30px;
+}
+
+
+.chicklist tr:nth-child(1) td,.chicklist tr:nth-child(2) td,.chicklist tr:nth-child(6) td,.chicklist tr:nth-child(10) td,.chicklist tr:nth-child(14) td,.chicklist tr:nth-child(18) td,
+.chicklist tr:nth-child(22) td,.chicklist tr:nth-child(26) td,.chicklist tr:nth-child(30) td,.chicklist tr:nth-child(34) td,.chicklist tr:nth-child(39) td,.chicklist tr:nth-child(44) td,
+.chicklist tr:nth-child(50) td,.chicklist tr:nth-child(56) td,.chicklist tr:nth-child(62) td,.chicklist tr:nth-child(68) td,.chicklist tr:nth-child(74) td,.chicklist tr:nth-child(80) td,
+.chicklist tr:nth-child(86) td,.chicklist tr:nth-child(90) td,.chicklist tr:nth-child(92) td,
+.chicklist tr:nth-child(93) td,.chicklist tr:nth-child(94) td,.chicklist tr:nth-child(95) td,.chicklist tr:nth-child(96) td,.chicklist tr:nth-child(97) td,.chicklist tr:nth-child(98) td,
+.chicklist tr:nth-child(99) td,.chicklist tr:nth-child(100) td,.chicklist tr:nth-child(101) td,.chicklist tr:nth-child(102) td,.chicklist tr:nth-child(103) td,.chicklist tr:nth-child(104) td,
+.chicklist tr:nth-child(105) td,.chicklist tr:nth-child(106) td,.chicklist tr:nth-child(107) td,.chicklist tr:nth-child(108) td,.chicklist tr:nth-child(109) td,.chicklist tr:nth-child(110) td,
+.chicklist tr:nth-child(111) td,.chicklist tr:nth-child(115) td,.chicklist tr:nth-child(119) td,
+.chicklist tr:nth-child(123) td,.chicklist tr:nth-child(127) td,.chicklist tr:nth-child(132) td,.chicklist tr:nth-child(137) td,.chicklist tr:nth-child(142) td,.chicklist tr:nth-child(146) td,
+.chicklist tr:nth-child(151) td,.chicklist tr:nth-child(156) td,.chicklist tr:nth-child(163) td,.chicklist tr:nth-child(170) td,.chicklist tr:nth-child(177) td,.chicklist tr:nth-child(184) td,
+.chicklist tr:nth-child(190) td,.chicklist tr:nth-child(196) td,.chicklist tr:nth-child(202) td,.chicklist tr:nth-child(208) td,.chicklist tr:nth-child(208) td,
+.chicklist tr:nth-child(214) td,
+.chicklist tr:nth-child(216) td,.chicklist tr:nth-child(217) td,.chicklist tr:nth-child(218) td,.chicklist tr:nth-child(219) td,
+.chicklist tr:nth-child(226) td,.chicklist tr:nth-child(230) td,.chicklist tr:nth-child(233) td,.chicklist tr:nth-child(236) td,.chicklist tr:nth-child(239) td,
+.chicklist tr:nth-child(242) td,.chicklist tr:nth-child(245) td,.chicklist tr:nth-child(248) td,
+.chicklist tr:nth-child(250) td,.chicklist tr:nth-child(253) td,.chicklist tr:nth-child(254) td,.chicklist tr:nth-child(256) td,.chicklist tr:nth-child(257) td,.chicklist tr:nth-child(258) td,
+.chicklist tr:nth-child(262) td,.chicklist tr:nth-child(267) td,
+.chicklist tr:nth-child(272) td,.chicklist tr:nth-child(276) td,
+.chicklist tr:nth-child(280) td,.chicklist tr:nth-child(284) td,.chicklist tr:nth-child(288) td,
+.chicklist tr:nth-child(292) td,.chicklist tr:nth-child(294) td,.chicklist tr:nth-child(299) td,
+.chicklist tr:nth-child(305) td,.chicklist tr:nth-child(311) td,.chicklist tr:nth-child(317) td,.chicklist tr:nth-child(323) td,.chicklist tr:nth-child(329) td,.chicklist tr:nth-child(335) td,
+.chicklist tr:nth-child(341) td,.chicklist tr:nth-child(347) td,.chicklist tr:nth-child(353) td,.chicklist tr:nth-child(359) td,.chicklist tr:nth-child(365) td,.chicklist tr:nth-child(371) td,
+.chicklist tr:nth-child(377) td,.chicklist tr:nth-child(383) td,.chicklist tr:nth-child(389) td,.chicklist tr:nth-child(395) td,.chicklist tr:nth-child(401) td,.chicklist tr:nth-child(402) td,
+.chicklist tr:nth-child(403) td,.chicklist tr:nth-child(404) td,.chicklist tr:nth-child(405) td,.chicklist tr:nth-child(406) td,.chicklist tr:nth-child(407) td,.chicklist tr:nth-child(408) td,
+.chicklist tr:nth-child(409) td,.chicklist tr:nth-child(414) td,.chicklist tr:nth-child(419) td,.chicklist tr:nth-child(423) td,.chicklist tr:nth-child(428) td,.chicklist tr:nth-child(433) td,
+.chicklist tr:nth-child(438) td,.chicklist tr:nth-child(439) td,.chicklist tr:nth-child(445) td,.chicklist tr:nth-child(451) td,.chicklist tr:nth-child(452) td,.chicklist tr:nth-child(453) td,
+.chicklist tr:nth-child(454) td,.chicklist tr:nth-child(455) td,.chicklist tr:nth-child(456) td {
+    padding-right : 0 !important;
+}
+
+
+.chicklist input[type=checkbox]{
+    margin-right:0px;
+}
+
+.chicklist tr td label{
+    display:inline-block ;
+    padding-right:10px;
+
+}
+.chicklist tr td input{
+    bottom :5px;
+    /*margin-right :30px;*/
+}
+
+chicklist0 {
+    border: 2px solid #77CC22;
+    border-radius:15px;
+    padding:20px;
+    height : 300px;
+    overflow-y:scroll;
+ }
+
+.chicklist0 tr td{
+    width:250px;
+}
+
+ .chicklist0 tr:nth-child(1),.chicklist0 tr:nth-child(2),.chicklist0 tr:nth-child(3),.chicklist0 tr:nth-child(4),.chicklist0 tr:nth-child(5),.chicklist0 tr:nth-child(6),.chicklist0 tr:nth-child(7)
+{
+    color:#5FA31B;
+    border-top:2px solid rgb(62, 87, 6);
+    border-bottom:2px solid rgb(62, 87, 6);
+}
+
+.chicklist0 tr{
+    color:#333333;
+    border:none;
+    padding-right:-30px;    
+}
+
+.chicklist0 tr td 
+{
+    padding-right:30px;
+}
+
+ .chicklist0 tr:nth-child(1),.chicklist0 tr:nth-child(2),.chicklist0 tr:nth-child(3),.chicklist0 tr:nth-child(4),.chicklist0 tr:nth-child(5),.chicklist0 tr:nth-child(6),.chicklist0 tr:nth-child(7)
+{
+    padding-right : 0 !important; 
+}
+
+
+.chicklist0 input[type=checkbox]{
+    margin-right:0px;
+}
+
+.chicklist0 tr td label{
+    display:inline-block ;
+    padding-right:10px;
+
+}
+.chicklist0 tr td input{
+    bottom :5px;
+    /*margin-right :30px;*/
+}
+
+
+

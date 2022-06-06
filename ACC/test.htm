@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+      <script src="https://maps.googleapis.com/maps/api/js?region=SA&language=ar&key=AIzaSyA9M8YZRpuxDNFZepVCOQ1wjGmMofe1MVA&libraries=places&callback=initAutocomplete"  async defer></script>
+
+    <script type="text/javascript">
+        function pageLoad(sender, args) {
+            var serviceDistance = new google.maps.DistanceMatrixService;
+            alert("111111");
+            // var origin2 = { lat: 24.738819, lng: 46.793184 };  //new google.maps.LatLng(46.8044106, 24.7262807);  //'Greenwich, England';
+            var origin2 = { lat: 24.55697, lng: 46.675061 };
+
+            alert("");
+            // var destinationB = { lat: 21.382801, lng: 39.226166 };   // new google.maps.LatLng(39.009165, 26.396809);   // 'Stockholm, Sweden';
+            var destinationB = { lat: 26.396809, lng: 50.009165 };
+            alert("check2");
+            serviceDistance.getDistanceMatrix({
+                origins: [origin2],
+                destinations: [destinationB],
+                travelMode: google.maps.TravelMode.DRIVING,
+                unitSystem: google.maps.UnitSystem.METRIC,
+                avoidHighways: false,
+                avoidTolls: false
+            }, callback);
+        }
+
+
+        function callback(response, status) {
+            if (status === google.maps.DistanceMatrixStatus.OK) {
+                //var results = response.rows[1].elements;
+                var mydist = response.rows[0].elements[0].distance.text;
+                var mytime = response.rows[0].elements[0].duration.text;
+                alert(mydist + " " + mytime);
+            }
+            else { alert('444444444444444444444444444444'); }
+        };
+
+
+    </script>
+</head>
+<body onload="pageLoad();">
+
+</body>
+</html>

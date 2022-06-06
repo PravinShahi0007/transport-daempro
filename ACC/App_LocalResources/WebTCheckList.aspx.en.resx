@@ -1,0 +1,567 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AttachImage" xml:space="preserve">
+    <value>~/images/attach1.png</value>
+  </data>
+  <data name="AttachToolTip" xml:space="preserve">
+    <value>Attach File</value>
+  </data>
+  <data name="BtnLoad01.Text" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="BtnView01.Text" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="CheckDate" xml:space="preserve">
+    <value>Request Date Should be Date Value</value>
+  </data>
+  <data name="CheckType1" xml:space="preserve">
+    <value>Issue</value>
+  </data>
+  <data name="CheckType2" xml:space="preserve">
+    <value>Transfer</value>
+  </data>
+  <data name="CheckType3" xml:space="preserve">
+    <value>Receive</value>
+  </data>
+  <data name="ClearImage" xml:space="preserve">
+    <value>~/images/erasure_641.png</value>
+  </data>
+  <data name="ClearToolTip" xml:space="preserve">
+    <value>Clear Form Fields</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteCheckList" xml:space="preserve">
+    <value>Delete Check List No.  </value>
+  </data>
+  <data name="DeleteConfirm" xml:space="preserve">
+    <value>return confirm("Delete This Check List...Are You Sure?")</value>
+  </data>
+  <data name="DeleteFileConfirm" xml:space="preserve">
+    <value>return confirm("Delete this File ... Are you Sure?")</value>
+  </data>
+  <data name="DeleteFileToolTip" xml:space="preserve">
+    <value>Delete File</value>
+  </data>
+  <data name="DeleteImage" xml:space="preserve">
+    <value>~/images/cut_641.png</value>
+  </data>
+  <data name="DeleteSuccess" xml:space="preserve">
+    <value>Deleting Check List Successfully Done</value>
+  </data>
+  <data name="DeleteToolTip" xml:space="preserve">
+    <value>Delete Check List</value>
+  </data>
+  <data name="DuplicateNo" xml:space="preserve">
+    <value>Duplicate Repair Check List No.</value>
+  </data>
+  <data name="EditImage" xml:space="preserve">
+    <value>~/images/draw_pen_641.png</value>
+  </data>
+  <data name="EditToolTip" xml:space="preserve">
+    <value>Edit Check List</value>
+  </data>
+  <data name="EnterCheckList" xml:space="preserve">
+    <value>You should Enter Check List No.</value>
+  </data>
+  <data name="EnterDate" xml:space="preserve">
+    <value>You Should Select Date</value>
+  </data>
+  <data name="EnterTime" xml:space="preserve">
+    <value>You Should Enter Time</value>
+  </data>
+  <data name="ErrorDelete" xml:space="preserve">
+    <value>Error During Deleting Check List ... Try Again</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="Header2" xml:space="preserve">
+    <value>TRACTOR HEAD CHECK LIST</value>
+  </data>
+  <data name="HideDetails" xml:space="preserve">
+    <value>(Hide Details)</value>
+  </data>
+  <data name="lblAcNo.Text" xml:space="preserve">
+    <value>A.C. S.No</value>
+  </data>
+  <data name="lblAcType.Text" xml:space="preserve">
+    <value>A.C. Type</value>
+  </data>
+  <data name="lblAttach" xml:space="preserve">
+    <value>Attach Files</value>
+  </data>
+  <data name="lblChNo.Text" xml:space="preserve">
+    <value>Check List No</value>
+  </data>
+  <data name="lblCode.Text" xml:space="preserve">
+    <value>Truck Type</value>
+  </data>
+  <data name="lblDate.Text" xml:space="preserve">
+    <value>Date - Time</value>
+  </data>
+  <data name="lblDescr.Text" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="lbleNo.Text" xml:space="preserve">
+    <value>Engine S.No</value>
+  </data>
+  <data name="lbleType.Text" xml:space="preserve">
+    <value>Engine Type</value>
+  </data>
+  <data name="lblFields.Text" xml:space="preserve">
+    <value>* Required Fields</value>
+  </data>
+  <data name="lblFrom.Text" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="lblGBox.Text" xml:space="preserve">
+    <value>Gear Box Type</value>
+  </data>
+  <data name="lblGBoxNo.Text" xml:space="preserve">
+    <value>Gear Box S.No</value>
+  </data>
+  <data name="lblHeader.Text" xml:space="preserve">
+    <value>[ Vehical Movement Check List ]</value>
+  </data>
+  <data name="lblModel.Text" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="lblPhoto.Text" xml:space="preserve">
+    <value>Photo</value>
+  </data>
+  <data name="lblPumpNo.Text" xml:space="preserve">
+    <value>Injection Pump S.No</value>
+  </data>
+  <data name="lblPumpType.Text" xml:space="preserve">
+    <value>Injection Pump Type</value>
+  </data>
+  <data name="lblSItem02.Text" xml:space="preserve">
+    <value>K.M. READING</value>
+  </data>
+  <data name="lblSItem03.Text" xml:space="preserve">
+    <value>PLATES NO. 2 PCS</value>
+  </data>
+  <data name="lblSItem04.Text" xml:space="preserve">
+    <value>DOORS KEYS</value>
+  </data>
+  <data name="lblSItem05.Text" xml:space="preserve">
+    <value>ING. KEYS</value>
+  </data>
+  <data name="lblSItem06.Text" xml:space="preserve">
+    <value>TRUCK LICENCE</value>
+  </data>
+  <data name="lblSItem07.Text" xml:space="preserve">
+    <value>TRANSPORT PERMIT</value>
+  </data>
+  <data name="lblSItem09.Text" xml:space="preserve">
+    <value>BODY</value>
+  </data>
+  <data name="lblSItem10.Text" xml:space="preserve">
+    <value>UPER WIND BLIZER</value>
+  </data>
+  <data name="lblSItem11.Text" xml:space="preserve">
+    <value>R/H SIDEN BLIZER</value>
+  </data>
+  <data name="lblSItem12.Text" xml:space="preserve">
+    <value>L/H SIDEN BLIZER</value>
+  </data>
+  <data name="lblSItem14.Text" xml:space="preserve">
+    <value>WIND SHIELD</value>
+  </data>
+  <data name="lblSItem15.Text" xml:space="preserve">
+    <value>FRONT BUMBER UPER</value>
+  </data>
+  <data name="lblSItem16.Text" xml:space="preserve">
+    <value>FRONT BUMBER LOWER</value>
+  </data>
+  <data name="lblSItem17.Text" xml:space="preserve">
+    <value>R/H SIDE HEAD LIGHT</value>
+  </data>
+  <data name="lblSItem18.Text" xml:space="preserve">
+    <value>L/H SIDE HEAD LIGHT</value>
+  </data>
+  <data name="lblSItem19.Text" xml:space="preserve">
+    <value>FORNT GIEAL</value>
+  </data>
+  <data name="lblSItem20.Text" xml:space="preserve">
+    <value>F R/H SIDE SIGNAL</value>
+  </data>
+  <data name="lblSItem21.Text" xml:space="preserve">
+    <value>F L/H SIDE SIGNAL</value>
+  </data>
+  <data name="lblSItem24.Text" xml:space="preserve">
+    <value>R/H SIDE DOOR</value>
+  </data>
+  <data name="lblSItem25.Text" xml:space="preserve">
+    <value>L/H SIDE DOOR</value>
+  </data>
+  <data name="lblSItem26.Text" xml:space="preserve">
+    <value>R/H SIDE MIRROR</value>
+  </data>
+  <data name="lblSItem27.Text" xml:space="preserve">
+    <value>L/H SIDE MIRROR</value>
+  </data>
+  <data name="lblSItem28.Text" xml:space="preserve">
+    <value>ADD.MIRROR DOOR</value>
+  </data>
+  <data name="lblSItem29.Text" xml:space="preserve">
+    <value>WIPER BALD R</value>
+  </data>
+  <data name="lblSItem30.Text" xml:space="preserve">
+    <value>WIPER BALD L</value>
+  </data>
+  <data name="lblSItem31.Text" xml:space="preserve">
+    <value>R/H DOOR STEP LADER</value>
+  </data>
+  <data name="lblSItem32.Text" xml:space="preserve">
+    <value>L/H DOOR STEP LADER</value>
+  </data>
+  <data name="lblSItem33.Text" xml:space="preserve">
+    <value>CABINT</value>
+  </data>
+  <data name="lblSItem34.Text" xml:space="preserve">
+    <value>RADIO &amp; STERIO</value>
+  </data>
+  <data name="lblSItem35.Text" xml:space="preserve">
+    <value>CABINETR CURTAINS</value>
+  </data>
+  <data name="lblSItem36.Text" xml:space="preserve">
+    <value>BEDS</value>
+  </data>
+  <data name="lblSItem38.Text" xml:space="preserve">
+    <value>AIR CONDITION UNIT</value>
+  </data>
+  <data name="lblSItem39.Text" xml:space="preserve">
+    <value>R/H SIDE TAIL LIGHTS</value>
+  </data>
+  <data name="lblSItem40.Text" xml:space="preserve">
+    <value>L/H SIDE TAIL LIGHTS</value>
+  </data>
+  <data name="lblSItem41.Text" xml:space="preserve">
+    <value>R/RUBBER MUD GUARD</value>
+  </data>
+  <data name="lblSItem42.Text" xml:space="preserve">
+    <value>L/RUBBER MUD GUARD</value>
+  </data>
+  <data name="lblSItem43.Text" xml:space="preserve">
+    <value>MAIN FUEL TANK</value>
+  </data>
+  <data name="lblSItem44.Text" xml:space="preserve">
+    <value>ADD. FUEL TANK</value>
+  </data>
+  <data name="lblSItem45.Text" xml:space="preserve">
+    <value>BATTERYS COVER</value>
+  </data>
+  <data name="lblSItem47.Text" xml:space="preserve">
+    <value>ELECTRIC CABLES</value>
+  </data>
+  <data name="lblSItem48.Text" xml:space="preserve">
+    <value>JACK</value>
+  </data>
+  <data name="lblSItem50.Text" xml:space="preserve">
+    <value>FIRE EXTINGUISHER</value>
+  </data>
+  <data name="lblSItem51.Text" xml:space="preserve">
+    <value>EARLY WARNING</value>
+  </data>
+  <data name="lblSItem52.Text" xml:space="preserve">
+    <value>SPARE TIERS</value>
+  </data>
+  <data name="lblSItem53.Text" xml:space="preserve">
+    <value>TOOLS</value>
+  </data>
+  <data name="lblSItem54.Text" xml:space="preserve">
+    <value>OTHER ACCESSORIES</value>
+  </data>
+  <data name="lblSItem55.Text" xml:space="preserve">
+    <value>REMARKS</value>
+  </data>
+  <data name="lblSItem56.Text" xml:space="preserve">
+    <value>ATTACHMENTS</value>
+  </data>
+  <data name="lblSL.Text" xml:space="preserve">
+    <value>SL</value>
+  </data>
+  <data name="lblTo.Text" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="lblTurnOver.Text" xml:space="preserve">
+    <value>Current Check</value>
+  </data>
+  <data name="lblType.Text" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="lblUpload.Text" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="lblUserDate.Text" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="lblUserName.Text" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="lblView.Text" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="lblVNo.Text" xml:space="preserve">
+    <value>Truck No</value>
+  </data>
+  <data name="NewConfirm" xml:space="preserve">
+    <value>return confirm("Adding New Check List...Are You Sure?")</value>
+  </data>
+  <data name="NewImage" xml:space="preserve">
+    <value>~/images/insource_641.png</value>
+  </data>
+  <data name="NewToolTip" xml:space="preserve">
+    <value>Add New Check List</value>
+  </data>
+  <data name="NoFile" xml:space="preserve">
+    <value>No File Selected</value>
+  </data>
+  <data name="NotFound" xml:space="preserve">
+    <value>Check List No. Not Found</value>
+  </data>
+  <data name="PrintImage" xml:space="preserve">
+    <value>~/images/print_641.png</value>
+  </data>
+  <data name="PrintToolTip" xml:space="preserve">
+    <value>Print Check List</value>
+  </data>
+  <data name="SaveData" xml:space="preserve">
+    <value>Saving Data Successfully Done</value>
+  </data>
+  <data name="SaveError" xml:space="preserve">
+    <value>Error During Saving Data ... Try Again</value>
+  </data>
+  <data name="SearchImage" xml:space="preserve">
+    <value>~/images/binoculars_641.png</value>
+  </data>
+  <data name="SearchToolTip" xml:space="preserve">
+    <value>Search for Check List</value>
+  </data>
+  <data name="ShowDetails" xml:space="preserve">
+    <value>(Show Details...)</value>
+  </data>
+  <data name="SVehical" xml:space="preserve">
+    <value>--- Select Vehical ---</value>
+  </data>
+  <data name="VType" xml:space="preserve">
+    <value>--- Select Vehical Type ---</value>
+  </data>
+  <data name="WorkShop" xml:space="preserve">
+    <value>WorkShop</value>
+  </data>
+  <data name="lblIssuance.Text" xml:space="preserve">
+    <value>Previous Check</value>
+  </data>
+  <data name="lblSItem13.Text" xml:space="preserve">
+    <value>SUN SHELDER</value>
+  </data>
+  <data name="lblSItem22.Text" xml:space="preserve">
+    <value>R/H FOG LIGHT</value>
+  </data>
+  <data name="lblSItem23.Text" xml:space="preserve">
+    <value>L/H FOG LIGHT</value>
+  </data>
+  <data name="lblSItem37.Text" xml:space="preserve">
+    <value>SEATS</value>
+  </data>
+  <data name="lblSItem46.Text" xml:space="preserve">
+    <value>BATTERYS</value>
+  </data>
+  <data name="lblSItem49.Text" xml:space="preserve">
+    <value>TIRE WRENCH</value>
+  </data>
+  <data name="Others" xml:space="preserve">
+    <value>Others</value>
+  </data>
+  <data name="EnterItem" xml:space="preserve">
+    <value>You Should Enter This Item</value>
+  </data>
+  <data name="lblSItem08.Text" xml:space="preserve">
+    <value>MVPI DOCUMENT</value>
+  </data>
+  <data name="Accomplish" xml:space="preserve">
+    <value>TO BE ACCOMPLISHED BY WORKSHOP OR OPERATION</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Division" xml:space="preserve">
+    <value>MAINTENANCE DIVISION</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="FromDriver" xml:space="preserve">
+    <value>From Driver</value>
+  </data>
+  <data name="Plate" xml:space="preserve">
+    <value>Plate No. / Model</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="ToDriver" xml:space="preserve">
+    <value>To Driver</value>
+  </data>
+  <data name="Driver" xml:space="preserve">
+    <value>Driver</value>
+  </data>
+  <data name="lblRemarks.Text" xml:space="preserve">
+    <value>Issue or Turn Over Remarks</value>
+  </data>
+  <data name="Mechanic" xml:space="preserve">
+    <value>Receiver</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>No Data Found</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>Signature</value>
+  </data>
+  <data name="Supervisor" xml:space="preserve">
+    <value>Supervisor</value>
+  </data>
+  <data name="lblSItem01.Text" xml:space="preserve">
+    <value>Tedder</value>
+  </data>
+  <data name="Name2" xml:space="preserve">
+    <value>Name2</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Note1" xml:space="preserve">
+    <value>Vehical Issue Note</value>
+  </data>
+  <data name="Note2" xml:space="preserve">
+    <value>Vehical Transfer Note</value>
+  </data>
+  <data name="Note3" xml:space="preserve">
+    <value>Vehical Receive Note</value>
+  </data>
+</root>

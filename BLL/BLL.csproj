@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{319320BF-99B6-4B6E-984B-1FD472570711}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BLL</RootNamespace>
+    <AssemblyName>BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Absent.cs" />
+    <Compile Include="AccCenter.cs" />
+    <Compile Include="AccProject.cs" />
+    <Compile Include="AccType.cs" />
+    <Compile Include="Acc.cs" />
+    <Compile Include="AccValue.cs" />
+    <Compile Include="Agreement.cs" />
+    <Compile Include="AppConfig.cs" />
+    <Compile Include="AppItem.cs" />
+    <Compile Include="AppPrice.cs" />
+    <Compile Include="AppService.cs" />
+    <Compile Include="AppServiceItem.cs" />
+    <Compile Include="AppServices.cs" />
+    <Compile Include="appUsers.cs" />
+    <Compile Include="Arch.cs" />
+    <Compile Include="Area.cs" />
+    <Compile Include="CarMove.cs" />
+    <Compile Include="CarMoveLines.cs" />
+    <Compile Include="CarMoveRCV.cs" />
+    <Compile Include="CarPrices.cs" />
+    <Compile Include="CarRcv.cs" />
+    <Compile Include="CarRepair.cs" />
+    <Compile Include="Cars.cs" />
+    <Compile Include="CarsType.cs" />
+    <Compile Include="CarType.cs" />
+    <Compile Include="Chat.cs" />
+    <Compile Include="CheckList.cs" />
+    <Compile Include="ChList.cs" />
+    <Compile Include="Cities.cs" />
+    <Compile Include="Claim.cs" />
+    <Compile Include="Clients.cs" />
+    <Compile Include="CoCars.cs" />
+    <Compile Include="Codes.cs" />
+    <Compile Include="CoDrivers.cs" />
+    <Compile Include="Coin.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="CostAcc.cs" />
+    <Compile Include="CostCenter.cs" />
+    <Compile Include="CustDetails.cs" />
+    <Compile Include="DealOut.cs" />
+    <Compile Include="doAgree.cs" />
+    <Compile Include="Drivers.cs" />
+    <Compile Include="ECat.cs" />
+    <Compile Include="EmergDetails.cs" />
+    <Compile Include="Emergency.cs" />
+    <Compile Include="EmergInv.cs" />
+    <Compile Include="Emp.cs" />
+    <Compile Include="EndPeriodRep.cs" />
+    <Compile Include="eServices.cs" />
+    <Compile Include="eServicesAgree.cs" />
+    <Compile Include="FastRepair.cs" />
+    <Compile Include="FavPlaces.cs" />
+    <Compile Include="FExcel.cs" />
+    <Compile Include="Functions1.cs" />
+    <Compile Include="Gas.cs" />
+    <Compile Include="GasDetails.cs" />
+    <Compile Include="GasOnline.cs" />
+    <Compile Include="ICat.cs" />
+    <Compile Include="IColor.cs" />
+    <Compile Include="ICOO.cs" />
+    <Compile Include="Invoice.cs" />
+    <Compile Include="InvOnLine.cs" />
+    <Compile Include="InvOnLineDetails.cs" />
+    <Compile Include="ISize.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="IWidth.cs" />
+    <Compile Include="JobWork.cs" />
+    <Compile Include="Jv.cs" />
+    <Compile Include="Lines.cs" />
+    <Compile Include="LShipment.cs" />
+    <Compile Include="moh.cs" />
+    <Compile Include="MyConfig.cs" />
+    <Compile Include="MyHelp.cs" />
+    <Compile Include="MyPO.cs" />
+    <Compile Include="MyUsers.cs" />
+    <Compile Include="Notes.cs" />
+    <Compile Include="Notify.cs" />
+    <Compile Include="Offers.cs" />
+    <Compile Include="Orders.cs" />
+    <Compile Include="OrderTran.cs" />
+    <Compile Include="Pay.cs" />
+    <Compile Include="Payments.cs" />
+    <Compile Include="PayReq.cs" />
+    <Compile Include="PCat.cs" />
+    <Compile Include="PettyCash.cs" />
+    <Compile Include="PLevel.cs" />
+    <Compile Include="PO.cs" />
+    <Compile Include="PReq.cs" />
+    <Compile Include="PriceList.cs" />
+    <Compile Include="Promo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers.cs" />
+    <Compile Include="ProvidersDetails.cs" />
+    <Compile Include="RepairReq.cs" />
+    <Compile Include="RJv.cs" />
+    <Compile Include="RootObject.cs" />
+    <Compile Include="Salaries.cs" />
+    <Compile Include="Salesmen.cs" />
+    <Compile Include="SalOP.cs" />
+    <Compile Include="SEmp.cs" />
+    <Compile Include="Shift.cs" />
+    <Compile Include="ShipDetailsOnline.cs" />
+    <Compile Include="ShipDrivers.cs" />
+    <Compile Include="Shipment.cs" />
+    <Compile Include="ShipmentDetails.cs" />
+    <Compile Include="ShipOnLine.cs" />
+    <Compile Include="ShipUsers.cs" />
+    <Compile Include="Shop.cs" />
+    <Compile Include="IUnit.cs" />
+    <Compile Include="sms.cs" />
+    <Compile Include="Stock.cs" />
+    <Compile Include="STP.cs" />
+    <Compile Include="STS.cs" />
+    <Compile Include="Support.cs" />
+    <Compile Include="Taxi.cs" />
+    <Compile Include="TblStart.cs" />
+    <Compile Include="Tech.cs" />
+    <Compile Include="AttLog.cs" />
+    <Compile Include="Timers.cs" />
+    <Compile Include="TripCol.cs" />
+    <Compile Include="TripCollect.cs" />
+    <Compile Include="TripDelivery.cs" />
+    <Compile Include="TripLog.cs" />
+    <Compile Include="TripWayPoints.cs" />
+    <Compile Include="TSupport.cs" />
+    <Compile Include="Vac.cs" />
+    <Compile Include="Vou.cs" />
+    <Compile Include="Water.cs" />
+    <Compile Include="WaterOnline.cs" />
+    <Compile Include="yStock.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{3027DD35-E8B9-4798-B8AE-68C7A4769630}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

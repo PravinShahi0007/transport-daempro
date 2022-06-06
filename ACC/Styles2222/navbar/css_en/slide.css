@@ -1,0 +1,26 @@
+
+.slideE ul, .slideE li > div {
+    display: block !important;
+    opacity: 0;
+    transform: translateY(50px);
+    transition-delay: 0.2s, 0s, 0s;
+    transition-duration: 0s, 0.2s, 0.2s;
+    transition-property: visibility, transform, opacity;
+    transition-timing-function: linear, linear, linear;
+    visibility: hidden;
+}
+.slideE li:hover > ul, .slideE li:hover > div {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0s;
+    visibility: visible;
+}
+.slideE > li > a .bubble-top {
+    transition-delay: 0s;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    transition-timing-function: ease;
+}
+.slideE > li > a:hover .bubble-top {
+    transform: translateY(-3px);
+}

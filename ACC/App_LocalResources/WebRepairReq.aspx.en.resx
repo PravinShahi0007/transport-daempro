@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CarNotFound" xml:space="preserve">
+    <value>Car No. Not Found</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="ClearImage" xml:space="preserve">
+    <value>~/images/erasure_641.png</value>
+  </data>
+  <data name="ClearTooltip" xml:space="preserve">
+    <value>Clear Form Fields</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteConfirm" xml:space="preserve">
+    <value>return confirm("Delete This Repair Request...Are You Sure?")</value>
+  </data>
+  <data name="DeleteError" xml:space="preserve">
+    <value>Error During Deleting Data ... Try Again</value>
+  </data>
+  <data name="DeleteFile" xml:space="preserve">
+    <value>Delete File</value>
+  </data>
+  <data name="DeleteFileConfirm" xml:space="preserve">
+    <value>return confirm("Delete this File ... Are you Sure?")</value>
+  </data>
+  <data name="DeleteImage" xml:space="preserve">
+    <value>~/images/cut_641.png</value>
+  </data>
+  <data name="DeleteItem" xml:space="preserve">
+    <value>Delete Repair Request Data</value>
+  </data>
+  <data name="DeleteTooltip" xml:space="preserve">
+    <value>Delete Repair Request </value>
+  </data>
+  <data name="DuplicateReq" xml:space="preserve">
+    <value>Duplicate Repair Request No.</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EditImage" xml:space="preserve">
+    <value>~/images/draw_pen_641.png</value>
+  </data>
+  <data name="EditTooltip" xml:space="preserve">
+    <value>Edit Repair Request</value>
+  </data>
+  <data name="EnterReq" xml:space="preserve">
+    <value>You should Enter Request No</value>
+  </data>
+  <data name="EnterReqNo" xml:space="preserve">
+    <value>You Should Enter Repair Request No.</value>
+  </data>
+  <data name="EnterTime" xml:space="preserve">
+    <value>You Should Enter In Time</value>
+  </data>
+  <data name="ErrorDelete" xml:space="preserve">
+    <value>Error During Deleting Repair Request ... Try Again</value>
+  </data>
+  <data name="ErrorSave" xml:space="preserve">
+    <value>Error During Saving Data ... Try Again</value>
+  </data>
+  <data name="HideDetails" xml:space="preserve">
+    <value>(Hide Details)</value>
+  </data>
+  <data name="IntegerVal" xml:space="preserve">
+    <value>You Should Enter Integer Value</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Request No</value>
+  </data>
+  <data name="Label10.Text" xml:space="preserve">
+    <value>Vehicle/No</value>
+  </data>
+  <data name="Label14.Text" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="Label15.Text" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Date/Time</value>
+  </data>
+  <data name="Label27.Text" xml:space="preserve">
+    <value>* Required Fields</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="Label34.Text" xml:space="preserve">
+    <value>(Show Details...)</value>
+  </data>
+  <data name="Label35.Text" xml:space="preserve">
+    <value>Others</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>KMS</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>Driver Name</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>Repair Required</value>
+  </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="Label9.Text" xml:space="preserve">
+    <value>Load No</value>
+  </data>
+  <data name="LblCode.Text" xml:space="preserve">
+    <value>Vehicle Type</value>
+  </data>
+  <data name="Literal2.Text" xml:space="preserve">
+    <value>[ Repair Request ]</value>
+  </data>
+  <data name="LoadNo" xml:space="preserve">
+    <value>Load #</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="NewConfirm" xml:space="preserve">
+    <value>return confirm("Adding New Repair Request...Are You Sure?")</value>
+  </data>
+  <data name="NewImage" xml:space="preserve">
+    <value>~/images/insource_641.png</value>
+  </data>
+  <data name="NewTooltip" xml:space="preserve">
+    <value>Add New Repair Request</value>
+  </data>
+  <data name="NoLoad" xml:space="preserve">
+    <value>Without Load</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="PrintImage" xml:space="preserve">
+    <value>~/images/print_641.png</value>
+  </data>
+  <data name="PrintTooltip" xml:space="preserve">
+    <value>Print Repair Request</value>
+  </data>
+  <data name="RepairReq" xml:space="preserve">
+    <value>Repair Request</value>
+  </data>
+  <data name="Req0" xml:space="preserve">
+    <value>Outside Repair</value>
+  </data>
+  <data name="Req1" xml:space="preserve">
+    <value>Routine Services</value>
+  </data>
+  <data name="ReqDate" xml:space="preserve">
+    <value>Request Date Should be Date Value</value>
+  </data>
+  <data name="ReqNotFound" xml:space="preserve">
+    <value>Repair Request No. Not Found</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="SearchImage" xml:space="preserve">
+    <value>~/images/binoculars_641.png</value>
+  </data>
+  <data name="SearchReq" xml:space="preserve">
+    <value>Search for Request No</value>
+  </data>
+  <data name="SearchTooltip" xml:space="preserve">
+    <value>Search for Repair Request</value>
+  </data>
+  <data name="SearchVeh" xml:space="preserve">
+    <value>Search for Vehicle No</value>
+  </data>
+  <data name="SelectDivision" xml:space="preserve">
+    <value>--- Select Division ---</value>
+  </data>
+  <data name="SelectDriver" xml:space="preserve">
+    <value>You Should Select Driver</value>
+  </data>
+  <data name="SelectDriver2" xml:space="preserve">
+    <value>--- Select Driver ---</value>
+  </data>
+  <data name="SelectFile" xml:space="preserve">
+    <value>You Should Select File</value>
+  </data>
+  <data name="SelectFrom" xml:space="preserve">
+    <value>You Should Select From</value>
+  </data>
+  <data name="SelectReqDate" xml:space="preserve">
+    <value>You Should Select Request Date</value>
+  </data>
+  <data name="SelectVeh" xml:space="preserve">
+    <value>You Should Select Vehicle</value>
+  </data>
+  <data name="SelectVeh2" xml:space="preserve">
+    <value>--- Select Vehical ---</value>
+  </data>
+  <data name="SelectVehicle" xml:space="preserve">
+    <value>You Should Select Vehicle Type</value>
+  </data>
+  <data name="SelectVType" xml:space="preserve">
+    <value>--- Select Vehical Type ---</value>
+  </data>
+  <data name="ShowDetails" xml:space="preserve">
+    <value>(Show Details...)</value>
+  </data>
+  <data name="SuccessDelete" xml:space="preserve">
+    <value>Deleting Repair Request Successfully Done</value>
+  </data>
+  <data name="SuccessSave" xml:space="preserve">
+    <value>Saving Data Successfully Done</value>
+  </data>
+  <data name="Req2" xml:space="preserve">
+    <value>Driver's Complaint</value>
+  </data>
+  <data name="Req3" xml:space="preserve">
+    <value>Break Down</value>
+  </data>
+  <data name="Req4" xml:space="preserve">
+    <value>Inspector</value>
+  </data>
+  <data name="Req5" xml:space="preserve">
+    <value>WorkShop</value>
+  </data>
+</root>

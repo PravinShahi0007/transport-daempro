@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccClass" xml:space="preserve">
+    <value>تصنيف الحسابات</value>
+  </data>
+  <data name="AccountCenter" xml:space="preserve">
+    <value>مركز الحسابات</value>
+  </data>
+  <data name="AddNewItem" xml:space="preserve">
+    <value>أضافة بند جديد</value>
+  </data>
+  <data name="AddSuccess" xml:space="preserve">
+    <value>لقد تم اضافة البيانات بنجاح</value>
+  </data>
+  <data name="ArabDscr" xml:space="preserve">
+    <value>الوصف بالعربي</value>
+  </data>
+  <data name="Balance" xml:space="preserve">
+    <value>حساب ميزانية</value>
+  </data>
+  <data name="CancelUpdate" xml:space="preserve">
+    <value>تجاهل التعديلات</value>
+  </data>
+  <data name="Cat" xml:space="preserve">
+    <value>النوع</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>الالوان</value>
+  </data>
+  <data name="COO" xml:space="preserve">
+    <value>بلد المنشأ</value>
+  </data>
+  <data name="CostCenter" xml:space="preserve">
+    <value>مراكز التكلفة</value>
+  </data>
+  <data name="CurrentAssets" xml:space="preserve">
+    <value>حساب ميزانية - أصول متداولة</value>
+  </data>
+  <data name="DeleteAccCenter" xml:space="preserve">
+    <value>الغاء بيانات مركز الحسابات </value>
+  </data>
+  <data name="DeleteColor" xml:space="preserve">
+    <value>الغاء بيانات اللون </value>
+  </data>
+  <data name="DeleteCOO" xml:space="preserve">
+    <value>الغاء بيانات بلد المنشأ </value>
+  </data>
+  <data name="DeleteCostCenter" xml:space="preserve">
+    <value>الغاء بيانات مركز التكلفة </value>
+  </data>
+  <data name="DeleteItem" xml:space="preserve">
+    <value>الغاء البند</value>
+  </data>
+  <data name="DeleteItemCat" xml:space="preserve">
+    <value>الغاء بيانات نوع الصنف </value>
+  </data>
+  <data name="DeleteMainAccount" xml:space="preserve">
+    <value>الغاء بيانات الحساب الرئيسي </value>
+  </data>
+  <data name="DeleteProductCat" xml:space="preserve">
+    <value>الغاء بيانات نوع المنتج </value>
+  </data>
+  <data name="DeleteProject" xml:space="preserve">
+    <value>الغاء بيانات المشروع </value>
+  </data>
+  <data name="DeleteSalesmen" xml:space="preserve">
+    <value>الغاء بيانات مندوب البيع </value>
+  </data>
+  <data name="DeleteSize" xml:space="preserve">
+    <value>الغاء بيانات المقاس </value>
+  </data>
+  <data name="DeleteStructure" xml:space="preserve">
+    <value>الغاء بيانات الهيكل الاداري </value>
+  </data>
+  <data name="DeleteSuccess" xml:space="preserve">
+    <value>لقد تم حذف السجل بنجاح</value>
+  </data>
+  <data name="DeleteUnit" xml:space="preserve">
+    <value>الغاء بيانات الوحدة </value>
+  </data>
+  <data name="DeleteWidth" xml:space="preserve">
+    <value>الغاء بيانات الحجم </value>
+  </data>
+  <data name="Dep" xml:space="preserve">
+    <value>مخصصات</value>
+  </data>
+  <data name="EditSuccess" xml:space="preserve">
+    <value>لقد تم تعديل البيانات بنجاح</value>
+  </data>
+  <data name="EngDscr" xml:space="preserve">
+    <value>الوصف بالانجليزي</value>
+  </data>
+  <data name="ErrorAdd" xml:space="preserve">
+    <value>لقد حدث خطأ أثناء أضافة البيانات ... حاول مرة أخرى</value>
+  </data>
+  <data name="ErrorDelete" xml:space="preserve">
+    <value>لا يمكن الغاء البند حيث انه مرتبط ببنود أخرى</value>
+  </data>
+  <data name="ErrorUpdate" xml:space="preserve">
+    <value>حدث خطأ أثناء تحديث البيانات ... حاول مرة أخرى</value>
+  </data>
+  <data name="Expenses" xml:space="preserve">
+    <value>المصروفات</value>
+  </data>
+  <data name="FixAssets" xml:space="preserve">
+    <value>حساب ميزانية - أصول ثابتة</value>
+  </data>
+  <data name="Income" xml:space="preserve">
+    <value>الايرادات</value>
+  </data>
+  <data name="ItemCat" xml:space="preserve">
+    <value>أنواع الأصناف</value>
+  </data>
+  <data name="Liberty" xml:space="preserve">
+    <value>حساب ميزانية - مطلوبات متداولة</value>
+  </data>
+  <data name="MaxLevel" xml:space="preserve">
+    <value>لقد تم الوصول الى أخر مستوى للتصنيف</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>حسابات أخرى</value>
+  </data>
+  <data name="Owner" xml:space="preserve">
+    <value>حساب ميزانية - حقوق الملكية</value>
+  </data>
+  <data name="ProductClass" xml:space="preserve">
+    <value>تصنيف المنتجات</value>
+  </data>
+  <data name="ProfitandLoss" xml:space="preserve">
+    <value>حساب أرباح وخسائر</value>
+  </data>
+  <data name="Projects" xml:space="preserve">
+    <value>المشاريع</value>
+  </data>
+  <data name="Purchase" xml:space="preserve">
+    <value>المشتريات</value>
+  </data>
+  <data name="Salemen" xml:space="preserve">
+    <value>مندوبين البيع</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>حفظ التعديلات</value>
+  </data>
+  <data name="SelectItem" xml:space="preserve">
+    <value>إختيار البند</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>المقاسات</value>
+  </data>
+  <data name="Structure" xml:space="preserve">
+    <value>الهيكل الاداري</value>
+  </data>
+  <data name="SureDelete" xml:space="preserve">
+    <value>return confirm("هل أنت متاكد من الغاء هذا البند؟")</value>
+  </data>
+  <data name="SureEnter" xml:space="preserve">
+    <value>تاكد من أدخال البيانات المطلوبة</value>
+  </data>
+  <data name="Trading" xml:space="preserve">
+    <value>حساب تشغيل و متاجرة</value>
+  </data>
+  <data name="Units" xml:space="preserve">
+    <value>الوحدات</value>
+  </data>
+  <data name="UpdateItem" xml:space="preserve">
+    <value>تعديل البند</value>
+  </data>
+  <data name="Width" xml:space="preserve">
+    <value>الاحجام</value>
+  </data>
+</root>

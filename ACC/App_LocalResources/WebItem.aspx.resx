@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Clear" xml:space="preserve">
+    <value>مسح</value>
+  </data>
+  <data name="ClearImage" xml:space="preserve">
+    <value>~/images/erasure_642.png</value>
+  </data>
+  <data name="ClearTooltip" xml:space="preserve">
+    <value>مسح خانات الشاشة</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>إلغاء</value>
+  </data>
+  <data name="DeleteConfirm" xml:space="preserve">
+    <value>return confirm("هل أنت متاكد من الغاء بيانات الصنف؟")</value>
+  </data>
+  <data name="DeleteImage" xml:space="preserve">
+    <value>~/images/cut_642.png</value>
+  </data>
+  <data name="DeleteTooltip" xml:space="preserve">
+    <value>إلغاء بيانات صنف</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="EditImage" xml:space="preserve">
+    <value>~/images/draw_pen_642.png</value>
+  </data>
+  <data name="EditTooltip" xml:space="preserve">
+    <value>تعديل بيانات صنف</value>
+  </data>
+  <data name="FindTooltip" xml:space="preserve">
+    <value>البحث عن كود الصنف</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>[ بيانات الأصناف ]</value>
+  </data>
+  <data name="Header2" xml:space="preserve">
+    <value>بيانات الاصناف</value>
+  </data>
+  <data name="Hide" xml:space="preserve">
+    <value>(أخفاء التفاصيل)</value>
+  </data>
+  <data name="ICatValid" xml:space="preserve">
+    <value>يجب أختيار نوع الصنف</value>
+  </data>
+  <data name="Image1Tooltip" xml:space="preserve">
+    <value>البحث عن نوع الصنف</value>
+  </data>
+  <data name="IOpen" xml:space="preserve">
+    <value>الرصيد الافتتاحي</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>بلد المنشأ</value>
+  </data>
+  <data name="Label10.Text" xml:space="preserve">
+    <value>صنف بديل 1</value>
+  </data>
+  <data name="Label11.Text" xml:space="preserve">
+    <value>المقاس</value>
+  </data>
+  <data name="Label12.Text" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="Label13.Text" xml:space="preserve">
+    <value>صنف بديل 2</value>
+  </data>
+  <data name="Label14.Text" xml:space="preserve">
+    <value>المستخدم</value>
+  </data>
+  <data name="Label15.Text" xml:space="preserve">
+    <value>بتاريخ</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>الاسم عربي</value>
+  </data>
+  <data name="Label22.Text" xml:space="preserve">
+    <value>نوع الصنف*</value>
+  </data>
+  <data name="Label23.Text" xml:space="preserve">
+    <value>الحجم</value>
+  </data>
+  <data name="Label24.Text" xml:space="preserve">
+    <value>وحدة المفرد</value>
+  </data>
+  <data name="Label25.Text" xml:space="preserve">
+    <value>وحدة الجملة</value>
+  </data>
+  <data name="Label26.Text" xml:space="preserve">
+    <value>سعر التكلفة</value>
+  </data>
+  <data name="Label27.Text" xml:space="preserve">
+    <value>* حقول الزامية</value>
+  </data>
+  <data name="Label28.Text" xml:space="preserve">
+    <value>أقل سعر</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>الاسم أنجليزي</value>
+  </data>
+  <data name="Label31.Text" xml:space="preserve">
+    <value>الشد</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>سعر البيع</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>اللون</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>سعر البيع</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>أقل سعر</value>
+  </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>حد الطلب</value>
+  </data>
+  <data name="Label9.Text" xml:space="preserve">
+    <value>(عرض التفاصيل)</value>
+  </data>
+  <data name="LblCode.Text" xml:space="preserve">
+    <value>كود الصنف*</value>
+  </data>
+  <data name="Loc" xml:space="preserve">
+    <value>الموقع</value>
+  </data>
+  <data name="Name1" xml:space="preserve">
+    <value>المستودع</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>جديد</value>
+  </data>
+  <data name="NewConfirm" xml:space="preserve">
+    <value>return confirm("هل أنت متاكد من حفظ بيانات الصنف؟")</value>
+  </data>
+  <data name="NewImage" xml:space="preserve">
+    <value>~/images/insource_642.png</value>
+  </data>
+  <data name="NewTooltip" xml:space="preserve">
+    <value>أضافة صنف جديد</value>
+  </data>
+  <data name="OpenDate" xml:space="preserve">
+    <value>تاريخ الصلاحية</value>
+  </data>
+  <data name="Panel3" xml:space="preserve">
+    <value>الأرصدة الأفتتاحية</value>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>لا توجد بيانات</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>بحث</value>
+  </data>
+  <data name="SearchImage" xml:space="preserve">
+    <value>~/images/binoculars_642.png</value>
+  </data>
+  <data name="SearchTooltip" xml:space="preserve">
+    <value>البحث عن بيانات صنف</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>(عرض التفاصيل)</value>
+  </data>
+  <data name="BalanceFound" xml:space="preserve">
+    <value>لا يمكن الغاء الصنف لوجود أرصدة او حركات</value>
+  </data>
+  <data name="SelectColor" xml:space="preserve">
+    <value>--- أختر اللون ---</value>
+  </data>
+  <data name="ItemNotFound" xml:space="preserve">
+    <value>كود الصنف غير مدرج من قبل</value>
+  </data>
+  <data name="DataUpdated" xml:space="preserve">
+    <value>لقد تم تعديل البيانات بنجاح</value>
+  </data>
+  <data name="UpdateError" xml:space="preserve">
+    <value>لقد حدث خطأ اثناء تعديل البيانات ... حاول مرة أخرى</value>
+  </data>
+  <data name="DeleteItem" xml:space="preserve">
+    <value>الغاء بيانات الصنف</value>
+  </data>
+  <data name="ItemDeleted" xml:space="preserve">
+    <value>لقد تم الغاء البيانات بنجاح</value>
+  </data>
+  <data name="DeleteError" xml:space="preserve">
+    <value>لقد حدث خطأ اثناء الغاء البيانات ... حاول مرة أخرى</value>
+  </data>
+  <data name="EnterItem" xml:space="preserve">
+    <value>يجب إدخال كود الصنف</value>
+  </data>
+  <data name="SelectSize" xml:space="preserve">
+    <value>--- أختر المقاس ---</value>
+  </data>
+  <data name="SelectWidth" xml:space="preserve">
+    <value>--- أختر الحجم ---</value>
+  </data>
+  <data name="SelectCOO" xml:space="preserve">
+    <value>--- أختر بلد المنشأ ---</value>
+  </data>
+  <data name="SelectUnit" xml:space="preserve">
+    <value>- أختر الوحدة -</value>
+  </data>
+  <data name="SelectAlter" xml:space="preserve">
+    <value>--- أختر الصنف البديل ---</value>
+  </data>
+  <data name="ItemFound" xml:space="preserve">
+    <value>كود الصنف مدخل من قبل</value>
+  </data>
+  <data name="ItemAdded" xml:space="preserve">
+    <value>لقد تمت أضافة البيانات بنجاح</value>
+  </data>
+  <data name="AddError" xml:space="preserve">
+    <value>لقد حدث خطأ اثناء أضافة البيانات ... حاول مرة أخرى</value>
+  </data>
+  <data name="txtItSPrice1Valid" xml:space="preserve">
+    <value>يجب أن تكون القيمة رقمية</value>
+  </data>
+  <data name="ValCode" xml:space="preserve">
+    <value>يجب إدخال كود الصنف</value>
+  </data>
+  <data name="ChkDate" xml:space="preserve">
+    <value>يجب أن تكون القيمة تاريخ</value>
+  </data>
+  <data name="Div10Style" xml:space="preserve">
+    <value>float: right;</value>
+  </data>
+  <data name="Div11Style" xml:space="preserve">
+    <value>float: right; margin-right: 20px;</value>
+  </data>
+  <data name="Div12Style" xml:space="preserve">
+    <value>float: left; vertical-align: middle;</value>
+  </data>
+  <data name="ITName" xml:space="preserve">
+    <value>ITName1</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name1</value>
+  </data>
+  <data name="Name2" xml:space="preserve">
+    <value>&lt;%# Bind("Name1") %&gt;</value>
+  </data>
+  <data name="EnterItem2" xml:space="preserve">
+    <value>يجب إدخال رمز الصنف</value>
+  </data>
+  <data name="Label16.Text" xml:space="preserve">
+    <value>كود المعده</value>
+  </data>
+  <data name="EnterItem3" xml:space="preserve">
+    <value>يجب إدخال رقم الصنف</value>
+  </data>
+  <data name="InvalidICat" xml:space="preserve">
+    <value>نوع الصنف غير معرف من قبل</value>
+  </data>
+</root>

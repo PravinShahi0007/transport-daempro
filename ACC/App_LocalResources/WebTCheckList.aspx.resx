@@ -1,0 +1,567 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AttachImage" xml:space="preserve">
+    <value>~/images/attach2.png</value>
+  </data>
+  <data name="AttachToolTip" xml:space="preserve">
+    <value>تحميل الملف</value>
+  </data>
+  <data name="BtnLoad01.Text" xml:space="preserve">
+    <value>تحميل</value>
+  </data>
+  <data name="BtnView01.Text" xml:space="preserve">
+    <value>عرض</value>
+  </data>
+  <data name="CheckDate" xml:space="preserve">
+    <value>يجب التاكد من صحة إدخال القيمة تاريخ</value>
+  </data>
+  <data name="CheckType1" xml:space="preserve">
+    <value>تسليم</value>
+  </data>
+  <data name="CheckType2" xml:space="preserve">
+    <value>تحويل</value>
+  </data>
+  <data name="CheckType3" xml:space="preserve">
+    <value>استلام</value>
+  </data>
+  <data name="ClearImage" xml:space="preserve">
+    <value>~/images/erasure_642.png</value>
+  </data>
+  <data name="ClearToolTip" xml:space="preserve">
+    <value>مسح حقول الشاشة</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>الغاء</value>
+  </data>
+  <data name="DeleteCheckList" xml:space="preserve">
+    <value>الغاء بيان الفحص رقم  </value>
+  </data>
+  <data name="DeleteConfirm" xml:space="preserve">
+    <value>return confirm("الغاء بيان الفحص - هل انت متأكد؟")</value>
+  </data>
+  <data name="DeleteFileConfirm" xml:space="preserve">
+    <value>return confirm("الغاء الملف - هل أنت متاكد؟")</value>
+  </data>
+  <data name="DeleteFileToolTip" xml:space="preserve">
+    <value>الغاء الملف</value>
+  </data>
+  <data name="DeleteImage" xml:space="preserve">
+    <value>~/images/cut_642.png</value>
+  </data>
+  <data name="DeleteSuccess" xml:space="preserve">
+    <value>تم الغاء البيانات بنجاح</value>
+  </data>
+  <data name="DeleteToolTip" xml:space="preserve">
+    <value>الغاء بيان الفحص</value>
+  </data>
+  <data name="DuplicateNo" xml:space="preserve">
+    <value>رقم بيان الفحص مكرر</value>
+  </data>
+  <data name="EditImage" xml:space="preserve">
+    <value>~/images/draw_pen_642.png</value>
+  </data>
+  <data name="EditToolTip" xml:space="preserve">
+    <value>تعديل بيان الفحص</value>
+  </data>
+  <data name="EnterCheckList" xml:space="preserve">
+    <value>يجب إدخال رقم بيان الفحص</value>
+  </data>
+  <data name="EnterDate" xml:space="preserve">
+    <value>يجب إدخال التاريخ</value>
+  </data>
+  <data name="EnterTime" xml:space="preserve">
+    <value>يجب إدخال الوقت</value>
+  </data>
+  <data name="ErrorDelete" xml:space="preserve">
+    <value>خطأ اثناء الغاء البيانات ... حاول مرة أخرى</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>الملف</value>
+  </data>
+  <data name="Header2" xml:space="preserve">
+    <value>بيان فحص تسليم و استلام شاحنة</value>
+  </data>
+  <data name="HideDetails" xml:space="preserve">
+    <value>(اخفاء التفاصيل)</value>
+  </data>
+  <data name="lblAcNo.Text" xml:space="preserve">
+    <value>الرقم التسلسلي للتكييف</value>
+  </data>
+  <data name="lblAcType.Text" xml:space="preserve">
+    <value>نوع التكييف</value>
+  </data>
+  <data name="lblAttach" xml:space="preserve">
+    <value>المرفقات</value>
+  </data>
+  <data name="lblChNo.Text" xml:space="preserve">
+    <value>رقم بيان الفحص</value>
+  </data>
+  <data name="lblCode.Text" xml:space="preserve">
+    <value>نوع الشاحنة</value>
+  </data>
+  <data name="lblDate.Text" xml:space="preserve">
+    <value>التاريخ - الوقت</value>
+  </data>
+  <data name="lblDescr.Text" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="lbleNo.Text" xml:space="preserve">
+    <value>الرقم التسلسلي للمحرك</value>
+  </data>
+  <data name="lbleType.Text" xml:space="preserve">
+    <value>نوع المحرك</value>
+  </data>
+  <data name="lblFields.Text" xml:space="preserve">
+    <value>* حقول اساسية</value>
+  </data>
+  <data name="lblFrom.Text" xml:space="preserve">
+    <value>من</value>
+  </data>
+  <data name="lblGBox.Text" xml:space="preserve">
+    <value>نوع الجير</value>
+  </data>
+  <data name="lblGBoxNo.Text" xml:space="preserve">
+    <value>الرقم التسلسلي للجير</value>
+  </data>
+  <data name="lblHeader.Text" xml:space="preserve">
+    <value>[ بيان فحص تسليم و استلام شاحنة ]</value>
+  </data>
+  <data name="lblModel.Text" xml:space="preserve">
+    <value>الموديل</value>
+  </data>
+  <data name="lblPhoto.Text" xml:space="preserve">
+    <value>الصورة</value>
+  </data>
+  <data name="lblPumpNo.Text" xml:space="preserve">
+    <value>الرقم التسلسلي للطرمبه</value>
+  </data>
+  <data name="lblPumpType.Text" xml:space="preserve">
+    <value>نوع الطرمبه</value>
+  </data>
+  <data name="lblSItem02.Text" xml:space="preserve">
+    <value>قراءة عداد الكيلومتر</value>
+  </data>
+  <data name="lblSItem03.Text" xml:space="preserve">
+    <value>اللوحات 2 لوحة</value>
+  </data>
+  <data name="lblSItem04.Text" xml:space="preserve">
+    <value>مفاتيح الابواب</value>
+  </data>
+  <data name="lblSItem05.Text" xml:space="preserve">
+    <value>مفاتيح التشغيل</value>
+  </data>
+  <data name="lblSItem06.Text" xml:space="preserve">
+    <value>استمارة الشاحنة</value>
+  </data>
+  <data name="lblSItem07.Text" xml:space="preserve">
+    <value>رخصة التشغيل</value>
+  </data>
+  <data name="lblSItem09.Text" xml:space="preserve">
+    <value>الهيكل الخارجي</value>
+  </data>
+  <data name="lblSItem10.Text" xml:space="preserve">
+    <value>كاب الغمارة</value>
+  </data>
+  <data name="lblSItem11.Text" xml:space="preserve">
+    <value>جناح الغمارة يمين</value>
+  </data>
+  <data name="lblSItem12.Text" xml:space="preserve">
+    <value>جناح الغمارة يسار</value>
+  </data>
+  <data name="lblSItem14.Text" xml:space="preserve">
+    <value>الزجاج الامامي</value>
+  </data>
+  <data name="lblSItem15.Text" xml:space="preserve">
+    <value>الصدام الامامي العلوي</value>
+  </data>
+  <data name="lblSItem16.Text" xml:space="preserve">
+    <value>الصدام الامامي السفلي</value>
+  </data>
+  <data name="lblSItem17.Text" xml:space="preserve">
+    <value>فانوس امامي يمين</value>
+  </data>
+  <data name="lblSItem18.Text" xml:space="preserve">
+    <value>فانوس امامي يسار</value>
+  </data>
+  <data name="lblSItem19.Text" xml:space="preserve">
+    <value>الشبكة الامامي</value>
+  </data>
+  <data name="lblSItem20.Text" xml:space="preserve">
+    <value>اشارة امامي يمين</value>
+  </data>
+  <data name="lblSItem21.Text" xml:space="preserve">
+    <value>اشارة امامي يسار</value>
+  </data>
+  <data name="lblSItem24.Text" xml:space="preserve">
+    <value>باب أمامي يمين</value>
+  </data>
+  <data name="lblSItem25.Text" xml:space="preserve">
+    <value>باب أمامي يسار</value>
+  </data>
+  <data name="lblSItem26.Text" xml:space="preserve">
+    <value>مرأه جانبية يمين</value>
+  </data>
+  <data name="lblSItem27.Text" xml:space="preserve">
+    <value>مرآه جانبية يسار</value>
+  </data>
+  <data name="lblSItem28.Text" xml:space="preserve">
+    <value>مرآة إضافية للباب</value>
+  </data>
+  <data name="lblSItem29.Text" xml:space="preserve">
+    <value>مساحة زجاج يمين</value>
+  </data>
+  <data name="lblSItem30.Text" xml:space="preserve">
+    <value>مساحة زجاج يسار</value>
+  </data>
+  <data name="lblSItem31.Text" xml:space="preserve">
+    <value>سلم باب يمين</value>
+  </data>
+  <data name="lblSItem32.Text" xml:space="preserve">
+    <value>سلم باب يسار</value>
+  </data>
+  <data name="lblSItem33.Text" xml:space="preserve">
+    <value>الغمارة</value>
+  </data>
+  <data name="lblSItem34.Text" xml:space="preserve">
+    <value>الراديو و الاستريو</value>
+  </data>
+  <data name="lblSItem35.Text" xml:space="preserve">
+    <value>ستائر الغمارة</value>
+  </data>
+  <data name="lblSItem37.Text" xml:space="preserve">
+    <value>المقاعد</value>
+  </data>
+  <data name="lblSItem38.Text" xml:space="preserve">
+    <value>وحدة التكييف</value>
+  </data>
+  <data name="lblSItem39.Text" xml:space="preserve">
+    <value>الاسطب خلفي يمين</value>
+  </data>
+  <data name="lblSItem40.Text" xml:space="preserve">
+    <value>الاسطب خلفي يسار</value>
+  </data>
+  <data name="lblSItem41.Text" xml:space="preserve">
+    <value>غطاء الكفرات يمين</value>
+  </data>
+  <data name="lblSItem42.Text" xml:space="preserve">
+    <value>غطاء الكفرات يسار</value>
+  </data>
+  <data name="lblSItem43.Text" xml:space="preserve">
+    <value>خزان الديزل الرئيسي</value>
+  </data>
+  <data name="lblSItem44.Text" xml:space="preserve">
+    <value>خزان الديزل الاضافي</value>
+  </data>
+  <data name="lblSItem45.Text" xml:space="preserve">
+    <value>غطاء البطارية</value>
+  </data>
+  <data name="lblSItem47.Text" xml:space="preserve">
+    <value>وصلة الكهربائية</value>
+  </data>
+  <data name="lblSItem49.Text" xml:space="preserve">
+    <value>مفتاح الكفر</value>
+  </data>
+  <data name="lblSItem50.Text" xml:space="preserve">
+    <value>طفاية الحريق</value>
+  </data>
+  <data name="lblSItem51.Text" xml:space="preserve">
+    <value>المثلث</value>
+  </data>
+  <data name="lblSItem52.Text" xml:space="preserve">
+    <value>اطارات الاسبير</value>
+  </data>
+  <data name="lblSItem53.Text" xml:space="preserve">
+    <value>الادوات</value>
+  </data>
+  <data name="lblSItem54.Text" xml:space="preserve">
+    <value>ملحقات أخرى</value>
+  </data>
+  <data name="lblSItem55.Text" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="lblSItem56.Text" xml:space="preserve">
+    <value>المرفقات</value>
+  </data>
+  <data name="lblSL.Text" xml:space="preserve">
+    <value>م</value>
+  </data>
+  <data name="lblTo.Text" xml:space="preserve">
+    <value>الى</value>
+  </data>
+  <data name="lblTurnOver.Text" xml:space="preserve">
+    <value>الفحص الحالي</value>
+  </data>
+  <data name="lblType.Text" xml:space="preserve">
+    <value>النوع</value>
+  </data>
+  <data name="lblUpload.Text" xml:space="preserve">
+    <value>تحميل</value>
+  </data>
+  <data name="lblUserDate.Text" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="lblUserName.Text" xml:space="preserve">
+    <value>اسم المستخدم</value>
+  </data>
+  <data name="lblView.Text" xml:space="preserve">
+    <value>عرض</value>
+  </data>
+  <data name="lblVNo.Text" xml:space="preserve">
+    <value>رقم الشاحنة</value>
+  </data>
+  <data name="NewConfirm" xml:space="preserve">
+    <value>return confirm("أضافة بيان الفحص - هل انت متأكد؟")</value>
+  </data>
+  <data name="NewImage" xml:space="preserve">
+    <value>~/images/insource_642.png</value>
+  </data>
+  <data name="NewToolTip" xml:space="preserve">
+    <value>أضافة بيان فحص جديد</value>
+  </data>
+  <data name="NoFile" xml:space="preserve">
+    <value>لم يتم أختيار الملف</value>
+  </data>
+  <data name="NotFound" xml:space="preserve">
+    <value>رقم بيان الفحص غير مدرج من قبل</value>
+  </data>
+  <data name="PrintImage" xml:space="preserve">
+    <value>~/images/print_64A.png</value>
+  </data>
+  <data name="PrintToolTip" xml:space="preserve">
+    <value>طباعة بيان الفحص</value>
+  </data>
+  <data name="SaveData" xml:space="preserve">
+    <value>تم حفظ البيانات بنجاح</value>
+  </data>
+  <data name="SaveError" xml:space="preserve">
+    <value>خطأ اثناء حفظ البيانات ... حاول مرة أخرى</value>
+  </data>
+  <data name="SearchImage" xml:space="preserve">
+    <value>~/images/binoculars_642.png</value>
+  </data>
+  <data name="SearchToolTip" xml:space="preserve">
+    <value>البحث عن بيان الفحص</value>
+  </data>
+  <data name="ShowDetails" xml:space="preserve">
+    <value>(عرض التفاصيل)</value>
+  </data>
+  <data name="SVehical" xml:space="preserve">
+    <value>--- أختر الشاحنة ---</value>
+  </data>
+  <data name="VType" xml:space="preserve">
+    <value>--- أختر نوع الشاحنة ---</value>
+  </data>
+  <data name="WorkShop" xml:space="preserve">
+    <value>الورشة</value>
+  </data>
+  <data name="lblIssuance.Text" xml:space="preserve">
+    <value>الفحص السابق</value>
+  </data>
+  <data name="lblSItem36.Text" xml:space="preserve">
+    <value>السراير</value>
+  </data>
+  <data name="lblSItem46.Text" xml:space="preserve">
+    <value>البطارية</value>
+  </data>
+  <data name="lblSItem48.Text" xml:space="preserve">
+    <value>الرافعه</value>
+  </data>
+  <data name="Others" xml:space="preserve">
+    <value>أخرى</value>
+  </data>
+  <data name="EnterItem" xml:space="preserve">
+    <value>يجب إدخال البند</value>
+  </data>
+  <data name="lblSItem08.Text" xml:space="preserve">
+    <value>الفحص الدوري</value>
+  </data>
+  <data name="lblSItem13.Text" xml:space="preserve">
+    <value>شماسه</value>
+  </data>
+  <data name="lblSItem22.Text" xml:space="preserve">
+    <value>كشاف ضباب يمين</value>
+  </data>
+  <data name="lblSItem23.Text" xml:space="preserve">
+    <value>كشفا ضباب يسار</value>
+  </data>
+  <data name="Accomplish" xml:space="preserve">
+    <value>يتعين أنجازها من قبل الورشة أو التشغيل</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>البيان</value>
+  </data>
+  <data name="Division" xml:space="preserve">
+    <value>قسم الصيانة</value>
+  </data>
+  <data name="Plate" xml:space="preserve">
+    <value>رقم اللوحة/الموديل</value>
+  </data>
+  <data name="Driver" xml:space="preserve">
+    <value>السائق</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>من</value>
+  </data>
+  <data name="FromDriver" xml:space="preserve">
+    <value>من السائق</value>
+  </data>
+  <data name="lblRemarks.Text" xml:space="preserve">
+    <value>ملاحظات التسليم و الاستلام</value>
+  </data>
+  <data name="Mechanic" xml:space="preserve">
+    <value>المسلم</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>التوقيع</value>
+  </data>
+  <data name="Supervisor" xml:space="preserve">
+    <value>المشرف</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>إلى</value>
+  </data>
+  <data name="ToDriver" xml:space="preserve">
+    <value>إلى السائق</value>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>لا توجد بيانات</value>
+  </data>
+  <data name="lblSItem01.Text" xml:space="preserve">
+    <value>التيدر</value>
+  </data>
+  <data name="Name2" xml:space="preserve">
+    <value>Name1</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>رقم</value>
+  </data>
+  <data name="Note1" xml:space="preserve">
+    <value>بيان تسليم شاحنة</value>
+  </data>
+  <data name="Note2" xml:space="preserve">
+    <value>بيان تحويل شاحنة</value>
+  </data>
+  <data name="Note3" xml:space="preserve">
+    <value>بيان أستلام شاحنة</value>
+  </data>
+</root>

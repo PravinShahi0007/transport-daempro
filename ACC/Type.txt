@@ -1,0 +1,26 @@
+﻿Voucher                     File        Type            ArchType
+Purchase Request            PREQ                        901
+Purchase Order              PO                          902
+Delivery Note               STP         601             905 
+Purchase Invoice            STP         501             903
+Return Purchase Invoice     STP         502             904
+Used Import Note            STP         503             900
+Issue Note                  STS         701             906
+Repair Request											907
+Check List Workshop										908
+Check List Drivers										909
+Adjust Note -               STS         710             910
+Ajust  Note +               STS         711             911
+Cars													999
+Journal Voucher				JV			100				101
+Receipt Voucher				JV			101
+Payment Voucher				JV			102				506
+Payment Voucher-Multi		JV			102				596
+Bank Transfer Voucher		JV			106				508
+Payment Request                                         501 - 515 - 516
+Purchase Request                                        502 - 513 - 514
+														500 - 503 - 504 - 505 - 507 - 509 - 512
+														222
+														666
+Manual Inventory										667
+CarMove                     JV          104

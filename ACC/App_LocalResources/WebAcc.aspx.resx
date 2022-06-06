@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AcBal" xml:space="preserve">
+    <value>رصيد المجمع</value>
+    <comment>1</comment>
+  </data>
+  <data name="AccountData" xml:space="preserve">
+    <value>بيانات الحسابات</value>
+    <comment>1</comment>
+  </data>
+  <data name="AccountHaveBal" xml:space="preserve">
+    <value>لا يمكن الغاء الحساب حيث يحتوي الى ارصدة أو حركات</value>
+    <comment>1</comment>
+  </data>
+  <data name="AccountNotFound" xml:space="preserve">
+    <value>الحساب غير معرف من قبل</value>
+    <comment>1</comment>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>اضافة</value>
+    <comment>1</comment>
+  </data>
+  <data name="AddAccount" xml:space="preserve">
+    <value>اضافة الحساب</value>
+    <comment>1</comment>
+  </data>
+  <data name="ArabicDescr" xml:space="preserve">
+    <value>الوصف بالعربي</value>
+    <comment>1</comment>
+  </data>
+  <data name="ChkArea.Text" xml:space="preserve">
+    <value>المنطقة</value>
+    <comment>1</comment>
+  </data>
+  <data name="ChkCarNo.Text" xml:space="preserve">
+    <value>الشاحنة</value>
+    <comment>1</comment>
+  </data>
+  <data name="ChkCostAcc.Text" xml:space="preserve">
+    <value>التكاليف</value>
+    <comment>1</comment>
+  </data>
+  <data name="ChkCostCenter.Text" xml:space="preserve">
+    <value>الفرع</value>
+    <comment>1</comment>
+  </data>
+  <data name="ChkDepDo.Text" xml:space="preserve">
+    <value>فني</value>
+    <comment>1</comment>
+  </data>
+  <data name="ChkEmp.Text" xml:space="preserve">
+    <value>الموظفين</value>
+    <comment>1</comment>
+  </data>
+  <data name="ChkProject.Text" xml:space="preserve">
+    <value>المشروع</value>
+    <comment>1</comment>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>مسح</value>
+    <comment>1</comment>
+  </data>
+  <data name="ClearImage" xml:space="preserve">
+    <value>~/images/erasure_642.png</value>
+    <comment>1</comment>
+  </data>
+  <data name="ClearTooltip" xml:space="preserve">
+    <value>مسح خانات الشاشة</value>
+    <comment>1</comment>
+  </data>
+  <data name="DebitOrCredit" xml:space="preserve">
+    <value>يجب ان يكون الرصيد الافتتاحي مدين او دائن</value>
+    <comment>1</comment>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>إلغاء</value>
+    <comment>1</comment>
+  </data>
+  <data name="DeleteConfirm" xml:space="preserve">
+    <value>return confirm("هل أنت متاكد من الغاء بيانات الحساب؟")</value>
+    <comment>1</comment>
+  </data>
+  <data name="DeleteError" xml:space="preserve">
+    <value>لقد حدث خطأ اثناء الغاء البيانات ... حاول مرة أخرى</value>
+    <comment>1</comment>
+  </data>
+  <data name="DeleteImage" xml:space="preserve">
+    <value>~/images/cut_642.png</value>
+    <comment>1</comment>
+  </data>
+  <data name="DeleteItem" xml:space="preserve">
+    <value>الغاء بيانات الحساب</value>
+    <comment>1</comment>
+  </data>
+  <data name="DeleteReleateAcc" xml:space="preserve">
+    <value>لا يمكن الغاء الحساب لانه مرتبط بحسابات اخرى</value>
+    <comment>1</comment>
+  </data>
+  <data name="DeleteSuccess" xml:space="preserve">
+    <value>تم الغاء بيانات الحساب بنجاح</value>
+    <comment>1</comment>
+  </data>
+  <data name="DeleteTooltip" xml:space="preserve">
+    <value>إلغاء بيانات الحساب</value>
+    <comment>1</comment>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>تعديل</value>
+    <comment>1</comment>
+  </data>
+  <data name="EditAccount" xml:space="preserve">
+    <value>تعديل بيانات الحساب</value>
+    <comment>1</comment>
+  </data>
+  <data name="EditImage" xml:space="preserve">
+    <value>~/images/draw_pen_642.png</value>
+    <comment>1</comment>
+  </data>
+  <data name="EditTooltip" xml:space="preserve">
+    <value>تعديل بيانات الحساب</value>
+    <comment>1</comment>
+  </data>
+  <data name="EnglishDescr" xml:space="preserve">
+    <value>الوصف بالانجليزي</value>
+    <comment>1</comment>
+  </data>
+  <data name="EnterAccount" xml:space="preserve">
+    <value>يجب إدخال رقم الحساب</value>
+    <comment>1</comment>
+  </data>
+  <data name="EnterDeleteReason" xml:space="preserve">
+    <value>يجب إدخال سبب التعديل/الالغاء</value>
+    <comment>1</comment>
+  </data>
+  <data name="ErrorSave" xml:space="preserve">
+    <value>لقد حدث خطأ اثناء حفظ البيانات ... حاول مرة أخرى</value>
+    <comment>1</comment>
+  </data>
+  <data name="FDebitOrCredit" xml:space="preserve">
+    <value>يجب ان يكون الرصيد المتوقع مدين او دائن</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>نوع الحساب</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label10.Text" xml:space="preserve">
+    <value>دائن</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label11.Text" xml:space="preserve">
+    <value>مركز الحسابات</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label12.Text" xml:space="preserve">
+    <value>ملاحظات</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label13.Text" xml:space="preserve">
+    <value>التوجية</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label14.Text" xml:space="preserve">
+    <value>الأصول الثابتة</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label15.Text" xml:space="preserve">
+    <value>مجمع الأهلاك</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label16.Text" xml:space="preserve">
+    <value>رصيد المجمع</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label17.Text" xml:space="preserve">
+    <value>حساب الاهلاك</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label18.Text" xml:space="preserve">
+    <value>نسبة الاهلاك</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label19.Text" xml:space="preserve">
+    <value>قيمة الشراء</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>الاسم عربي</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label20.Text" xml:space="preserve">
+    <value>تاريخ الشراء</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label21.Text" xml:space="preserve">
+    <value>المنطقة</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label22.Text" xml:space="preserve">
+    <value>الفرع</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label23.Text" xml:space="preserve">
+    <value>المشروع</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label24.Text" xml:space="preserve">
+    <value>حساب التكاليف</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label25.Text" xml:space="preserve">
+    <value>الموظف</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label26.Text" xml:space="preserve">
+    <value>السيارة</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>الاسم أنجليزي</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>الرصيد الافتتاحي</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>العملة</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>مدين</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>الرصيد المتوقع</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label9.Text" xml:space="preserve">
+    <value>مدين</value>
+    <comment>1</comment>
+  </data>
+  <data name="LblCode.Text" xml:space="preserve">
+    <value>كود الحساب</value>
+    <comment>1</comment>
+  </data>
+  <data name="lblCost.Text" xml:space="preserve">
+    <value>حساب المصروف</value>
+    <comment>1</comment>
+  </data>
+  <data name="lblReason.Text" xml:space="preserve">
+    <value>سبب التعديل/الغاء</value>
+    <comment>1</comment>
+  </data>
+  <data name="LbtnLevel1.Text" xml:space="preserve">
+    <value>الحسابات</value>
+    <comment>1</comment>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>جديد</value>
+    <comment>1</comment>
+  </data>
+  <data name="NewConfirm" xml:space="preserve">
+    <value>return confirm("هل أنت متاكد من حفظ بيانات الحساب؟")</value>
+    <comment>1</comment>
+  </data>
+  <data name="NewImage" xml:space="preserve">
+    <value>~/images/insource_642.png</value>
+    <comment>1</comment>
+  </data>
+  <data name="NewTooltip" xml:space="preserve">
+    <value>أضافة حساب جديد</value>
+    <comment>1</comment>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>لا توجد بيانات</value>
+    <comment>1</comment>
+  </data>
+  <data name="NumberValue" xml:space="preserve">
+    <value>يجب ان تكون القيمة رقمية</value>
+    <comment>1</comment>
+  </data>
+  <data name="OpenCredit" xml:space="preserve">
+    <value>رصيد أفتتاحي دائن</value>
+    <comment>1</comment>
+  </data>
+  <data name="OpenDebit" xml:space="preserve">
+    <value>رصيد أفتتاحي مدين</value>
+    <comment>1</comment>
+  </data>
+  <data name="SaveSuccess" xml:space="preserve">
+    <value>لقد تم حفظ البيانات بنجاح</value>
+    <comment>1</comment>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>بحث</value>
+    <comment>1</comment>
+  </data>
+  <data name="SearchImage" xml:space="preserve">
+    <value>~/images/binoculars_642.png</value>
+    <comment>1</comment>
+  </data>
+  <data name="SearchTooltip" xml:space="preserve">
+    <value>البحث عن بيانات الحساب</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectAccount" xml:space="preserve">
+    <value>أختيار الحساب و عرض تفاصيله</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectAccountCenter" xml:space="preserve">
+    <value>--- أختار مركز الحسابات ---</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectAccountType" xml:space="preserve">
+    <value>يجب أختيار نوع الحساب</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectAcDep" xml:space="preserve">
+    <value>--- أختار مجمع الاهلاك ---</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectArea" xml:space="preserve">
+    <value>--- أختار المنطقة---</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectBank" xml:space="preserve">
+    <value>البنوك</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectBranch" xml:space="preserve">
+    <value>--- أختار الفرع---</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectCar" xml:space="preserve">
+    <value>--- أختار السيارة---</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectCash" xml:space="preserve">
+    <value>النقدية</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectCostAcc" xml:space="preserve">
+    <value>--- أختار حساب التكاليف---</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectCustomer" xml:space="preserve">
+    <value>العملاء</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectDep" xml:space="preserve">
+    <value>أهلاكات</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectDepAccount" xml:space="preserve">
+    <value>--- أختار حساب الاهلاك ---</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectEmp" xml:space="preserve">
+    <value>--- أختار الموظف---</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectFixed" xml:space="preserve">
+    <value>أصول ثابتة</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectLoan" xml:space="preserve">
+    <value>العهد</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectOther" xml:space="preserve">
+    <value>أخرى</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectPage" xml:space="preserve">
+    <value>تم اختيار صفحة الحسابات التحليلية</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectProject" xml:space="preserve">
+    <value>--- أختار المشروع---</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectVendor" xml:space="preserve">
+    <value>الموردين</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectWorkShopExp" xml:space="preserve">
+    <value>--- أختار مصروف الصيانة ---</value>
+    <comment>1</comment>
+  </data>
+  <data name="StartPeriod" xml:space="preserve">
+    <value>تاريخ بداية الفترة</value>
+    <comment>1</comment>
+  </data>
+  <data name="SureDelete" xml:space="preserve">
+    <value>هل انت متاكد من الغاء </value>
+    <comment>1</comment>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>الحسابات التحليلية</value>
+    <comment>1</comment>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>عرض</value>
+    <comment>1</comment>
+  </data>
+  <data name="ViewAccount" xml:space="preserve">
+    <value>عرض بيانات الحساب</value>
+    <comment>1</comment>
+  </data>
+</root>

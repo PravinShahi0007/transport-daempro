@@ -1,0 +1,40 @@
+.menu,.menu ul{margin:0;padding:0;list-style:none}
+.menu li,.menu ul a{position:relative}
+.menu>li{float:left}
+.menu>li.floatr{float:right}
+.menu li>a{display:block}
+.menu ul{position:absolute;display:none;width:140px}
+.menu ul ul{top:0;left:125px}
+.menu>li.floatr>ul{right:0}
+.menu>li.floatr>ul ul{left:-125px}
+.menu li:hover>ul{display:block}
+.menu .cols1,.menu .cols2,.menu .cols3,.menu .cols4,.menu .cols5{position:absolute;display:none;overflow:auto}
+.menu .cols1,.menu .col1{width:160px}
+.menu .cols2,.menu .col2{width:320px}
+.menu .cols3,.menu .col3{width:480px}
+.menu .cols4,.menu .col4{width:640px}
+.menu .cols5,.menu .col5{width:800px}
+.menu i{float: right;padding: 0 0 5px 0;}
+.menu>li.floatr>div{right:0}
+.menu>li:hover>div{display:block}
+.menu .col1,.menu .col2,.menu .col3,.menu .col4,.menu .col5{float:right;z-index: 5001;}
+.menu2, .menu2 ul {list-style-image: none;list-style-position: outside;list-style-type: none;margin-bottom: 0;margin-left: 0;margin-right: 0;margin-top: 0;padding-bottom: 0;padding-left: 0;padding-right: 0;padding-top: 0;}
+.menu2 li, .menu2 ul a {position: relative;}
+.menu2 > li {float: right;padding:0 5px 0 0;}
+.menu2 > li.floatr {float: left;}
+.menu2 li > a {display: block;}
+.menu2 ul {display: none;position: absolute;width: 140px;}
+.menu2 ul ul {left: 125px;top: 0;}
+.menu2 > li.floatr > ul {right: 0;}
+.menu2 > li.floatr > ul ul {left: -125px;}
+.menu2 li:hover > ul {display: block;}
+.menu2 .cols1, .menu2 .cols2, .menu2 .cols3, .menu2 .cols4, .menu2 .cols5 {display: none;overflow-x: auto;overflow-y: auto;position: absolute;}
+.menu2 .cols1, .menu2 .col1 {width: 160px;}
+.menu2 .cols2, .menu2 .col2 {width: 320px;}
+.menu2 .cols3, .menu2 .col3 {width: 480px;}
+.menu2 .cols4, .menu2 .col4 {width: 640px;}
+.menu2 .cols5, .menu2 .col5 {width: 800px;}
+.menu2 i{float: left; padding:0 5px 0 0;}
+.menu2 > li.floatr > div {left: 0;}
+.menu2 > li:hover > div {display: block;right:-1px;left:auto;;direction:ltr;}
+.menu2 .col1, .menu2 .col2, .menu2 .col3, .menu2 .col4, .menu2 .col5 {float: left;z-index: 5001;}

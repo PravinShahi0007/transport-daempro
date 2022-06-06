@@ -1,0 +1,1066 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="EmpSite.master.cs" Inherits="ACC.EmpSite" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+	<link href="Script/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+	<link href="Styles/navbar/css_ar/core.css" rel="stylesheet" type="text/css" />
+	<link href="Styles/navbar/css_ar/Igray.css" rel="stylesheet" type="text/css" />
+	<link href="Styles/navbar/css_ar/slide.css" rel="stylesheet" type="text/css" />
+	<link href="Script/themes/blitzer/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+	<link href="Styles/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+	<link href="Styles/fonts/fontface.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		.ui-widget .ui-widget
+		{
+			font-size: 12px;
+		}
+		.ui-tabs
+		{
+			direction: rtl;
+		}
+		.ui-tabs .ui-tabs-nav li.ui-tabs-selected, .ui-tabs .ui-tabs-nav li.ui-state-default
+		{
+			float: right;
+		}
+		.ui-tabs .ui-tabs-nav li a
+		{
+			float: right;
+		}
+		.ui-tabs .ui-tabs-nav li a
+		{
+			font-size: 11pt !important;
+		}
+	</style>
+	<title></title>
+	<script src="Script/jquery-1.7.js" type="text/javascript"></script>
+	<script src="Script/jquery.slidingmessage.js" type="text/javascript"></script>
+<%--    <script src="Script/jquery.watermark.min.js" type="text/javascript"></script>--%>    
+	<script src="Script/external/jquery.bgiframe-2.1.2.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.core.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.widget.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.mouse.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.button.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.dialog.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.draggable.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.position.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.resizable.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.tabs.min.js" type="text/javascript"></script>
+	<script src="Script/jquery.blockUI.js" type="text/javascript"></script>
+	<!--[if IE]><script type="text/javascript" src="../excanvas.js"></script><![endif]-->
+	<script src="Script/coolclock.js" type="text/javascript"></script>
+	<script src="Script/moreskins.js" type="text/javascript"></script>
+	<script type="text/javascript" language="JavaScript">
+	    function pageLoad() {
+	        SetMyStyle();
+	    }
+
+
+	    function SetMyStyle() {
+	        if (!Sys.WebForms.PageRequestManager.getInstance().get_isInAsyncPostBack()) {
+	            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(AjaxEnd);
+	            Sys.WebForms.PageRequestManager.getInstance().add_initializeRequest(AjaxBegin);
+	        }
+
+	        function AjaxEnd(sender, args) {
+	            $.unblockUI();
+	        }
+
+	        function AjaxBegin(sender, args) {
+	            if (document.getElementById("divHeader").className == "header") {
+	                $.blockUI({ message: '<P>برجاء الانتظار ... جاري معالجة البيانات &nbsp;&nbsp; <img src="images/busy.gif" /></P>' });
+	            }
+	            else {
+	                $.blockUI({ message: '<P>Data Processing in Progress... &nbsp;&nbsp; <img src="images/busy.gif" /></P>' });
+	            }
+	        }
+
+
+	        $(function () {
+	            //$('input[type="text"],select[name*="ContentPlaceHolder"],input[type="password"]').focusin(function () {
+	            $('input,select,textarea').focusin(function () {
+	                $(this).addClass('HoverHighLightText ');
+	            });
+	            //$('input[type="text"],select[name*="ContentPlaceHolder"],input[type="password"]').focusout(function () {
+	            $('input,select,textarea').focusout(function () {
+	                $(this).removeClass('HoverHighLightText');
+	            });
+
+	            $('input,select,textarea').keydown(function (e) {
+	                var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+	                if (key == 13) {
+	                    e.preventDefault();
+	                    var inputs = $(this).closest('form').find(':input:visible');
+	                    inputs.eq(inputs.index(this) + 1).focus();
+	                }
+	            });
+
+	            $('table[id*="Content"] tr').mouseover(function () {
+	                $(this).addClass('HoverHighLight');
+	            });
+	            $('table[id*="Content"] tr').mouseout(function () {
+	                $(this).removeClass('HoverHighLight');
+	            });
+	        });
+	    }
+
+	    function DispMessage(flag, myitem) {
+	        var mystr = "";
+	        if (flag == 1) {
+	            mystr = "<span class='ui-icon ui-icon-circle-check' style='float:right; margin:0 0 0 10px;'></span>";
+	        }
+	        else {
+	            mystr = "<span class='ui-icon ui-icon-alert' style='float:right; margin:0 0 0 10px;'></span>";
+	        }
+	        if (document.getElementById("divHeader").className == "header") {
+	            var $dialog = $('<div  dir="rtl" style="font-size:14px;"></div>')
+				    .html(mystr + '<center><strong>' + myitem + '</strong></center>')
+				    .dialog({
+				        autoOpen: true,
+				        title: 'الناقلات البرية',
+				        modal: true,
+				        closeOnEscape: false,
+				        buttons: [{
+				            text: "موافق",
+				            position: "center",
+				            click: function () { $(this).dialog("close"); }
+				        }]
+				    });
+	        }
+	        else {
+	            var $dialog = $('<div  dir="ltr" style="font-size:14px;"></div>')
+				    .html(mystr + '<center><strong>' + myitem + '</strong></center>')
+				    .dialog({
+				        autoOpen: true,
+				        title: 'Neqelat',
+				        modal: true,
+				        closeOnEscape: false,
+				        buttons: [{
+				            text: "OK",
+				            position: "center",
+				            click: function () { $(this).dialog("close"); }
+				        }]
+				    });
+	        }
+	        // prevent the default action, e.g., following a link
+	        return false;
+	    }
+
+	    //javascript: window.history.forward(1);
+
+	    function doProcess() {
+	        if (document.getElementById("divHeader").className == "header") {
+	            var x = confirm("تشغيل نظام مطابقة الارصدة؟");
+	            $.blockUI({ message: '<P>برجاء الانتظار ... جاري معالجة البيانات &nbsp;&nbsp; <img src="images/busy.gif" /></P>' });
+	            if (x) {
+	                $.ajax({
+	                    type: "POST",
+	                    url: "default.aspx/doTally",
+	                    data: "{}",
+	                    contentType: "application/json; charset=utf-8",
+	                    dataType: "json",
+	                    success: function (msg) {
+	                        // Replace the div's content with the page method's return.
+	                        alert("لقد تم تشغيل مطابقة الارصدة بنجاح");
+	                    }
+	                });
+	                $.unblockUI();
+	            }
+	        }
+	        else {
+	            var x = confirm("Process Balances Tally System?");
+	            $.blockUI({ message: '<P>Data Processing in Progress... &nbsp;&nbsp; <img src="images/busy.gif" /></P>' });
+	            if (x) {
+	                $.ajax({
+	                    type: "POST",
+	                    url: "default.aspx/doTally",
+	                    data: "{}",
+	                    contentType: "application/json; charset=utf-8",
+	                    dataType: "json",
+	                    success: function (msg) {
+	                        // Replace the div's content with the page method's return.
+	                        alert("Balances Tally Successfully Done");
+	                    }
+	                });
+	                $.unblockUI();
+	            }
+	        }
+	        return x;
+	    }
+	    function onComplete(result, response, content) {
+	        alert(result);
+	    }             
+		   
+	</script>
+	<script type="text/javascript">
+	    $(document).ready(function () {
+	        $(".trigger").click(function () {
+	            $(".panel").toggle("fast");
+	            $(this).toggleClass("active");
+	            return false;
+	        });
+	    });
+	</script>
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+	<form id="form1" runat="server" dir="<%$ Resources:Resource, dir %>" enctype="multipart/form-data">
+	<div class="page">
+		<div id="divHeader" runat="server" class="<%$ Resources:Resource, HeaderClass %>">
+			<div id="divRecord" runat="server"  class="<%$ Resources:Resource, record %>">
+				<p id="p1" runat="server"  class="<%$ Resources:Resource, p %>">
+                    <a><i class="fa fa-map-marker"></i>&nbsp;<asp:Label ID="Label4" runat="server" Text="<%$ Resources:Resource, SiteLoc %>"></asp:Label></a>
+					<a>&nbsp;<asp:Label ID="lblSite" runat="server" ForeColor="#FFFF00" Text="فرع النسيم"></asp:Label></a>
+				</p>
+				<p id="p2" runat="server"  class="<%$ Resources:Resource, p %>">
+					<a><i class="fa fa-truck"></i>&nbsp;<asp:Label ID="Label2" runat="server" Text="<%$ Resources:Resource, AreaLoc %>"></asp:Label></a>
+					<a>&nbsp;<asp:Label ID="lblArea" runat="server" ForeColor="#FFFF00" Text="فرع النسيم"></asp:Label></a>
+				</p>
+				<p id="p3" runat="server"  class="<%$ Resources:Resource, p %>">
+					<a><i class="fa fa-cubes"></i>
+						<asp:Label ID="Label6" runat="server" Text="<%$ Resources:Resource, StoreLoc %>"></asp:Label></a> <a>&nbsp;<asp:Label
+							ID="lblStore" runat="server" ForeColor="#FFFF00" Text="لا يوجد"></asp:Label></a>
+				</p>
+				<p id="p4" runat="server"  class="<%$ Resources:Resource, p %>">
+					<a><i class="fa fa-database"></i>&nbsp;<asp:Label ID="Label3" runat="server" Text="<%$ Resources:Resource, DataLoc %>"></asp:Label>&nbsp;&nbsp;</a>
+					<a>
+						<asp:Label ID="lblData" runat="server" ForeColor="Yellow" Text=""></asp:Label></a>&nbsp;
+                        <span>
+						<asp:LinkButton ID="btnLangImg" ToolTip="<%$ Resources:Resource, Lang %>" 
+                        Text="<%$ Resources:Resource, LangMsg %>" ForeColor="White" Font-Bold="true" runat="server" 
+                        onclick="btnLangImg_Click">LinkButton</asp:LinkButton></span>
+				</p>
+				<p id="p5" runat="server"  class="<%$ Resources:Resource, p %>">
+					<a><i class="fa fa-user"></i>&nbsp;<asp:Label ID="LblUser2" runat="server" Text="<%$ Resources:Resource, User %>"></asp:Label></a>
+					<a>
+						<asp:Label ID="LblUser" runat="server" ForeColor="Yellow" Text=""></asp:Label></a>
+				</p>
+			</div>
+			<div id="logoText" runat="server"  class="<%$ Resources:Resource, logoText %>">
+				<asp:Label ID="Label1" runat="server" Text="<%$ Resources:Resource, Header %>"></asp:Label>
+			</div>
+			<div id="DivLang" runat="server" style="<%$ Resources:Resource, DivLangStyle %>">
+				<![if !IE]><canvas id="clockid" style="display: block; text-align: left;" class="CoolClock:swissRail:35:Seconds:+3 myClock"></canvas><![endif]>
+				<!--[if IE]><canvas id="clockid" style="display:block; text-align:left; "  class="CoolClock:swissRail:35:noSeconds:+3 myClock"></canvas><![endif]-->
+				<a><i class="fa fa-power-off"></i>&nbsp;<asp:LoginStatus ID="LoginStatus1" runat="server"
+					ForeColor="White" LogoutText="<%$ Resources:Resource, Logout %>" LoginText="<%$ Resources:Resource, LoginMsg %>" LogoutAction="Redirect"
+					LogoutPageUrl="~/logout.aspx" OnLoggingOut="LoginStatus1_LoggingOut" />
+				</a>
+			</div>
+		</div>
+		<div id="DivContainer" runat="server" style="<%$ Resources:Resource, container %>">
+			<nav class="row">
+				<div class="span12">
+					<asp:HiddenField ID="myArea" Value="" runat="server" />
+					<asp:HiddenField ID="AccSite" Value="" runat="server" />
+					<asp:HiddenField ID="myStore" Value="1" runat="server" />
+					<asp:HiddenField ID="ClosedPeriod" Value="" runat="server" />
+					<ul id="menu" runat="server" class="<%$ Resources:Resource, Menu %>">	
+						<!--الرئيسية-->
+						<li class="floatr"><a href='<%= string.Format("default.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>&nbsp;<asp:Literal ID="Literal00" Text="<%$ Resources:Resource, Home %>" runat="server"></asp:Literal><i class="fa fa-home"></i></a></li>									
+						<!--الحسابات-->
+						<li id="liA1" runat="server" class="floatr"><a href="#">&nbsp;<asp:Literal ID="Literal84" Text="<%$ Resources:Resource, liA1 %>" runat="server"></asp:Literal><i class="fa fa-file-text"></i></a>
+							<div class="cols4">
+								<div class="col1">
+									 <!--الملفات-->
+									 <h4><i class="fa fa-archive"></i>&nbsp;<asp:Literal ID="Literal85" Text="<%$ Resources:Resource, Files %>" runat="server"></asp:Literal></h4>
+										<ol>
+											<!--الحسابات الرئيسية-->
+											<li id="liA10" runat="server"><a href='<%= string.Format("WebClassify.aspx?FType=3&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal1" Text="<%$ Resources:Resource, liA10 %>" runat="server"></asp:Literal>
+												<i class="fa fa-files-o" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebClassify.aspx?FType=3&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+										</a></li>
+											<!--الحسابات التحليلية-->
+											<li id="liA11" runat="server"><a href='<%= string.Format("WebAcc.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal2" Text="<%$ Resources:Resource, liA11 %>" runat="server"></asp:Literal>
+												<i class="fa fa-clipboard" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebAcc.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+											</a></li>
+											<!--مركز الحسابات-->
+											<li id="liA12" runat="server"><a href='<%= string.Format("WebClassify.aspx?FType=6&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal3" Text="<%$ Resources:Resource, liA12 %>" runat="server"></asp:Literal>
+												<i class="fa fa-th" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebClassify.aspx?FType=6&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>												
+											</a></li>
+											<!--الفروع-->
+											<li id="liA13" runat="server"><a href='<%= string.Format("WebClassify.aspx?FType=5&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal4" Text="<%$ Resources:Resource, liA13 %>" runat="server"></asp:Literal>
+												<i class="fa fa-sitemap" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebClassify.aspx?FType=5&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+											</a></li>
+											<!--المشاريع-->
+											<li id="liA14" runat="server"><a href='<%= string.Format("WebClassify.aspx?FType=4&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal5" Text="<%$ Resources:Resource, liA14 %>" runat="server"></asp:Literal>
+												<i class="fa fa-share-alt" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebClassify.aspx?FType=4&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+											</a></li>
+											<!--المناطق-->
+											<li id="liA15" runat="server"><a href='<%= string.Format("WebClassify.aspx?FType=13&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal6" Text="<%$ Resources:Resource, liA15 %>" runat="server"></asp:Literal>
+												<i class="fa fa-map-marker" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebClassify.aspx?FType=13&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+											</a></li>
+											<!--حسابات التكاليف-->
+											<li id="liA16" runat="server"><a href='<%= string.Format("WebClassify.aspx?FType=14&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal7" Text="<%$ Resources:Resource, liA16 %>" runat="server"></asp:Literal>
+												<i class="fa fa-sort-amount-desc" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebClassify.aspx?FType=14&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>' ></i>
+											</a></li>
+											<!--العملات-->
+											<li id="liA17" runat="server"><a href='<%= string.Format("WebCoin.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal8" Text="<%$ Resources:Resource, liA17 %>" runat="server"></asp:Literal>
+												<i class="fa fa-money" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebCoin.aspx?&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>' ></i>
+											</a></li>
+											<!--الفروع-->
+											<%--					<li id="li49" runat="server"><a href="WebBranch.aspx">الفروع
+												<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebBranch.aspx'); return false;"
+													style="<%$ Resources: Resource, StarPos %>" />
+											</a></li>
+											--%>
+										</ol>
+								</div>
+								<div class="col1">
+									<!--المعاملات-->
+									<h4><i class="fa fa-sliders"></i>&nbsp;<asp:Literal ID="Literal86" Text="<%$ Resources:Resource, Transactions %>" runat="server"></asp:Literal></h4>
+										<ol>
+											<!--سند القبض-->
+											<li id="liA24" runat="server"><a href='<%= string.Format("WebRVou12.aspx?FType=1&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal9" Text="<%$ Resources:Resource, liA24 %>" runat="server"></asp:Literal>
+												<i class="fa fa-plus-circle" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebRVou12.aspx?FType=1&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>' ></i>
+											</a></li>
+											<!--سندات القبض المجمعة-->
+											<%-- <li id="li8" runat="server"><a href="WebRVou.aspx">سندات القبض المجمعة
+												<img alt="Favorites" runat="server" id="i010" title="<%$ Resources:Resource,OpenNewWindow %>"  src="images/Favorites.png" onclick="window.open('WebRVou.aspx'); return false;"
+													style="<%$ Resources: Resource, StarPos %>" />
+											</a></li>
+											<!--سند صرف مؤقت-->
+										   <li id="li9" runat="server"><a href="WebTVou.aspx">سند صرف مؤقت
+												<img alt="Favorites" runat="server" id="i011" title="<%$ Resources:Resource,OpenNewWindow %>"  src="images/Favorites.png" onclick="window.open('WebTVou.aspx'); return false;"
+													style="<%$ Resources: Resource, StarPos %>" />
+											</a></li>
+											--%>
+											<!--سند صرف-->
+											<li id="liA25" runat="server"><a href='<%= string.Format("WebRVou12.aspx?FType=2&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal10" Text="<%$ Resources:Resource, liA25 %>" runat="server"></asp:Literal>
+												<i class="fa fa-minus-circle" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebRVou12.aspx?FType=2&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+											</a></li>
+											<!--سندات الصرف المجمعة-->
+											<%--					<li id="li11" runat="server"><a href="WebPVou.aspx">سندات الصرف المجمعة
+												<img alt="Favorites" runat="server" id="i013" title="<%$ Resources:Resource,OpenNewWindow %>"  src="images/Favorites.png" onclick="window.open('WebPVou.aspx'); return false;"
+													style="<%$ Resources: Resource, StarPos %>" />
+											</a></li>
+											--%>
+											<!--قيد يومية-->
+											<li id="liA26" runat="server"><a href='<%= string.Format("WebJVou.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal011" Text="<%$ Resources:Resource, liA26 %>" runat="server"></asp:Literal>
+												<i class="fa fa-book" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebJVou.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>' ></i>
+											</a></li>
+											<!--إيداع بنكي-->
+											<li id="liA27" runat="server"><a href='<%= string.Format("WebBankPay.aspx?Flag=0&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal12" Text="<%$ Resources:Resource, liA27 %>" runat="server"></asp:Literal>
+												<i class="fa fa-bookmark" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebBankPay.aspx?Flag=0&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>' ></i>
+											</a></li>
+											<!--تجويل بنكي-->
+											<li id="liA28" runat="server"><a href='<%= string.Format("WebBankTrans.aspx?Flag=0&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal13" Text="<%$ Resources:Resource, liA28 %>" runat="server"></asp:Literal>
+												<i class="fa fa-external-link" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebBankTrans.aspx?Flag=0&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>' ></i>
+											</a></li>
+											<!--طلب شراء مواد-->
+											<li id="liA29" runat="server"><a href='<%= string.Format("WebPPO.aspx?Flag=0&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal14" Text="<%$ Resources:Resource, liA29 %>" runat="server"></asp:Literal>
+												<i class="fa fa-shopping-cart" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebPPO.aspx?Flag=0&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>' ></i>
+											</a></li>
+											<!--طلب دفع-->
+											<li id="liA30" runat="server"><a href='<%= string.Format("WebPPO1.aspx?Flag=0&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal15" Text="<%$ Resources:Resource, liA30 %>" runat="server"></asp:Literal>
+												<i class="fa fa-credit-card" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebPPO1.aspx?Flag=0&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+											</a></li>
+										</ol>
+								</div>
+								<div class="col1">
+									<!--أعدادات النظام-->
+									<h4><i class="fa fa-cogs"></i>&nbsp;<asp:Literal ID="Literal87" Text="<%$ Resources:Resource, Setting %>" runat="server"></asp:Literal></h4>
+										<ol>
+											<!--أعدادات النظام-->
+											<li id="liA35" runat="server"><a href='<%= string.Format("WebAccSetup.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal16" Text="<%$ Resources:Resource, liA35 %>" runat="server"></asp:Literal>
+											 <i class="fa fa-wrench" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebAccSetup.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+											</a></li>
+											<!--مطابقة الارصدة-->
+											<li id="liA36" runat="server"><a onclick="doProcess();"  href="#"><asp:Literal ID="Literal17" Text="<%$ Resources:Resource, liA36 %>" runat="server"></asp:Literal>
+											<i class="fa fa-th-list"></i></a></li>
+											<!--تشغيل قيود الاهلاك-->
+											<li id="liA37" runat="server"><a href='<%= string.Format("WebFixAssetPro.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal18" Text="<%$ Resources:Resource, liA37 %>" runat="server"></asp:Literal>
+											<i class="fa fa-gavel" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebFixAssetPro.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i></a></li>
+											<!--أقفال الفترة-->
+											<li id="liA38" runat="server"><a href='<%= string.Format("WebClosePeriod.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal19" Text="<%$ Resources:Resource, liA38 %>" runat="server"></asp:Literal>
+											<i class="fa fa-link" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebClosePeriod.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'  ></i></a></li>
+										</ol>											
+								</div>
+								<div class="col1">
+									<!--التقارير-->
+									<h4><i class="fa fa-newspaper-o"></i>&nbsp;<asp:Literal ID="Literal88" Text="<%$ Resources:Resource, Reports %>" runat="server"></asp:Literal></h4>
+										<ol>
+											<!--دليل الحسابات-->
+											<li id="liA40" runat="server"><a href='<%= string.Format("WebDaleel.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal20" Text="<%$ Resources:Resource, liA40 %>" runat="server"></asp:Literal>
+												<i class="fa fa-tree" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebDaleel.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>' ></i>
+											</a></li>
+											<!--كشف حساب تفصيلي-->
+											<li id="liA41" runat="server"><a href='<%= string.Format("WebStatement.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal21" Text="<%$ Resources:Resource, liA41 %>" runat="server"></asp:Literal>
+												<i class="fa fa-tasks" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebStatement.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+											</a></li>
+											<!--دفتؤ قيود اليومية-->
+											<li id="liA42" runat="server"><a href='<%= string.Format("WebJournal.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal22" Text="<%$ Resources:Resource, liA42 %>" runat="server"></asp:Literal>
+												<i class="fa fa-bars" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebJournal.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>' ></i>
+											</a></li>
+											<!--كشف الاصول الثابتة-->
+											<li id="liA43" runat="server"><a href='<%= string.Format("WebFixedAsset.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal23" Text="<%$ Resources:Resource, liA43 %>" runat="server"></asp:Literal>
+												<i class="fa fa-bar-chart" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebFixedAsset.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+											</a></li>
+											<!--الحركة الشهرية للحسابات-->
+											<li id="liA44" runat="server"><a href='<%= string.Format("WebMonthlyMovement.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal24" Text="<%$ Resources:Resource, liA44 %>" runat="server"></asp:Literal>
+												<i class="fa fa-road" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebMonthlyMovement.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'  ></i>
+											</a></li>
+											<!--دفتر الاستاذ-->
+											<li id="liA45" runat="server"><a href='<%= string.Format("WebLedger.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal25" Text="<%$ Resources:Resource, liA45 %>" runat="server"></asp:Literal>
+												<i class="fa fa-building-o" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebLedger.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'  ></i>
+											</a></li>
+											<!--ميزان المراجعة-->
+											<li id="liA46" runat="server"><a href='<%= string.Format("WebTrialBalance.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal26" Text="<%$ Resources:Resource, liA46 %>" runat="server"></asp:Literal>
+												<i class="fa fa-paper-plane" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebTrialBalance.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+											</a></li>
+											<!--كشف متابعة المستخدمين-->
+											<li id="liA47" runat="server"><a href='<%= string.Format("WebUsersTranRep.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal27" Text="<%$ Resources:Resource, liA47 %>" runat="server"></asp:Literal>
+												<i class="fa fa-child" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebUsersTranRep.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>' ></i>
+											</a></li>
+											<!--حساب التشغيل و المتاجرة-->
+											<%--<li id="li27" runat="server"><a href="#">حساب التشغيل و المتاجرة
+												<img alt="Favorites" id="i031" runat="server" title="<%$ Resources:Resource,OpenNewWindow %>"  src="images/Favorites.png" onclick="window.open('#'); return false;"
+													style="<%$ Resources: Resource, StarPos %>" />
+											</a></li>
+											<!--حساب الارباح و الخسائر-->
+											<li id="li28" runat="server"><a href="#">حساب الارباح و الخسائر
+												<img alt="Favorites" id="i032" runat="server" title="<%$ Resources:Resource,OpenNewWindow %>"  src="images/Favorites.png" onclick="window.open('#'); return false;"
+													style="<%$ Resources: Resource, StarPos %>" />
+											</a></li>
+											--%>
+											<!--قائمة الدخل-->
+											<li id="liA60" runat="server"><a href="#"><asp:Literal ID="Literal28" Text="<%$ Resources:Resource, liA60 %>" runat="server"></asp:Literal>
+												<i class="fa fa-area-chart" onclick="window.open('#'); return false;" ></i>
+											</a></li>
+											<!--الميزانية العمومية-->
+											<li id="liA61" runat="server"><a href="#"><asp:Literal ID="Literal29" Text="<%$ Resources:Resource, liA61 %>" runat="server"></asp:Literal>
+												<i class="fa fa-pie-chart" onclick="window.open('#'); return false;"></i>
+											</a></li>
+											<!--مراجعة تسلسل السندات-->
+											<li id="liA62" runat="server"><a href='<%= string.Format("WebDocSerial.aspx?Flag=0&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal30" Text="<%$ Resources:Resource, liA62 %>" runat="server"></asp:Literal>
+												 <i class="fa fa-ellipsis-v" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebDocSerial.aspx?Flag=0&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>' ></i>
+											</a></li>
+											<!--بيان أعمار الديون-->
+											<li id="liA63" runat="server"><a href='<%= string.Format("WebDocSerial.aspx?Flag=0&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal31" Text="<%$ Resources:Resource, liA63 %>" runat="server"></asp:Literal>
+												 <i class="fa fa-ellipsis-v" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebDocSerial.aspx?Flag=0&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+											</a></li>
+											</ol>
+										</div>
+									</div>									
+									</li>
+									<!--التشغيل-->
+									<li id="liB1" runat="server" class="floatr"><a href="#">&nbsp;<asp:Literal ID="Literal89" Text="<%$ Resources:Resource, liB1 %>" runat="server"></asp:Literal><i class="fa fa-truck"></i></a>
+										<div class="cols5">
+										<div class="col1">
+											<!--الملفات-->
+											<h4><i class="fa fa-archive"></i>&nbsp;<asp:Literal ID="Literal90" Text="<%$ Resources:Resource, Files %>" runat="server"></asp:Literal></h4>
+											<ol>
+												<!--المدن-->
+												<li id="liB10" runat="server"><a href='<%= string.Format("WebCity.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal32" Text="<%$ Resources:Resource, liB10 %>" runat="server"></asp:Literal>
+													<i class="fa fa-flag" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebCity.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--أنواع السيارات-->
+												<li id="liB11" runat="server"><a href='<%= string.Format("WebClassify.aspx?FType=15&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal33" Text="<%$ Resources:Resource, liB11 %>" runat="server"></asp:Literal>
+													<i class="fa fa-car" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebClassify.aspx?FType=15&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--مستويات التسعير-->
+												<li id="liB12" runat="server"><a href='<%= string.Format("WebClassify.aspx?FType=16&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal34" Text="<%$ Resources:Resource, liB12 %>" runat="server"></asp:Literal>
+													<i class="fa fa-line-chart" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebClassify.aspx?FType=16&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--سياسة التسعير-->
+												<li id="liB13" runat="server"><a href='<%= string.Format("WebPrices.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal35" Text="<%$ Resources:Resource, liB13 %>" runat="server"></asp:Literal>
+													<i class="fa fa-money" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebPrices.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--العروض و المواسم-->
+												<li id="liB14" runat="server"><a href='<%= string.Format("WebOffers.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal36" Text="<%$ Resources:Resource, liB14 %>" runat="server"></asp:Literal>
+													<i class="fa fa-bell-o" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebOffers.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--العملاء-->
+												<li id="liB15" runat="server"><a href='<%= string.Format("WebClients.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal37" Text="<%$ Resources:Resource, liB15 %>" runat="server"></asp:Literal>
+													<i class="fa fa-coffee" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebClients.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--السائقين-->
+												<li id="liB16" runat="server"><a href='<%= string.Format("WebDrivers.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal38" Text="<%$ Resources:Resource, liB16 %>" runat="server"></asp:Literal>
+													<i class="fa fa-male" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebDrivers.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--الاكواد العامة-->
+												<li id="liB17" runat="server"><a href='<%= string.Format("WebEmpCodes.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal39" Text="<%$ Resources:Resource, liB17 %>" runat="server"></asp:Literal>
+													<i class="fa fa-bolt" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebEmpCodes.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>' ></i>
+												</a></li>
+												<!--أنواع المركبات-->
+												<li id="liB19" runat="server"><a href='<%= string.Format("WebCarType.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal40" Text="<%$ Resources:Resource, liB19 %>" runat="server"></asp:Literal>
+													<i class="fa fa-truck" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebCarType.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--الشاحنات-->
+												<li id="liB18" runat="server"><a href='<%= string.Format("WebCars.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal41" Text="<%$ Resources:Resource, liB18 %>" runat="server"></asp:Literal>
+													<i class="fa fa-bus" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebCars.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+											</ol>
+										</div>
+										<div class="col1">
+											<!--المعاملات-->
+											<h4><i class="fa fa-sliders"></i>&nbsp;<asp:Literal ID="Literal91" Text="<%$ Resources:Resource, Transactions %>" runat="server"></asp:Literal></h4>
+											<ol>
+												<!--أتفاقية شحن - فاتورة-->
+												<li id="liB20" runat="server"><a href='<%= string.Format("WebInvoice.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal42" Text="<%$ Resources:Resource, liB20 %>" runat="server"></asp:Literal>
+													<i class="fa fa-file-text" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebInvoice.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--بيان الترحيل-->
+												<li id="liB21" runat="server"><a href='<%= string.Format("WebCarMove.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal43" Text="<%$ Resources:Resource, liB21 %>" runat="server"></asp:Literal>
+													<i class="fa fa-sign-out" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebCarMove.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--بيان الوصول-->
+												<li id="liB22" runat="server"><a href='<%= string.Format("WebCarMoveRCV.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal44" Text="<%$ Resources:Resource, liB22 %>" runat="server"></asp:Literal>
+													<i class="fa fa-tachometer" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebCarMoveRCV.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--سند استلام سيارة-->
+												<li id="liB23" runat="server"><a href='<%= string.Format("WebCarRCV.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal45" Text="<%$ Resources:Resource, liB23 %>" runat="server"></asp:Literal>
+													<i class="fa fa-suitcase" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebCarRCV.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--سند قبض-->
+												<li id="liB24" runat="server"><a href='<%= string.Format("WebRVou1.aspx?Flag=1&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal46" Text="<%$ Resources:Resource, liB24 %>" runat="server"></asp:Literal>
+													<i class="fa fa-plus-circle" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebRVou1.aspx?Flag=1&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--سند صرف-->
+												<li id="liB25" runat="server"><a href='<%= string.Format("WebPay1.aspx?Flag=1&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal47" Text="<%$ Resources:Resource, liB25 %>" runat="server"></asp:Literal>
+													<i class="fa fa-minus-circle" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebPay1.aspx?Flag=1&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--قسيمة إيداع بنكي-->
+												<li id="liB26" runat="server"><a href='<%= string.Format("WebBankPay.aspx?Flag=1&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal48" Text="<%$ Resources:Resource, liB26 %>" runat="server"></asp:Literal>
+													<i class="fa fa-bookmark" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebBankPay.aspx?Flag=1&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--طلب شراء مواد-->
+												<li id="liB27" runat="server"><a href='<%= string.Format("WebPPO.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal49" Text="<%$ Resources:Resource, liB27 %>" runat="server"></asp:Literal>
+													<i class="fa fa-shopping-cart" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebPPO.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--طلب دفع-->
+												<li id="liB28" runat="server"><a href='<%= string.Format("WebPPO1.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal50" Text="<%$ Resources:Resource, liB28 %>" runat="server"></asp:Literal>
+													<i class="fa fa-credit-card" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebPPO1.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+											</ol>
+										</div>
+										<div class="col1">
+											<!--أعدادات النظام-->
+											<h4><i class="fa fa-cogs"></i>&nbsp;<asp:Literal ID="Literal92" Text="<%$ Resources:Resource, Setting %>" runat="server"></asp:Literal></h4>
+											<ol>
+												<!--أعدادات النظام-->
+												<li id="liB30" runat="server"><a href='<%= string.Format("WebSetup.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal51" Text="<%$ Resources:Resource, liB30 %>" runat="server"></asp:Literal>
+													<i class="fa fa-wrench" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebSetup.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--خطوط الرحلة-->
+												<li id="liB31" runat="server"><a href='<%= string.Format("WebLines.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal52" Text="<%$ Resources:Resource, liB31 %>" runat="server"></asp:Literal>
+													<i class="fa fa-sliders" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebLines.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--النسخ الاحتياطية-->
+												<li id="liB32" runat="server"><a href='<%= string.Format("WebBackup.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal53" Text="<%$ Resources:Resource, liB32 %>" runat="server"></asp:Literal>
+													<i class="fa fa-database"></i>
+												</a></li>
+											</ol>
+										</div>
+										<div class="col1">
+											<!--تقارير يومية-->
+											<h4><i class="fa fa-newspaper-o"></i>&nbsp;<asp:Literal ID="Literal93" Text="<%$ Resources:Resource, DailyReports %>" runat="server"></asp:Literal></h4>
+											<ol>
+												<!--الحركة اليومية-->
+												<li id="liB41" runat="server"><a href='<%= string.Format("WebDailyTrackRep.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal54" Text="<%$ Resources:Resource, liB41 %>" runat="server"></asp:Literal>
+													<i class="fa fa-file-text-o" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebDailyTrackRep.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>' ></i>
+												</a></li>
+												<!--حركة الشاحنات-->
+												<li id="liB42" runat="server"><a href='<%= string.Format("WebTrackMoveRep.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal55" Text="<%$ Resources:Resource, liB42 %>" runat="server"></asp:Literal>
+													<i class="fa fa-truck" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebTrackMoveRep2.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--بيانات الترحيل المعلقة-->
+												<li id="liB43" runat="server"><a href='<%= string.Format("WebCarMoveVSrcv.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal56" Text="<%$ Resources:Resource, liB43 %>" runat="server"></asp:Literal>
+													<i class="fa fa-clipboard" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebCarMoveVSrcv.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--بيان الفواتير النقدية-->
+												<li id="liB44" runat="server"><a href='<%= string.Format("WebCashInvRep.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal57" Text="<%$ Resources:Resource, liB44 %>" runat="server"></asp:Literal>
+													<i class="fa fa-money" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebCashInvRep.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--بيان الفواتير الآجلة-->
+												<li id="liB46" runat="server"><a href='<%= string.Format("WebCreditInvRep.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal58" Text="<%$ Resources:Resource, liB46 %>" runat="server"></asp:Literal>
+													<i class="fa fa-university" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebCreditInvRep.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--فواتير لم يتم تحصيلها-->
+												<li id="liB47" runat="server"><a href='<%= string.Format("WebNotPaidInvRep.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal59" Text="<%$ Resources:Resource, liB47 %>" runat="server"></asp:Literal>
+													<i class="fa fa-umbrella" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebNotPaidInvRep.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>' ></i>
+												</a></li>
+												<!--بيان الفواتير المحصلة-->
+												<li id="liB48" runat="server"><a href='<%= string.Format("WebPaidInvRep.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal60" Text="<%$ Resources:Resource, liB48 %>" runat="server"></asp:Literal>
+													<i class="fa fa-life-ring" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebPaidInvRep.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>' ></i>
+												</a></li>
+											</ol>
+										</div>
+										<div class="col1">
+											<!--التقارير-->
+											<h4><i class="fa fa-newspaper-o"></i>&nbsp;<asp:Literal ID="Literal94" Text="<%$ Resources:Resource, Reports %>" runat="server"></asp:Literal></h4>
+											<ol>
+												<!--بيان الفواتير الملغاه-->
+												<li id="liB45" runat="server"><a href='<%= string.Format("WebDeleteInvRep.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal61" Text="<%$ Resources:Resource, liB45 %>" runat="server"></asp:Literal>
+													<i class="fa fa-ticket" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebDeleteInvRep.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>' ></i>
+												</a></li>
+												<!--مراقبة تحصيل الفواتير-->
+												<li id="liB49" runat="server"><a href='<%= string.Format("WebInvErrorRep.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal62" Text="<%$ Resources:Resource, liB49 %>" runat="server"></asp:Literal>
+													<i class="fa fa-eye" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebInvErrorRep.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>' ></i>
+												</a></li>
+												<!--بيان حركة شاحنة / سائق-->
+												<li id="liB50" runat="server"><a href='<%= string.Format("WebDrCarMove.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal63" Text="<%$ Resources:Resource, liB50 %>" runat="server"></asp:Literal>
+													<i class="fa fa-tasks" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebDrCarMove.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--معدل أداء موظفي الفرع-->
+												<li id="liB51" runat="server"><a href='<%= string.Format("WebInvEmpsPerRep.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal64" Text="<%$ Resources:Resource, liB51 %>" runat="server"></asp:Literal>
+													<i class="fa fa-pie-chart" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebInvEmpsPerRep.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>' ></i>
+												</a></li>
+												<!--تفصيلي أداء موظف الفرع-->
+												<li id="liB52" runat="server"><a href='<%= string.Format("WebInvEmpPerRep.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal65" Text="<%$ Resources:Resource, liB52 %>" runat="server"></asp:Literal>
+													<i class="fa fa-area-chart" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebInvEmpPerRep.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--أجمالي أنشطة العملاء-->
+												<li id="liB53" runat="server"><a href='<%= string.Format("WebCustomersInvRep.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal66" Text="<%$ Resources:Resource, liB53 %>" runat="server"></asp:Literal>
+													<i class="fa fa-file-image-o" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebCustomersInvRep.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--مراقبة تسلسل السندات-->
+												<li id="liB54" runat="server"><a href='<%= string.Format("WebDocSerial.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal67" Text="<%$ Resources:Resource, liB54 %>" runat="server"></asp:Literal>
+													<i class="fa fa-ellipsis-v" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebDocSerial.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+											</ol>
+										</div>
+									</div>									
+									</li>
+									<!--المستودعات-->
+									<li id="liC1" runat="server" class="floatr"><a href="#">&nbsp;<asp:Literal ID="Literal82" Text="<%$ Resources:Resource, Stores %>" runat="server"></asp:Literal><i class="fa fa-cubes"></i></a>
+										<div class="cols4">
+										<div class="col1">
+											<!--الملفات-->
+											<h4><i class="fa fa-archive"></i>&nbsp;<asp:Literal ID="Literal104" Text="<%$ Resources:Resource, Files %>" runat="server"></asp:Literal></h4>
+											<ol>
+												<!--أنواع الاصناف-->
+												<li id="liC10" runat="server" ><a href='<%= string.Format("WebICat.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal901" Text="<%$ Resources:Resource, F1 %>" runat="server"></asp:Literal>
+													<i class="fa fa-outdent" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebICat.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!-- بطاقة الصنف -->
+												<li id="liC11" runat="server" ><a href='<%= string.Format("WebItem.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal904" Text="<%$ Resources:Resource, F2 %>" runat="server"></asp:Literal>
+													<i class="fa fa-list-alt" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebItem.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!--  الخدمات-->
+												<li id="liC12" runat="server" ><a href='<%= string.Format("WebService.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal905" Text="<%$ Resources:Resource, F3 %>" runat="server"></asp:Literal>
+													<i class="fa fa-tachometer" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebService.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!-- اللون -->
+												<li id="liC13" runat="server" ><a href='<%= string.Format("WebClassify.aspx?FType=7&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal906" Text="<%$ Resources:Resource, F4 %>" runat="server"></asp:Literal>
+													<i class="fa fa-shield" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebClassify.aspx?FType=7&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!-- المقاس -->
+												<li id="liC14" runat="server" ><a href='<%= string.Format("WebClassify.aspx?FType=8&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal907" Text="<%$ Resources:Resource, F5 %>" runat="server"></asp:Literal>
+													<i class="fa fa-signal" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebClassify.aspx?FType=8&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!-- الحجم -->
+												<li id="liC15" runat="server" ><a href='<%= string.Format("WebClassify.aspx?FType=9&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal908" Text="<%$ Resources:Resource, F6 %>" runat="server"></asp:Literal>
+													<i class="fa fa-cube" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebClassify.aspx?FType=9&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!-- بلد المنشأ -->
+												<li id="liC16" runat="server"><a href='<%= string.Format("WebClassify.aspx?FType=10&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal990" Text="<%$ Resources:Resource, F7 %>" runat="server"></asp:Literal>
+													<i class="fa fa-flag-checkered" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebClassify.aspx?FType=10&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!-- مندوبين البيع -->
+												<!--<li id="li49" runat="server"><a href='<%= string.Format("WebClassify.aspx?FType=11&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>مندوبين البيع <img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebClassify.aspx?FType=11'); return false;" <!--        style="float: left; border: none" />
+												</a></li>-->
+												<!-- مندوبين البيع -->
+												<li id="liC17" runat="server"><a href='<%= string.Format("WebClassify.aspx?FType=12&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal910" Text="<%$ Resources:Resource, F8 %>" runat="server"></asp:Literal>
+													<i class="fa fa-crosshairs" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebClassify.aspx?FType=12&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!-- مندوبين البيع -->
+												<li id="liC18" runat="server"><a href='<%= string.Format("WebOpenBalances.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal11" Text="<%$ Resources:Resource, R1 %>" runat="server"></asp:Literal>
+													<i class="fa fa-cubes" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebOpenBalances.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!-- مندوبين البيع -->
+											   <li id="liC19" runat="server"><a href='<%= string.Format("WebStores.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal110" Text="<%$ Resources:Resource, F9 %>" runat="server"></asp:Literal>
+													<i class="fa fa-database" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebStores.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+											  <!--  المخازن و المعارض -->
+											</ol>
+										</div>
+										<div class="col1">
+											<!-- مندوبين البيع -->
+											<h4><i class="fa fa-sliders"></i>&nbsp;<asp:Literal ID="Literal105" Text="<%$ Resources:Resource, Transactions %>" runat="server"></asp:Literal></h4>
+											<ol>
+												<!-- طلب شراء -->
+												<li id="liC30" runat="server"><a href='<%= string.Format("WebPurchaseRequest.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal937" Text="<%$ Resources:Resource, S0 %>" runat="server"></asp:Literal>
+													<i class="fa fa-share-square-o" onclick='<%# string.Format("window.open({0}); return false;", "\""+"WebPurchaseRequest.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!-- أمر شراء قطع غيار -->
+												<li id="liC31" runat="server"><a href='<%= string.Format("WebPurchaseOrder.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal912" Text="<%$ Resources:Resource, S1 %>" runat="server"></asp:Literal>
+													<i class="fa fa-share-square" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebPurchaseOrder.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>                                    
+												<!-- أشعار اضافة-->                    
+												<li id="liC32" runat="server"><a href='<%= string.Format("WebDeliveryNote.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal915" Text="<%$ Resources:Resource, S4 %>" runat="server"></asp:Literal>
+													<i class="fa fa-sign-in" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebDeliveryNote.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!-- فاتورة مشتريات -->
+												<li id="liC33" runat="server"><a href='<%= string.Format("WebPurchaseInvoice.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal913" Text="<%$ Resources:Resource, S2 %>" runat="server"></asp:Literal>
+													<i class="fa fa-share" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebPurchaseInvoice.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!-- فاتورة ترجيع مشتريات -->
+												<li id="liC34" runat="server"><a href='<%= string.Format("WebReturnPurchaseInvoice.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal914" Text="<%$ Resources:Resource, S3 %>" runat="server"></asp:Literal>
+													<i class="fa fa-reply" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebReturnPurchaseInvoice.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!-- سند صرف قطع غيار -->
+												<li id="liC35" runat="server"><a href='<%= string.Format("WebIssueNote.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal916" Text="<%$ Resources:Resource, S5 %>" runat="server"></asp:Literal>
+													<i class="fa fa-sign-out" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebIssueNote.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!-- طلب دفع -->
+												<li id="liC37" runat="server"><a href='<%= string.Format("WebPPO1.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal919" Text="<%$ Resources:Resource, S8 %>" runat="server"></asp:Literal>
+													<i class="fa fa-credit-card" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebPPO1.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!-- طلب شراء مواد -->
+												<li id="liC38" runat="server"><a href='<%= string.Format("WebPPO.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal920" Text="<%$ Resources:Resource, S9 %>" runat="server"></asp:Literal>
+													<i class="fa fa-shopping-cart" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebPPO.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+											</ol>
+										</div>
+										<div class="col1">
+											<!-- الاعدادات-->
+											<h4><i class="fa fa-cogs"></i>&nbsp;<asp:Literal ID="Literal106" Text="<%$ Resources:Resource, Setting %>" runat="server"></asp:Literal></h4>
+											<ol>
+												<!-- اعدادات النظام -->
+												<li id="liC50" runat="server"><a href="#">
+													<asp:Literal ID="Literal330" Text="<%$ Resources:Resource, T1 %>" runat="server"></asp:Literal>
+													<i class="fa fa-wrench" onclick="window.open('#'); return false;"></i>
+												</a></li>
+												<!-- أعدادات النظام -->
+												<li id="liC51" runat="server"><a href="#">
+													<asp:Literal ID="Literal340" Text="<%$ Resources:Resource, T2 %>" runat="server"></asp:Literal>
+													<i class="fa fa-lock" onclick="window.open('#'); return false;"></i>
+												</a></li>
+											</ol>
+										</div>
+										<div class="col1">
+											<!-- التقارير -->
+											<h4><i class="fa fa-newspaper-o"></i>&nbsp;<asp:Literal ID="Literal107" Text="<%$ Resources:Resource, Reports %>" runat="server"></asp:Literal></h4>
+											<ol>
+												<!-- جرد البضاعة -->
+												<li id="liC60" runat="server"><a href='<%= string.Format("WebGoodsInventory.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal360" Text="<%$ Resources:Resource, R1 %>" runat="server"></asp:Literal>
+													<i class="fa fa-cubes" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebGoodsInventory.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!-- بطاقة تفصيلية للصنف -->
+												<li id="liC62" runat="server"><a href='<%= string.Format("WebDetailsItemCard.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal114" Text="<%$ Resources:Resource, R2 %>" runat="server"></asp:Literal>
+													<i class="fa fa-file-text-o" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebDetailsItemCard.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+											</ol>											
+										</div>
+									</div>									
+									</li>
+									<!-- الصيانة -->
+									<li id="liC01" runat="server" class="floatr"><a href="#">&nbsp;<asp:Literal ID="Literal108" Text="<%$ Resources:Resource, liC01 %>" runat="server"></asp:Literal><i class="fa fa-wrench"></i></a>
+										<div class="cols3">
+										<div class="col1">
+											<!-- الملفات -->
+											<h4><i class="fa fa-archive"></i>&nbsp;<asp:Literal ID="Literal109" Text="<%$ Resources:Resource, Files %>" runat="server"></asp:Literal></h4>
+											<ol>
+												<!-- أنواع الشاحنات -->
+												<li id="li28" runat="server"><a href='<%= string.Format("WebCarType.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal170" Text="<%$ Resources:Resource, liB19 %>" runat="server"></asp:Literal>
+													<i class="fa fa-truck" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebCarType.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!-- الشاحنات -->
+												<li id="li29" runat="server"><a href='<%= string.Format("WebCars.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal180" Text="<%$ Resources:Resource, liB18 %>" runat="server"></asp:Literal>
+													 <i class="fa fa-bus" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebCars.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!-- الفنيين -->
+												<li id="li30" runat="server"><a href='<%= string.Format("WebTechno.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal300" Text="<%$ Resources:Resource, liC30 %>" runat="server"></asp:Literal>
+													<i class="fa fa-male" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebTechno.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+											</ol>
+										</div>
+										<div class="col1">
+											<!-- المعاملات -->
+											<h4><i class="fa fa-sliders"></i>&nbsp;<asp:Literal ID="Literal111" Text="<%$ Resources:Resource, Transactions %>" runat="server"></asp:Literal></h4>
+											<ol>
+												<!-- مندوبين البيع -->
+												<li id="liC40" runat="server"><a href='<%= string.Format("WebRepairReq.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal220" Text="<%$ Resources:Resource, W1 %>" runat="server"></asp:Literal>
+													<i class="fa fa-lightbulb-o" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebRepairReq.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!-- مندوبين البيع -->
+												<li id="liC41" runat="server"><a href='<%= string.Format("WebCheckList.aspx?FType=1&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal310" Text="<%$ Resources:Resource, liC41 %>" runat="server"></asp:Literal>
+													<i class="fa fa-tasks" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebCheckList.aspx?FType=1&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!-- مندوبين البيع -->
+												<li id="liC42" runat="server"><a href='<%= string.Format("WebRepairReq.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal230" Text="<%$ Resources:Resource, W2 %>" runat="server"></asp:Literal>
+													<i class="fa fa-puzzle-piece" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebRepairReq.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!-- أمر تشغيل -->
+												<li id="liC43" runat="server"><a href='<%= string.Format("WebCheckList.aspx?FType=2&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'>
+													<asp:Literal ID="Literal380" Text="<%$ Resources:Resource, liC43 %>" runat="server"></asp:Literal>
+													<i class="fa fa-thumbs-o-up" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebCheckList.aspx?FType=2&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!-- مندوبين البيع -->
+												<li id="liC44" runat="server"><a href="#">
+													<asp:Literal ID="Literal240" Text="<%$ Resources:Resource, W3 %>" runat="server"></asp:Literal>
+													<i class="fa fa-sort-amount-asc" onclick="window.open('#'); return false;"></i>
+												</a></li>
+												<!-- كارت متابعة صيانة -->
+												<li id="liC45" runat="server"><a href="#">
+													<asp:Literal ID="Literal250" Text="<%$ Resources:Resource, W4 %>" runat="server"></asp:Literal>
+													<i class="fa fa-pencil-square-o"onclick="window.open('#'); return false;"></i>
+												</a></li>
+												<!-- طلب صرف قطع غيار -->
+												<li id="liC46" runat="server"><a href="#">
+													<asp:Literal ID="Literal260" Text="<%$ Resources:Resource, W5 %>" runat="server"></asp:Literal>
+													<i class="fa fa-external-link" onclick="window.open('#'); return false;"></i>
+												</a></li>
+												<!-- فحص رأس سيارة-->
+												<li id="liC47" runat="server"><a href="#">
+													<asp:Literal ID="Literal270" Text="<%$ Resources:Resource, W6 %>" runat="server"></asp:Literal>
+													<i class="fa fa-cog" onclick="window.open('#'); return false;"></i>
+												</a></li>
+												<!-- كارت تسليم مركبه -->
+												<li id="liC48" runat="server"><a href="#">
+													<asp:Literal ID="Literal280" Text="<%$ Resources:Resource, W7 %>" runat="server"></asp:Literal>
+													<i class="fa fa-star" onclick="window.open('#'); return false;"></i>
+												</a></li>
+												<!-- كارت متابعة الاطارات -->
+												<li id="liC49" runat="server"><a href="#">
+													<asp:Literal ID="Literal290" Text="<%$ Resources:Resource, W8 %>" runat="server"></asp:Literal>
+													<i class="fa fa-life-ring" onclick="window.open('#'); return false;"></i>
+												</a></li>
+												<!-- متابعة اطارات شاحنة -->
+												<!-- طلب شراء مواد -->                                           												
+											</ol>
+										</div>
+										<div class="col1">
+											<!-- مندوبين البيع -->
+											<h4><i class="fa fa-newspaper-o"></i>&nbsp;<asp:Literal ID="Literal112" Text="<%$ Resources:Resource, Reports %>" runat="server"></asp:Literal></h4>
+											<ol>
+												<!-- مندوبين البيع -->
+												<li id="liC61" runat="server"><a href="#"><asp:Literal ID="Literal113" Text="<%$ Resources:Resource, R1 %>" runat="server"></asp:Literal>
+													<i class="fa fa-file-image-o" onclick="window.open('#'); return false;"></i>
+												</a></li>
+											</ol>
+										</div>
+									</div>									
+									</li>
+
+									<!-- الشئون الادارية-->
+									<li id="liD1" runat="server" class="floatr"><a href="#">&nbsp;<asp:Literal ID="Literal95" Text="<%$ Resources:Resource, HR %>" runat="server"></asp:Literal><i  class="fa fa-users"></i></a>
+										<div class="cols3">
+										<div class="col1">
+											<!-- الملفات -->
+											<h4><i class="fa fa-archive"></i>&nbsp;<asp:Literal ID="Literal96" Text="<%$ Resources:Resource, Files %>" runat="server"></asp:Literal></h4>
+											<ol>
+												<!-- البيانات الاساسية -->
+												<li id="liD10" runat="server"><a href='<%= string.Format("WebEmp.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal68" Text="<%$ Resources:Resource, liD10 %>" runat="server"></asp:Literal>
+													<i class="fa fa-child" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebEmp.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>' ></i>
+												</a></li>
+												<!-- بيانات الرواتب -->
+												<li id="liD11" runat="server"><a href='<%= string.Format("WebSal.aspx?FType=3&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal69" Text="<%$ Resources:Resource, liD11 %>" runat="server"></asp:Literal>
+													<i class="fa fa-money" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebSal.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!-- الهيكل الاداري -->
+							<%--					<li id="li503" runat="server"><a href="#">الهيكل الإداري
+													<img alt="Favorites" id="i075" runat="server" title="<%$ Resources:Resource,OpenNewWindow %>"  src="images/Favorites.png" onclick="window.open('#'); return false;"
+														style="<%$ Resources: Resource, StarPos %>" />
+												</a></li>
+							--%>					
+													<!-- الاكواد العامة -->
+													<li id="liD12" runat="server"><a href='<%= string.Format("WebEmpCodes.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal70" Text="<%$ Resources:Resource, liD12 %>" runat="server"></asp:Literal>
+													<i class="fa fa-bolt" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebEmpCodes.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+												<!-- أعدادات النظام -->
+												<li id="liD30" runat="server"><a href='<%= string.Format("WebSetup.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal71" Text="<%$ Resources:Resource, liD30 %>" runat="server"></asp:Literal>
+													<i class="fa fa-wrench" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebSetup.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+												</a></li>
+											</ol>
+										</div>
+										<div class="col1">
+											<!-- المعاملات -->
+											<h4><i class="fa fa-sliders"></i>&nbsp;<asp:Literal ID="Literal97" Text="<%$ Resources:Resource, Transactions %>" runat="server"></asp:Literal></h4>
+											<ol>
+												<!-- حركة الغياب -->
+												<li id="liD20" runat="server"><a href="#"><asp:Literal ID="Literal72" Text="<%$ Resources:Resource, liD20 %>" runat="server"></asp:Literal>
+													<i class="fa fa-minus-circle" onclick="window.open('#'); return false;"></i>
+												</a></li>
+												<!-- الاضافي -->
+												<li id="liD21" runat="server"><a href="#"><asp:Literal ID="Literal73" Text="<%$ Resources:Resource, liD21 %>" runat="server"></asp:Literal>
+													<i class="fa fa-plus-circle" onclick="window.open('#'); return false;"></i>
+												</a></li>
+												<!-- السلف -->
+												<li id="liD22" runat="server"><a href="#"><asp:Literal ID="Literal74" Text="<%$ Resources:Resource, liD22 %>" runat="server"></asp:Literal>
+													<i class="fa fa-bomb" onclick="window.open('#'); return false;"></i>
+												</a></li>
+												<!-- التشغيل الشهري -->
+												<li id="liD23" runat="server"><a href="#"><asp:Literal ID="Literal75" Text="<%$ Resources:Resource, liD23 %>" runat="server"></asp:Literal>
+													<i class="fa fa-cogs" onclick="window.open('#'); return false;"></i>
+												</a></li>
+												<!-- تسوية إجازة موظف -->
+												<li id="liD24" runat="server"><a href="#"><asp:Literal ID="Literal76" Text="<%$ Resources:Resource, liD24 %>" runat="server"></asp:Literal>
+													<i class="fa fa-plane" onclick="window.open('#'); return false;"></i>
+												</a></li>
+												<!-- مندوبين البيع -->
+												<li id="liD25" runat="server"><a href="#"><asp:Literal ID="Literal77" Text="<%$ Resources:Resource, liD25 %>" runat="server"></asp:Literal>
+													<i class="fa fa-graduation-cap" onclick="window.open('#'); return false;"></i>
+												</a></li>
+											</ol>
+										</div>
+										<div class="col1">
+											<!-- التقارير-->
+											<h4><i class="fa fa-newspaper-o"></i>&nbsp;<asp:Literal ID="Literal98" Text="<%$ Resources:Resource, Reports %>" runat="server"></asp:Literal></h4>
+											<ol>
+												<!-- تقرير رثم 1 -->
+												<li id="liD40" runat="server"><a href="#"><asp:Literal ID="Literal78" Text="<%$ Resources:Resource, liD40 %>" runat="server"></asp:Literal>
+													<i class="fa fa-file-image-o" onclick="window.open('#'); return false;"></i>
+												</a></li>
+											</ol>
+										</div>
+									</div>									
+									</li>
+									<!-- لوحة التحكم -->
+									<li><a href="#">&nbsp;<asp:Literal ID="Literal99" Text="<%$ Resources:Resource, Control %>" runat="server"></asp:Literal><i class="fa fa-cog"></i></a>
+										<!-- start mega menu -->
+										<div class="cols1">
+											<div class="col1">
+												<!-- أعدادات عامة -->
+												<h4><i class="fa fa-cogs"></i>&nbsp;<asp:Literal ID="Literal100" Text="<%$ Resources:Resource, GSetting %>" runat="server"></asp:Literal></h4>
+												<ol>
+													<!-- تغيير كلمة السر -->
+													<li id="li110" runat="server"><a href='<%= string.Format("ResetPassword.aspx?FMode=1&AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal79" Text="<%$ Resources:Resource, li110 %>" runat="server"></asp:Literal>
+													<i class="fa fa-key" onclick='<%= string.Format("window.open({0}); return false;", "\""+"ResetPassword.aspx?FMode=1&AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i></a></li>
+													<!-- مجموعة العمل -->
+													<li id="liA18" runat="server"><a href='<%= string.Format("WebRoles.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal80" Text="<%$ Resources:Resource, liA18 %>" runat="server"></asp:Literal>
+													<i class="fa fa-users" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebRoles.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+													</a></li>
+													<!-- المستخدمين -->
+													<li id="liA19" runat="server"><a href='<%= string.Format("WebUsers.aspx?AreaNo={0}&StoreNo={1}",myArea.Value,myStore.Value) %>'><asp:Literal ID="Literal81" Text="<%$ Resources:Resource, liA19 %>" runat="server"></asp:Literal>
+														<i class="fa fa-user" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebUsers.aspx?AreaNo="+myArea.Value+"&StoreNo="+myStore.Value+ "\"") %>'></i>
+													</a></li>
+													<!-- تغير اللغة -->
+<%--													<li id="li5" runat="server"><a href="#"><asp:Literal ID="Literal82" Text="<%$ Resources:Resource, li5 %>" runat="server"></asp:Literal>
+														<i class="fa fa-globe"></i>
+													</a></li>
+--%>													<!-- تسجيل خروج -->
+													<li id="o5" runat="server"><a href="logout.aspx">&nbsp;<asp:Literal ID="Literal83" Text="<%$ Resources:Resource, Logout %>" runat="server"></asp:Literal>
+													<i class="fa fa-power-off"></i></a></li>
+												</ol>
+											</div> <!-- end col1 -->
+										</div>
+										<!-- end mega menu -->
+									</li>
+								</ul>
+						</div> <!-- end span12 -->
+					</nav>
+		</div>
+		<div class="clear">
+		</div>
+		<div class="main">
+			<asp:ScriptManager ID="ScriptManager1" EnableScriptGlobalization="true" EnableScriptLocalization="true"
+				EnablePageMethods="true" EnablePartialRendering="true" runat="server" AsyncPostBackTimeout="36000">
+				<Services>
+					<asp:ServiceReference Path="AutoComplete.asmx" />
+				</Services>
+			</asp:ScriptManager>
+			<asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+				<ContentTemplate>
+					<asp:UpdateProgress ID="UpdateProgress" runat="server" DynamicLayout="true">
+						<%--						<ProgressTemplate>                        
+							<div>
+								<center>                                    
+									<img src="images/ajaxloader.gif" alt="" />
+									برجاء الانتظار ... جاري معالجة البيانات
+								</center>
+							</div>
+						</ProgressTemplate>
+						--%>
+					</asp:UpdateProgress>
+					<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+					</asp:ContentPlaceHolder>
+				</ContentTemplate>
+			</asp:UpdatePanel>
+		</div>
+		<div class="clear">
+		</div>
+	</div>
+	<div class="footer">
+		<center>
+			<a id="lblfooter" runat="server"><asp:Literal ID="Literal103" Text="<%$ Resources:Resource, footer %>" runat="server"></asp:Literal> <span style="font-family: Arial;">
+				&copy;</span>&nbsp;<asp:Literal ID="Literal115" Text="<%$ Resources:Resource, footer1 %>" runat="server"></asp:Literal></a>
+		</center>
+	</div>
+	<div id="SlideForm">
+		<div class="panel">
+			<div style="clear: both;">
+			</div>
+			<asp:UpdatePanel ID="UpdatePanel3" UpdateMode="Conditional"   runat="server">
+				<ContentTemplate>
+					<div>
+						<p style="text-align: center;">
+							<asp:Literal ID="Literal102" Text="<%$ Resources:Resource, ChatLog %>" runat="server"></asp:Literal></p>
+						<asp:GridView ID="grdCodes" runat="server" CellPadding="2" CellSpacing="0" ForeColor="#333333"
+							GridLines="None" AllowPaging="true" PageSize="5" Font-Size="14px" AutoGenerateColumns="False"
+							DataKeyNames="MyDate" Width="455px" EmptyDataText="<%$ Resources:Resource, NoData %>" OnPageIndexChanging="grdCodes_PageIndexChanging">
+							<AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+							<Columns>
+								<asp:TemplateField HeaderText="<%$ Resources:Resource, FDate %>" SortExpression="" ItemStyle-HorizontalAlign="Center">
+									<ItemTemplate>
+										<asp:Label ID="lblMyDate" Text='<%# Bind("MyDate") %>' runat="server"></asp:Label>
+									</ItemTemplate>
+									<ControlStyle Width="75px" />
+									<ItemStyle HorizontalAlign="Center"></ItemStyle>
+								</asp:TemplateField>
+								<asp:TemplateField HeaderText="<%$ Resources:Resource, Msg %>" SortExpression="Msg" ItemStyle-HorizontalAlign="Center">
+									<ItemTemplate>
+										<asp:Label ID="lblMsg" Text='<%# Bind("Msg") %>' runat="server"></asp:Label>
+									</ItemTemplate>
+									<ControlStyle Width="375px" />
+									<ItemStyle HorizontalAlign="Center"></ItemStyle>
+								</asp:TemplateField>
+							</Columns>
+							<EditRowStyle BackColor="#999999" />
+							<FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" VerticalAlign="Middle"
+								HorizontalAlign="Center" />
+							<HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+							<PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+							<RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+							<SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+							<SortedAscendingCellStyle BackColor="#E9E7E2" />
+							<SortedAscendingHeaderStyle BackColor="#506C8C" />
+							<SortedDescendingCellStyle BackColor="#FFFDF8" />
+							<SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+						</asp:GridView>
+						<br />
+						<asp:TextBox ID="txtMsg" Width="446px" MaxLength="500" Height="60" TextMode="MultiLine"
+							runat="server"></asp:TextBox>
+						<asp:DropDownList ID="ddlSender" Width="326px" runat="server">
+						</asp:DropDownList>
+						<asp:Button ID="BtnSend" runat="server" Width="120px" Text="<%$ Resources:Resource, Send %>" OnClick="BtnSend_Click" />
+					</div>
+				</ContentTemplate>
+			</asp:UpdatePanel>
+			<div style="clear: both;">
+			</div>
+		</div>
+		<a class="trigger" href="#"><asp:Literal ID="Literal101" Text="<%$ Resources:Resource, Chat %>" runat="server"></asp:Literal>&nbsp;</a>
+	</div>
+	</form>
+</body>
+</html>

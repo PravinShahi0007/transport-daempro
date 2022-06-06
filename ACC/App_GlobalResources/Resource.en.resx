@@ -1,0 +1,1042 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Body" xml:space="preserve">
+    <value>body</value>
+  </data>
+  <data name="Branch" xml:space="preserve">
+    <value>Branch:</value>
+  </data>
+  <data name="BtnLangImg" xml:space="preserve">
+    <value>~/images/eng.png</value>
+  </data>
+  <data name="dir" xml:space="preserve">
+    <value>ltr</value>
+  </data>
+  <data name="dir1" xml:space="preserve">
+    <value>RightToLeft</value>
+  </data>
+  <data name="dir2" xml:space="preserve">
+    <value>right</value>
+  </data>
+  <data name="DivCompany" xml:space="preserve">
+    <value>text-align: right; position: absolute; color: White; font-family: Arial (Arabic);padding-right:5px;</value>
+  </data>
+  <data name="DivLangStyle" xml:space="preserve">
+    <value>float: right; font-family: Arial (Arabic); font-size: 14px;padding-left:5px;font-size: 14px;margin: 5px 5px 0 10px;</value>
+  </data>
+  <data name="F1" xml:space="preserve">
+    <value>Item Categories</value>
+  </data>
+  <data name="F2" xml:space="preserve">
+    <value>Item Cards</value>
+  </data>
+  <data name="F3" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="F4" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="F5" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="F6" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="F7" xml:space="preserve">
+    <value>Country of Orgion</value>
+  </data>
+  <data name="F8" xml:space="preserve">
+    <value>Units</value>
+  </data>
+  <data name="F9" xml:space="preserve">
+    <value>Stores</value>
+  </data>
+  <data name="Files" xml:space="preserve">
+    <value>Files</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Lang" xml:space="preserve">
+    <value>ar-EG</value>
+  </data>
+  <data name="LangDivStyle" xml:space="preserve">
+    <value>float: left;margin-top:6px; margin-left:-18px; font-family: Arial (Arabic); font-size: 14px;</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>login</value>
+  </data>
+  <data name="Logo" xml:space="preserve">
+    <value>header</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>&lt;i class="fa fa-power-off"&gt;&lt;/i&gt; Logout</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>menu2 lgray2 slide2</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name1</value>
+  </data>
+  <data name="OpenNewWindow" xml:space="preserve">
+    <value>Open New Window</value>
+  </data>
+  <data name="R1" xml:space="preserve">
+    <value>Goods Inventory</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="S1" xml:space="preserve">
+    <value>Purchase Order</value>
+  </data>
+  <data name="S2" xml:space="preserve">
+    <value>Purchase Invoice</value>
+  </data>
+  <data name="S3" xml:space="preserve">
+    <value>Return Purchase </value>
+  </data>
+  <data name="S4" xml:space="preserve">
+    <value>Delivery Note</value>
+  </data>
+  <data name="S5" xml:space="preserve">
+    <value>Stock Issue Note</value>
+  </data>
+  <data name="S6" xml:space="preserve">
+    <value>Issue Invoice</value>
+  </data>
+  <data name="S7" xml:space="preserve">
+    <value>Transfer Request</value>
+  </data>
+  <data name="S8" xml:space="preserve">
+    <value>Payment Request</value>
+  </data>
+  <data name="S9" xml:space="preserve">
+    <value>Purchase Request</value>
+  </data>
+  <data name="Setting" xml:space="preserve">
+    <value>Setting</value>
+  </data>
+  <data name="StarPos" xml:space="preserve">
+    <value>float: left;</value>
+  </data>
+  <data name="Store" xml:space="preserve">
+    <value>Store</value>
+  </data>
+  <data name="SubMenu" xml:space="preserve">
+    <value>subnav</value>
+  </data>
+  <data name="T1" xml:space="preserve">
+    <value>System Setting</value>
+  </data>
+  <data name="T2" xml:space="preserve">
+    <value>Close Period</value>
+  </data>
+  <data name="TextAlign" xml:space="preserve">
+    <value>text-align: left;</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User:</value>
+  </data>
+  <data name="W1" xml:space="preserve">
+    <value>Repair Request</value>
+  </data>
+  <data name="W10" xml:space="preserve">
+    <value>Materials Reuqest</value>
+  </data>
+  <data name="W2" xml:space="preserve">
+    <value>Job Order</value>
+  </data>
+  <data name="W3" xml:space="preserve">
+    <value>Follow up Card</value>
+  </data>
+  <data name="W4" xml:space="preserve">
+    <value>Stock Issue Request</value>
+  </data>
+  <data name="W5" xml:space="preserve">
+    <value>Head Check up</value>
+  </data>
+  <data name="W6" xml:space="preserve">
+    <value>Car Delivery Card</value>
+  </data>
+  <data name="W7" xml:space="preserve">
+    <value>Tire Follow up Card </value>
+  </data>
+  <data name="W8" xml:space="preserve">
+    <value>Tires Follow up</value>
+  </data>
+  <data name="W9" xml:space="preserve">
+    <value>Payment Request</value>
+  </data>
+  <data name="WorkShop" xml:space="preserve">
+    <value>WorkShop</value>
+  </data>
+  <data name="AreaLoc" xml:space="preserve">
+    <value>Site:</value>
+  </data>
+  <data name="Chat" xml:space="preserve">
+    <value>Chat</value>
+  </data>
+  <data name="ChatLog" xml:space="preserve">
+    <value>[Chat Log]</value>
+  </data>
+  <data name="Control" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="DailyReports" xml:space="preserve">
+    <value>Daily Reports</value>
+  </data>
+  <data name="DataLoc" xml:space="preserve">
+    <value>Data:</value>
+  </data>
+  <data name="FDate" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="footer" xml:space="preserve">
+    <value>All Copyrights Reserved for</value>
+  </data>
+  <data name="footer1" xml:space="preserve">
+    <value>Arab Land Transporter - 2018</value>
+  </data>
+  <data name="GSetting" xml:space="preserve">
+    <value>General Setting</value>
+  </data>
+  <data name="HR" xml:space="preserve">
+    <value>Human Resource</value>
+  </data>
+  <data name="li110" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="li5" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="liA1" xml:space="preserve">
+    <value>Accounts</value>
+  </data>
+  <data name="liA10" xml:space="preserve">
+    <value>Main Accounts</value>
+  </data>
+  <data name="liA11" xml:space="preserve">
+    <value>Partial Accounts</value>
+  </data>
+  <data name="liA12" xml:space="preserve">
+    <value>Center of Accounts</value>
+  </data>
+  <data name="liA13" xml:space="preserve">
+    <value>Branches</value>
+  </data>
+  <data name="liA14" xml:space="preserve">
+    <value>Projects</value>
+  </data>
+  <data name="liA15" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="liA16" xml:space="preserve">
+    <value>Cost Accounts</value>
+  </data>
+  <data name="liA17" xml:space="preserve">
+    <value>Coins</value>
+  </data>
+  <data name="liA18" xml:space="preserve">
+    <value>User Groups</value>
+  </data>
+  <data name="liA19" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="liA24" xml:space="preserve">
+    <value>Receipt Voucher</value>
+  </data>
+  <data name="liA25" xml:space="preserve">
+    <value>Cheque Payment Voucher</value>
+  </data>
+  <data name="liA26" xml:space="preserve">
+    <value>Journal Voucher</value>
+  </data>
+  <data name="liA27" xml:space="preserve">
+    <value>Bank Deposit Note</value>
+  </data>
+  <data name="liA28" xml:space="preserve">
+    <value>Bank Transfers Note</value>
+  </data>
+  <data name="liA29" xml:space="preserve">
+    <value>Purchase Request</value>
+  </data>
+  <data name="liA30" xml:space="preserve">
+    <value>Payment Request</value>
+  </data>
+  <data name="liA35" xml:space="preserve">
+    <value>System Setting</value>
+  </data>
+  <data name="liA36" xml:space="preserve">
+    <value>Balance Tally</value>
+  </data>
+  <data name="liA37" xml:space="preserve">
+    <value>Fixed Assets Pro.</value>
+  </data>
+  <data name="liA38" xml:space="preserve">
+    <value>Close Period</value>
+  </data>
+  <data name="liA40" xml:space="preserve">
+    <value>Chart of Accounts</value>
+  </data>
+  <data name="liA41" xml:space="preserve">
+    <value>Statement of Account</value>
+  </data>
+  <data name="liA42" xml:space="preserve">
+    <value>Journal Vouchers</value>
+  </data>
+  <data name="liA43" xml:space="preserve">
+    <value>Fixed Assets</value>
+  </data>
+  <data name="liA44" xml:space="preserve">
+    <value>Accounts Movement</value>
+  </data>
+  <data name="liA45" xml:space="preserve">
+    <value>Ledger</value>
+  </data>
+  <data name="liA46" xml:space="preserve">
+    <value>Trial Balance</value>
+  </data>
+  <data name="liA47" xml:space="preserve">
+    <value>Users Transaction </value>
+  </data>
+  <data name="liA60" xml:space="preserve">
+    <value>Income Statement</value>
+  </data>
+  <data name="liA61" xml:space="preserve">
+    <value>Balance Sheet</value>
+  </data>
+  <data name="liA62" xml:space="preserve">
+    <value>Vouchers Serial</value>
+  </data>
+  <data name="liA63" xml:space="preserve">
+    <value>Customers Balance</value>
+  </data>
+  <data name="liB1" xml:space="preserve">
+    <value>Process</value>
+  </data>
+  <data name="liB10" xml:space="preserve">
+    <value>Cities</value>
+  </data>
+  <data name="liB11" xml:space="preserve">
+    <value>Type of Cars</value>
+  </data>
+  <data name="liB12" xml:space="preserve">
+    <value>Level of Pricing</value>
+  </data>
+  <data name="liB13" xml:space="preserve">
+    <value>Thory of Pricing</value>
+  </data>
+  <data name="liB14" xml:space="preserve">
+    <value>Offers</value>
+  </data>
+  <data name="liB15" xml:space="preserve">
+    <value>Clients</value>
+  </data>
+  <data name="liB16" xml:space="preserve">
+    <value>Drivers</value>
+  </data>
+  <data name="liB17" xml:space="preserve">
+    <value>General Codes</value>
+  </data>
+  <data name="liB18" xml:space="preserve">
+    <value>Cars</value>
+  </data>
+  <data name="liB19" xml:space="preserve">
+    <value>Car Types</value>
+  </data>
+  <data name="liB20" xml:space="preserve">
+    <value>Invoice</value>
+  </data>
+  <data name="liB21" xml:space="preserve">
+    <value>Deportation Note</value>
+  </data>
+  <data name="liB22" xml:space="preserve">
+    <value>Arrival Note</value>
+  </data>
+  <data name="liB23" xml:space="preserve">
+    <value>Car Receipt Note</value>
+  </data>
+  <data name="liB24" xml:space="preserve">
+    <value>Receipt Voucher</value>
+  </data>
+  <data name="liB25" xml:space="preserve">
+    <value>Payment Voucher</value>
+  </data>
+  <data name="liB26" xml:space="preserve">
+    <value>Bank Deposit Note</value>
+  </data>
+  <data name="liB27" xml:space="preserve">
+    <value>Purchase Request</value>
+  </data>
+  <data name="liB28" xml:space="preserve">
+    <value>Payment Request</value>
+  </data>
+  <data name="liB30" xml:space="preserve">
+    <value>System Setting</value>
+  </data>
+  <data name="liB31" xml:space="preserve">
+    <value>Trip Lines</value>
+  </data>
+  <data name="liB32" xml:space="preserve">
+    <value>Database Backup</value>
+  </data>
+  <data name="liB41" xml:space="preserve">
+    <value>Daily Movement</value>
+  </data>
+  <data name="liB42" xml:space="preserve">
+    <value>Cars Movement</value>
+  </data>
+  <data name="liB43" xml:space="preserve">
+    <value>Hold Deportation </value>
+  </data>
+  <data name="liB44" xml:space="preserve">
+    <value>Cash Invoices </value>
+  </data>
+  <data name="liB45" xml:space="preserve">
+    <value>Deleted Invoices </value>
+  </data>
+  <data name="liB46" xml:space="preserve">
+    <value>Credit Invoices </value>
+  </data>
+  <data name="liB47" xml:space="preserve">
+    <value>Not Paid Invoices </value>
+  </data>
+  <data name="liB48" xml:space="preserve">
+    <value>Paid Invoices </value>
+  </data>
+  <data name="liB49" xml:space="preserve">
+    <value>Monitor of Invoices</value>
+  </data>
+  <data name="liB50" xml:space="preserve">
+    <value>Rate of Car or Driver</value>
+  </data>
+  <data name="liB51" xml:space="preserve">
+    <value>Rate of Employees</value>
+  </data>
+  <data name="liB52" xml:space="preserve">
+    <value>Employee Rate</value>
+  </data>
+  <data name="liB53" xml:space="preserve">
+    <value>Total Clients Activities </value>
+  </data>
+  <data name="liB54" xml:space="preserve">
+    <value>Vouchers Serial</value>
+  </data>
+  <data name="liD1" xml:space="preserve">
+    <value>H.R.</value>
+  </data>
+  <data name="liD10" xml:space="preserve">
+    <value>Main Data</value>
+  </data>
+  <data name="liD11" xml:space="preserve">
+    <value>Payroll</value>
+  </data>
+  <data name="liD12" xml:space="preserve">
+    <value>General Codes</value>
+  </data>
+  <data name="liD21" xml:space="preserve">
+    <value>Overtime</value>
+  </data>
+  <data name="liD22" xml:space="preserve">
+    <value>Loans</value>
+  </data>
+  <data name="liD23" xml:space="preserve">
+    <value>Monthly Processing</value>
+  </data>
+  <data name="liD24" xml:space="preserve">
+    <value>Settlement Vacation </value>
+  </data>
+  <data name="liD25" xml:space="preserve">
+    <value>Settle Exit </value>
+  </data>
+  <data name="liD30" xml:space="preserve">
+    <value>System Setting</value>
+  </data>
+  <data name="LoginMsg" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Msg" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>No Data Found</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="SiteLoc" xml:space="preserve">
+    <value>Branch:</value>
+  </data>
+  <data name="StoreLoc" xml:space="preserve">
+    <value>Store:</value>
+  </data>
+  <data name="Transactions" xml:space="preserve">
+    <value>Transactions</value>
+  </data>
+  <data name="container" xml:space="preserve">
+    <value>container2</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>Arab Land Transporter</value>
+  </data>
+  <data name="HeaderClass" xml:space="preserve">
+    <value>header2</value>
+  </data>
+  <data name="LangMsg" xml:space="preserve">
+    <value>Arabic</value>
+  </data>
+  <data name="logoText" xml:space="preserve">
+    <value>logoText2</value>
+  </data>
+  <data name="p" xml:space="preserve">
+    <value>p2</value>
+  </data>
+  <data name="record" xml:space="preserve">
+    <value>record2</value>
+  </data>
+  <data name="liC01" xml:space="preserve">
+    <value>Maintenance</value>
+  </data>
+  <data name="liC30" xml:space="preserve">
+    <value>Technicians</value>
+  </data>
+  <data name="liC41" xml:space="preserve">
+    <value>Check for Repair</value>
+  </data>
+  <data name="liC43" xml:space="preserve">
+    <value>Check for Recepit</value>
+  </data>
+  <data name="S0" xml:space="preserve">
+    <value>Purchase Request</value>
+  </data>
+  <data name="Stores" xml:space="preserve">
+    <value>Stores</value>
+  </data>
+  <data name="R2" xml:space="preserve">
+    <value>Details Item Card</value>
+  </data>
+  <data name="TextAlign2" xml:space="preserve">
+    <value>text-align: right;</value>
+  </data>
+  <data name="AllUsers" xml:space="preserve">
+    <value>All Users</value>
+  </data>
+  <data name="HeadOffice" xml:space="preserve">
+    <value>Head Office</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="SuccessTally" xml:space="preserve">
+    <value>Balances Tally Process Done Successfully</value>
+  </data>
+  <data name="Tally" xml:space="preserve">
+    <value>Balances Tally Process</value>
+  </data>
+  <data name="li001" xml:space="preserve">
+    <value>Personal Profile</value>
+  </data>
+  <data name="News" xml:space="preserve">
+    <value>News</value>
+  </data>
+  <data name="News1" xml:space="preserve">
+    <value>Welcome to Naqelat System 2015</value>
+  </data>
+  <data name="News2" xml:space="preserve">
+    <value>A system that meets your needs</value>
+  </data>
+  <data name="News3" xml:space="preserve">
+    <value>We always serve our customers through our system in 24 hours, seven days a week</value>
+  </data>
+  <data name="News4" xml:space="preserve">
+    <value>We always keep up with the latest systems to serve our customers</value>
+  </data>
+  <data name="News5" xml:space="preserve">
+    <value>We are pleased to receive your suggestions by contacting technical support</value>
+  </data>
+  <data name="News6" xml:space="preserve">
+    <value>Copyright  Arab Land Transporter &amp;copy; 2015</value>
+  </data>
+  <data name="R3" xml:space="preserve">
+    <value>Delivery without Purchase</value>
+  </data>
+  <data name="R10" xml:space="preserve">
+    <value>Manual Inventory</value>
+  </data>
+  <data name="S10" xml:space="preserve">
+    <value>Adjust Note</value>
+  </data>
+  <data name="li0001" xml:space="preserve">
+    <value>Comming Trucks</value>
+  </data>
+  <data name="li0002" xml:space="preserve">
+    <value>Trucks in Loading</value>
+  </data>
+  <data name="li0003" xml:space="preserve">
+    <value>Arrived Trucks</value>
+  </data>
+  <data name="li0004" xml:space="preserve">
+    <value>Cars in Park</value>
+  </data>
+  <data name="li0005" xml:space="preserve">
+    <value>List of Trips</value>
+  </data>
+  <data name="li0006" xml:space="preserve">
+    <value>Cars Ready for Delivery</value>
+  </data>
+  <data name="L1" xml:space="preserve">
+    <value>Open Balances</value>
+  </data>
+  <data name="L2" xml:space="preserve">
+    <value>Purchase Request</value>
+  </data>
+  <data name="liA31" xml:space="preserve">
+    <value>Financial Claim</value>
+  </data>
+  <data name="CheckList" xml:space="preserve">
+    <value>Issue &amp; Receive Check List</value>
+  </data>
+  <data name="Note1" xml:space="preserve">
+    <value>Vehical Issue Note</value>
+  </data>
+  <data name="Note2" xml:space="preserve">
+    <value>Vehical Transfer Note</value>
+  </data>
+  <data name="Note3" xml:space="preserve">
+    <value>Vehical Receive Note</value>
+  </data>
+  <data name="EmpSys" xml:space="preserve">
+    <value>شئون إدارية</value>
+    <comment>1</comment>
+  </data>
+  <data name="eSys" xml:space="preserve">
+    <value>خدمات الكترونية</value>
+    <comment>1</comment>
+  </data>
+  <data name="li04090" xml:space="preserve">
+    <value>الاقرار الضريبي</value>
+    <comment>1</comment>
+  </data>
+  <data name="li0949" xml:space="preserve">
+    <value>بطاقة تسعير الغاز</value>
+    <comment>1</comment>
+  </data>
+  <data name="li09849" xml:space="preserve">
+    <value>بيان مصروفات نثرية</value>
+    <comment>1</comment>
+  </data>
+  <data name="li104" xml:space="preserve">
+    <value>الحضور والانصراف</value>
+    <comment>1</comment>
+  </data>
+  <data name="li12" xml:space="preserve">
+    <value>البريد الالكتروني</value>
+    <comment>1</comment>
+  </data>
+  <data name="li13" xml:space="preserve">
+    <value>تنبيهات الشاحنات</value>
+    <comment>1</comment>
+  </data>
+  <data name="li14" xml:space="preserve">
+    <value>مصادقة رصيد حساب</value>
+    <comment>1</comment>
+  </data>
+  <data name="li16" xml:space="preserve">
+    <value>أجماليات الرواتب</value>
+    <comment>1</comment>
+  </data>
+  <data name="li17" xml:space="preserve">
+    <value>تقييم مراكز الفروع</value>
+    <comment>1</comment>
+  </data>
+  <data name="li18" xml:space="preserve">
+    <value>ايرادات و مصروفات الفرع</value>
+    <comment>1</comment>
+  </data>
+  <data name="li19" xml:space="preserve">
+    <value>البيانات الاساسية</value>
+    <comment>1</comment>
+  </data>
+  <data name="li20" xml:space="preserve">
+    <value>بيان الشاحنات</value>
+    <comment>1</comment>
+  </data>
+  <data name="li21" xml:space="preserve">
+    <value>مواقع الفروع</value>
+    <comment>1</comment>
+  </data>
+  <data name="li22" xml:space="preserve">
+    <value>البوابة الالكترونية</value>
+    <comment>1</comment>
+  </data>
+  <data name="li23" xml:space="preserve">
+    <value>مستحقات الموظفين</value>
+    <comment>1</comment>
+  </data>
+  <data name="li24" xml:space="preserve">
+    <value>رواتب البنك</value>
+    <comment>1</comment>
+  </data>
+  <data name="li25" xml:space="preserve">
+    <value>متابعة رسائل الوصول</value>
+    <comment>1</comment>
+  </data>
+  <data name="li26" xml:space="preserve">
+    <value>حضور وأنصراف شهري</value>
+    <comment>1</comment>
+  </data>
+  <data name="li27" xml:space="preserve">
+    <value>القيود الدورية</value>
+    <comment>1</comment>
+  </data>
+  <data name="li272" xml:space="preserve">
+    <value>سندات صرف لم تستعاض</value>
+    <comment>1</comment>
+  </data>
+  <data name="li282" xml:space="preserve">
+    <value>بيان ترحيل لم يصرف</value>
+    <comment>1</comment>
+  </data>
+  <data name="li31" xml:space="preserve">
+    <value>أتفاقية شحن طرود</value>
+    <comment>1</comment>
+  </data>
+  <data name="li32" xml:space="preserve">
+    <value>طلبات شراء بدون أوامر</value>
+    <comment>1</comment>
+  </data>
+  <data name="li34" xml:space="preserve">
+    <value>أتفاقية شحن بضاعة</value>
+    <comment>1</comment>
+  </data>
+  <data name="li3449" xml:space="preserve">
+    <value>فاتورة مياه</value>
+    <comment>1</comment>
+  </data>
+  <data name="li349" xml:space="preserve">
+    <value>بطاقة تسعير مياه</value>
+    <comment>1</comment>
+  </data>
+  <data name="li35" xml:space="preserve">
+    <value>عرض سعر</value>
+    <comment>1</comment>
+  </data>
+  <data name="li36" xml:space="preserve">
+    <value>خدمة العملاء</value>
+    <comment>1</comment>
+  </data>
+  <data name="li37" xml:space="preserve">
+    <value>بيان الشاحنات</value>
+    <comment>1</comment>
+  </data>
+  <data name="li40" xml:space="preserve">
+    <value>بلاغ حادث</value>
+    <comment>1</comment>
+  </data>
+  <data name="li4009" xml:space="preserve">
+    <value>سائقين متعاونين</value>
+    <comment>1</comment>
+  </data>
+  <data name="li4049" xml:space="preserve">
+    <value>بيان مصرفات نثرية</value>
+    <comment>1</comment>
+  </data>
+  <data name="li41" xml:space="preserve">
+    <value>بلاغ حادث</value>
+    <comment>1</comment>
+  </data>
+  <data name="li4109" xml:space="preserve">
+    <value>التحكم بالاسطول</value>
+    <comment>1</comment>
+  </data>
+  <data name="li42" xml:space="preserve">
+    <value>تحليل أوامر التشغيل</value>
+    <comment>1</comment>
+  </data>
+  <data name="li42349" xml:space="preserve">
+    <value>مؤثرات الرواتب</value>
+    <comment>1</comment>
+  </data>
+  <data name="li43" xml:space="preserve">
+    <value>تحليل سندات الصرف</value>
+    <comment>1</comment>
+  </data>
+  <data name="li4329" xml:space="preserve">
+    <value>الايرادات والمصروفات</value>
+    <comment>1</comment>
+  </data>
+  <data name="li44" xml:space="preserve">
+    <value>تحليل تكلفة قطع الغيار</value>
+    <comment>1</comment>
+  </data>
+  <data name="li44329" xml:space="preserve">
+    <value>أعدادات التطبيق</value>
+    <comment>1</comment>
+  </data>
+  <data name="li449" xml:space="preserve">
+    <value>بيان الفواتير المغلقة</value>
+    <comment>1</comment>
+  </data>
+  <data name="li45" xml:space="preserve">
+    <value>تتبع قطع الغيار</value>
+    <comment>1</comment>
+  </data>
+  <data name="li45590" xml:space="preserve">
+    <value>بيان تسليم للفرع</value>
+    <comment>1</comment>
+  </data>
+  <data name="li45649" xml:space="preserve">
+    <value>أوامر شراء بدون استلام</value>
+    <comment>1</comment>
+  </data>
+  <data name="li456789" xml:space="preserve">
+    <value>أستيراد البيانات</value>
+    <comment>1</comment>
+  </data>
+  <data name="li46" xml:space="preserve">
+    <value>أصلاح خارجي سريع</value>
+    <comment>1</comment>
+  </data>
+  <data name="li47" xml:space="preserve">
+    <value>أصلاح خارجي سريع</value>
+    <comment>1</comment>
+  </data>
+  <data name="li48" xml:space="preserve">
+    <value>مستخدمي الاجهزة الذكية</value>
+    <comment>1</comment>
+  </data>
+  <data name="li4900" xml:space="preserve">
+    <value>بيان التجميع</value>
+    <comment>1</comment>
+  </data>
+  <data name="li49000" xml:space="preserve">
+    <value>بيان التوزيع</value>
+    <comment>1</comment>
+  </data>
+  <data name="li50" xml:space="preserve">
+    <value>أتفاقية خدمات الطريق</value>
+    <comment>1</comment>
+  </data>
+  <data name="li51" xml:space="preserve">
+    <value>فاتورة الغاز</value>
+    <comment>1</comment>
+  </data>
+  <data name="li7" xml:space="preserve">
+    <value>مستندات وعقود</value>
+    <comment>1</comment>
+  </data>
+  <data name="li749" xml:space="preserve">
+    <value>أعدادات البيانات</value>
+    <comment>1</comment>
+  </data>
+  <data name="liApp49" xml:space="preserve">
+    <value>بطاقة صنف - التطبيق</value>
+    <comment>1</comment>
+  </data>
+  <data name="liApp51" xml:space="preserve">
+    <value>بطاقة خدمة - التطبيق</value>
+    <comment>1</comment>
+  </data>
+  <data name="liB09849" xml:space="preserve">
+    <value>سياسة التسعير 2</value>
+    <comment>1</comment>
+  </data>
+  <data name="liC39" xml:space="preserve">
+    <value>سند استلام مستعمل</value>
+    <comment>1</comment>
+  </data>
+  <data name="liC61" xml:space="preserve">
+    <value>أجمالي مصروفات الشاحنات</value>
+    <comment>1</comment>
+  </data>
+  <data name="liD20" xml:space="preserve">
+    <value>مؤثرات الرواتب</value>
+    <comment>1</comment>
+  </data>
+  <data name="liD40" xml:space="preserve">
+    <value>كشف الرواتب</value>
+    <comment>1</comment>
+  </data>
+  <data name="lis49" xml:space="preserve">
+    <value>الاجازات الرسمية</value>
+    <comment>1</comment>
+  </data>
+  <data name="PleaseWait" xml:space="preserve">
+    <value>برجاء حفظ البيانات الحالية و شكرا</value>
+    <comment>1</comment>
+  </data>
+  <data name="SysUpdate" xml:space="preserve">
+    <value>يتم تحديث النظام اليوم الساعة</value>
+    <comment>1</comment>
+  </data>
+  <data name="Trip" xml:space="preserve">
+    <value>رحلة</value>
+    <comment>1</comment>
+  </data>
+  <data name="TripReady" xml:space="preserve">
+    <value>جاهزة للترحيل إلى</value>
+    <comment>1</comment>
+  </data>
+  <data name="CarsReady" xml:space="preserve">
+    <value>سيارات جاهزة للتسليم</value>
+    <comment>2</comment>
+  </data>
+  <data name="CustomerFollowUp" xml:space="preserve">
+    <value>متابعة عملاء</value>
+    <comment>2</comment>
+  </data>
+  <data name="eServices" xml:space="preserve">
+    <value>الخدمات الالكترونية</value>
+    <comment>2</comment>
+  </data>
+  <data name="FollowSMS" xml:space="preserve">
+    <value>متابعة رسائل الوصول</value>
+    <comment>2</comment>
+  </data>
+  <data name="FollowUpOrder" xml:space="preserve">
+    <value>طلبات متابعة</value>
+    <comment>2</comment>
+  </data>
+  <data name="Inquery" xml:space="preserve">
+    <value>الاستعلام</value>
+    <comment>2</comment>
+  </data>
+  <data name="MainBranch" xml:space="preserve">
+    <value>الفرع الرئيسي</value>
+    <comment>2</comment>
+  </data>
+  <data name="MainData" xml:space="preserve">
+    <value>البيانات الاساسية</value>
+    <comment>2</comment>
+  </data>
+  <data name="NewService" xml:space="preserve">
+    <value>خدمة جديدة</value>
+    <comment>2</comment>
+  </data>
+  <data name="ServiceInquery" xml:space="preserve">
+    <value>الاستعلام عن خدمة</value>
+    <comment>2</comment>
+  </data>
+  <data name="TruckList" xml:space="preserve">
+    <value>بيان الشاحنات</value>
+    <comment>2</comment>
+  </data>
+</root>

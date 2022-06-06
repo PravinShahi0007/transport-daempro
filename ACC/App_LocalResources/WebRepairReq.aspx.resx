@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CarNotFound" xml:space="preserve">
+    <value>رقم الشاحنة غير معرف من قبل</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>مسح</value>
+  </data>
+  <data name="ClearImage" xml:space="preserve">
+    <value>~/images/erasure_642.png</value>
+  </data>
+  <data name="ClearTooltip" xml:space="preserve">
+    <value>مسح خانات النموذج</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>الغاء</value>
+  </data>
+  <data name="DeleteConfirm" xml:space="preserve">
+    <value>return confirm("هل أنت متاكد من الغاء بيان الاصلاح؟")</value>
+  </data>
+  <data name="DeleteError" xml:space="preserve">
+    <value>حدث خطأ اثناء الغاء البيانات ... حاول مرة أخرى</value>
+  </data>
+  <data name="DeleteFile" xml:space="preserve">
+    <value>الغاء الملف</value>
+  </data>
+  <data name="DeleteFileConfirm" xml:space="preserve">
+    <value>return confirm("هل أنت متاكد من الغاء هذا الملف؟")</value>
+  </data>
+  <data name="DeleteImage" xml:space="preserve">
+    <value>~/images/cut_642.png</value>
+  </data>
+  <data name="DeleteItem" xml:space="preserve">
+    <value>الغاء بيان الاصلاح</value>
+  </data>
+  <data name="DeleteTooltip" xml:space="preserve">
+    <value>الغاء طلب الاصلاح</value>
+  </data>
+  <data name="DuplicateReq" xml:space="preserve">
+    <value>رقم طلب الاصلاح مكرر</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="EditImage" xml:space="preserve">
+    <value>~/images/draw_pen_642.png</value>
+  </data>
+  <data name="EditTooltip" xml:space="preserve">
+    <value>تعديل بيان الاصلاح</value>
+  </data>
+  <data name="EnterReq" xml:space="preserve">
+    <value>يجب إدخال رقم طلب الاصلاح</value>
+  </data>
+  <data name="EnterReqNo" xml:space="preserve">
+    <value>يجب إدخال رقم طلب الاصلاح</value>
+  </data>
+  <data name="EnterTime" xml:space="preserve">
+    <value>يجب إدخال الوقت</value>
+  </data>
+  <data name="ErrorDelete" xml:space="preserve">
+    <value>لقد حدث خطأ اثناء الغاء طلب الاصلاح ... حاول مرة أخرى</value>
+  </data>
+  <data name="ErrorSave" xml:space="preserve">
+    <value>خطأ أثناء حفظ البيانات ... حاول مرة أخرى</value>
+  </data>
+  <data name="HideDetails" xml:space="preserve">
+    <value>( أخفاء التفاصيل )</value>
+  </data>
+  <data name="IntegerVal" xml:space="preserve">
+    <value>يجب أدخال قيمة رقمية</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>رقم الطلب</value>
+  </data>
+  <data name="Label10.Text" xml:space="preserve">
+    <value>الشاحنة</value>
+  </data>
+  <data name="Label14.Text" xml:space="preserve">
+    <value>اسم المستخدم</value>
+  </data>
+  <data name="Label15.Text" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>التاريخ/الوقت</value>
+  </data>
+  <data name="Label27.Text" xml:space="preserve">
+    <value>* حقول الزامية</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>الموديل</value>
+  </data>
+  <data name="Label34.Text" xml:space="preserve">
+    <value>( عرض التفاصيل )</value>
+  </data>
+  <data name="Label35.Text" xml:space="preserve">
+    <value>أخرى</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>عداد الكيلومتر</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>اسم السائق</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>من</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>طلبات الاصلاح</value>
+  </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="Label9.Text" xml:space="preserve">
+    <value>بيان الترحيل</value>
+  </data>
+  <data name="LblCode.Text" xml:space="preserve">
+    <value>نوع الشاحنة</value>
+  </data>
+  <data name="Literal2.Text" xml:space="preserve">
+    <value>[ طلب أصلاح ]</value>
+  </data>
+  <data name="LoadNo" xml:space="preserve">
+    <value>بيان ترحيل رقم</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>جديد</value>
+  </data>
+  <data name="NewConfirm" xml:space="preserve">
+    <value>return confirm("هل أنت متاكد من أضافة بيان أصلاح جديد؟")</value>
+  </data>
+  <data name="NewImage" xml:space="preserve">
+    <value>~/images/insource_642.png</value>
+  </data>
+  <data name="NewTooltip" xml:space="preserve">
+    <value>أضافة بيان أصلاح جديد</value>
+  </data>
+  <data name="NoLoad" xml:space="preserve">
+    <value>بدون حموله</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>طباعة</value>
+  </data>
+  <data name="PrintImage" xml:space="preserve">
+    <value>~/images/print_642.png</value>
+  </data>
+  <data name="PrintTooltip" xml:space="preserve">
+    <value>طباعة طلب الاصلاح</value>
+  </data>
+  <data name="RepairReq" xml:space="preserve">
+    <value>طلب أصلاح</value>
+  </data>
+  <data name="Req0" xml:space="preserve">
+    <value>أصلاحات خارجية</value>
+  </data>
+  <data name="Req1" xml:space="preserve">
+    <value>صيانة دورية</value>
+  </data>
+  <data name="ReqDate" xml:space="preserve">
+    <value>يجب إدخال قيمة تاريخ في تاريخ الاصلاح</value>
+  </data>
+  <data name="ReqNotFound" xml:space="preserve">
+    <value>رقم طلب الاصلاح غير مدرج من قبل</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>بحث</value>
+  </data>
+  <data name="SearchImage" xml:space="preserve">
+    <value>~/images/binoculars_642.png</value>
+  </data>
+  <data name="SearchReq" xml:space="preserve">
+    <value>البحث عن طلب الاصلاح</value>
+  </data>
+  <data name="SearchTooltip" xml:space="preserve">
+    <value>البحث عن طلب الاصلاح</value>
+  </data>
+  <data name="SearchVeh" xml:space="preserve">
+    <value>البحث عن رقم الشاحنة</value>
+  </data>
+  <data name="SelectDivision" xml:space="preserve">
+    <value>--- أختر القطاع ---</value>
+  </data>
+  <data name="SelectDriver" xml:space="preserve">
+    <value>يجب أختيار السائق</value>
+  </data>
+  <data name="SelectDriver2" xml:space="preserve">
+    <value>--- أختر السائق ---</value>
+  </data>
+  <data name="SelectFile" xml:space="preserve">
+    <value>لم بتم اختيار الملف</value>
+  </data>
+  <data name="SelectFrom" xml:space="preserve">
+    <value>يجب أختيار الجهه</value>
+  </data>
+  <data name="SelectReqDate" xml:space="preserve">
+    <value>يجب أختيار تاريخ طلب الاصلاح</value>
+  </data>
+  <data name="SelectVeh" xml:space="preserve">
+    <value>يجب أختيار الشاحنة</value>
+  </data>
+  <data name="SelectVeh2" xml:space="preserve">
+    <value>--- أختر المركبة ---</value>
+  </data>
+  <data name="SelectVehicle" xml:space="preserve">
+    <value>يجب أختيار نوع الشاحنة</value>
+  </data>
+  <data name="SelectVType" xml:space="preserve">
+    <value>--- أختر نوع المركبة ---</value>
+  </data>
+  <data name="ShowDetails" xml:space="preserve">
+    <value>( عرض التفاصيل )</value>
+  </data>
+  <data name="SuccessDelete" xml:space="preserve">
+    <value>لقد تم الغاء طلب الاصلاح بنجاح</value>
+  </data>
+  <data name="SuccessSave" xml:space="preserve">
+    <value>تم حفظ البيانات بنجاح</value>
+  </data>
+  <data name="Req2" xml:space="preserve">
+    <value>بلاغ سائق</value>
+  </data>
+  <data name="Req3" xml:space="preserve">
+    <value>أعطال خارجية</value>
+  </data>
+  <data name="Req4" xml:space="preserve">
+    <value>الفحص</value>
+  </data>
+  <data name="Req5" xml:space="preserve">
+    <value>الورشة</value>
+  </data>
+</root>

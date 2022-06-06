@@ -1,0 +1,948 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Area" xml:space="preserve">
+    <value>الموقع</value>
+  </data>
+  <data name="CarHere" xml:space="preserve">
+    <value>شاحنات تم وصولها الفرع وتحت التحميل</value>
+  </data>
+  <data name="CarMove" xml:space="preserve">
+    <value>بيان الترحيل</value>
+  </data>
+  <data name="CarMoveRCV" xml:space="preserve">
+    <value>بيان الوصول</value>
+  </data>
+  <data name="CarNo" xml:space="preserve">
+    <value>رقم الشاحنة</value>
+  </data>
+  <data name="CarOut" xml:space="preserve">
+    <value>الشاحنات المغادرة من الفرع</value>
+  </data>
+  <data name="CarRefresh" xml:space="preserve">
+    <value>تحديث بيانات الشاحنات</value>
+  </data>
+  <data name="ChassisNo" xml:space="preserve">
+    <value>رقم الهيكل</value>
+  </data>
+  <data name="Dest" xml:space="preserve">
+    <value>جهة الترحيل</value>
+  </data>
+  <data name="DocNumber" xml:space="preserve">
+    <value>المستند</value>
+  </data>
+  <data name="DriverName" xml:space="preserve">
+    <value>اسم السائق</value>
+  </data>
+  <data name="FDate" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="FTime" xml:space="preserve">
+    <value>الوقت</value>
+  </data>
+  <data name="FType1" xml:space="preserve">
+    <value>جوال المستلم</value>
+  </data>
+  <data name="FType2" xml:space="preserve">
+    <value>جوال المرسل</value>
+  </data>
+  <data name="FType3" xml:space="preserve">
+    <value>هوية المرسل</value>
+  </data>
+  <data name="FType4" xml:space="preserve">
+    <value>رقم الفاتورة</value>
+  </data>
+  <data name="FType5" xml:space="preserve">
+    <value>رقم اللوحة</value>
+  </data>
+  <data name="FType6" xml:space="preserve">
+    <value>رقم الهيكل</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>الصفحة الرئيسية</value>
+  </data>
+  <data name="IncomeCars" xml:space="preserve">
+    <value>شاحنات قادمة في الطريق</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>[ الفروع ]</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>[ طلبات معلقة ]</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>[ البحث ]</value>
+  </data>
+  <data name="lblCashs.Text" xml:space="preserve">
+    <value>رصيد الصندوق</value>
+  </data>
+  <data name="lblDayIncomes.Text" xml:space="preserve">
+    <value>الايراد اليومي</value>
+  </data>
+  <data name="lblIncomes.Text" xml:space="preserve">
+    <value>إيرادات الفرع</value>
+  </data>
+  <data name="lblLoans.Text" xml:space="preserve">
+    <value>رصيد العهدة</value>
+  </data>
+  <data name="lblMonthIncomes.Text" xml:space="preserve">
+    <value>الايراد الشهري</value>
+  </data>
+  <data name="lblSMS.Text" xml:space="preserve">
+    <value>رصيد الرسائل</value>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>لا توجد بيانات</value>
+  </data>
+  <data name="PlateNo" xml:space="preserve">
+    <value>رقم اللوحه</value>
+  </data>
+  <data name="RCVDest" xml:space="preserve">
+    <value>جهة الوصول</value>
+  </data>
+  <data name="RCVTime" xml:space="preserve">
+    <value>وصول متوقع</value>
+  </data>
+  <data name="Remark" xml:space="preserve">
+    <value>البيان</value>
+  </data>
+  <data name="SearchCar" xml:space="preserve">
+    <value>البحث عن بيانات السيارة</value>
+  </data>
+  <data name="SNo" xml:space="preserve">
+    <value>م</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value> في نظام الصيانة و مراقبة المخزون </value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>أهلاً وسهلاً بك المستخدم / </value>
+  </data>
+  <data name="float" xml:space="preserve">
+    <value>float:right;</value>
+  </data>
+  <data name="mDiv1" xml:space="preserve">
+    <value>width:210px; height:300px; float:right; border: thin solid #444444; overflow:hidden; overflow-x:hidden; overflow-y:auto;</value>
+  </data>
+  <data name="TableStyle" xml:space="preserve">
+    <value>text-align: right; color:Black;</value>
+  </data>
+  <data name="mDivInfo" xml:space="preserve">
+    <value>width:916px; height:2910px; float:right; border: thin solid #444444; overflow:hidden; overflow-x:hidden; overflow-y:auto;</value>
+  </data>
+  <data name="FType7" xml:space="preserve">
+    <value>اسم المرسل</value>
+  </data>
+  <data name="FType8" xml:space="preserve">
+    <value>اسم المستلم</value>
+  </data>
+  <data name="RepairReqNo" xml:space="preserve">
+    <value>رقم طلب الاصلاح</value>
+  </data>
+  <data name="JobWorkNo" xml:space="preserve">
+    <value>رقم أمر التشغيل</value>
+  </data>
+  <data name="Active1" xml:space="preserve">
+    <value>نقل سيارات</value>
+    <comment>1</comment>
+  </data>
+  <data name="Active2" xml:space="preserve">
+    <value>نقل بضاعة</value>
+    <comment>1</comment>
+  </data>
+  <data name="Active3" xml:space="preserve">
+    <value>نقل طرود</value>
+    <comment>1</comment>
+  </data>
+  <data name="CarAlerts" xml:space="preserve">
+    <value>تنبيهات السيارات - الفروع</value>
+    <comment>1</comment>
+  </data>
+  <data name="CarDoc" xml:space="preserve">
+    <value>الإستمارة</value>
+    <comment>1</comment>
+  </data>
+  <data name="CarIns" xml:space="preserve">
+    <value>التأمين</value>
+    <comment>1</comment>
+  </data>
+  <data name="CarInspec" xml:space="preserve">
+    <value>الفحص الدوري</value>
+    <comment>1</comment>
+  </data>
+  <data name="CarInWorkShop" xml:space="preserve">
+    <value>شاحنات جاري صيانتها الآن</value>
+    <comment>1</comment>
+  </data>
+  <data name="CarLeaveBranch" xml:space="preserve">
+    <value>الشاحنات المغادرة من الفرع</value>
+    <comment>1</comment>
+  </data>
+  <data name="CarLeaveWorkShop" xml:space="preserve">
+    <value>شاحنات غادرت الصيانة</value>
+    <comment>1</comment>
+  </data>
+  <data name="CarLoc" xml:space="preserve">
+    <value>موقع السيارة</value>
+    <comment>1</comment>
+  </data>
+  <data name="CarOp" xml:space="preserve">
+    <value>بطاقة التشغيل</value>
+    <comment>1</comment>
+  </data>
+  <data name="CarsInStore" xml:space="preserve">
+    <value>سيارات في الساحة في انتظار ترحيلها</value>
+    <comment>1</comment>
+  </data>
+  <data name="CarToWorkshop" xml:space="preserve">
+    <value>شاحنات في طريقها للصيانة</value>
+    <comment>1</comment>
+  </data>
+  <data name="CarWIns" xml:space="preserve">
+    <value>تأمين الحمولة</value>
+    <comment>1</comment>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>مسح</value>
+    <comment>1</comment>
+  </data>
+  <data name="ConfirmDelete" xml:space="preserve">
+    <value>return confirm("هل أنت متاكد من الغاء هذا البند؟")</value>
+    <comment>1</comment>
+  </data>
+  <data name="DeleteItem" xml:space="preserve">
+    <value>الغاء البند</value>
+    <comment>1</comment>
+  </data>
+  <data name="EmpDoc" xml:space="preserve">
+    <value>تنبيهات الوثائق الشخصية للموظفين</value>
+    <comment>1</comment>
+  </data>
+  <data name="EmpID" xml:space="preserve">
+    <value>الهوية</value>
+    <comment>1</comment>
+  </data>
+  <data name="EmpName" xml:space="preserve">
+    <value>الاسم</value>
+    <comment>1</comment>
+  </data>
+  <data name="EmpPass" xml:space="preserve">
+    <value>جواز السفر</value>
+    <comment>1</comment>
+  </data>
+  <data name="IssueCarMove" xml:space="preserve">
+    <value>إصدار بيان ترحيل</value>
+    <comment>1</comment>
+  </data>
+  <data name="IssueCarMoveRCV" xml:space="preserve">
+    <value>اصدار بيان وصول</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label13.Text" xml:space="preserve">
+    <value>فترة البحث</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>الفرع</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>[ فواتير معلقة ]</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>[ أرصدة الفرع ]</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>[ النقدية ]</value>
+    <comment>1</comment>
+  </data>
+  <data name="LblBanks.Text" xml:space="preserve">
+    <value>[ البنوك ]</value>
+    <comment>1</comment>
+  </data>
+  <data name="MakeIssueNote" xml:space="preserve">
+    <value>اصدار سند صرف</value>
+    <comment>1</comment>
+  </data>
+  <data name="OpenJobWork" xml:space="preserve">
+    <value>فتح أمر التشغيل</value>
+    <comment>1</comment>
+  </data>
+  <data name="Period0" xml:space="preserve">
+    <value>جميع الفترات</value>
+    <comment>1</comment>
+  </data>
+  <data name="Period14" xml:space="preserve">
+    <value>أسبوعين</value>
+    <comment>1</comment>
+  </data>
+  <data name="Period180" xml:space="preserve">
+    <value>سته أشهر</value>
+    <comment>1</comment>
+  </data>
+  <data name="Period21" xml:space="preserve">
+    <value>ثلاثة اسابيع</value>
+    <comment>1</comment>
+  </data>
+  <data name="Period30" xml:space="preserve">
+    <value>شهر</value>
+    <comment>1</comment>
+  </data>
+  <data name="Period365" xml:space="preserve">
+    <value>سنة</value>
+    <comment>1</comment>
+  </data>
+  <data name="Period60" xml:space="preserve">
+    <value>شهرين</value>
+    <comment>1</comment>
+  </data>
+  <data name="Period7" xml:space="preserve">
+    <value>أسبوع</value>
+    <comment>1</comment>
+  </data>
+  <data name="Period90" xml:space="preserve">
+    <value>ثلاثة أشهر</value>
+    <comment>1</comment>
+  </data>
+  <data name="SearchEmpMobile" xml:space="preserve">
+    <value>البحث عن رقم جوال موظف</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectInvoiceOnOff" xml:space="preserve">
+    <value>أختيار او عدم اختيار الفاتورة</value>
+    <comment>1</comment>
+  </data>
+  <data name="SenderRCV" xml:space="preserve">
+    <value>مرسل السيارة/مستلم السيارة</value>
+    <comment>1</comment>
+  </data>
+  <data name="Taraz" xml:space="preserve">
+    <value>الطراز</value>
+    <comment>1</comment>
+  </data>
+  <data name="TripDist" xml:space="preserve">
+    <value>متجهة إلى</value>
+    <comment>1</comment>
+  </data>
+  <data name="TripList" xml:space="preserve">
+    <value>بيان بالرحلات</value>
+    <comment>1</comment>
+  </data>
+  <data name="TripNo" xml:space="preserve">
+    <value>رقم الرحلة</value>
+    <comment>1</comment>
+  </data>
+  <data name="TripSetting" xml:space="preserve">
+    <value>دمج الرحلة</value>
+    <comment>1</comment>
+  </data>
+  <data name="TripWeight" xml:space="preserve">
+    <value>الحمولة</value>
+    <comment>1</comment>
+  </data>
+  <data name="TruckAlerts" xml:space="preserve">
+    <value>تنبيهات الشاحنات</value>
+    <comment>1</comment>
+  </data>
+  <data name="TruckNo" xml:space="preserve">
+    <value>الرقم</value>
+    <comment>1</comment>
+  </data>
+  <data name="ViewCar" xml:space="preserve">
+    <value>عرض السيارة</value>
+    <comment>1</comment>
+  </data>
+  <data name="ViewCarMove" xml:space="preserve">
+    <value>عرض بيان الترحيل</value>
+    <comment>1</comment>
+  </data>
+  <data name="ViewCarMoveRCV" xml:space="preserve">
+    <value>عرض بيان الوصول</value>
+    <comment>1</comment>
+  </data>
+  <data name="ViewEmp" xml:space="preserve">
+    <value>عرض بيانات الموظف</value>
+    <comment>1</comment>
+  </data>
+  <data name="ViewInvoice" xml:space="preserve">
+    <value>عرض الفاتورة</value>
+    <comment>1</comment>
+  </data>
+  <data name="ViewJobWork" xml:space="preserve">
+    <value>عرض أمر التشغيل</value>
+    <comment>1</comment>
+  </data>
+  <data name="ViewRepairReq" xml:space="preserve">
+    <value>عرض طلب الاصلاح</value>
+    <comment>1</comment>
+  </data>
+  <data name="AccountNo" xml:space="preserve">
+    <value>رقم الحساب</value>
+    <comment>1</comment>
+  </data>
+  <data name="AccountStatement" xml:space="preserve">
+    <value>كشف حساب</value>
+    <comment>1</comment>
+  </data>
+  <data name="Bank" xml:space="preserve">
+    <value>البنك</value>
+    <comment>1</comment>
+  </data>
+  <data name="BankAccounts" xml:space="preserve">
+    <value>أرقام حسابات البنوك</value>
+    <comment>1</comment>
+  </data>
+  <data name="Branch" xml:space="preserve">
+    <value>الفرع</value>
+    <comment>1</comment>
+  </data>
+  <data name="BranchManagerAccounts" xml:space="preserve">
+    <value>حسابات مراقبي الفروع</value>
+    <comment>1</comment>
+  </data>
+  <data name="ChkAutoUpdate.Text" xml:space="preserve">
+    <value>تحديث تلقائي</value>
+    <comment>1</comment>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>اليوم</value>
+    <comment>1</comment>
+  </data>
+  <data name="Day2" xml:space="preserve">
+    <value>يوم</value>
+    <comment>1</comment>
+  </data>
+  <data name="DisplayHome" xml:space="preserve">
+    <value>تم عرض الصفحة الرئيسية</value>
+    <comment>1</comment>
+  </data>
+  <data name="Doc" xml:space="preserve">
+    <value>مستند</value>
+    <comment>1</comment>
+  </data>
+  <data name="DocNotFound" xml:space="preserve">
+    <value>المستند غير مدرج</value>
+    <comment>1</comment>
+  </data>
+  <data name="Finish" xml:space="preserve">
+    <value>نتهي</value>
+    <comment>1</comment>
+  </data>
+  <data name="Finished" xml:space="preserve">
+    <value>منتهي من</value>
+    <comment>1</comment>
+  </data>
+  <data name="IBAN" xml:space="preserve">
+    <value>رقم الايبان</value>
+    <comment>1</comment>
+  </data>
+  <data name="Job" xml:space="preserve">
+    <value>الوظيفة</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label10.Text" xml:space="preserve">
+    <value>[ تأمينات مستحقة ]</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label11.Text" xml:space="preserve">
+    <value>[  ايجارات مستحقة  ]</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label12.Text" xml:space="preserve">
+    <value>[ أقساط مستحقة ]</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label22.Text" xml:space="preserve">
+    <value>[ العملاء ]</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>[ الموردين ]</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label9.Text" xml:space="preserve">
+    <value>[ العهد ]</value>
+    <comment>1</comment>
+  </data>
+  <data name="Last20" xml:space="preserve">
+    <value>أخر 20 عملية</value>
+    <comment>1</comment>
+  </data>
+  <data name="ManagementAccounts" xml:space="preserve">
+    <value>حسابات الإدارة</value>
+    <comment>1</comment>
+  </data>
+  <data name="MobileNo" xml:space="preserve">
+    <value>رقم الجوال</value>
+    <comment>1</comment>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>الاسم</value>
+    <comment>1</comment>
+  </data>
+  <data name="Payment" xml:space="preserve">
+    <value>دفع</value>
+    <comment>1</comment>
+  </data>
+  <data name="PaymentNo" xml:space="preserve">
+    <value>دفع رقم</value>
+    <comment>1</comment>
+  </data>
+  <data name="PReq" xml:space="preserve">
+    <value>طلب شراء</value>
+    <comment>1</comment>
+  </data>
+  <data name="PReqNo" xml:space="preserve">
+    <value>طلب شراء رقم</value>
+    <comment>1</comment>
+  </data>
+  <data name="Purch" xml:space="preserve">
+    <value>شراء</value>
+    <comment>1</comment>
+  </data>
+  <data name="PurchNo" xml:space="preserve">
+    <value>شراء رقم</value>
+  </data>
+  <data name="RunJVou" xml:space="preserve">
+    <value>تم تنفيذ القيد</value>
+    <comment>1</comment>
+  </data>
+  <data name="Section" xml:space="preserve">
+    <value>القسم</value>
+    <comment>1</comment>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>أختيار</value>
+    <comment>1</comment>
+  </data>
+  <data name="SystemName" xml:space="preserve">
+    <value>في نظام الناقلات البرية</value>
+    <comment>1</comment>
+  </data>
+  <data name="TelNo" xml:space="preserve">
+    <value>رقم الهاتف</value>
+    <comment>1</comment>
+  </data>
+  <data name="TimeIn" xml:space="preserve">
+    <value>الحضور</value>
+    <comment>1</comment>
+  </data>
+  <data name="TimeOut" xml:space="preserve">
+    <value>الانصراف</value>
+    <comment>1</comment>
+  </data>
+  <data name="VendorAccount" xml:space="preserve">
+    <value>حسابات الموردين</value>
+    <comment>1</comment>
+  </data>
+  <data name="WillFinish" xml:space="preserve">
+    <value>ينتهي خلال</value>
+    <comment>1</comment>
+  </data>
+  <data name="AccruedExp" xml:space="preserve">
+    <value>مصروفات مستحقة</value>
+    <comment>1</comment>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>الجميع</value>
+    <comment>1</comment>
+  </data>
+  <data name="Banks" xml:space="preserve">
+    <value>البنوك</value>
+    <comment>1</comment>
+  </data>
+  <data name="BankTransfer" xml:space="preserve">
+    <value>تحويل بنكي</value>
+    <comment>1</comment>
+  </data>
+  <data name="BankTransferNo" xml:space="preserve">
+    <value>تحويل بنكي رقم</value>
+    <comment>1</comment>
+  </data>
+  <data name="Branch2" xml:space="preserve">
+    <value>فرع</value>
+    <comment>1</comment>
+  </data>
+  <data name="Cash" xml:space="preserve">
+    <value>النقدية</value>
+    <comment>1</comment>
+  </data>
+  <data name="ChIssue" xml:space="preserve">
+    <value>صرف شيكات</value>
+    <comment>1</comment>
+  </data>
+  <data name="ChIssueNo" xml:space="preserve">
+    <value>صرف شيكات رقم</value>
+    <comment>1</comment>
+  </data>
+  <data name="Claim" xml:space="preserve">
+    <value>مطالبة</value>
+    <comment>1</comment>
+  </data>
+  <data name="Claims" xml:space="preserve">
+    <value>مطالبات</value>
+    <comment>1</comment>
+  </data>
+  <data name="ClosedInv" xml:space="preserve">
+    <value>تم أغلاق الفاتورة من قبل</value>
+    <comment>1</comment>
+  </data>
+  <data name="Customers" xml:space="preserve">
+    <value>العملاء</value>
+    <comment>1</comment>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>بتاريخ</value>
+    <comment>1</comment>
+  </data>
+  <data name="Deliver" xml:space="preserve">
+    <value>تسليم</value>
+    <comment>1</comment>
+  </data>
+  <data name="DelivertoCustomer" xml:space="preserve">
+    <value>تم تسليم العميل</value>
+    <comment>1</comment>
+  </data>
+  <data name="Delivery" xml:space="preserve">
+    <value>سند اضافة</value>
+    <comment>1</comment>
+  </data>
+  <data name="DeliveryNo" xml:space="preserve">
+    <value>سند اضافة رقم</value>
+    <comment>1</comment>
+  </data>
+  <data name="DeliveryNote" xml:space="preserve">
+    <value>بيان تسليم</value>
+    <comment>1</comment>
+  </data>
+  <data name="Dep" xml:space="preserve">
+    <value>إدارة</value>
+    <comment>1</comment>
+  </data>
+  <data name="DriverPickedUp" xml:space="preserve">
+    <value>تم تسليم السائق</value>
+    <comment>1</comment>
+  </data>
+  <data name="Emp" xml:space="preserve">
+    <value>إدارية</value>
+    <comment>1</comment>
+  </data>
+  <data name="EmpLeave" xml:space="preserve">
+    <value>إخلاء طرف</value>
+    <comment>1</comment>
+  </data>
+  <data name="EmpTransfer" xml:space="preserve">
+    <value>نقل موظف</value>
+    <comment>1</comment>
+  </data>
+  <data name="EmpVac" xml:space="preserve">
+    <value>طلب أجازة</value>
+    <comment>1</comment>
+  </data>
+  <data name="InstallmentDue" xml:space="preserve">
+    <value>أقساط مستحقة</value>
+    <comment>1</comment>
+  </data>
+  <data name="InTruck" xml:space="preserve">
+    <value>على الشاحنة</value>
+    <comment>1</comment>
+  </data>
+  <data name="Invoice" xml:space="preserve">
+    <value>فاتورة</value>
+    <comment>1</comment>
+  </data>
+  <data name="Issue" xml:space="preserve">
+    <value>صرف بضاعة</value>
+    <comment>1</comment>
+  </data>
+  <data name="IssueNo" xml:space="preserve">
+    <value>صرف بضاعة رقم</value>
+    <comment>1</comment>
+  </data>
+  <data name="JV" xml:space="preserve">
+    <value>يومية</value>
+    <comment>1</comment>
+  </data>
+  <data name="JVNo" xml:space="preserve">
+    <value>قيد يومية رقم</value>
+    <comment>1</comment>
+  </data>
+  <data name="Loan" xml:space="preserve">
+    <value>العهد</value>
+    <comment>1</comment>
+  </data>
+  <data name="Man" xml:space="preserve">
+    <value>صيانة</value>
+    <comment>1</comment>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>رسالة</value>
+    <comment>1</comment>
+  </data>
+  <data name="NotPaid" xml:space="preserve">
+    <value>لم يسدد</value>
+    <comment>1</comment>
+  </data>
+  <data name="Package" xml:space="preserve">
+    <value>طرد</value>
+    <comment>1</comment>
+  </data>
+  <data name="PendingClaims" xml:space="preserve">
+    <value>مطالبات معلقة</value>
+    <comment>1</comment>
+  </data>
+  <data name="PendingOrders" xml:space="preserve">
+    <value>طلبات معلقة</value>
+    <comment>1</comment>
+  </data>
+  <data name="Petty" xml:space="preserve">
+    <value>نثرية</value>
+    <comment>1</comment>
+  </data>
+  <data name="PettyNo" xml:space="preserve">
+    <value>نثرية رقم</value>
+    <comment>1</comment>
+  </data>
+  <data name="PickedUp" xml:space="preserve">
+    <value>تم الاستلام منن العميل</value>
+    <comment>1</comment>
+  </data>
+  <data name="Reached" xml:space="preserve">
+    <value>تم الوصول</value>
+    <comment>1</comment>
+  </data>
+  <data name="ReachtoTransit" xml:space="preserve">
+    <value>تم الوصول إلى محطة الترانزيت</value>
+    <comment>1</comment>
+  </data>
+  <data name="RentTruck" xml:space="preserve">
+    <value>على شاحنة مستأجرة</value>
+    <comment>1</comment>
+  </data>
+  <data name="Repair" xml:space="preserve">
+    <value>أصلاح</value>
+    <comment>1</comment>
+  </data>
+  <data name="RepairNo" xml:space="preserve">
+    <value>أصلاح رقم</value>
+    <comment>1</comment>
+  </data>
+  <data name="Reserved" xml:space="preserve">
+    <value>تم الحجز بتاريخ</value>
+    <comment>1</comment>
+  </data>
+  <data name="SalEffects" xml:space="preserve">
+    <value>مؤثرات رواتب</value>
+    <comment>1</comment>
+  </data>
+  <data name="SR" xml:space="preserve">
+    <value>ريال</value>
+    <comment>1</comment>
+  </data>
+  <data name="StartWork" xml:space="preserve">
+    <value>مباشرة</value>
+    <comment>1</comment>
+  </data>
+  <data name="Through" xml:space="preserve">
+    <value>مرور</value>
+    <comment>1</comment>
+  </data>
+  <data name="ThroughWorkShop" xml:space="preserve">
+    <value>مروراً بالورشة</value>
+    <comment>1</comment>
+  </data>
+  <data name="UpdatedIn" xml:space="preserve">
+    <value>تم التحديث بتاريخ</value>
+    <comment>1</comment>
+  </data>
+  <data name="Vendors" xml:space="preserve">
+    <value>الموردين</value>
+    <comment>1</comment>
+  </data>
+  <data name="WorkShop" xml:space="preserve">
+    <value>الورشة</value>
+    <comment>1</comment>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>المبلغ</value>
+    <comment>1</comment>
+  </data>
+  <data name="Balance" xml:space="preserve">
+    <value>الرصيد</value>
+    <comment>1</comment>
+  </data>
+  <data name="CarType" xml:space="preserve">
+    <value>نوع السيارة</value>
+    <comment>1</comment>
+  </data>
+  <data name="Credit" xml:space="preserve">
+    <value>دائن</value>
+    <comment>1</comment>
+  </data>
+  <data name="Debit" xml:space="preserve">
+    <value>مدين</value>
+    <comment>1</comment>
+  </data>
+  <data name="Descr" xml:space="preserve">
+    <value>البيان</value>
+    <comment>1</comment>
+  </data>
+  <data name="Doc2" xml:space="preserve">
+    <value>المستند</value>
+    <comment>1</comment>
+  </data>
+  <data name="Land" xml:space="preserve">
+    <value>أرضية</value>
+    <comment>1</comment>
+  </data>
+  <data name="LastTran" xml:space="preserve">
+    <value>عرض آخر معاملات تمت على</value>
+    <comment>1</comment>
+  </data>
+  <data name="NoLand" xml:space="preserve">
+    <value>لا يوجد أرضية</value>
+    <comment>1</comment>
+  </data>
+  <data name="Receiver" xml:space="preserve">
+    <value>المستلم</value>
+    <comment>1</comment>
+  </data>
+  <data name="Rent" xml:space="preserve">
+    <value>مستأجرة</value>
+    <comment>1</comment>
+  </data>
+  <data name="Sender" xml:space="preserve">
+    <value>المرسل</value>
+    <comment>1</comment>
+  </data>
+  <data name="ViewCarMoveNo" xml:space="preserve">
+    <value>عرض بيان الترحيل رقم</value>
+    <comment>1</comment>
+  </data>
+  <data name="WithoutCars" xml:space="preserve">
+    <value>بدون سيارات</value>
+    <comment>1</comment>
+  </data>
+  <data name="WorkShops" xml:space="preserve">
+    <value>الورش</value>
+    <comment>1</comment>
+  </data>
+</root>

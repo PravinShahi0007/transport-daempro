@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DateValue" xml:space="preserve">
+    <value>يجب أن تكون القيمة تاريخ</value>
+    <comment>1</comment>
+  </data>
+  <data name="DeleteVou" xml:space="preserve">
+    <value>هل أنت متاكد من الغاء بيانات السند؟</value>
+    <comment>1</comment>
+  </data>
+  <data name="EnterVouDate" xml:space="preserve">
+    <value>يجب أختيار تاريخ السند</value>
+    <comment>1</comment>
+  </data>
+  <data name="EnterVouNo" xml:space="preserve">
+    <value>يجب إدخال رقم السند</value>
+    <comment>1</comment>
+  </data>
+  <data name="FindVou" xml:space="preserve">
+    <value>البحث عن بيانات السند</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>التاريخ</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>حساب البنك</value>
+    <comment>1</comment>
+  </data>
+  <data name="lblHead.Text" xml:space="preserve">
+    <value>[ قسيمة إيداع بنكي]</value>
+    <comment>1</comment>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>بحث</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectBankAcc" xml:space="preserve">
+    <value>يجب أختيار حساب البنك</value>
+    <comment>1</comment>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>أضافة</value>
+    <comment>1</comment>
+  </data>
+  <data name="AddVou" xml:space="preserve">
+    <value>أضافة ايداع بنكي رقم</value>
+    <comment>1</comment>
+  </data>
+  <data name="Attach" xml:space="preserve">
+    <value>مرفقات</value>
+    <comment>1</comment>
+  </data>
+  <data name="Attach2" xml:space="preserve">
+    <value>المرفقات</value>
+    <comment>1</comment>
+  </data>
+  <data name="Cash" xml:space="preserve">
+    <value>نقدي</value>
+    <comment>1</comment>
+  </data>
+  <data name="Cheque" xml:space="preserve">
+    <value>شيك</value>
+    <comment>1</comment>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>مسح</value>
+    <comment>1</comment>
+  </data>
+  <data name="ClearImage" xml:space="preserve">
+    <value>~/images/erasure_642.png</value>
+    <comment>1</comment>
+  </data>
+  <data name="ClearTooltip" xml:space="preserve">
+    <value>مسح خانات الشاشة</value>
+    <comment>1</comment>
+  </data>
+  <data name="ClosedPeriod" xml:space="preserve">
+    <value>لقد تم اغلاق الفترة حتى تاريخ</value>
+    <comment>1</comment>
+  </data>
+  <data name="CreditAccNotFound" xml:space="preserve">
+    <value>الحساب الدائن غير معرف من قبل</value>
+    <comment>1</comment>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>التاريخ والوقت</value>
+    <comment>1</comment>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>إلغاء</value>
+    <comment>1</comment>
+  </data>
+  <data name="DeleteConfirm" xml:space="preserve">
+    <value>return confirm("هل أنت متاكد من الغاء بيانات الحساب؟")</value>
+    <comment>1</comment>
+  </data>
+  <data name="DeleteFile" xml:space="preserve">
+    <value>الغاء الملف</value>
+    <comment>1</comment>
+  </data>
+  <data name="DeleteImage" xml:space="preserve">
+    <value>~/images/cut_642.png</value>
+    <comment>1</comment>
+  </data>
+  <data name="DeleteTooltip" xml:space="preserve">
+    <value>إلغاء بيانات السند</value>
+    <comment>1</comment>
+  </data>
+  <data name="DeleteVou2" xml:space="preserve">
+    <value>الغاء بيانات الايداع البنكي رقم</value>
+    <comment>1</comment>
+  </data>
+  <data name="DuplicateVou" xml:space="preserve">
+    <value>رقم الايداع البنكي مكرر</value>
+    <comment>1</comment>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>تعديل</value>
+    <comment>1</comment>
+  </data>
+  <data name="EditImage" xml:space="preserve">
+    <value>~/images/draw_pen_642.png</value>
+    <comment>1</comment>
+  </data>
+  <data name="EditTooltip" xml:space="preserve">
+    <value>تعديل بيانات السند</value>
+    <comment>1</comment>
+  </data>
+  <data name="EditVou" xml:space="preserve">
+    <value>تعديل بيانات الايداع البنكي رقم</value>
+    <comment>1</comment>
+  </data>
+  <data name="EnterCrAccount" xml:space="preserve">
+    <value>يجب إدخال رقم الحساب الدائن</value>
+    <comment>1</comment>
+  </data>
+  <data name="EnterCrName" xml:space="preserve">
+    <value>يجب إدخال أسم الحساب الدائن</value>
+    <comment>1</comment>
+  </data>
+  <data name="EnterReason" xml:space="preserve">
+    <value>يجب إدخال سبب التعديل/الالغاء</value>
+    <comment>1</comment>
+  </data>
+  <data name="ErrorAdd" xml:space="preserve">
+    <value>لقد حدث خطأ أثناء أضافة البيانات ... حاول مرة أخرى</value>
+    <comment>1</comment>
+  </data>
+  <data name="ErrorDelete" xml:space="preserve">
+    <value>لقد حدث خطأ أثناء الغاء البيانات ... حاول مرة أخرى</value>
+    <comment>1</comment>
+  </data>
+  <data name="ErrorUpdate" xml:space="preserve">
+    <value>لقد حدث خطأ أثناء تعديل البيانات ... حاول مرة أخرى</value>
+    <comment>1</comment>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>الملف</value>
+    <comment>1</comment>
+  </data>
+  <data name="HideDetails" xml:space="preserve">
+    <value>(أخفاء التفاصيل)</value>
+    <comment>1</comment>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>الرئيسية</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>رقم السند</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label11.Text" xml:space="preserve">
+    <value>مبلغ وقدرة</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label12.Text" xml:space="preserve">
+    <value>الحساب الدائن</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label14.Text" xml:space="preserve">
+    <value>المستخدم</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label15.Text" xml:space="preserve">
+    <value>بتاريخ</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label27.Text" xml:space="preserve">
+    <value>حقول الزامية</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label34.Text" xml:space="preserve">
+    <value>(عرض التفاصيل)</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label35.Text" xml:space="preserve">
+    <value>اسم المودع</value>
+    <comment>1</comment>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>وذلك عن</value>
+    <comment>1</comment>
+  </data>
+  <data name="lblArea.Text" xml:space="preserve">
+    <value>المنطقة</value>
+    <comment>1</comment>
+  </data>
+  <data name="lblBankName.Text" xml:space="preserve">
+    <value>مسحوب على بنك</value>
+    <comment>1</comment>
+  </data>
+  <data name="lblChqDate.Text" xml:space="preserve">
+    <value>تاريخ الشيك</value>
+    <comment>1</comment>
+  </data>
+  <data name="lblChqNo.Text" xml:space="preserve">
+    <value>رقم الشيك</value>
+    <comment>1</comment>
+  </data>
+  <data name="lblCostAcc.Text" xml:space="preserve">
+    <value>حساب التكاليف</value>
+    <comment>1</comment>
+  </data>
+  <data name="lblCostCenter.Text" xml:space="preserve">
+    <value>الفرع</value>
+    <comment>1</comment>
+  </data>
+  <data name="lblEmp.Text" xml:space="preserve">
+    <value>الموظف</value>
+    <comment>1</comment>
+  </data>
+  <data name="lblProject.Text" xml:space="preserve">
+    <value>المشروع</value>
+    <comment>1</comment>
+  </data>
+  <data name="lblReason.Text" xml:space="preserve">
+    <value>سبب التعديل/الغاء</value>
+    <comment>1</comment>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>جديد</value>
+    <comment>1</comment>
+  </data>
+  <data name="NewConfirm" xml:space="preserve">
+    <value>return confirm("هل أنت متاكد من حفظ بيانات الحساب؟")</value>
+    <comment>1</comment>
+  </data>
+  <data name="NewImage" xml:space="preserve">
+    <value>~/images/insource_642.png</value>
+    <comment>1</comment>
+  </data>
+  <data name="NewTooltip" xml:space="preserve">
+    <value>أضافة سند جديد</value>
+    <comment>1</comment>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>طباعة</value>
+    <comment>1</comment>
+  </data>
+  <data name="PrintImage" xml:space="preserve">
+    <value>~/images/print_642.png</value>
+    <comment>1</comment>
+  </data>
+  <data name="PrintTooltip" xml:space="preserve">
+    <value>طباعة بيانات السند</value>
+    <comment>1</comment>
+  </data>
+  <data name="SearchImage" xml:space="preserve">
+    <value>~/images/binoculars_642.png</value>
+    <comment>1</comment>
+  </data>
+  <data name="SearchTooltip" xml:space="preserve">
+    <value>البحث عن بيانات السند</value>
+    <comment>1</comment>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>أختيار</value>
+  </data>
+  <data name="SelectArea" xml:space="preserve">
+    <value>--- أختار المنطقة---</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectBank" xml:space="preserve">
+    <value>--- أختار حساب البنك  ---</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectBranch" xml:space="preserve">
+    <value>--- أختار الفرع---</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectCost" xml:space="preserve">
+    <value>--- أختار حساب التكاليف---</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectEmp" xml:space="preserve">
+    <value>--- أختار الموظف---</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectProject" xml:space="preserve">
+    <value>--- أختار المشروع---</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectTask" xml:space="preserve">
+    <value>أختيار العملية و عرض تفاصيلها</value>
+    <comment>1</comment>
+  </data>
+  <data name="SelectVou" xml:space="preserve">
+    <value>اختيار قسيمة إيداع بنكي</value>
+    <comment>1</comment>
+  </data>
+  <data name="SuccessAdd" xml:space="preserve">
+    <value>لقد تمت أضافة البيانات بنجاح</value>
+    <comment>1</comment>
+  </data>
+  <data name="SuccessDelete" xml:space="preserve">
+    <value>لقد تم الغاء البيانات بنجاح</value>
+    <comment>1</comment>
+  </data>
+  <data name="SuccessUpdate" xml:space="preserve">
+    <value>لقد تم تعديل البيانات بنجاح</value>
+    <comment>1</comment>
+  </data>
+  <data name="SureDeleteFile" xml:space="preserve">
+    <value>return confirm("هل أنت متاكد من الغاء الملف؟")</value>
+    <comment>1</comment>
+  </data>
+  <data name="Task" xml:space="preserve">
+    <value>الإجراء</value>
+    <comment>1</comment>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>قسيمة إيداع بنكي</value>
+    <comment>1</comment>
+  </data>
+  <data name="Title2" xml:space="preserve">
+    <value>إيداع بنكي</value>
+    <comment>1</comment>
+  </data>
+  <data name="TrackUser" xml:space="preserve">
+    <value>تتبع عمليات المستخدم</value>
+    <comment>1</comment>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>المستخدم</value>
+    <comment>1</comment>
+  </data>
+  <data name="VouNotFound" xml:space="preserve">
+    <value>رقم السند غير معرف من قبل</value>
+    <comment>1</comment>
+  </data>
+  <data name="AddAttach" xml:space="preserve">
+    <value>اضافة مرفقات</value>
+    <comment>1</comment>
+  </data>
+  <data name="AddAttachFile" xml:space="preserve">
+    <value>اضافة مرفقات للايداع البنكي رقم</value>
+    <comment>1</comment>
+  </data>
+  <data name="DeleteAttach" xml:space="preserve">
+    <value>الغاء مرفقات</value>
+    <comment>1</comment>
+  </data>
+  <data name="DeleteAttachFile" xml:space="preserve">
+    <value>الغاء مرفقات للايداع البنكي رقم</value>
+    <comment>1</comment>
+  </data>
+  <data name="FileNotSelect" xml:space="preserve">
+    <value>لم بتم اختيار الملف</value>
+    <comment>1</comment>
+  </data>
+  <data name="PrintVou" xml:space="preserve">
+    <value>طباعة بيانات الايداع البنكي رقم</value>
+    <comment>1</comment>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>عرض</value>
+    <comment>1</comment>
+  </data>
+  <data name="ViewVou" xml:space="preserve">
+    <value>عرض بيانات الايداع البنكي رقم</value>
+    <comment>1</comment>
+  </data>
+</root>

@@ -1,0 +1,1218 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="erp" Class="DataERP2DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=naqelat.net,7033\MSSQL;Initial Catalog=erp;Persist Security Info=True;User ID=softtec" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="erpConnectionString13" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.ArchDelete" Method="ArchDelete">
+    <Parameter Name="Branch" Parameter="branch" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocNumber" Parameter="locNumber" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Number" Parameter="number" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ArchDeleteFNo" Method="ArchDeleteFNo">
+    <Parameter Name="Branch" Parameter="branch" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocNumber" Parameter="locNumber" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Number" Parameter="number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FNo" Parameter="fNo" Type="System.Int16" DbType="SmallInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ArchGet" Method="ArchGet">
+    <Parameter Name="Branch" Parameter="branch" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocNumber" Parameter="locNumber" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Number" Parameter="number" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ArchGetResult">
+      <Column Name="Branch" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="LocNumber" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="DocType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FNo" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="FileName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FileName2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ArchInsert" Method="ArchInsert">
+    <Parameter Name="Branch" Parameter="branch" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocNumber" Parameter="locNumber" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Number" Parameter="number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FNo" Parameter="fNo" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="FileName" Parameter="fileName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FileName2" Parameter="fileName2" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ArchMaxFNo" Method="ArchMaxFNo">
+    <Parameter Name="Branch" Parameter="branch" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocNumber" Parameter="locNumber" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Number" Parameter="number" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ArchMaxFNoResult">
+      <Column Name="myCode" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ChatDelete" Method="ChatDelete">
+    <Parameter Name="MyDate" Parameter="myDate" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ChatGetAll" Method="ChatGetAll">
+    <Parameter Name="FromUser" Parameter="fromUser" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="ChatGetAllResult">
+      <Column Name="MyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FromUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ToUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Msg" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="FRead" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FDisplay" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ChatGetAll2" Method="ChatGetAll2">
+    <Parameter Name="StartDate" Parameter="startDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="EndDate" Parameter="endDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FromUser" Parameter="fromUser" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="ChatGetAll2Result">
+      <Column Name="MyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FromUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ToUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Msg" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="FRead" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FDisplay" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ChatGetAlls" Method="ChatGetAlls">
+    <ElementType Name="ChatGetAllsResult">
+      <Column Name="MyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FromUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ToUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Msg" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="FRead" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FDisplay" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ChatInsert" Method="ChatInsert">
+    <Parameter Name="FromUser" Parameter="fromUser" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ToUser" Parameter="toUser" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MyDate" Parameter="myDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Msg" Parameter="msg" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="FRead" Parameter="fRead" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="FDisplay" Parameter="fDisplay" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ChatRead" Method="ChatRead">
+    <Parameter Name="ToUser" Parameter="toUser" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DealOutAdd" Method="DealOutAdd">
+    <Parameter Name="FType" Parameter="fType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="FNum" Parameter="fNum" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FNo" Parameter="fNo" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="FStep" Parameter="fStep" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FDate" Parameter="fDate" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="FAgree" Parameter="fAgree" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="FNote" Parameter="fNote" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="CurrentState" Parameter="currentState" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="EmpCode" Parameter="empCode" Type="System.Int32" DbType="Int" />
+    <Parameter Name="WDate" Parameter="wDate" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Days" Parameter="days" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SDays" Parameter="sDays" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="EDays" Parameter="eDays" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="TicketPrice" Parameter="ticketPrice" Type="System.Double" DbType="Float" />
+    <Parameter Name="TicketNo" Parameter="ticketNo" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="vTaking" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Replacement" Parameter="replacement" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="REmpCode" Parameter="rEmpCode" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Basic" Parameter="basic" Type="System.Double" DbType="Float" />
+    <Parameter Name="Add01" Parameter="add01" Type="System.Double" DbType="Float" />
+    <Parameter Name="Add02" Parameter="add02" Type="System.Double" DbType="Float" />
+    <Parameter Name="Add03" Parameter="add03" Type="System.Double" DbType="Float" />
+    <Parameter Name="Add04" Parameter="add04" Type="System.Double" DbType="Float" />
+    <Parameter Name="Add05" Parameter="add05" Type="System.Double" DbType="Float" />
+    <Parameter Name="Add06" Parameter="add06" Type="System.Double" DbType="Float" />
+    <Parameter Name="Add07" Parameter="add07" Type="System.Double" DbType="Float" />
+    <Parameter Name="Add08" Parameter="add08" Type="System.Double" DbType="Float" />
+    <Parameter Name="Add09" Parameter="add09" Type="System.Double" DbType="Float" />
+    <Parameter Name="Add10" Parameter="add10" Type="System.Double" DbType="Float" />
+    <Parameter Name="Add11" Parameter="add11" Type="System.Double" DbType="Float" />
+    <Parameter Name="Add12" Parameter="add12" Type="System.Double" DbType="Float" />
+    <Parameter Name="Add13" Parameter="add13" Type="System.Double" DbType="Float" />
+    <Parameter Name="Add14" Parameter="add14" Type="System.Double" DbType="Float" />
+    <Parameter Name="Add15" Parameter="add15" Type="System.Double" DbType="Float" />
+    <Parameter Name="Ded01" Parameter="ded01" Type="System.Double" DbType="Float" />
+    <Parameter Name="Ded02" Parameter="ded02" Type="System.Double" DbType="Float" />
+    <Parameter Name="Ded03" Parameter="ded03" Type="System.Double" DbType="Float" />
+    <Parameter Name="Ded04" Parameter="ded04" Type="System.Double" DbType="Float" />
+    <Parameter Name="Ded05" Parameter="ded05" Type="System.Double" DbType="Float" />
+    <Parameter Name="Ded06" Parameter="ded06" Type="System.Double" DbType="Float" />
+    <Parameter Name="Ded07" Parameter="ded07" Type="System.Double" DbType="Float" />
+    <Parameter Name="Ded08" Parameter="ded08" Type="System.Double" DbType="Float" />
+    <Parameter Name="Ded09" Parameter="ded09" Type="System.Double" DbType="Float" />
+    <Parameter Name="Ded10" Parameter="ded10" Type="System.Double" DbType="Float" />
+    <Parameter Name="Ded11" Parameter="ded11" Type="System.Double" DbType="Float" />
+    <Parameter Name="Ded12" Parameter="ded12" Type="System.Double" DbType="Float" />
+    <Parameter Name="Ded13" Parameter="ded13" Type="System.Double" DbType="Float" />
+    <Parameter Name="Ded14" Parameter="ded14" Type="System.Double" DbType="Float" />
+    <Parameter Name="Ded15" Parameter="ded15" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DealOutDeleteFNum" Method="DealOutDeleteFNum">
+    <Parameter Name="FType" Parameter="fType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="FNum" Parameter="fNum" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DealOutDeleteFNumStep" Method="DealOutDeleteFNumStep">
+    <Parameter Name="FType" Parameter="fType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="FNum" Parameter="fNum" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FNo" Parameter="fNo" Type="System.Int16" DbType="SmallInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DealOutGetFNum" Method="DealOutGetFNum">
+    <Parameter Name="FType" Parameter="fType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="FNum" Parameter="fNum" Type="System.Int32" DbType="Int" />
+    <ElementType Name="DealOutGetFNumResult">
+      <Column Name="FType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="FNum" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FNo" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="FStep" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FDate" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="FAgree" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="FNote" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CurrentState" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmpCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Days" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SDays" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="EDays" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="TicketPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TicketNo" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="vTaking" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Replacement" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="REmpCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Basic" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add01" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add02" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add03" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add04" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add05" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add06" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add07" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add08" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add09" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add10" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add11" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add12" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add13" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add14" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add15" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded01" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded02" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded03" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded04" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded05" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded06" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded07" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded08" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded09" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded10" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded11" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded12" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded13" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded14" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded15" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DealOutGetFNumStep" Method="DealOutGetFNumStep">
+    <Parameter Name="FType" Parameter="fType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="FNum" Parameter="fNum" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FNo" Parameter="fNo" Type="System.Int16" DbType="SmallInt" />
+    <ElementType Name="DealOutGetFNumStepResult">
+      <Column Name="FType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="FNum" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FNo" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="FStep" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FDate" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="FAgree" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="FNote" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CurrentState" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmpCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Days" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SDays" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="EDays" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="TicketPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TicketNo" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="vTaking" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Replacement" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="REmpCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Basic" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add01" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add02" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add03" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add04" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add05" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add06" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add07" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add08" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add09" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add10" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add11" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add12" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add13" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add14" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add15" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded01" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded02" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded03" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded04" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded05" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded06" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded07" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded08" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded09" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded10" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded11" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded12" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded13" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded14" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded15" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DealOutGetMaxFNum" Method="DealOutGetMaxFNum">
+    <Parameter Name="FType" Parameter="fType" Type="System.Int16" DbType="SmallInt" />
+    <ElementType Name="DealOutGetMaxFNumResult">
+      <Column Name="myCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DealOutGetMaxStep" Method="DealOutGetMaxStep">
+    <Parameter Name="FType" Parameter="fType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="FNum" Parameter="fNum" Type="System.Int32" DbType="Int" />
+    <ElementType Name="DealOutGetMaxStepResult">
+      <Column Name="myCode" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DealOutGetState" Method="DealOutGetState">
+    <Parameter Name="CurrentState" Parameter="currentState" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="DealOutGetStateResult">
+      <Column Name="FType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="FNum" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FNo" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="FStep" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FDate" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="FAgree" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="FNote" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CurrentState" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmpCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Days" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SDays" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="EDays" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="TicketPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TicketNo" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="vTaking" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Replacement" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="REmpCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Basic" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add01" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add02" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add03" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add04" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add05" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add06" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add07" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add08" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add09" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add10" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add11" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add12" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add13" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add14" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Add15" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded01" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded02" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded03" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded04" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded05" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded06" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded07" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded08" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded09" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded10" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded11" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded12" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded13" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded14" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ded15" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TblStartGet" Method="TblStartGet">
+    <Parameter Name="FType" Parameter="fType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="FNo" Parameter="fNo" Type="System.Int16" DbType="SmallInt" />
+    <ElementType Name="TblStartGetResult">
+      <Column Name="FType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="FNo" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Fd1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Fd2" Type="System.String" DbType="NVarChar(1500)" CanBeNull="true" />
+      <Column Name="Fd3" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Fd4" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Fd5" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TblStartGetAll" Method="TblStartGetAll">
+    <Parameter Name="FType" Parameter="fType" Type="System.Int16" DbType="SmallInt" />
+    <ElementType Name="TblStartGetAllResult">
+      <Column Name="FType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="FNo" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Fd1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Fd2" Type="System.String" DbType="NVarChar(1500)" CanBeNull="true" />
+      <Column Name="Fd3" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Fd4" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Fd5" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TblStartGetAll2" Method="TblStartGetAll2">
+    <ElementType Name="TblStartGetAll2Result">
+      <Column Name="FType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="FNo" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Fd1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Fd2" Type="System.String" DbType="NVarChar(1500)" CanBeNull="true" />
+      <Column Name="Fd3" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Fd4" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Fd5" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TblStartUpdate" Method="TblStartUpdate">
+    <Parameter Name="FType" Parameter="fType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="FNo" Parameter="fNo" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Fd1" Parameter="fd1" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Fd2" Parameter="fd2" Type="System.String" DbType="NVarChar(1500)" />
+    <Parameter Name="Fd3" Parameter="fd3" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Fd4" Parameter="fd4" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Fd5" Parameter="fd5" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ArchGetFNo" Method="ArchGetFNo">
+    <Parameter Name="Branch" Parameter="branch" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocNumber" Parameter="locNumber" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Number" Parameter="number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FNo" Parameter="fNo" Type="System.Int16" DbType="SmallInt" />
+    <ElementType Name="ArchGetFNoResult">
+      <Column Name="Branch" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="LocNumber" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="DocType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FNo" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="FileName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FileName2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.doAgreeAdd" Method="doAgreeAdd">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FType" Parameter="fType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocType" Parameter="locType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocNumber" Parameter="locNumber" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Number" Parameter="number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FNo" Parameter="fNo" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="UserName2" Parameter="userName2" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="UserGroup" Parameter="userGroup" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.doAgreeGet" Method="doAgreeGet">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="UserGroup" Parameter="userGroup" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="doAgreeGetResult">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="LocType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="LocNumber" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FNo" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="UserName2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserGroup" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.doAgreeDelete" Method="doAgreeDelete">
+    <Parameter Name="FType" Parameter="fType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocType" Parameter="locType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocNumber" Parameter="locNumber" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Number" Parameter="number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FNo" Parameter="fNo" Type="System.Int16" DbType="SmallInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.doAgreeGetFNo" Method="doAgreeGetFNo">
+    <Parameter Name="FType" Parameter="fType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocType" Parameter="locType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocNumber" Parameter="locNumber" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Number" Parameter="number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FNo" Parameter="fNo" Type="System.Int16" DbType="SmallInt" />
+    <ElementType Name="doAgreeGetFNoResult">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="LocType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="LocNumber" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FNo" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="UserName2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserGroup" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AgreeDelete" Method="AgreeDelete">
+    <Parameter Name="FType" Parameter="fType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocType" Parameter="locType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocNumber" Parameter="locNumber" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Number" Parameter="number" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AgreeDeleteFNo" Method="AgreeDeleteFNo">
+    <Parameter Name="FType" Parameter="fType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocType" Parameter="locType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocNumber" Parameter="locNumber" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Number" Parameter="number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FNo" Parameter="fNo" Type="System.Int16" DbType="SmallInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AgreeGet" Method="AgreeGet">
+    <Parameter Name="FType" Parameter="fType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocType" Parameter="locType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocNumber" Parameter="locNumber" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Number" Parameter="number" Type="System.Int32" DbType="Int" />
+    <ElementType Name="AgreeGetResult">
+      <Column Name="FType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="LocType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="LocNumber" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FNo" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Agree" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="AgreeRemark" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="AgreeUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AgreeUserDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="RUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AgreeGetFNo" Method="AgreeGetFNo">
+    <Parameter Name="FType" Parameter="fType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocType" Parameter="locType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocNumber" Parameter="locNumber" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Number" Parameter="number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FNo" Parameter="fNo" Type="System.Int16" DbType="SmallInt" />
+    <ElementType Name="AgreeGetFNoResult">
+      <Column Name="FType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="LocType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="LocNumber" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FNo" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Agree" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="AgreeRemark" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="AgreeUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AgreeUserDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="RUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AgreeInsert" Method="AgreeInsert">
+    <Parameter Name="FType" Parameter="fType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocType" Parameter="locType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocNumber" Parameter="locNumber" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Number" Parameter="number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FNo" Parameter="fNo" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Agree" Parameter="agree" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="AgreeRemark" Parameter="agreeRemark" Type="System.String" DbType="NVarChar(300)" />
+    <Parameter Name="AgreeUser" Parameter="agreeUser" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="AgreeUserDate" Parameter="agreeUserDate" Type="System.String" DbType="NVarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AgreeMaxFNo" Method="AgreeMaxFNo">
+    <Parameter Name="FType" Parameter="fType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocType" Parameter="locType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocNumber" Parameter="locNumber" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Number" Parameter="number" Type="System.Int32" DbType="Int" />
+    <ElementType Name="AgreeMaxFNoResult">
+      <Column Name="myCode" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AgreeUpdate" Method="AgreeUpdate">
+    <Parameter Name="FType" Parameter="fType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocType" Parameter="locType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="LocNumber" Parameter="locNumber" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Number" Parameter="number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FNo" Parameter="fNo" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Agree" Parameter="agree" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="AgreeRemark" Parameter="agreeRemark" Type="System.String" DbType="NVarChar(300)" />
+    <Parameter Name="AgreeUser" Parameter="agreeUser" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="AgreeUserDate" Parameter="agreeUserDate" Type="System.String" DbType="NVarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.TransactionsGetAll" Method="TransactionsGetAll">
+    <Parameter Name="TranDate" Parameter="tranDate" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FormName" Parameter="formName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FormAction" Parameter="formAction" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="TransactionsGetAllResult">
+      <Column Name="TranDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="TranTime" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FormName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FormAction" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Reason" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="IP" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="lat" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="lng" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TransactionsInsert" Method="TransactionsInsert">
+    <Parameter Name="TranDate" Parameter="tranDate" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="TranTime" Parameter="tranTime" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FormName" Parameter="formName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FormAction" Parameter="formAction" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Reason" Parameter="reason" Type="System.String" DbType="NVarChar(300)" />
+    <Parameter Name="IP" Parameter="iP" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="lat" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="lng" Type="System.String" DbType="NVarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.TransactionsSelectFormAction" Method="TransactionsSelectFormAction">
+    <ElementType Name="TransactionsSelectFormActionResult">
+      <Column Name="FormAction" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TransactionsSelectFormName" Method="TransactionsSelectFormName">
+    <ElementType Name="TransactionsSelectFormNameResult">
+      <Column Name="FormName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TransactionsSelectUserName" Method="TransactionsSelectUserName">
+    <ElementType Name="TransactionsSelectUserNameResult">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PromoCodeAdd" Method="PromoCodeAdd">
+    <Parameter Name="OrderType" Parameter="orderType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="VouLoc" Parameter="vouLoc" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="VouNo" Parameter="vouNo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="GDateTime" Parameter="gDateTime" Type="System.String" DbType="NVarChar(25)" />
+    <Parameter Name="PromoCode" Parameter="promoCode" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Discount" Parameter="discount" Type="System.Double" DbType="Float" />
+    <Parameter Name="DeviceType" Parameter="deviceType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Amount" Parameter="amount" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.PromoCodeCount" Method="PromoCodeCount">
+    <Parameter Name="PromoCode" Parameter="promoCode" Type="System.String" DbType="NVarChar(15)" />
+    <ElementType Name="PromoCodeCountResult">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PromoCodeCountUserName" Method="PromoCodeCountUserName">
+    <Parameter Name="PromoCode" Parameter="promoCode" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="PromoCodeCountUserNameResult">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PromoCodeGet" Method="PromoCodeGet">
+    <Parameter Name="PromoCode" Parameter="promoCode" Type="System.String" DbType="NVarChar(15)" />
+    <ElementType Name="PromoCodeGetResult">
+      <Column Name="OrderType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="VouLoc" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="VouNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GDateTime" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="PromoCode" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Discount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DeviceType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PromoCodeGetVou" Method="PromoCodeGetVou">
+    <Parameter Name="OrderType" Parameter="orderType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="VouLoc" Parameter="vouLoc" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="VouNo" Parameter="vouNo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="PromoCodeGetVouResult">
+      <Column Name="OrderType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="VouLoc" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="VouNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GDateTime" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="PromoCode" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Discount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DeviceType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.eServicesAdd" Method="eServicesAdd">
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="DocNo" Parameter="docNo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DocDate" Parameter="docDate" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="DocTime" Parameter="docTime" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="EmpCode" Parameter="empCode" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FType" Parameter="fType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="sDate" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Notes" Parameter="notes" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="Status" Parameter="status" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="UserDate" Parameter="userDate" Type="System.String" DbType="NVarChar(25)" />
+    <Parameter Name="TransferUser" Parameter="transferUser" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="VacDays" Parameter="vacDays" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="VacDays0" Parameter="vacDays0" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="VacDays1" Parameter="vacDays1" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="VacDaysam" Parameter="vacDaysam" Type="System.Double" DbType="Float" />
+    <Parameter Name="Notes2" Parameter="notes2" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="EDate" Parameter="eDate" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Field1" Parameter="field1" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Field01" Parameter="field01" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.eServicesAgreeAdd" Method="eServicesAgreeAdd">
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="DocNo" Parameter="docNo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FNo" Parameter="fNo" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Agree" Parameter="agree" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="AgreeRemark" Parameter="agreeRemark" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="AgreeUser" Parameter="agreeUser" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="AgreeUserDate" Parameter="agreeUserDate" Type="System.String" DbType="NVarChar(25)" />
+    <Parameter Name="TransferUser" Parameter="transferUser" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.eServicesAgreeDelete" Method="eServicesAgreeDelete">
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="DocNo" Parameter="docNo" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.eServicesAgreeDeleteFNo" Method="eServicesAgreeDeleteFNo">
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="DocNo" Parameter="docNo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FNo" Parameter="fNo" Type="System.Int16" DbType="SmallInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.eServicesAgreeGet" Method="eServicesAgreeGet">
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="DocNo" Parameter="docNo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="eServicesAgreeGetResult">
+      <Column Name="DocType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="DocNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FNo" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Agree" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="AgreeRemark" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="AgreeUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AgreeUserDate" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="TransferUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.eServicesAgreeGetFNo" Method="eServicesAgreeGetFNo">
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="DocNo" Parameter="docNo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FNo" Parameter="fNo" Type="System.Int16" DbType="SmallInt" />
+    <ElementType Name="eServicesAgreeGetFNoResult">
+      <Column Name="DocType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="DocNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FNo" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Agree" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="AgreeRemark" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="AgreeUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AgreeUserDate" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="TransferUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.eServicesAgreeGetMaxFNo" Method="eServicesAgreeGetMaxFNo">
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="DocNo" Parameter="docNo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="eServicesAgreeGetMaxFNoResult">
+      <Column Name="myFNo" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.eServicesAgreeUpdate" Method="eServicesAgreeUpdate">
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="DocNo" Parameter="docNo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FNo" Parameter="fNo" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Agree" Parameter="agree" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="AgreeRemark" Parameter="agreeRemark" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="AgreeUser" Parameter="agreeUser" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="AgreeUserDate" Parameter="agreeUserDate" Type="System.String" DbType="NVarChar(25)" />
+    <Parameter Name="TransferUser" Parameter="transferUser" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.eServicesDelete" Method="eServicesDelete">
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="DocNo" Parameter="docNo" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.eServicesGet" Method="eServicesGet">
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="DocNo" Parameter="docNo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="eServicesGetResult">
+      <Column Name="DocType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="DocNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DocTime" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="EmpCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserDate" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="TransferUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VacDays" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="VacDays0" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="VacDays1" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="VacDaysam" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Notes2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Field1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Field01" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.eServicesGetAll" Method="eServicesGetAll">
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="EmpCode" Parameter="empCode" Type="System.Int32" DbType="Int" />
+    <ElementType Name="eServicesGetAllResult">
+      <Column Name="DocType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="DocNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DocTime" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="EmpCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserDate" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="TransferUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VacDays" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="VacDays0" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="VacDays1" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="VacDaysam" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Notes2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Field1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Field01" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.eServicesMaxCode" Method="eServicesMaxCode">
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int16" DbType="SmallInt" />
+    <ElementType Name="eServicesMaxCodeResult">
+      <Column Name="myCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.eServicesUpdate" Method="eServicesUpdate">
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="DocNo" Parameter="docNo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DocDate" Parameter="docDate" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="DocTime" Parameter="docTime" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="EmpCode" Parameter="empCode" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FType" Parameter="fType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="sDate" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Notes" Parameter="notes" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="Status" Parameter="status" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="UserDate" Parameter="userDate" Type="System.String" DbType="NVarChar(25)" />
+    <Parameter Name="TransferUser" Parameter="transferUser" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="VacDays" Parameter="vacDays" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="VacDays0" Parameter="vacDays0" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="VacDays1" Parameter="vacDays1" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="VacDaysam" Parameter="vacDaysam" Type="System.Double" DbType="Float" />
+    <Parameter Name="Notes2" Parameter="notes2" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="EDate" Parameter="eDate" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Field1" Parameter="field1" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Field01" Parameter="field01" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.eServicesUpdateStatus" Method="eServicesUpdateStatus">
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="DocNo" Parameter="docNo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Status" Parameter="status" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="TransferUser" Parameter="transferUser" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Functions1Add" Method="Functions1Add">
+    <Parameter Name="FType" Parameter="fType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Name2" Parameter="name2" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="FormName" Parameter="formName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FCreate" Parameter="fCreate" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FStep1" Parameter="fStep1" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FStep2" Parameter="fStep2" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FStep3" Parameter="fStep3" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FStep4" Parameter="fStep4" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FStep5" Parameter="fStep5" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FStep6" Parameter="fStep6" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FStep7" Parameter="fStep7" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FStep8" Parameter="fStep8" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SType1" Parameter="sType1" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="SType2" Parameter="sType2" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="SType3" Parameter="sType3" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="SType4" Parameter="sType4" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="SType5" Parameter="sType5" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="SType6" Parameter="sType6" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="SType7" Parameter="sType7" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="SType8" Parameter="sType8" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Action1" Parameter="action1" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Action2" Parameter="action2" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Action3" Parameter="action3" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Action4" Parameter="action4" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Action5" Parameter="action5" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Action6" Parameter="action6" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Action7" Parameter="action7" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Action8" Parameter="action8" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Functions1Delete" Method="Functions1Delete">
+    <Parameter Name="FType" Parameter="fType" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Functions1Find" Method="Functions1Find">
+    <Parameter Name="FType" Parameter="fType" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Functions1FindResult">
+      <Column Name="FType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FormName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FCreate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep4" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep5" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep6" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep7" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep8" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SType1" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType2" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType3" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType4" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType5" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType6" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType7" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType8" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Action1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action3" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action4" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action5" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action6" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action7" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action8" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Functions1GetAll" Method="Functions1GetAll">
+    <ElementType Name="Functions1GetAllResult">
+      <Column Name="FType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FormName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FCreate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep4" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep5" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep6" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep7" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep8" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SType1" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType2" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType3" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType4" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType5" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType6" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType7" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType8" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Action1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action3" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action4" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action5" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action6" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action7" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action8" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Functions1Update" Method="Functions1Update">
+    <Parameter Name="FType" Parameter="fType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Name2" Parameter="name2" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="FormName" Parameter="formName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FCreate" Parameter="fCreate" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FStep1" Parameter="fStep1" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FStep2" Parameter="fStep2" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FStep3" Parameter="fStep3" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FStep4" Parameter="fStep4" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FStep5" Parameter="fStep5" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FStep6" Parameter="fStep6" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FStep7" Parameter="fStep7" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FStep8" Parameter="fStep8" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SType1" Parameter="sType1" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="SType2" Parameter="sType2" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="SType3" Parameter="sType3" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="SType4" Parameter="sType4" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="SType5" Parameter="sType5" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="SType6" Parameter="sType6" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="SType7" Parameter="sType7" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="SType8" Parameter="sType8" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Action1" Parameter="action1" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Action2" Parameter="action2" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Action3" Parameter="action3" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Action4" Parameter="action4" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Action5" Parameter="action5" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Action6" Parameter="action6" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Action7" Parameter="action7" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Action8" Parameter="action8" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.veServicesGet" Method="veServicesGet">
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="DocNo" Parameter="docNo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="veServicesGetResult">
+      <Column Name="DocType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="DocNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DocTime" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="EmpCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserDate" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FCreate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep4" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep5" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep6" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep7" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep8" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Manag1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Manag2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FormName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmpName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LoginUserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SType1" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType2" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType3" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType4" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType5" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType6" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType7" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType8" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="TransferUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VacDays" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="VacDays0" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="VacDays1" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="VacDaysam" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Action1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action3" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action4" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action5" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action6" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action7" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action8" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.veServicesGetActive" Method="veServicesGetActive">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="RoleName" Parameter="roleName" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="veServicesGetActiveResult">
+      <Column Name="DocType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="DocNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DocTime" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="EmpCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserDate" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FCreate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep4" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep5" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep6" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep7" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep8" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Manag1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Manag2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FormName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmpName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LoginUserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SType1" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType2" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType3" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType4" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType5" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType6" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType7" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType8" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="TransferUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VacDays" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="VacDays0" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="VacDays1" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="VacDaysam" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Action1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action3" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action4" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action5" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action6" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action7" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action8" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.veServicesGetStatus" Method="veServicesGetStatus">
+    <Parameter Name="RoleName" Parameter="roleName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Status" Parameter="status" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int16" DbType="SmallInt" />
+    <ElementType Name="veServicesGetStatusResult">
+      <Column Name="DocType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="DocNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DocTime" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="EmpCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserDate" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FCreate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep4" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep5" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep6" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep7" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep8" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Manag1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Manag2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FormName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmpName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LoginUserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SType1" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType2" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType3" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType4" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType5" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType6" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType7" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType8" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="TransferUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VacDays" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="VacDays0" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="VacDays1" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="VacDaysam" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Action1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action3" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action4" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action5" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action6" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action7" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action8" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.eServicesGetOpen" Method="eServicesGetOpen">
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="EmpCode" Parameter="empCode" Type="System.Int32" DbType="Int" />
+    <ElementType Name="eServicesGetOpenResult">
+      <Column Name="DocType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="DocNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DocTime" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="EmpCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserDate" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="TransferUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VacDays" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="VacDays0" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="VacDays1" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="VacDaysam" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Notes2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Field1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Field01" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.veServicesGetAll" Method="veServicesGetAll">
+    <Parameter Name="DocType" Parameter="docType" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="EmpCode" Parameter="empCode" Type="System.Int32" DbType="Int" />
+    <ElementType Name="veServicesGetAllResult">
+      <Column Name="DocType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="DocNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DocTime" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="EmpCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserDate" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FCreate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep4" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep5" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep6" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep7" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FStep8" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Manag1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Manag2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FormName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmpName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LoginUserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SType1" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType2" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType3" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType4" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType5" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType6" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType7" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SType8" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="TransferUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VacDays" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="VacDays0" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="VacDays1" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="VacDaysam" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Action1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action3" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action4" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action5" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action6" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action7" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action8" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

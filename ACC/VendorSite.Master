@@ -1,0 +1,213 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="VendorSite.master.cs" Inherits="ACC.VendorSite" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+	<link href="Script/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+	<link href="Styles/navbar/css_ar/core.css" rel="stylesheet" type="text/css" />
+	<link href="Styles/navbar/css_ar/Igray.css" rel="stylesheet" type="text/css" />
+	<link href="Styles/navbar/css_ar/slide.css" rel="stylesheet" type="text/css" />
+	<link href="Script/themes/blitzer/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+	<link href="Styles/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+	<link href="Styles/fonts/fontface.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		.ui-widget .ui-widget
+		{
+			font-size: 12px;
+		}
+		.ui-tabs
+		{
+			direction: rtl;
+		}
+		.ui-tabs .ui-tabs-nav li.ui-tabs-selected, .ui-tabs .ui-tabs-nav li.ui-state-default
+		{
+			float: right;
+		}
+		.ui-tabs .ui-tabs-nav li a
+		{
+			float: right;
+		}
+		.ui-tabs .ui-tabs-nav li a
+		{
+			font-size: 11pt !important;
+		}
+	</style>
+	<title></title>
+	<script src="Script/jquery-1.7.js" type="text/javascript"></script>
+	<script src="Script/jquery.slidingmessage.js" type="text/javascript"></script>
+<%--    <script src="Script/jquery.watermark.min.js" type="text/javascript"></script>--%>    
+	<script src="Script/external/jquery.bgiframe-2.1.2.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.core.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.widget.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.mouse.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.button.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.dialog.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.draggable.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.position.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.resizable.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.tabs.min.js" type="text/javascript"></script>
+	<script src="Script/jquery.blockUI.js" type="text/javascript"></script>
+	<!--[if IE]><script type="text/javascript" src="../excanvas.js"></script><![endif]-->
+	<script src="Script/coolclock.js" type="text/javascript"></script>
+	<script src="Script/moreskins.js" type="text/javascript"></script>
+	<script type="text/javascript" language="JavaScript">
+	    function pageLoad() {
+	        SetMyStyle();
+	    }
+
+
+	    function SetMyStyle() {
+	        if (!Sys.WebForms.PageRequestManager.getInstance().get_isInAsyncPostBack()) {
+	            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(AjaxEnd);
+	            Sys.WebForms.PageRequestManager.getInstance().add_initializeRequest(AjaxBegin);
+	        }
+
+	        function AjaxEnd(sender, args) {
+	            $.unblockUI();
+	        }
+
+	        function AjaxBegin(sender, args) {
+	            if (document.getElementById("divHeader").className == "header") {
+	                $.blockUI({ message: '<P>برجاء الانتظار ... جاري معالجة البيانات &nbsp;&nbsp; <img src="images/busy.gif" /></P>' });
+	            }
+	            else {
+	                $.blockUI({ message: '<P>Data Processing in Progress... &nbsp;&nbsp; <img src="images/busy.gif" /></P>' });
+	            }
+	        }
+
+
+	        $(function () {
+	            //$('input[type="text"],select[name*="ContentPlaceHolder"],input[type="password"]').focusin(function () {
+	            $('input,select,textarea').focusin(function () {
+	                $(this).addClass('HoverHighLightText ');
+	            });
+	            //$('input[type="text"],select[name*="ContentPlaceHolder"],input[type="password"]').focusout(function () {
+	            $('input,select,textarea').focusout(function () {
+	                $(this).removeClass('HoverHighLightText');
+	            });
+
+	            $('input,select,textarea').keydown(function (e) {
+	                var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+	                if (key == 13) {
+	                    e.preventDefault();
+	                    var inputs = $(this).closest('form').find(':input:visible');
+	                    inputs.eq(inputs.index(this) + 1).focus();
+	                }
+	            });
+
+	            $('table[id*="Content"] tr').mouseover(function () {
+	                $(this).addClass('HoverHighLight');
+	            });
+	            $('table[id*="Content"] tr').mouseout(function () {
+	                $(this).removeClass('HoverHighLight');
+	            });
+	        });
+	    }
+
+	    function DispMessage(flag, myitem) {
+	        var mystr = "";
+	        if (flag == 1) {
+	            mystr = "<span class='ui-icon ui-icon-circle-check' style='float:right; margin:0 0 0 10px;'></span>";
+	        }
+	        else {
+	            mystr = "<span class='ui-icon ui-icon-alert' style='float:right; margin:0 0 0 10px;'></span>";
+	        }
+	        if (document.getElementById("divHeader").className == "header") {
+	            var $dialog = $('<div  dir="rtl" style="font-size:14px;"></div>')
+				    .html(mystr + '<center><strong>' + myitem + '</strong></center>')
+				    .dialog({
+				        autoOpen: true,
+				        title: 'الناقلات البرية',
+				        modal: true,
+				        closeOnEscape: false,
+				        buttons: [{
+				            text: "موافق",
+				            position: "center",
+				            click: function () { $(this).dialog("close"); }
+				        }]
+				    });
+	        }
+	        else {
+	            var $dialog = $('<div  dir="ltr" style="font-size:14px;"></div>')
+				    .html(mystr + '<center><strong>' + myitem + '</strong></center>')
+				    .dialog({
+				        autoOpen: true,
+				        title: 'Neqelat',
+				        modal: true,
+				        closeOnEscape: false,
+				        buttons: [{
+				            text: "OK",
+				            position: "center",
+				            click: function () { $(this).dialog("close"); }
+				        }]
+				    });
+	        }
+	        // prevent the default action, e.g., following a link
+	        return false;
+	    }
+
+	    //javascript: window.history.forward(1);
+
+	    function doProcess() {
+	        if (document.getElementById("divHeader").className == "header") {
+	            var x = confirm("تشغيل نظام مطابقة الارصدة؟");
+	            $.blockUI({ message: '<P>برجاء الانتظار ... جاري معالجة البيانات &nbsp;&nbsp; <img src="images/busy.gif" /></P>' });
+	            if (x) {
+	                $.ajax({
+	                    type: "POST",
+	                    url: "default.aspx/doTally",
+	                    data: "{}",
+	                    contentType: "application/json; charset=utf-8",
+	                    dataType: "json",
+	                    success: function (msg) {
+	                        // Replace the div's content with the page method's return.
+	                        alert("لقد تم تشغيل مطابقة الارصدة بنجاح");
+	                    }
+	                });
+	                $.unblockUI();
+	            }
+	        }
+	        else {
+	            var x = confirm("Process Balances Tally System?");
+	            $.blockUI({ message: '<P>Data Processing in Progress... &nbsp;&nbsp; <img src="images/busy.gif" /></P>' });
+	            if (x) {
+	                $.ajax({
+	                    type: "POST",
+	                    url: "default.aspx/doTally",
+	                    data: "{}",
+	                    contentType: "application/json; charset=utf-8",
+	                    dataType: "json",
+	                    success: function (msg) {
+	                        // Replace the div's content with the page method's return.
+	                        alert("Balances Tally Successfully Done");
+	                    }
+	                });
+	                $.unblockUI();
+	            }
+	        }
+	        return x;
+	    }
+	    function onComplete(result, response, content) {
+	        alert(result);
+	    }             
+		   
+	</script>
+	<script type="text/javascript">
+	    $(document).ready(function () {
+	        $(".trigger").click(function () {
+	            $(".panel").toggle("fast");
+	            $(this).toggleClass("active");
+	            return false;
+	        });
+	    });
+	</script>
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+	<form id="form1" runat="server" dir="<%$ Resources:Resource, dir %>" enctype="multipart/form-data">
+	</form>
+</body>
+</html>

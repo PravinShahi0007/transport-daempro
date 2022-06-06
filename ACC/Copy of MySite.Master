@@ -1,0 +1,424 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MySite.master.cs" Inherits="ACC.MySite" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+	<link href="Script/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+	<link href="Script/themes/blitzer/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		.ui-widget .ui-widget
+		{
+			font-size: 12px;
+		}
+		.ui-tabs
+		{
+			direction: rtl;
+		}
+		.ui-tabs .ui-tabs-nav li.ui-tabs-selected, .ui-tabs .ui-tabs-nav li.ui-state-default
+		{
+			float: right;
+		}
+		.ui-tabs .ui-tabs-nav li a
+		{
+			float: right;
+		}
+		.ui-tabs .ui-tabs-nav li a
+		{
+			font-size: 11pt !important;
+		}
+	</style>
+	<title></title>
+	<script src="Script/jquery-1.7.js" type="text/javascript"></script>
+	<script src="Script/jquery.slidingmessage.js" type="text/javascript"></script>
+	<script src="Script/jquery.watermark.min.js" type="text/javascript"></script>
+	<script src="Script/external/jquery.bgiframe-2.1.2.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.core.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.widget.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.mouse.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.button.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.dialog.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.draggable.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.position.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.resizable.min.js" type="text/javascript"></script>
+	<script src="Script/ui/jquery.ui.tabs.min.js" type="text/javascript"></script>
+	<script src="Script/jquery.blockUI.js" type="text/javascript"></script>
+	<!--[if IE]><script type="text/javascript" src="../excanvas.js"></script><![endif]-->
+	<script src="Script/coolclock.js" type="text/javascript"></script>
+	<script src="Script/moreskins.js" type="text/javascript"></script>
+	<script type="text/javascript" language="JavaScript">
+		$(document).ready(function () {
+			$("ul.subnav").parent().prepend("<span></span>"); //Only shows drop down trigger when js is enabled - Adds empty span tag after ul.subnavd	
+			$("ul.topnav li a").mouseover(function () { //When trigger is clicked...
+				//Following events are applied to the subnav itself (moving subnav up and down)
+				$(this).parent().find("ul.subnav").slideDown('fast').show(); //Drop down the subnav on click
+
+				$(this).parent().hover(function () {
+				}, function () {
+					$(this).parent().find("ul.subnav").slideUp('slow'); //When the mouse hovers out of the subnav, move it back up
+				});
+
+				//Following events are applied to the trigger (Hover events for the trigger)
+			}).hover(function () {
+				$(this).addClass("subhover"); //On hover over, add class "subhover"
+			}, function () {	//On Hover Out
+				$(this).removeClass("subhover"); //On hover out, remove class "subhover"
+			});
+
+		});
+
+
+		function pageLoad() {
+			SetMyStyle();
+		}
+
+
+		function SetMyStyle() {
+			if (!Sys.WebForms.PageRequestManager.getInstance().get_isInAsyncPostBack()) {
+				Sys.WebForms.PageRequestManager.getInstance().add_endRequest(AjaxEnd);
+				Sys.WebForms.PageRequestManager.getInstance().add_initializeRequest(AjaxBegin);
+			}
+
+			function AjaxEnd(sender, args) {
+				$.unblockUI();
+			}
+
+			function AjaxBegin(sender, args) {
+				$.blockUI({ message: '<P>برجاء الانتظار ... جاري معالجة البيانات &nbsp;&nbsp; <img src="images/busy.gif" /></P>' });
+			}
+
+
+			$(function () {
+				//$('input[type="text"],select[name*="ContentPlaceHolder"],input[type="password"]').focusin(function () {
+				$('input,select,textarea').focusin(function () {
+					$(this).addClass('HoverHighLightText ');
+				});
+				//$('input[type="text"],select[name*="ContentPlaceHolder"],input[type="password"]').focusout(function () {
+				$('input,select,textarea').focusout(function () {
+					$(this).removeClass('HoverHighLightText');
+				});
+
+				$('input,select,textarea').keydown(function (e) {
+					var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+					if (key == 13) {
+						e.preventDefault();
+						var inputs = $(this).closest('form').find(':input:visible');
+						inputs.eq(inputs.index(this) + 1).focus();
+					}
+				});
+
+				$('table[id*="Content"] tr').mouseover(function () {
+					$(this).addClass('HoverHighLight');
+				});
+				$('table[id*="Content"] tr').mouseout(function () {
+					$(this).removeClass('HoverHighLight');
+				});
+			});
+		}
+
+		function DispMessage(flag, myitem) {
+			var mystr = "";
+			if (flag == 1) {
+				mystr = "<span class='ui-icon ui-icon-circle-check' style='float:right; margin:0 0 0 10px;'></span>";
+			}
+			else {
+				mystr = "<span class='ui-icon ui-icon-alert' style='float:right; margin:0 0 0 10px;'></span>";
+			}
+			var $dialog = $('<div  dir="rtl" style="font-size:14px;"></div>')
+				.html(mystr + '<center><strong>' + myitem + '</strong></center>')
+				.dialog({
+					autoOpen: true,
+					title: 'نظام الحسابات',
+					modal: true,
+					closeOnEscape: false,
+					buttons: [{
+						text: "موافق",
+						position: "center",
+						click: function () { $(this).dialog("close"); }
+					}]
+				});
+			// prevent the default action, e.g., following a link
+			return false;
+		}
+
+		//javascript: window.history.forward(1);
+		function SetmyColor(myitem) {
+			document.getElementById("a1").className = ""
+			document.getElementById("a2").className = ""
+			document.getElementById("a3").className = ""
+			document.getElementById("a4").className = "";
+			document.getElementById("a5").className = "";
+			document.getElementById("a6").className = "";
+			document.getElementById("a7").className = "";
+			document.getElementById("a8").className = "";
+			if (myitem == "a1") {
+				document.getElementById("a1").className = "ActiveItem";
+			}
+			if (myitem == "a2") {
+				document.getElementById("a2").className = "ActiveItem";
+			}
+			if (myitem == "a3") {
+				document.getElementById("a3").className = "ActiveItem";
+			}
+			if (myitem == "a4") {
+				document.getElementById("a4").className = "ActiveItem";
+			}
+			if (myitem == "a5") {
+				document.getElementById("a5").className = "ActiveItem";
+			}
+			if (myitem == "a6") {
+				document.getElementById("a6").className = "ActiveItem";
+			}
+			if (myitem == "a7") {
+				document.getElementById("a7").className = "ActiveItem";
+			}
+			if (myitem == "a8") {
+				document.getElementById("a8").className = "ActiveItem";
+			}
+			return false;
+		}
+
+		function doProcess() {
+            var x = confirm("تشغيل نظام مطابقة الارصدة؟");
+		    $.blockUI({ message: '<P>برجاء الانتظار ... جاري معالجة البيانات &nbsp;&nbsp; <img src="images/busy.gif" /></P>' });
+            return x;
+		}
+
+	</script>
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+	<form id="form1" runat="server" dir="rtl" enctype="multipart/form-data">
+	<div class="page">
+		<div class="header">
+			<div style="text-align: right; position: absolute; color: White; font-family: Arial (Arabic);
+				font-size: 14px;">
+				<br />
+				<asp:Label ID="Label1" runat="server" Text="شركة الناقلات البرية"></asp:Label>
+                <br />
+                <asp:Label ID="Label3" runat="server" Text="مجال البيانات: "></asp:Label>
+                <asp:Label ID="lblData" runat="server" ForeColor="Yellow" Text=""></asp:Label>
+				<br />
+				<asp:Label ID="LblUser2" runat="server" Text="المستخدم: "></asp:Label>
+				<asp:Label ID="LblUser" runat="server" ForeColor="Yellow" Text=""></asp:Label>
+			</div>
+			<div id="titleDiv" class="title" style="float: right; text-align: right;">
+				<p class="logo" />
+			</div>
+			<div id="DivLang" style="float: left; font-family: Arial (Arabic); font-size: 14px;">
+				<![if !IE]><canvas id="clockid" style="display: block; text-align: left;" class="CoolClock:swissRail:35:Seconds:+3 myClock"></canvas><![endif]>
+				<!--[if IE]><canvas id="clockid" style="display:block; text-align:left; "  class="CoolClock:swissRail:35:noSeconds:+3 myClock"></canvas><![endif]-->
+				<asp:LoginStatus ID="LoginStatus1" runat="server" ForeColor="White" LogoutText="تسجيل خروج"
+					LoginText="تسجيل دخول" LogoutAction="Redirect" LogoutPageUrl="~/logout.aspx"
+					OnLoggingOut="LoginStatus1_LoggingOut" />
+			</div>
+		</div>
+		<%--<div class="leftCol1">--%>
+		<ul class="topnav">
+			<li><a href="default.aspx">الرئيسية</a></li>
+			<li><a href="#">الملفات</a>
+				<ul class="subnav">
+					<li id="li1" runat="server"><a href="WebClassify.aspx?FType=3">الحسابات الرئيسية
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebClassify.aspx?FType=3'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					<li id="li2" runat="server"><a href="WebAcc.aspx">الحسابات التحليلية
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebAcc.aspx'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					<li id="li3" runat="server"><a href="WebClassify.aspx?FType=6">مراكز الحسابات
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebClassify.aspx?FType=6'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					<li id="li4" runat="server"><a href="WebClassify.aspx?FType=5">الفروع
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebClassify.aspx?FType=5'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					<li id="li47" runat="server"><a href="WebClassify.aspx?FType=4">المشاريع
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebClassify.aspx?FType=4'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					<li id="li14" runat="server"><a href="WebClassify.aspx?FType=13">المناطق
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebClassify.aspx?FType=13'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					<li id="li15" runat="server"><a href="WebClassify.aspx?FType=14">حسابات التكاليف
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebClassify.aspx?FType=14'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					<li id="li48" runat="server"><a href="WebCoin.aspx">العملات
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebCoin.aspx'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					<%--					<li id="li49" runat="server"><a href="WebBranch.aspx">الفروع
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebBranch.aspx'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					--%>
+					<li id="li5" runat="server"><a href="WebRoles.aspx">مجموعات العمل
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebRoles.aspx'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					<li id="li6" runat="server"><a href="WebUsers.aspx">المستخدمين
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebUsers.aspx'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+				</ul>
+			</li>
+			<li><a href="#">المعاملات</a>
+				<ul class="subnav">
+					<li id="li7" runat="server"><a href="WebRVou1.aspx?FType=1">سندات القبض
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebRVou1.aspx'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					<%-- <li id="li8" runat="server"><a href="WebRVou.aspx">سندات القبض المجمعة
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebRVou.aspx'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+				   <li id="li9" runat="server"><a href="WebTVou.aspx">سند صرف مؤقت
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebTVou.aspx'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					--%>
+					<li id="li10" runat="server"><a href="WebRVou1.aspx?FType=2">سندات الصرف
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebRVou1.aspx?FType=2'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					<%--					<li id="li11" runat="server"><a href="WebPVou.aspx">سندات الصرف المجمعة
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebPVou.aspx'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					--%>
+					<li id="li12" runat="server"><a href="WebJVou.aspx">قيود اليومية
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebJVou.aspx'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+                    <li id="li11" runat="server"><a href="WebBankPay.aspx?Flag=0">
+                        قسيمة إيداع بنكي
+                        <img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebBankPay.aspx?Flag=0'); return false;"
+                            style="float: left; border: none" />
+                    </a></li>
+                    <li id="li16" runat="server"><a href="WebBankTrans.aspx?Flag=0">
+                        تحويلات بنكية
+                        <img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebBankTrans.aspx?Flag=0'); return false;"
+                            style="float: left; border: none" />
+                    </a></li>
+                    <li id="li8" runat="server"><a href='<%= string.Format("WebPPO.aspx?AreaNo={0}","00000") %>'>
+                        طلب شراء مواد
+                        <img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebPPO.aspx?AreaNo="+"00000"+ "\"") %>'
+                            style="float: left; border: none" />
+                    </a></li>
+                    <li id="li9" runat="server"><a href='<%= string.Format("WebPPO1.aspx?AreaNo={0}","00000") %>'>
+                        طلب دفع
+                        <img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick='<%= string.Format("window.open({0}); return false;", "\""+"WebPPO1.aspx?AreaNo="+"00000"+ "\"") %>'
+                            style="float: left; border: none" />
+                    </a></li>
+				</ul>
+			</li>
+			<li><a href="#">الاعدادات</a>
+				<ul class="subnav">
+					<li id="li17" runat="server"><a href="WebSetup.aspx">أعدادات النظام<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebSetup.aspx'); return false;" style="float: left; border: none" />
+					</a></li>
+                    <li id="li20" runat="server"><a href="ResetPassword.aspx?FMode=1">تغيير كلمة المرور</a></li>
+                    <li id="li19" runat="server"><asp:LinkButton ID="BtnProcess" OnClientClick="doProcess();" OnClick="BtnProcess_Click" runat="server">مطابقة الأرصدة</asp:LinkButton></li>
+                    <li id="li18" runat="server"><a href="#">تشغيل قيود الاهلاك</a></li>
+				</ul>
+			</li>
+			<li><a href="#">التقارير</a>
+				<ul class="subnav">
+					<li id="li21" runat="server"><a href="WebDaleel.aspx">دليل الحسابات
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebDaleel.aspx'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					<li id="li22" runat="server"><a href="WebStatement.aspx">كشف حساب تفصيلي
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebStatement.aspx'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					<li id="li23" runat="server"><a href="WebJournal.aspx">دفتر قيود اليومية
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebJournal.aspx'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					<li id="li24" runat="server"><a href="WebFixedAsset.aspx">كشف الاصول الثابتة
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebFixedAsset.aspx'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					<li id="li25" runat="server"><a href="WebMonthlyMovement.aspx">الحركة الشهرية للحسابات
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebMonthlyMovement.aspx'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					<li id="li26" runat="server"><a href="WebLedger.aspx">دفتر الاستاذ
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebLedger.aspx'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					<li id="li13" runat="server"><a href="WebTrialBalance.aspx">ميزان المراجعة
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebTrialBalance.aspx'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					<li id="li44" runat="server"><a href="WebUsersTranRep.aspx">كشف متابعة المستخدمين
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('WebUsersTranRep.aspx'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+				</ul>
+			</li>
+			<li><a href="#">تقارير ختامية</a>
+				<ul class="subnav">
+					<%--					<li id="li27" runat="server"><a href="#">حساب التشغيل و المتاجرة
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('#'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					<li id="li28" runat="server"><a href="#">حساب الارباح و الخسائر
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('#'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					--%>
+					<li id="li29" runat="server"><a href="#">قائمة الدخل
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('#'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+					<li id="li30" runat="server"><a href="#">الميزانية العمومية
+						<img alt="Favorites" title="فتح في نافذة جديدة" src="images/Favorites.png" onclick="window.open('#'); return false;"
+							style="float: left; border: none" />
+					</a></li>
+				</ul>
+			</li>
+		</ul>
+		<%--</div>--%>
+		<div class="clear">
+		</div>
+		<div class="main">
+			<asp:ScriptManager ID="ScriptManager1" EnableScriptGlobalization="true" EnableScriptLocalization="true"
+				EnablePageMethods="true" EnablePartialRendering="true" runat="server" AsyncPostBackTimeout="36000">
+				<Services>
+					<asp:ServiceReference Path="AutoComplete.asmx" />
+				</Services>
+			</asp:ScriptManager>
+			<asp:UpdatePanel ID="UpdatePanel1" runat="server">
+				<ContentTemplate>
+					<asp:UpdateProgress ID="UpdateProgress" runat="server" DynamicLayout="true">
+						<%--						<ProgressTemplate>                        
+							<div>
+								<center>                                    
+									<img src="images/ajaxloader.gif" alt="" />
+									برجاء الانتظار ... جاري معالجة البيانات
+								</center>
+							</div>
+						</ProgressTemplate>
+						--%>
+					</asp:UpdateProgress>
+					<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+					</asp:ContentPlaceHolder>
+				</ContentTemplate>
+			</asp:UpdatePanel>
+		</div>
+		<div class="clear">
+		</div>
+	</div>
+	<div class="footer">
+		<center>
+			<asp:Label ID="lblfooter" runat="server" Text="جميع حقوق الطبع و النسخ محفوظة <a href='http://www.golotec.com'>قولو للتقنية</a> الإصدار الاول - 2012"></asp:Label>
+		</center>
+	</div>
+	</form>
+</body>
+</html>

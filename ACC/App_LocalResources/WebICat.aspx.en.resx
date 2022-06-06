@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccClass" xml:space="preserve">
+    <value>Account Classification</value>
+  </data>
+  <data name="AccountCenter" xml:space="preserve">
+    <value>Accounts Center</value>
+  </data>
+  <data name="AddNewItem" xml:space="preserve">
+    <value>Add New Item</value>
+  </data>
+  <data name="AddSuccess" xml:space="preserve">
+    <value>Adding Data Done Successfully </value>
+  </data>
+  <data name="ArabDscr" xml:space="preserve">
+    <value>Arabic Description</value>
+  </data>
+  <data name="Balance" xml:space="preserve">
+    <value>Balance Sheet Account</value>
+  </data>
+  <data name="CancelUpdate" xml:space="preserve">
+    <value>Cancel Updates</value>
+  </data>
+  <data name="Cat" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="COO" xml:space="preserve">
+    <value>Country of Orgin</value>
+  </data>
+  <data name="CostCenter" xml:space="preserve">
+    <value>Cost Centers</value>
+  </data>
+  <data name="CPur_Acc" xml:space="preserve">
+    <value>Cash Purchase</value>
+  </data>
+  <data name="CrPur_Acc" xml:space="preserve">
+    <value>Credit Purchase</value>
+  </data>
+  <data name="CrSal_Acc" xml:space="preserve">
+    <value>Credit Sales</value>
+  </data>
+  <data name="CSal_Acc" xml:space="preserve">
+    <value>Cash Sales</value>
+  </data>
+  <data name="CurrentAssets" xml:space="preserve">
+    <value>Balance Sheet Account - Current Assets</value>
+  </data>
+  <data name="DeleteAccCenter" xml:space="preserve">
+    <value>Delete Account Center </value>
+  </data>
+  <data name="DeleteColor" xml:space="preserve">
+    <value>Delete Color </value>
+  </data>
+  <data name="DeleteCOO" xml:space="preserve">
+    <value>Delete Country of Orgin </value>
+  </data>
+  <data name="DeleteCostCenter" xml:space="preserve">
+    <value>Delete Cost Center </value>
+  </data>
+  <data name="DeleteItem" xml:space="preserve">
+    <value>Delete Item</value>
+  </data>
+  <data name="DeleteItemCat" xml:space="preserve">
+    <value>Delete Stock Item Category</value>
+  </data>
+  <data name="DeleteMainAccount" xml:space="preserve">
+    <value>Delete Main Account </value>
+  </data>
+  <data name="DeleteProductCat" xml:space="preserve">
+    <value>Delete Product Category </value>
+  </data>
+  <data name="DeleteProject" xml:space="preserve">
+    <value>Delete Project </value>
+  </data>
+  <data name="DeleteSalesmen" xml:space="preserve">
+    <value>Delete Salesmen </value>
+  </data>
+  <data name="DeleteSize" xml:space="preserve">
+    <value>Delete Size </value>
+  </data>
+  <data name="DeleteStructure" xml:space="preserve">
+    <value>Delete Employee Structure </value>
+  </data>
+  <data name="DeleteSuccess" xml:space="preserve">
+    <value>Deleting Data Done Successfully</value>
+  </data>
+  <data name="DeleteUnit" xml:space="preserve">
+    <value>Delete Unit </value>
+  </data>
+  <data name="DeleteWidth" xml:space="preserve">
+    <value>Delete Width </value>
+  </data>
+  <data name="Dep" xml:space="preserve">
+    <value>Provisions</value>
+  </data>
+  <data name="EditSuccess" xml:space="preserve">
+    <value>Updating Data Done Successfully</value>
+  </data>
+  <data name="EngDscr" xml:space="preserve">
+    <value>English Description</value>
+  </data>
+  <data name="ErrorAdd" xml:space="preserve">
+    <value>Error during Adding Data...Try Again</value>
+  </data>
+  <data name="ErrorDelete" xml:space="preserve">
+    <value>Cannot Delete Item which Related to another Items</value>
+  </data>
+  <data name="ErrorUpdate" xml:space="preserve">
+    <value>Error During Updating Data...Try Again</value>
+  </data>
+  <data name="Expenses" xml:space="preserve">
+    <value>Expenses</value>
+  </data>
+  <data name="FixAssets" xml:space="preserve">
+    <value>Balance Sheet Account - Fixed Assets</value>
+  </data>
+  <data name="Income" xml:space="preserve">
+    <value>Income</value>
+  </data>
+  <data name="ItemCat" xml:space="preserve">
+    <value>Stock Item Category</value>
+  </data>
+  <data name="Liberty" xml:space="preserve">
+    <value>Balance Sheet Account - Current Liabilities</value>
+  </data>
+  <data name="MaxLevel" xml:space="preserve">
+    <value>Reach to Max. Level for Classification</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Other Account</value>
+  </data>
+  <data name="Owner" xml:space="preserve">
+    <value>Balance Sheet Account - Property Rights</value>
+  </data>
+  <data name="ProductClass" xml:space="preserve">
+    <value>Products Classification</value>
+  </data>
+  <data name="ProfitandLoss" xml:space="preserve">
+    <value>Profit and Loss Account</value>
+  </data>
+  <data name="Projects" xml:space="preserve">
+    <value>Projects</value>
+  </data>
+  <data name="Purchase" xml:space="preserve">
+    <value>Purchase</value>
+  </data>
+  <data name="RCPur_Acc" xml:space="preserve">
+    <value>Return Cash Purchase</value>
+  </data>
+  <data name="RCRPur_Acc" xml:space="preserve">
+    <value>Return Credit Purchase</value>
+  </data>
+  <data name="RCRSal_Acc" xml:space="preserve">
+    <value>Return Credit Sales</value>
+  </data>
+  <data name="RCSal_Acc" xml:space="preserve">
+    <value>Return Cash Sales</value>
+  </data>
+  <data name="Salemen" xml:space="preserve">
+    <value>Salesmen</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save Updates</value>
+  </data>
+  <data name="SelectItem" xml:space="preserve">
+    <value>Select Item</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Structure" xml:space="preserve">
+    <value>Employee Structure</value>
+  </data>
+  <data name="SureDelete" xml:space="preserve">
+    <value>return confirm("Are You Sure ... Delete This Item?")</value>
+  </data>
+  <data name="SureEnter" xml:space="preserve">
+    <value>Make Sure you Enter all Required Data</value>
+  </data>
+  <data name="Trading" xml:space="preserve">
+    <value>Trading Account</value>
+  </data>
+  <data name="Units" xml:space="preserve">
+    <value>Units</value>
+  </data>
+  <data name="UpdateItem" xml:space="preserve">
+    <value>Edit Item</value>
+  </data>
+  <data name="Width" xml:space="preserve">
+    <value>Width</value>
+  </data>
+</root>
