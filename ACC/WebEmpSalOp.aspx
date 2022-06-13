@@ -17,41 +17,33 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div style="" class="ColorRounded4Corners">
-        <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 99.8%;
-            border: solid 2px #800000">
+    <div style="" class="ColorRounded4Corners col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+        <fieldset class="Rounded4CornersNoShadow">
             <legend align="right" style="font-size: 18px; color: #800000; text-align: center;"><b>
                 <asp:Label ID="LblHeader" runat="server" Text="[ مؤثرات الرواتب ]"></asp:Label>
             </b></legend>
-            <table width="99.8%">
-                <tr>
-                    <td style="width: 100px">
+             <div class="box box-info" align="right">
+     <div class="body">
+                                    <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
                         <asp:Label ID="Label2" runat="server" Text="الإدارة"></asp:Label>
-                    </td>
-                    <td colspan="2">
-                        <asp:DropDownList ID="ddlSection" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlSection_SelectedIndexChanged">
+                 
+                        <asp:DropDownList ID="ddlSection" CssClass="form-control" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlSection_SelectedIndexChanged">
                         </asp:DropDownList>
-                    </td>
-                    <td style="width: 150px">
-                        &nbsp;
-                    </td>
-                    <td rowspan="2" style="text-align: center" style="width: 300px">
-                        <asp:Button ID="Button1" runat="server" Text="Button" Visible="false" onclick="Button1_Click" />
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 100px">
+                  
+                        <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Button" Visible="false" onclick="Button1_Click" />
+                     </div></div></div>
+                 <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
                         <asp:Label ID="Label3" runat="server" Text="الشهر"></asp:Label>
-                    </td>
-                    <td style="width: 200px">
-                        <asp:DropDownList ID="ddlMonth" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlMonth_SelectedIndexChanged">
+                  
+                        <asp:DropDownList ID="ddlMonth" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlMonth_SelectedIndexChanged">
                         </asp:DropDownList>
-                    </td>
-                    <td colspan="2" style="text-align: right;">
-                        &nbsp;</td>
-                </tr>
-            </table>
-            <div style="width: 100%; overflow: none; overflow-x: auto; border: 1px solid #800000;">
+                  </div></div></div>
+            <div class="table-responsive">
                 <asp:GridView ID="grdAbs" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                     GridLines="None" AutoGenerateColumns="False" AllowPaging="False" DataKeyNames="EmpCode"
                     PageSize="2000" Width="99.9%">
@@ -176,7 +168,7 @@
                 </asp:GridView>
             </div>
 
-            <div style="width: 100%; overflow: none; overflow-x: auto; border: 1px solid #800000;">
+           <div class="table-responsive">
                 <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                     GridLines="None" AutoGenerateColumns="False" AllowPaging="False" DataKeyNames="EmpCode"
                     PageSize="2000" Width="99.9%" Visible="False">
@@ -275,26 +267,23 @@
                 </asp:GridView>
             </div>
 
-            <center>
-                <table id="Table2" width="100%" cellpadding="0" cellspacing="0">
-                    <tr align="right">
-                        <td style="width: 70px;">
+          <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
                             <asp:Label ID="Label14" runat="server" Text="المستخدم"></asp:Label>
-                        </td>
-                        <td style="width: 300px;">
-                            <asp:TextBox ID="txtUserName" Width="300px" runat="server" MaxLength="50" BackColor="#E8E8E8"
-                                CssClass="MouseStop" Enabled="false"></asp:TextBox>
-                        </td>
-                        <td style="width: 70px;">
+                     
+                            <asp:TextBox ID="txtUserName"  runat="server" MaxLength="50" BackColor="#E8E8E8"
+                                CssClass="MouseStop form-control" Enabled="false"></asp:TextBox>
+                      </div></div></div>
+                                        <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
                             <asp:Label ID="Label15" runat="server" Text="بتاريخ"></asp:Label>
-                        </td>
-                        <td style="width: 300px;">
+                   
                             <asp:TextBox ID="txtUserDate" Width="150px" runat="server" MaxLength="50" BackColor="#E8E8E8"
-                                CssClass="MouseStop" Enabled="false">                                                               
+                                CssClass="MouseStop form-control" Enabled="false">                                                               
                             </asp:TextBox>
-                        </td>
-                    </tr>
-                </table>
+                      </div></div></div>
                 <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
                 <table dir="rtl" width="100%" cellpadding="2px">
                     <tr align="center">
@@ -327,6 +316,7 @@
                     </asp:Panel>
                     <asp:Panel ID="Panel10" runat="server" Height="0" BackColor="#FFFFCC" Width="99.3%"
                         BorderColor="Maroon">
+                         <div class="table-responsive">
                         <asp:GridView ID="grdAttach" runat="server" CellPadding="4" ForeColor="#333333" ShowHeader="False"
                             GridLines="None" AutoGenerateColumns="False" DataKeyNames="FNo" Width="99%" OnRowDeleting="grdAttach_RowDeleting">
                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -356,7 +346,7 @@
                             <SortedAscendingHeaderStyle BackColor="#506C8C" />
                             <SortedDescendingCellStyle BackColor="#FFFDF8" />
                             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-                        </asp:GridView>
+                        </asp:GridView></div>
                         <table width="100%">
                             <tr>
                                 <td align="right">
@@ -390,7 +380,7 @@
                                         <asp:Label ID="lblRemark1" runat="server" Text="ملاحظات"></asp:Label>
                                     </td>
                                     <td align="right" colspan="3" rowspan="5">
-                                        <asp:TextBox ID="txtAgreeRemark1" MaxLength="300" TextMode="MultiLine" Width="99%" 
+                                        <asp:TextBox ID="txtAgreeRemark1" MaxLength="300" TextMode="MultiLine" CssClass="form-control"
                                             Height="100px" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
@@ -452,14 +442,14 @@
                                         <asp:Label ID="LblAgreeUser1" runat="server" Text="المستخدم"></asp:Label>
                                     </td>
                                     <td align="right" style="width: 300px;">
-                                        <asp:TextBox ID="txtAgreeUser1" Width="250px" runat="server" BackColor="#E8E8E8"
+                                        <asp:TextBox ID="txtAgreeUser1" CssClass="form-control" runat="server" BackColor="#E8E8E8"
                                             ReadOnly="false"></asp:TextBox>
                                     </td>
                                     <td align="right" style="width: 100px;">
                                         <asp:Label ID="lblAgreeUserDate1" runat="server" Text="تاريخ التعميد"></asp:Label>
                                     </td>
                                     <td align="right" style="width: 300px;">
-                                        <asp:TextBox ID="txtAgreeUserDate1" runat="server" BackColor="#E8E8E8" ReadOnly="false"></asp:TextBox>
+                                        <asp:TextBox ID="txtAgreeUserDate1" CssClass="form-control" runat="server" BackColor="#E8E8E8" ReadOnly="false"></asp:TextBox>
                                     </td>
                                 </tr>
                             </table>
@@ -480,7 +470,7 @@
                                         <asp:Label ID="lblRemark2" runat="server" Text="ملاحظات"></asp:Label>
                                     </td>
                                     <td align="right" colspan="3" rowspan="5">
-                                        <asp:TextBox ID="txtAgreeRemark2" MaxLength="300" TextMode="MultiLine" Width="99%" 
+                                        <asp:TextBox ID="txtAgreeRemark2" CssClass="form-control" MaxLength="300" TextMode="MultiLine" Width="99%" 
                                             Height="100px" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
@@ -542,7 +532,7 @@
                                         <asp:Label ID="lblAgreeUser2" runat="server" Text="المستخدم"></asp:Label>
                                     </td>
                                     <td align="right" style="width: 300px;">
-                                        <asp:TextBox ID="txtAgreeUser2" Width="250px" runat="server" BackColor="#E8E8E8"
+                                        <asp:TextBox ID="txtAgreeUser2" CssClass="form-control" runat="server" BackColor="#E8E8E8"
                                             ReadOnly="false"></asp:TextBox>
                                     </td>
                                     <td align="right" style="width: 100px;">
@@ -570,7 +560,7 @@
                                         <asp:Label ID="lblRemark3" runat="server" Text="ملاحظات"></asp:Label>
                                     </td>
                                     <td align="right" colspan="3" rowspan="5">
-                                        <asp:TextBox ID="txtAgreeRemark3" MaxLength="300" TextMode="MultiLine" Width="99%"
+                                        <asp:TextBox ID="txtAgreeRemark3" MaxLength="300" TextMode="MultiLine" CssClass="form-control"
                                             Height="100px" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
@@ -632,7 +622,7 @@
                                         <asp:Label ID="lblAgreeUser3" runat="server" Text="المستخدم"></asp:Label>
                                     </td>
                                     <td align="right" style="width: 300px;">
-                                        <asp:TextBox ID="txtAgreeUser3" Width="250px" runat="server" BackColor="#E8E8E8"
+                                        <asp:TextBox ID="txtAgreeUser3" CssClass="form-control" runat="server" BackColor="#E8E8E8"
                                             ReadOnly="false"></asp:TextBox>
                                     </td>
                                     <td align="right" style="width: 100px;">
@@ -660,7 +650,7 @@
                                         <asp:Label ID="lblRemark4" runat="server" Text="ملاحظات"></asp:Label>
                                     </td>
                                     <td align="right" colspan="3" rowspan="5">
-                                        <asp:TextBox ID="txtAgreeRemark4" MaxLength="300" TextMode="MultiLine" Width="99%" 
+                                        <asp:TextBox ID="txtAgreeRemark4" MaxLength="300" TextMode="MultiLine" CssClass="form-control" 
                                             Height="100px" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
@@ -722,14 +712,14 @@
                                         <asp:Label ID="lblAgreeUser4" runat="server" Text="المستخدم"></asp:Label>
                                     </td>
                                     <td align="right" style="width: 300px;">
-                                        <asp:TextBox ID="txtAgreeUser4" Width="250px" runat="server" BackColor="#E8E8E8"
+                                        <asp:TextBox ID="txtAgreeUser4" CssClass="form-control" runat="server" BackColor="#E8E8E8"
                                             ReadOnly="false"></asp:TextBox>
                                     </td>
                                     <td align="right" style="width: 100px;">
                                         <asp:Label ID="lblAgreeUserDate4" runat="server" Text="تاريخ التعميد"></asp:Label>
                                     </td>
                                     <td align="right" style="width: 300px;">
-                                        <asp:TextBox ID="txtAgreeUserDate4" runat="server" BackColor="#E8E8E8" ReadOnly="false"></asp:TextBox>
+                                        <asp:TextBox ID="txtAgreeUserDate4" runat="server" CssClass="form-control" BackColor="#E8E8E8" ReadOnly="false"></asp:TextBox>
                                     </td>
                                 </tr>
                             </table>
@@ -750,7 +740,7 @@
                                         <asp:Label ID="lblRemark5" runat="server" Text="ملاحظات"></asp:Label>
                                     </td>
                                     <td align="right" colspan="3" rowspan="5">
-                                        <asp:TextBox ID="txtAgreeRemark5" MaxLength="300" TextMode="MultiLine" Width="99%" 
+                                        <asp:TextBox ID="txtAgreeRemark5" MaxLength="300" TextMode="MultiLine" CssClass="form-control" 
                                             Height="100px" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
@@ -812,14 +802,14 @@
                                         <asp:Label ID="lblAgreeUser5" runat="server" Text="المستخدم"></asp:Label>
                                     </td>
                                     <td align="right" style="width: 300px;">
-                                        <asp:TextBox ID="txtAgreeUser5" Width="250px" runat="server" BackColor="#E8E8E8"
+                                        <asp:TextBox ID="txtAgreeUser5" CssClass="form-control" runat="server" BackColor="#E8E8E8"
                                             ReadOnly="false"></asp:TextBox>
                                     </td>
                                     <td align="right" style="width: 100px;">
                                         <asp:Label ID="lblAgreeUserDate5" runat="server" Text="تاريخ التعميد"></asp:Label>
                                     </td>
                                     <td align="right" style="width: 300px;">
-                                        <asp:TextBox ID="txtAgreeUserDate5" runat="server" BackColor="#E8E8E8" ReadOnly="false"></asp:TextBox>
+                                        <asp:TextBox ID="txtAgreeUserDate5" CssClass="form-control" runat="server" BackColor="#E8E8E8" ReadOnly="false"></asp:TextBox>
                                     </td>
                                 </tr>
                             </table>
@@ -839,7 +829,7 @@
                                         <asp:Label ID="lblRemark6" runat="server" Text="ملاحظات"></asp:Label>
                                     </td>
                                     <td align="right" colspan="3" rowspan="5">
-                                        <asp:TextBox ID="txtAgreeRemark6" MaxLength="300" TextMode="MultiLine" Width="99%" 
+                                        <asp:TextBox ID="txtAgreeRemark6" MaxLength="300" TextMode="MultiLine" CssClass="form-control"
                                             Height="100px" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
@@ -901,14 +891,14 @@
                                         <asp:Label ID="lblAgreeUser6" runat="server" Text="المستخدم"></asp:Label>
                                     </td>
                                     <td align="right" style="width: 300px;">
-                                        <asp:TextBox ID="txtAgreeUser6" Width="250px" runat="server" BackColor="#E8E8E8"
+                                        <asp:TextBox ID="txtAgreeUser6" CssClass="form-control" runat="server" BackColor="#E8E8E8"
                                             ReadOnly="false"></asp:TextBox>
                                     </td>
                                     <td align="right" style="width: 100px;">
                                         <asp:Label ID="lblAgreeUserDate6" runat="server" Text="تاريخ التعميد"></asp:Label>
                                     </td>
                                     <td align="right" style="width: 300px;">
-                                        <asp:TextBox ID="txtAgreeUserDate6" runat="server" BackColor="#E8E8E8" ReadOnly="false"></asp:TextBox>
+                                        <asp:TextBox ID="txtAgreeUserDate6" CssClass="form-control" runat="server" BackColor="#E8E8E8" ReadOnly="false"></asp:TextBox>
                                     </td>
                                 </tr>
                             </table>
@@ -929,7 +919,7 @@
                                         <asp:Label ID="lblRemark7" runat="server" Text="ملاحظات"></asp:Label>
                                     </td>
                                     <td align="right" colspan="3" rowspan="5">
-                                        <asp:TextBox ID="txtAgreeRemark7" MaxLength="300" TextMode="MultiLine" Width="99%" 
+                                        <asp:TextBox ID="txtAgreeRemark7" MaxLength="300" TextMode="MultiLine" CssClass="form-control"
                                             Height="100px" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
@@ -991,14 +981,14 @@
                                         <asp:Label ID="lblAgreeUser7" runat="server" Text="المستخدم"></asp:Label>
                                     </td>
                                     <td align="right" style="width: 300px;">
-                                        <asp:TextBox ID="txtAgreeUser7" Width="250px" runat="server" BackColor="#E8E8E8"
+                                        <asp:TextBox ID="txtAgreeUser7" CssClass="form-control" runat="server" BackColor="#E8E8E8"
                                             ReadOnly="false"></asp:TextBox>
                                     </td>
                                     <td align="right" style="width: 100px;">
                                         <asp:Label ID="lblAgreeUserDate7" runat="server" Text="تاريخ التعميد"></asp:Label>
                                     </td>
                                     <td align="right" style="width: 300px;">
-                                        <asp:TextBox ID="txtAgreeUserDate7" runat="server" BackColor="#E8E8E8" ReadOnly="false"></asp:TextBox>
+                                        <asp:TextBox ID="txtAgreeUserDate7" CssClass="form-control" runat="server" BackColor="#E8E8E8" ReadOnly="false"></asp:TextBox>
                                     </td>
                                 </tr>
                             </table>
@@ -1006,7 +996,7 @@
                     </fieldset>
                 </div>
                 <br />
-            </center>
+            </center></div></div></div>
         </fieldset>
     </div>
     <asp:Panel ID="Panel1" runat="server" CssClass="popupControl">

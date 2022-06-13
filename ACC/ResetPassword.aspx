@@ -89,7 +89,7 @@
                         <tr id="tr4" runat="server">
                             <td style="width: 120px;">
                             </td>
-                            <td style="width: 250px" class="card-footer">
+                            <td style="width: 250px" >
                                 <asp:Button ID="BtnConfirm" CssClass="btn btn-primary" runat="server" Text="موافق" OnClick="BtnConfirm_Click"
                                    meta:resourcekey="BtnConfirm" />
                                 <asp:Button ID="BtnClear" CssClass="btn btn-primary" ValidationGroup="2" runat="server" Text="مسح"

@@ -117,50 +117,51 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="ColorRounded4Corners" style="width: 99.9%">
-        <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 99.8%;
-            border: solid 2px #800000">
+ <div class="ColorRounded4Corners col-md-12 col-sm-12 col-xs-12">
+    
             <legend align="right" style="font-size: 18px; color: #800000; text-align: center;">أتفاقية
                 شحن طرود</legend>
-            <table width="99%" cellpadding="5px" dir="rtl">
-                <tr>
-                    <td style="width: 150px;">
+              <div class="box box-info" align="right">
+            <div class="body">
+                <div class="row">
+
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label1" runat="server" Text="رقم الفاتورة"></asp:Label>
-                        *
-                    </td>
-                    <td style="width: 300px;" colspan="2">
-                        <asp:TextBox ID="txtVouNo" MaxLength="10" runat="server" CssClass="MouseStop"></asp:TextBox>
+                      
+                        <asp:TextBox ID="txtVouNo" MaxLength="10" runat="server" CssClass="MouseStop form-control"></asp:TextBox>
                         <asp:Label ID="lblBranch" runat="server" Text="Label"></asp:Label>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtVouNo"
                             Display="Dynamic" ErrorMessage="يجب أختيار رقم الفاتورة" ForeColor="Red" SetFocusOnError="True"
                             ValidationGroup="1">*</asp:RequiredFieldValidator>
-                    </td>
-                    <td style="width: 150px;">
-                    </td>
-                    <td style="width: 300px;" align="left" colspan="2">
+                 </div></div></div>
+                     
+
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="lblStatus" runat="server" CssClass="blink" ForeColor="Red" Text=""></asp:Label>
-                        <asp:TextBox ID="txtSearch" MaxLength="10" Width="100px" placeholder="بحث" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtSearch" MaxLength="10"  CssClass="form-control" placeholder="بحث" runat="server"></asp:TextBox>
                         <asp:ImageButton ID="BtnFind" runat="server" ValidationGroup="55" ImageUrl="~/images/zoom_16.png"
                             ToolTip="البحث عن بيانات فاتورة شحن" OnClick="BtnFind_Click" />
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 150px;">
+                   </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label4" runat="server" Text="التاريخ"></asp:Label>
-                        *
-                    </td>
-                    <td style="width: 300px;" colspan="2">
-                        <asp:TextBox ID="txtHDate" MaxLength="10" runat="server"></asp:TextBox>
+                      
+                        <asp:TextBox ID="txtHDate" MaxLength="10" runat="server" CssClass="form-control"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtHDate"
                             Display="Dynamic" ErrorMessage="يجب أختيار تاريخ الفاتورة" ForeColor="Red" SetFocusOnError="True"
                             ValidationGroup="1">*</asp:RequiredFieldValidator>هـ
-                    </td>
-                    <td style="width: 150px;">
+                 </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label7" runat="server" Text="الموافق"></asp:Label>
-                        *
-                    </td>
-                    <td style="width: 300px;" colspan="2">
-                        <asp:TextBox ID="txtGDate" MaxLength="10" runat="server"></asp:TextBox>
+                      
+                        <asp:TextBox ID="txtGDate" MaxLength="10" runat="server" CssClass="form-control"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtGDate"
                             Display="Dynamic" ErrorMessage="يجب أختيار تاريخ الفاتورة" ForeColor="Red" SetFocusOnError="True"
                             ValidationGroup="1">*</asp:RequiredFieldValidator>
@@ -174,191 +175,180 @@
                             TargetControlID="txtGDate" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
                             PopupPosition="BottomLeft" />
                         <asp:Label ID="LblFTime" runat="server" Text=""></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <th align="right">
+                </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label25" Font-Underline="true" ForeColor="#800000" runat="server"
                             Text="بيانات المرسل"></asp:Label>
-                    </th>
-                </tr>
-                <tr>
-                    <td style="width: 150px;">
+                  
                         <asp:Label ID="Label6" runat="server" Text="أسم المرسل"></asp:Label>
-                        *
-                    </td>
-                    <td style="width: 300px;" colspan="2">
-                        <asp:TextBox ID="txtName" MaxLength="100" runat="server" Width="275px"></asp:TextBox>
+                     
+                        <asp:TextBox ID="txtName" MaxLength="100" runat="server" CssClass="form-control"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="txtName"
                             Display="Dynamic" ErrorMessage="يجب إدخال أسم المرسل" ForeColor="Red" SetFocusOnError="True"
                             ValidationGroup="1">*</asp:RequiredFieldValidator>
-                    </td>
-                    <td style="width: 150px;">
+                  </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label9" runat="server" Text="رقم الهوية"></asp:Label>
-                    </td>
-                    <td style="width: 150px;">
-                        <asp:TextBox ID="txtIDNo" MaxLength="15" runat="server"></asp:TextBox>
-                    </td>
-                    <td style="width: 150px;">
+                
+                        <asp:TextBox ID="txtIDNo" MaxLength="15" runat="server" CssClass="form-control"></asp:TextBox>
+                 </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:RadioButtonList ID="rdoIDType" runat="server" RepeatColumns="2">
                             <asp:ListItem Selected="True" Value="0">الهوية</asp:ListItem>
                             <asp:ListItem Value="1">بطاقة</asp:ListItem>
                         </asp:RadioButtonList>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 150px;">
+                    </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label10" runat="server" Text="مصدرها"></asp:Label>
-                    </td>
-                    <td style="width: 300px;" colspan="2">
-                        <asp:TextBox ID="txtIDFrom" MaxLength="50" runat="server" Width="275px"></asp:TextBox>
-                    </td>
-                    <td style="width: 150px;">
+                  
+                        <asp:TextBox ID="txtIDFrom" MaxLength="50" runat="server" CssClass="form-control"></asp:TextBox>
+                  </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label11" runat="server" Text="تاريخها"></asp:Label>
-                    </td>
-                    <td style="width: 300px;" colspan="2">
-                        <asp:TextBox ID="txtIdDate" MaxLength="10" runat="server"></asp:TextBox>
+                  
+                        <asp:TextBox ID="txtIdDate" MaxLength="10" runat="server" CssClass="form-control"></asp:TextBox>
                         <asp:CompareValidator ID="CompareValidator4" runat="server" ControlToValidate="txtIdDate"
                             CultureInvariantValues="true" Display="Dynamic" ErrorMessage="يجب أن تكون القيمة تاريخ"
                             ForeColor="Red" Type="Date" ValidationGroup="1" SetFocusOnError="True" Operator="DataTypeCheck">*</asp:CompareValidator>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 150px;">
+                   </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label3" runat="server" Text="العنوان"></asp:Label>
-                    </td>
-                    <td style="width: 300px;" colspan="2">
-                        <asp:TextBox ID="txtAddress" MaxLength="200" runat="server" Width="275px"></asp:TextBox>
-                    </td>
-                    <td style="width: 150px;">
+                  
+                        <asp:TextBox ID="txtAddress" MaxLength="200" runat="server" CssClass="form-control"></asp:TextBox>
+                  </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label28" runat="server" Text="رقم الجوال"></asp:Label>
-                    </td>
-                    <td style="width: 300px;" colspan="2">
-                        <asp:TextBox ID="txtMobileNo" MaxLength="20" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 150px;">
+                   
+                        <asp:TextBox ID="txtMobileNo" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
+                   </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label2" runat="server" Text="الإيميل"></asp:Label>
-                    </td>
-                    <td style="width: 300px;" colspan="2">
-                        <asp:TextBox ID="Txtmail" MaxLength="50" runat="server" Width="250px"></asp:TextBox>
+                
+                        <asp:TextBox ID="Txtmail" MaxLength="50" runat="server" CssClass="form-control"></asp:TextBox>
                         <asp:RegularExpressionValidator ID="regexEmailValid" runat="server" ValidationGroup="1"
                             ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="Txtmail"
                             ErrorMessage="خطأ في صيغة الايميل" CultureInvariantValues="true" Display="Dynamic"
                             ForeColor="Red">*</asp:RegularExpressionValidator>
-                    </td>
-                    <td style="width: 150px;">
+                  </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label12" runat="server" Text="تأكيد الإيميل"></asp:Label>
-                    </td>
-                    <td style="width: 300px;" colspan="2">
-                        <asp:TextBox ID="Txtmail2" MaxLength="50" runat="server" Width="250px"></asp:TextBox>
+                 
+                        <asp:TextBox ID="Txtmail2" MaxLength="50" runat="server" CssClass="form-control"></asp:TextBox>
                         <asp:CompareValidator ID="CompareValidator5" ControlToCompare="Txtmail" Operator="Equal"
                             ValidationGroup="1" ControlToValidate="Txtmail2" runat="server" CultureInvariantValues="true"
                             Display="Dynamic" ErrorMessage="تأكيد الإيميل لا يطابق الإيميل" ForeColor="Red">*</asp:CompareValidator>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 150px;">
-                    </td>
-                    <td style="width: 150px;">
+                   </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:CheckBox ID="chkbPlaceFrom" runat="server" Text="الإستلام من موقع العميل" OnCheckedChanged="chkbPlaceFrom_CheckedChanged"
                             AutoPostBack="True" />
-                    </td>
-                    <td style="width: 150px;">
+                 
                         <asp:HyperLink ID="lnkDispFrom" Target="_blank" NavigateUrl="WebGetMap.aspx" Visible="false"
                             runat="server">تحديد الموقع</asp:HyperLink>
-                    </td>
-                    <td style="width: 150px;">
+                 
                         <asp:Button ID="btnFrom" runat="server" Text="حفظ الموقع" Visible="False" OnClick="btnFrom_Click" />
-                    </td>
-                    <td style="width: 300px;" colspan="2">
+               
                         <asp:HyperLink ID="lnkFrom" Target="_blank" Visible="false" runat="server">عرض الموقع</asp:HyperLink>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 150px;">
+                   </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label5" runat="server" Text="مكان الشحن"></asp:Label>
-                    </td>
-                    <td style="width: 300px;" colspan="2">
-                        <asp:DropDownList ID="ddlPlaceofLoading" Width="280" runat="server" AutoPostBack="True"
+                  
+                        <asp:DropDownList ID="ddlPlaceofLoading" CssClass="form-control" runat="server" AutoPostBack="True"
                             OnSelectedIndexChanged="ddlPlaceofLoading_SelectedIndexChanged">
                         </asp:DropDownList>
-                    </td>
-                    <td style="width: 150px;">
+                </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label13" runat="server" Text="جهة الترحيل"></asp:Label>
-                    </td>
-                    <td style="width: 300px;" colspan="2">
-                        <asp:DropDownList ID="ddlDestination" Width="280" runat="server" AutoPostBack="True"
+                   
+                        <asp:DropDownList ID="ddlDestination" CssClass="form-control" runat="server" AutoPostBack="True"
                             OnSelectedIndexChanged="ddlPlaceofLoading_SelectedIndexChanged">
                         </asp:DropDownList>
-                    </td>
-                </tr>
-                <tr>
-                    <th align="right">
+                 </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label24" runat="server" ForeColor="#800000" Font-Underline="true"
                             Text="بيانات المرسل اليه"></asp:Label>
-                    </th>
-                </tr>
-                <tr>
-                    <td style="width: 150px;">
+                   
                         <asp:Label ID="Label33" runat="server" Text="أسم المستلم"></asp:Label>
-                    </td>
-                    <td style="width: 300px;" colspan="2">
-                        <asp:TextBox ID="txtRecName" Width="275px" MaxLength="100" runat="server"></asp:TextBox>
-                    </td>
-                    <td style="width: 150px;">
+                  
+                        <asp:TextBox ID="txtRecName" CssClass="form-control" MaxLength="100" runat="server"></asp:TextBox>
+                 </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label8" runat="server" Text="عنوان المستلم"></asp:Label>*
-                    </td>
-                    <td style="width: 300px;" colspan="2">
-                        <asp:TextBox ID="txtRecAddress" Width="275px" MaxLength="100" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 150px;">
+                
+                        <asp:TextBox ID="txtRecAddress" CssClass="form-control" MaxLength="100" runat="server"></asp:TextBox>
+                    </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="lblChqNo" runat="server" Text="رقم الجوال"></asp:Label>*
-                    </td>
-                    <td style="width: 300px;" colspan="2">
+                  
                         <asp:TextBox ID="txtRecMobileNo" MaxLength="20" runat="server"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtRecMobileNo"
                             Display="Dynamic" ErrorMessage="يجب أختيار رقم جوال المستلم" ForeColor="Red"
                             SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                    </td>
-                    <td style="width: 150px;">
+                </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label14" runat="server" Text="فرع استلام الشحنة"></asp:Label>
-                    </td>
-                    <td style="width: 300px;" colspan="2">
-                        <asp:DropDownList ID="ddlTo" Width="150" runat="server">
+                
+                        <asp:DropDownList ID="ddlTo" CssClass="form-control" runat="server">
                         </asp:DropDownList>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 150px;">
+                  </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label15" runat="server" Text="الإيميل"></asp:Label>
-                    </td>
-                    <td style="width: 300px;" colspan="2">
-                        <asp:TextBox ID="Txtrecmail" MaxLength="50" runat="server" Width="250px"></asp:TextBox>
+                 
+                        <asp:TextBox ID="Txtrecmail" MaxLength="50" runat="server" CssClass="form-control"></asp:TextBox>
                         <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ValidationGroup="1"
                             ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="Txtrecmail"
                             ErrorMessage="خطأ في صيغة الايميل" CultureInvariantValues="true" Display="Dynamic"
                             ForeColor="Red">*</asp:RegularExpressionValidator>
-                    </td>
-                    <td style="width: 150px;">
+                </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label16" runat="server" Text="تأكيد الإيميل"></asp:Label>
-                    </td>
-                    <td style="width: 300px;" colspan="2">
-                        <asp:TextBox ID="Txtrecmail2" MaxLength="50" runat="server" Width="250px"></asp:TextBox>
+                 
+                        <asp:TextBox ID="Txtrecmail2" MaxLength="50" runat="server" CssClass="form-control"></asp:TextBox>
                         <asp:CompareValidator ID="CompareValidator3" ControlToCompare="Txtrecmail" Operator="Equal"
                             ValidationGroup="1" CultureInvariantValues="true" Display="Dynamic" ErrorMessage="تأكيد الإيميل لا يطابق الإيميل"
                             ForeColor="Red" ControlToValidate="Txtrecmail2" runat="server"></asp:CompareValidator>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 150px;">
+                   </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label38" runat="server" Text="مدة التسليم"></asp:Label>*
-                    </td>
-                    <td style="width: 300px;" colspan="2">
-                        <asp:DropDownList ID="ddlDPeriod" runat="server">
+                
+                        <asp:DropDownList ID="ddlDPeriod" runat="server" CssClass="form-control">
                             <asp:ListItem Value="-1" Selected="True">اختر مدة التسليم</asp:ListItem>
                             <asp:ListItem>1</asp:ListItem>
                             <asp:ListItem>2</asp:ListItem>
@@ -394,52 +384,34 @@
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlDPeriod"
                             Display="Dynamic" ErrorMessage="يجب أختيار مدة التسليم" ForeColor="Red" SetFocusOnError="True"
                             InitialValue="-1" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                        &nbsp;&nbsp;
+                      </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label39" runat="server" Text="يوم"></asp:Label>
-                    </td>
-                    <td style="width: 150px;">
-                    </td>
-                    <td style="width: 300px;" colspan="2">
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 150px;">
-                    </td>
-                    <td style="width: 200px;">
+                  
                         <asp:CheckBox ID="chkbTo" runat="server" Text="التسليم إلى موقع العميل" OnCheckedChanged="chkbTo_CheckedChanged"
                             AutoPostBack="True" />
-                    </td>
-                    <td style="width: 100px;">
+                   
                         <asp:HyperLink ID="lnkDispTo" Target="_blank" NavigateUrl="WebGetMap.aspx" Visible="false"
                             runat="server">تحديد الموقع</asp:HyperLink>
-                    </td>
-                    <td style="width: 150px;">
-                        <asp:Button ID="btnPlaceTo" runat="server" Text="حفظ الموقع" Visible="False" OnClick="btnPlaceTo_Click" />
-                    </td>
-                    <td style="width: 300px;" colspan="2">
+                 
+                        <asp:Button ID="btnPlaceTo" CssClass="btn btn-primary" runat="server" Text="حفظ الموقع" Visible="False" OnClick="btnPlaceTo_Click" />
+                  
                         <asp:HyperLink ID="lnkTo" Target="_blank" Visible="false" runat="server">عرض الموقع</asp:HyperLink>
-                    </td>
-                </tr>
-                <tr>
-                    <th align="right">
+                  </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label23" Font-Underline="true" ForeColor="#800000" runat="server"
                             Text="وصف الشحنة"></asp:Label>
-                    </th>
-                    <th colspan="2">
+                
                         <asp:RadioButtonList ID="RdoGType" runat="server" RepeatColumns="2" Visible="false"
                             Width="200px">
                             <asp:ListItem Selected="True" Value="0">شحنة فردية</asp:ListItem>
                             <asp:ListItem Value="1">حمولة كاملة</asp:ListItem>
                         </asp:RadioButtonList>
-                    </th>
-                    <th align="right">
-                    </th>
-                    <th align="left">
-                    </th>
-                    <th align="left">
-                    </th>
-                </tr>
-            </table>
+                  </div></div></div>
             <div id="DivMulti" runat="server">
                 <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333"
                         GridLines="None" AutoGenerateColumns="False" DataKeyNames="FNo" 
@@ -520,13 +492,11 @@
                 
             </div>
             <div id="Divsingle" runat="server">
-                <table width="99%" cellpadding="5px" dir="rtl">
-                    <tr>
-                        <td style="width: 150px;">
-                            <asp:Label ID="lblAccess4" runat="server"  Visible="false"  Text="نوع الشحنة"></asp:Label>
-                        </td>
-                        <td style="width: 300px;" colspan="2">
-                            <asp:DropDownList ID="ddlType" runat="server" Visible="false">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                     
+                            <asp:DropDownList ID="ddlType" runat="server"  Visible="false" CssClass="form-control">
                                 <asp:ListItem Value="1">سوائل</asp:ListItem>
                                 <asp:ListItem Value="2">منتجات تجميل وعطورات</asp:ListItem>
                                 <asp:ListItem Value="3">قابلة للكسر</asp:ListItem>
@@ -537,61 +507,62 @@
                                 <asp:ListItem Value="8">مواد مبردة</asp:ListItem>
                                 <asp:ListItem Value="9">مواد سائبة</asp:ListItem>
                             </asp:DropDownList>
-                        </td>
-                        <td style="width: 150px;">
+                       </div></div></div>
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                             <asp:Label ID="Label26" runat="server" Text="الوحدة" Visible="false"></asp:Label>
-                        </td>
-                        <td style="width: 300px; margin-right: 40px;" colspan="2">
-                            <asp:DropDownList ID="ddlUnit" runat="server" Style="width: 120px" AutoPostBack="true" Visible="false"
+                    
+                            <asp:DropDownList ID="ddlUnit" runat="server" CssClass="form-control" AutoPostBack="true" Visible="false"
                                 OnSelectedIndexChanged="ddlUnit_SelectedIndexChanged">
                                 <asp:ListItem Value="1">كيلو جرام KG</asp:ListItem>
                                 <asp:ListItem Value="2">باوند LB</asp:ListItem>
                                 <asp:ListItem Value="3">طن</asp:ListItem>
                             </asp:DropDownList>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 150px;">
+                    </div></div></div>
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                             <asp:Label ID="Label36" runat="server" Visible="false" Text="نوع التغليف"></asp:Label>
-                        </td>
-                        <td style="width: 300px;" colspan="2">
+                   
                             <asp:DropDownList ID="ddlCoverType" runat="server" Visible="false" AutoPostBack="True" OnSelectedIndexChanged="ddlCoverType_SelectedIndexChanged">
                                 <asp:ListItem Value="1">مغلف</asp:ListItem>
                                 <asp:ListItem Value="2">ظرف</asp:ListItem>
                                 <asp:ListItem Value="3">كرتون</asp:ListItem>
                             </asp:DropDownList>
-                        </td>
-                        <td style="width: 150px;">
+                     </div></div></div>
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                             <asp:Label ID="Label37" runat="server" Text="المقاس" Visible="false"></asp:Label>
-                        </td>
-                        <td style="width: 300px;" colspan="2">
-                            <asp:DropDownList ID="ddlCoverSize" runat="server" Style="width: 120px" Visible="false" AutoPostBack="true"
+                   
+                            <asp:DropDownList ID="ddlCoverSize" runat="server" CssClass="form-control" Visible="false" AutoPostBack="true"
                                 OnSelectedIndexChanged="ddlUnit_SelectedIndexChanged">
                                 <asp:ListItem Value="1">صغير</asp:ListItem>
                                 <asp:ListItem Value="2">وسط</asp:ListItem>
                                 <asp:ListItem Value="3">كبير</asp:ListItem>
                                 <asp:ListItem Value="4" Selected="True">مخصص</asp:ListItem>
                             </asp:DropDownList>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 150px;">
+                      </div></div></div>
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                             <asp:Label ID="lblAccess6" runat="server" Visible="false" Text="عدد القطع"></asp:Label>
-                        </td>
-                        <td style="width: 300px;" colspan="2">
-                            <asp:TextBox ID="txtQty" MaxLength="10" Visible="false" runat="server"></asp:TextBox>
+                      
+                            <asp:TextBox ID="txtQty" MaxLength="10" CssClass="form-control" Visible="false" runat="server"></asp:TextBox>
                             <asp:CompareValidator ID="ValDebit" runat="server" ControlToValidate="txtQty" Display="Dynamic" Enabled="false"
                                 ErrorMessage="*" ForeColor="Red" SetFocusOnError="True" Operator="DataTypeCheck"
                                 ValidationGroup="1" Type="Currency">*</asp:CompareValidator>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtQty" Enabled="false"
                                 Display="Dynamic" ErrorMessage="يجب أدخال عدد القطع" ForeColor="Red" SetFocusOnError="True"
                                 ValidationGroup="1">*</asp:RequiredFieldValidator>
-                        </td>
-                        <td style="width: 150px;">
+                       </div></div></div>
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                             <asp:Label ID="Label27" runat="server" Visible="false" Text="وزن الشحنة"></asp:Label>
-                        </td>
-                        <td style="width: 300px;" colspan="2">
-                            <asp:TextBox ID="txtWeight" Text="" MaxLength="11" Visible="false" runat="server" AutoPostBack="True"
+               
+                            <asp:TextBox ID="txtWeight" Text="" CssClass="form-control" MaxLength="11" Visible="false" runat="server" AutoPostBack="True"
                                 OnTextChanged="txtWeight_TextChanged"></asp:TextBox>
                             <asp:CompareValidator ID="CompareValidator6" runat="server" ControlToValidate="txtWeight" Enabled="false"
                                 Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="True" Operator="DataTypeCheck"
@@ -599,35 +570,34 @@
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtWeight" Enabled="false"
                                 Display="Dynamic" ErrorMessage="يجب أدخال وزن الشحنة" ForeColor="Red" SetFocusOnError="True"
                                 ValidationGroup="1">*</asp:RequiredFieldValidator>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 150px;">
+                      </div></div></div>
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                             <asp:Label ID="Label19" runat="server" Visible="false" Text="السعر"></asp:Label>
-                        </td>
-                        <td style="width: 300px;" colspan="2">
-                            <asp:TextBox ID="txtPrice" Text="" MaxLength="15" Visible="false" runat="server" AutoPostBack="True"
+                    
+                            <asp:TextBox ID="txtPrice" Text="" CssClass="form-control" MaxLength="15" Visible="false" runat="server" AutoPostBack="True"
                                 OnTextChanged="txtPrice_TextChanged"></asp:TextBox>
-                        </td>
-                        <td style="width: 150px;">
+                       </div></div></div>
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                             <asp:Label ID="lblAccess1" runat="server" Visible="false" Text="الغرض من الشحنة"></asp:Label>
-                        </td>
-                        <td style="width: 300px;" colspan="2">
-                            <asp:DropDownList ID="ddlUse" runat="server" Visible="false"  >
+                     
+                            <asp:DropDownList ID="ddlUse" CssClass="form-control" runat="server" Visible="false"  >
                                 <asp:ListItem Value="1">تجاري</asp:ListItem>
                                 <asp:ListItem Value="2">استخدام شخصي</asp:ListItem>
                                 <asp:ListItem Value="3">هدية</asp:ListItem>
                                 <asp:ListItem Value="4">عينة</asp:ListItem>
                                 <asp:ListItem Value="5">إصلاح وإرجاع</asp:ListItem>
                             </asp:DropDownList>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 150px;">
+                     </div></div></div>
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                             <asp:Label ID="Label40" runat="server" Text="عدد الشحنات"></asp:Label>*
-                        </td>
-                        <td style="width: 300px;" colspan="2">
-                            <asp:TextBox ID="txtQty2" Text="1" MaxLength="15" AutoPostBack="True" OnTextChanged="txtQty2_TextChanged"
+                     
+                            <asp:TextBox ID="txtQty2" Text="1" CssClass="form-control" MaxLength="15" AutoPostBack="True" OnTextChanged="txtQty2_TextChanged"
                                 runat="server"></asp:TextBox>
                             <asp:CompareValidator ID="CompareValidator7" runat="server" ControlToValidate="txtQty2"
                                 Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="True" Operator="DataTypeCheck"
@@ -635,98 +605,76 @@
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtQty2"
                                 Display="Dynamic" ErrorMessage="يجب أدخال عدد الشحنات" ForeColor="Red" SetFocusOnError="True"
                                 ValidationGroup="1">*</asp:RequiredFieldValidator>
-                        </td>
-                        <td style="width: 150px;">
+                       </div></div></div>
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                             <asp:Label ID="Label41" runat="server" Text="الأجمالي"></asp:Label>
-                        </td>
-                        <td style="width: 300px;" colspan="2">
-                            <asp:TextBox ID="txtTotal" ReadOnly="true" MaxLength="15" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                            <td style="width: 150px;">
+                      
+                            <asp:TextBox ID="txtTotal" ReadOnly="true" CssClass="form-control" MaxLength="15" runat="server"></asp:TextBox>
+                     </div></div></div>
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                                 <asp:Label ID="Label46" runat="server" Text="كود الخصم"></asp:Label>
-                            </td>
-                            <td style="width: 300px;" colspan="2">
-                                 <asp:TextBox ID="txtDiscountTerm" MaxLength="20" runat="server"></asp:TextBox>
+                          
+                                 <asp:TextBox ID="txtDiscountTerm" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                    <asp:ImageButton ID="BtnDiscountTerm" runat="server" ValidationGroup="550" ImageUrl="~/images/zoom_16.png"
                                                 ToolTip="البحث عن بيانات كود الخصم" 
                                      onclick="BtnDiscountTerm_Click" />
                                             <asp:Label ID="lblErrDiscountTerm" runat="server" ForeColor="Red" Text=" "></asp:Label>
-                            </td>
-                            <td style="width: 150px;">
+                         </div></div></div>
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                                 <asp:Label ID="Label47" runat="server" Text="الخصم"></asp:Label>
-                            </td>
-                            <td style="width: 300px;" colspan="2">                             
-                                <asp:TextBox ID="txtDiscount" Width="100px" ReadOnly="true" MaxLength="15" runat="server"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 150px;">
-                            </td>
-                            <td style="width: 300px;" colspan="2">
-                            </td>
-                            <td style="width: 150px;">
+                                                 
+                                <asp:TextBox ID="txtDiscount" CssClass="form-control" ReadOnly="true" MaxLength="15" runat="server"></asp:TextBox>
+                           </div></div></div>
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                                 <asp:Label ID="Label48" runat="server" Text="الصافي"></asp:Label>
-                            </td>
-                            <td style="width: 300px;" colspan="2">                             
-                                <asp:TextBox ID="txtNet" ReadOnly="true" Width="100px" MaxLength="15" runat="server"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 150px;">
-                            </td>
-                            <td style="width: 300px;" colspan="2">
-                            </td>
-                            <td style="width: 150px;">
+                                                     
+                                <asp:TextBox ID="txtNet" ReadOnly="true" CssClass="form-control" MaxLength="15" runat="server"></asp:TextBox>
+                          </div></div></div>
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                                 <asp:Label ID="LblTax" runat="server" Text="الضريبة 5%"></asp:Label>
-                            </td>
-                            <td style="width: 300px;" colspan="2">                             
-                                <asp:TextBox ID="txtTax" ReadOnly="true" Width="100px" MaxLength="15" runat="server"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 150px;">
-                            </td>
-                            <td style="width: 300px;" colspan="2">
-                            </td>
-                            <td style="width: 150px;">
+                                                  
+                                <asp:TextBox ID="txtTax" ReadOnly="true" CssClass="form-control" MaxLength="15" runat="server"></asp:TextBox>
+                          </div></div></div>
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                                 <asp:Label ID="Label50" runat="server" Text="الاجمالي شامل الضريبة"></asp:Label>
-                            </td>
-                            <td style="width: 300px;" colspan="2">                             
-                                <asp:TextBox ID="txtTotNet" Width="100px" ReadOnly="true" MaxLength="15" runat="server"></asp:TextBox>
-                            </td>
-                        </tr>
-                    <tr>
-                        <td style="width: 150px;">
+                                              
+                                <asp:TextBox ID="txtTotNet" CssClass="form-control" ReadOnly="true" MaxLength="15" runat="server"></asp:TextBox>
+                         </div></div></div>
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                             <asp:Label ID="Label22" runat="server" Text="وصف الشحنة "></asp:Label>
-                        </td>
-                        <td colspan="5">
+                     
                             <asp:TextBox ID="txtRemark1" MaxLength="200" runat="server" Width="550px"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 150px;">
+                      </div></div></div>
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                             <asp:Label ID="Label29" runat="server" Text="ملاحظات"></asp:Label>
-                        </td>
-                        <td colspan="5">
+                      
                             <asp:TextBox ID="txtnote" MaxLength="200" runat="server" Width="550px"></asp:TextBox>
-                        </td>
-                    </tr>
-                </table>
+                     </div></div></div>
             </div>
-            <table width="99%" cellpadding="5px" dir="rtl">
-                <tr>
-                    <th align="right">
+             <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label17" runat="server" ForeColor="#800000" Font-Underline="true"
                             Text="بيانات الدفع"></asp:Label>
-                    </th>
-                </tr>
-                <tr>
-                    <td style="width: 150px;">
+                 
                         <asp:Label ID="Label20" runat="server" Text="نقداً بمبلغ"></asp:Label>
-                    </td>
-                    <td style="width: 300px;" colspan="2">
+                  
                         <asp:TextBox ID="txtCashAmount" MaxLength="15" runat="server"></asp:TextBox>
                         <asp:CheckBox ID="ChkCashAmount" runat="server" AutoPostBack="True" oncheckedchanged="ChkCashAmount_CheckedChanged" />
                         <asp:CustomValidator ID="CustomValidator2" runat="server" ClientValidationFunction="CheckItem2"
@@ -735,11 +683,13 @@
                         <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="txtCashAmount"
                             ErrorMessage="يجب ان تكون القيمة رقمية" ForeColor="Red" SetFocusOnError="True"
                             Display="Dynamic" Type="Currency" ValidationGroup="1" Operator="DataTypeCheck">*</asp:CompareValidator>
-                    </td>
-                    <td style="width: 150px;">
+                   </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
+
                         <asp:Label ID="Label30" runat="server" Text="شبكة بمبلغ"></asp:Label>
-                    </td>
-                    <td style="width: 300px;" colspan="2">
+                   
                         <asp:TextBox ID="txtShabakaAmount" MaxLength="15" runat="server"></asp:TextBox>
                         <asp:CheckBox ID="ChkShabakaAmount" runat="server" AutoPostBack="True" oncheckedchanged="ChkShabakaAmount_CheckedChanged" />
                         <asp:CustomValidator ID="CustomValidator1" runat="server" ClientValidationFunction="CheckItem3"
@@ -748,20 +698,20 @@
                         <asp:CompareValidator ID="ValCashAmount2" runat="server" ControlToValidate="txtShabakaAmount"
                             ErrorMessage="يجب ان تكون القيمة رقمية" ForeColor="Red" SetFocusOnError="True"
                             Display="Dynamic" Type="Currency" ValidationGroup="1" Operator="DataTypeCheck">*</asp:CompareValidator>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 150px;">
+                  </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label18" runat="server" Text="أجل فرع"></asp:Label>
-                    </td>
-                    <td style="width: 300px;" colspan="2">
+                 
                         <asp:DropDownList ID="ddlSite" Width="275" runat="server">
                         </asp:DropDownList>
-                    </td>
-                    <td style="width: 150px;">
+                </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label21" runat="server" Text="المبلغ"></asp:Label>
-                    </td>
-                    <td style="width: 300px;" colspan="2">
+                 
                         <asp:TextBox ID="txtSiteAmount" MaxLength="50" runat="server"></asp:TextBox>
                         <asp:CheckBox ID="ChkSiteAmount" runat="server" AutoPostBack="True" oncheckedchanged="ChkSiteAmount_CheckedChanged" />
                         <asp:CustomValidator ID="ValSiteAmount1" runat="server" ClientValidationFunction="CheckItem1"
@@ -770,20 +720,20 @@
                         <asp:CompareValidator ID="ValSiteAmount2" runat="server" ControlToValidate="txtSiteAmount"
                             ErrorMessage="يجب ان تكون القيمة رقمية" ForeColor="Red" SetFocusOnError="True"
                             Display="Dynamic" Type="Currency" ValidationGroup="1" Operator="DataTypeCheck">*</asp:CompareValidator>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 150px;">
+                  </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label44" runat="server" Text="على حساب العميل"></asp:Label>
-                    </td>
-                    <td style="width: 300px;" colspan="2">
+                   
                         <asp:DropDownList ID="ddlCustomers" Width="275" runat="server">
                         </asp:DropDownList>
-                    </td>
-                    <td style="width: 150px;">
+                  </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label45" runat="server" Text="المبلغ"></asp:Label>
-                    </td>
-                    <td style="width: 300px;" colspan="2">
+                  
                         <asp:TextBox ID="txtCustomerAmount" MaxLength="50" runat="server"></asp:TextBox>
                         <asp:CheckBox ID="ChkCustomerAmount" runat="server" AutoPostBack="True" oncheckedchanged="ChkCustomerAmount_CheckedChanged" />
                         <asp:CustomValidator ID="ValCustomerAmount1" runat="server" ClientValidationFunction="CheckItem4"
@@ -792,9 +742,7 @@
                         <asp:CompareValidator ID="ValCustomerAmount2" runat="server" ControlToValidate="txtCustomerAmount"
                             ErrorMessage="يجب ان تكون القيمة رقمية" ForeColor="Red" SetFocusOnError="True"
                             Display="Dynamic" Type="Currency" ValidationGroup="1" Operator="DataTypeCheck">*</asp:CompareValidator>
-                    </td>
-                </tr>
-            </table>
+                  </div></div></div>
             <asp:Panel ID="mypanel" runat="server" Visible="False">
                 <table width="99%" cellpadding="5px" dir="rtl">
                     <tr>
@@ -814,57 +762,40 @@
                     </tr>
                 </table>
             </asp:Panel>
-            <table width="99%" cellpadding="5px" dir="rtl">
-                <tr>
-                    <td style="width: 150px;">
+           <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label31" runat="server" Text="المستخدم"></asp:Label>
-                    </td>
-                    <td style="width: 300px;" colspan="2">
+                  
                         <asp:TextBox ID="txtUserName" Width="285px" runat="server" MaxLength="50" BackColor="#E8E8E8"
                             CssClass="MouseStop" Enabled="false"></asp:TextBox>
-                    </td>
-                    <td style="width: 150px;">
+                  </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="Label32" runat="server" Text="بتاريخ"></asp:Label>
-                    </td>
-                    <td style="width: 300px;" colspan="2">
+                
                         <asp:TextBox ID="txtUserDate" Width="150px" runat="server" MaxLength="50" BackColor="#E8E8E8"
                             CssClass="MouseStop" Enabled="false"> </asp:TextBox>
                         <asp:Label ID="Label35" runat="server" Text="* حقول الزامية"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 150px;">
+                 </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="lblReason" Visible="false" runat="server" Text="سبب التعديل/الغاء"></asp:Label>
-                    </td>
-                    <td style="width: 300px;" colspan="2">
+               
                         <asp:TextBox ID="txtReason" Width="280px" Visible="false" runat="server" MaxLength="100"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="ValReason" Enabled="false" runat="server" ControlToValidate="txtReason"
                             ErrorMessage="يجب إدخال سبب التعديل/الالغاء" ForeColor="Red" Display="Dynamic"
                             SetFocusOnError="True" ValidationGroup="10">*</asp:RequiredFieldValidator>
-                    </td>
-                    <td style="width: 150px;">
-                    </td>
-                    <td style="width: 300px;" colspan="2">
-                    </td>
-                </tr>
-                <tr align="center">
-                    <td colspan="5">
+                 </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                         <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:LinkButton ID="BtnPrint2" runat="server" OnClick="BtnPrint2_Click">طباعة الشروط</asp:LinkButton>
-                    </td>
-                </tr>
-            </table>
-            <center>
-                <br />
-                <div class="DivButtons" style="width: 95%">
-                    <table id="Table2" dir="rtl" width="100%" cellpadding="0" cellspacing="0">
-                        <tr align="center">
-                            <td style="width: 150px;">
-                                &nbsp;
-                            </td>
-                            <td style="width: 400px;">
+                  
+                        <asp:LinkButton ID="BtnPrint2" runat="server" CssClass="btn  btn-primary" OnClick="BtnPrint2_Click">طباعة الشروط</asp:LinkButton>
+     
                                 <asp:ImageButton ID="BtnNew" runat="server" AlternateText="جديد" CommandName="New"
                                     ImageUrl="~/images/insource_642.png" ToolTip="أضافة سند جديد" ValidationGroup="1"
                                     OnClientClick='return confirm("هل أنت متاكد من حفظ بيانات السند؟")' OnClick="BtnNew_Click" />
@@ -880,22 +811,18 @@
                                     ImageUrl="~/images/binoculars_642.png" ToolTip="البحث عن بيانات السند" OnClick="BtnSearch_Click" />
                                 <asp:ImageButton ID="BtnPrint" runat="server" AlternateText="طباعة" CommandName="Print"
                                     ImageUrl="~/images/print_64A.png" ValidationGroup="1" ToolTip="طباعة السند" OnClick="BtnPrint_Click" />
-                            </td>
-                            <td id="td1" runat="server" style="width: 200px; text-align: right">
+                      </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                                 <asp:DropDownList ID="DropDownList1" runat="server">
                                     <asp:ListItem Selected="True" Value="0">نسخة السائق</asp:ListItem>
                                     <asp:ListItem Value="1">نسخة العميل</asp:ListItem>
                                     <asp:ListItem Value="2">نسخة الفرع</asp:ListItem>
                                 </asp:DropDownList>
-                                <br />
-                                &nbsp;
+                             
                                 <asp:CheckBox ID="ChkDoubleSide" Text="طباعة وجهين" Checked="true" runat="server" />
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <br />
-            </center>
+                         </div></div></div>
             <div style="text-align: left; width: 50%; float: left;">
                 <asp:Panel ID="Panel2" runat="server" Height="30px" BackColor="#5D7B9D" Width="99.5%"
                     Direction="RightToLeft" ForeColor="#FFFF99">
@@ -961,7 +888,6 @@
                     ExpandDirection="Vertical" ExpandedImage="~/images/collapse.jpg" CollapsedImage="~/images/expand.jpg"
                     SuppressPostBack="true" />
             </div>
-        </fieldset>
-        <br />
-    </div>
+       
+    </div></div></div></div>
 </asp:Content>

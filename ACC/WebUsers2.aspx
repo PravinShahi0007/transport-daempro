@@ -30,7 +30,7 @@
                             <asp:Label ID="LblCode" runat="server" Text="رمز المستخدم"></asp:Label>
                         </td>
                         <td style="width: 230px">
-                            <asp:TextBox ID="txtName" Width="200px" runat="server" ReadOnly="true" MaxLength="20"></asp:TextBox>
+                            <asp:TextBox ID="txtName" CssClass="form-control" runat="server" ReadOnly="true" MaxLength="20"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="ValName" runat="server" ControlToValidate="txtName"
                                 ErrorMessage="يجب إدخال اسم المستخدم" ForeColor="Red" SetFocusOnError="True"
                                 ValidationGroup="1">*</asp:RequiredFieldValidator>
@@ -39,7 +39,7 @@
                             <asp:Label ID="Label12" runat="server" Text="نوع الحساب"></asp:Label>
                         </td>
                         <td style="width: 160px;">
-                            <asp:DropDownList ID="ddlAccType" Width="120px" runat="server" AutoPostBack="True"
+                            <asp:DropDownList ID="ddlAccType" CssClass="form-control" runat="server" AutoPostBack="True"
                                 OnSelectedIndexChanged="ddlAccType_SelectedIndexChanged">
                                 <asp:ListItem Selected="True" Value="1">سائق</asp:ListItem>
                                 <asp:ListItem Value="2">عميل</asp:ListItem>
@@ -48,7 +48,7 @@
                         </td>
                         <td align="left" rowspan="5" style="width: 120px;">
                             <img id="ImgPhoto" runat="server" src="images/123.jpg" alt="Photo" class="img-circle" />
-                            <asp:FileUpload ID="FileUpload0" Width="80px" runat="server" />
+                            <asp:FileUpload ID="FileUpload0" CssClass="form-control" runat="server" />
                             <asp:Button ID="BtnLoad0" runat="server" Text="تحميل" OnClick="BtnLoad0_Click" />
                         </td>
                     </tr>
@@ -57,7 +57,7 @@
                             <asp:Label ID="Label2" runat="server" Text="كلمة المرور"></asp:Label>
                         </td>
                         <td style="width: 230px">
-                            <asp:TextBox ID="txtPassword" Width="200px" runat="server" TextMode="Password" MaxLength="20"></asp:TextBox>
+                            <asp:TextBox ID="txtPassword" CssClass="form-control" runat="server" TextMode="Password" MaxLength="20"></asp:TextBox>
                         </td>
                         <td style="width: 130px;">
                             <asp:CheckBox ID="ChkActive" runat="server" Text="تفعيل الحساب" />
@@ -71,13 +71,13 @@
                             <asp:Label ID="Label1" runat="server" Text="تأكيد كلمة المرور"></asp:Label>
                         </td>
                         <td style="width: 230px">
-                            <asp:TextBox ID="txtPassword2" Width="200px" runat="server" TextMode="Password" MaxLength="20"></asp:TextBox>
+                            <asp:TextBox ID="txtPassword2" CssClass="form-control" runat="server" TextMode="Password" MaxLength="20"></asp:TextBox>
                         </td>
                         <td style="width: 130px;">
                             <asp:Label ID="Label35" runat="server" Text="رقم الهوية"></asp:Label>
                         </td>
                         <td style="width: 160px;">
-                            <asp:TextBox ID="txtIDNo" Width="150px" runat="server" MaxLength="50"></asp:TextBox>
+                            <asp:TextBox ID="txtIDNo" CssClass="form-control" runat="server" MaxLength="50"></asp:TextBox>
                         </td>
                     </tr>
                     <tr id="tr19" align="right">
@@ -85,13 +85,13 @@
                             <asp:Label ID="Label3" runat="server" Text="الاسم الاول"></asp:Label>
                         </td>
                         <td style="width: 230px">
-                            <asp:TextBox ID="txtFName" Width="200px" runat="server" MaxLength="50"></asp:TextBox>
+                            <asp:TextBox ID="txtFName" CssClass="form-control" runat="server" MaxLength="50"></asp:TextBox>
                         </td>
                         <td style="width: 130px;">
                             <asp:Label ID="Label8" runat="server" Text="الاسم الاخير"></asp:Label>
                         </td>
                         <td style="width: 160px;">
-                            <asp:TextBox ID="txtLName" Width="150px" runat="server" MaxLength="50"></asp:TextBox>
+                            <asp:TextBox ID="txtLName" CssClass="form-control" runat="server" MaxLength="50"></asp:TextBox>
                         </td>
                     </tr>
                     <tr id="tr20" align="right">
@@ -99,15 +99,15 @@
                             <asp:Label ID="Label4" runat="server" Text="الايميل"></asp:Label>
                         </td>
                         <td style="width: 230px">
-                            <asp:TextBox ID="txtEmail" Width="222px" runat="server" MaxLength="50"></asp:TextBox>
+                            <asp:TextBox ID="txtEmail" CssClass="form-control" runat="server" MaxLength="50"></asp:TextBox>
                             <asp:Button ID="BtnEmail" runat="server" Text="Email" Visible="false" OnClick="BtnEmail_Click" />
                         </td>
                         <td style="width: 130px;">
                             <asp:Label ID="Label9" runat="server" Text="رقم الجوال"></asp:Label>
                         </td>
                         <td style="width: 160px;">
-                            <asp:TextBox ID="txtMobileNo" Width="105px" runat="server" MaxLength="50"></asp:TextBox>
-                            <asp:TextBox ID="txtCountryCode" Width="40px" runat="server" MaxLength="5"></asp:TextBox>
+                            <asp:TextBox ID="txtMobileNo" CssClass="form-control" runat="server" MaxLength="50"></asp:TextBox>
+                            <asp:TextBox ID="txtCountryCode" CssClass="form-control" runat="server" MaxLength="5"></asp:TextBox>
                             <asp:Button ID="BtnSMS" runat="server" Text="SMS" Visible="false" OnClick="BtnSMS_Click" />
                         </td>
                     </tr>
@@ -116,13 +116,13 @@
                             <asp:Label ID="Label10" runat="server" Text="حساب المحفظة"></asp:Label>
                         </td>
                         <td style="width: 230px">
-                            <asp:TextBox ID="txtAccount" ReadOnly="true" Width="150px" runat="server" MaxLength="50"></asp:TextBox>
+                            <asp:TextBox ID="txtAccount" ReadOnly="true" CssClass="form-control" runat="server" MaxLength="50"></asp:TextBox>
                         </td>
                         <td style="width: 130px;">
                             <asp:Label ID="Label6" runat="server" Text="رصيد المحفظة"></asp:Label>
                         </td>
                         <td style="width: 160px;">
-                            <asp:TextBox ID="txtBal" ReadOnly="true" Width="150px" runat="server" MaxLength="50"></asp:TextBox>
+                            <asp:TextBox ID="txtBal" ReadOnly="true" CssClass="form-control" runat="server" MaxLength="50"></asp:TextBox>
                         </td>
                         <td align="center" style="width: 120px;">
                             <ajax:Rating runat="server" ID="MyRate" BehaviorID="RatingBehavior1" MaxRating="5"
@@ -136,7 +136,7 @@
                             <asp:Label ID="Label38" runat="server" Text="رصيد أفتتاحي مدين"></asp:Label>
                         </td>
                         <td style="width: 230px">
-                            <asp:TextBox ID="txtOdacc" ReadOnly="true" Width="150px" runat="server" MaxLength="50"></asp:TextBox>
+                            <asp:TextBox ID="txtOdacc" ReadOnly="true" CssClass="form-control" runat="server" MaxLength="50"></asp:TextBox>
                                     <asp:CompareValidator ID="Valodacc" runat="server" ControlToValidate="txtOdacc"
                                     Display="Dynamic" ErrorMessage="يجب ان تكون القيمة رقمية" ForeColor="Red" Type="Currency"
                                     ValidationGroup="1" SetFocusOnError="True" EnableClientScript="False" Operator="DataTypeCheck">*</asp:CompareValidator>
@@ -145,7 +145,7 @@
                             <asp:Label ID="Label39" runat="server" Text="رصيد أفتتاحي دائن"></asp:Label>
                         </td>
                         <td style="width: 160px;">
-                            <asp:TextBox ID="txtOcacc" ReadOnly="true" Width="150px" runat="server" MaxLength="50"></asp:TextBox>
+                            <asp:TextBox ID="txtOcacc" ReadOnly="true" CssClass="form-control" runat="server" MaxLength="50"></asp:TextBox>
                                     <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="txtOcacc"
                                     Display="Dynamic" ErrorMessage="يجب ان تكون القيمة رقمية" ForeColor="Red" Type="Currency"
                                     ValidationGroup="1" SetFocusOnError="True" EnableClientScript="False" Operator="DataTypeCheck">*</asp:CompareValidator>
@@ -158,13 +158,13 @@
                             <asp:Label ID="Label27" runat="server" Text="نوع الجهاز"></asp:Label>
                         </td>
                         <td style="width: 230px">
-                            <asp:TextBox ID="txtDevice_Type" runat="server" MaxLength="50" Width="150px"></asp:TextBox>
+                            <asp:TextBox ID="txtDevice_Type" runat="server" MaxLength="50" CssClass="form-control"></asp:TextBox>
                         </td>
                         <td style="width: 130px;">
                             <asp:Label ID="Label28" runat="server" Text="رقم الإصدار"></asp:Label>
                         </td>
                         <td style="width: 160px;">
-                            <asp:TextBox ID="txtDevice_OS_Version" runat="server" MaxLength="50" Width="150px"></asp:TextBox>
+                            <asp:TextBox ID="txtDevice_OS_Version" runat="server" MaxLength="50" CssClass="form-control"></asp:TextBox>
                         </td>
                         <td align="center" style="width: 120px;">
                             &nbsp;
@@ -175,13 +175,13 @@
                             <asp:Label ID="Label29" runat="server" Text="اسم الجهاز"></asp:Label>
                         </td>
                         <td style="width: 230px">
-                            <asp:TextBox ID="txtDevice_Name" runat="server" MaxLength="50" Width="150px"></asp:TextBox>
+                            <asp:TextBox ID="txtDevice_Name" runat="server" MaxLength="50" CssClass="form-control"></asp:TextBox>
                         </td>
                         <td style="width: 130px;">
                             <asp:Label ID="Label30" runat="server" Text="نظام التشغيل"></asp:Label>
                         </td>
                         <td style="width: 160px;">
-                            <asp:TextBox ID="txtDevice_Label" runat="server" MaxLength="50" Width="150px"></asp:TextBox>
+                            <asp:TextBox ID="txtDevice_Label" runat="server" MaxLength="50" CssClass="form-control"></asp:TextBox>
                         </td>
                         <td align="center" style="width: 120px;">
                             &nbsp;
@@ -192,13 +192,13 @@
                             <asp:Label ID="Label31" runat="server" Text="رقم إصدار التطبيق"></asp:Label>
                         </td>
                         <td style="width: 230px">
-                            <asp:TextBox ID="txtApp_Version" runat="server" MaxLength="50" Width="150px"></asp:TextBox>
+                            <asp:TextBox ID="txtApp_Version" runat="server" MaxLength="50" CssClass="form-control"></asp:TextBox>
                         </td>
                         <td style="width: 130px;">
                             <asp:Label ID="Label32" runat="server" Text="لغة الواجهة"></asp:Label>
                         </td>
                         <td style="width: 160px;">
-                            <asp:DropDownList ID="ddlILang" runat="server" Width="40px">
+                            <asp:DropDownList ID="ddlILang" runat="server" CssClass="form-control">
                                 <asp:ListItem>Ar</asp:ListItem>
                                 <asp:ListItem>En</asp:ListItem>
                             </asp:DropDownList>
@@ -212,7 +212,7 @@
                             <asp:Label ID="Label36" runat="server" Text="إرسال تنبيه"></asp:Label>
                         </td>
                         <td colspan="4" rowspan="4">
-                            <asp:TextBox ID="txtNotify" runat="server" MaxLength="50" Width="100%" TextMode="MultiLine"
+                            <asp:TextBox ID="txtNotify" runat="server" MaxLength="50" CssClass="form-control" TextMode="MultiLine"
                                 Height="100px"></asp:TextBox>
                         </td>
                     </tr>
@@ -272,7 +272,7 @@
                                 <asp:Label ID="Label5" runat="server" Text="مجال المنطقة"></asp:Label>
                             </td>
                             <td style="width: 160px;">
-                                <asp:TextBox ID="txtCardType" runat="server" MaxLength="50" Width="125px"></asp:TextBox>
+                                <asp:TextBox ID="txtCardType" runat="server" MaxLength="50" CssClass="form-control"></asp:TextBox>
                                 كم
                             </td>
                             <td align="center" style="width: 120px;">
@@ -287,7 +287,7 @@
                                 <asp:Label ID="Label34" runat="server" Text="الفرع"></asp:Label>
                             </td>
                             <td style="width: 160px;">
-                                <asp:DropDownList ID="ddlSites" Width="150px" runat="server">
+                                <asp:DropDownList ID="ddlSites" CssClass="form-control" runat="server">
                                 </asp:DropDownList>
                             </td>
                             <td align="center" style="width: 120px;">
@@ -302,7 +302,7 @@
                                 <asp:Label ID="Label7" runat="server" Text="ساعات العمل"></asp:Label>
                             </td>
                             <td style="width: 160px;">
-                                <asp:TextBox ID="txtWorkRate" runat="server" MaxLength="50" Width="150px"></asp:TextBox>
+                                <asp:TextBox ID="txtWorkRate" runat="server" MaxLength="50" CssClass="form-control"></asp:TextBox>
                             </td>
                             <td align="center" style="width: 120px;">
                                 &nbsp;
@@ -316,7 +316,7 @@
                                 <asp:Label ID="Label13" runat="server" Text="معدل القبول"></asp:Label>
                             </td>
                             <td style="width: 160px;">
-                                <asp:TextBox ID="txtAcceptRate" runat="server" MaxLength="50" Width="150px"></asp:TextBox>
+                                <asp:TextBox ID="txtAcceptRate" runat="server" MaxLength="50" CssClass="form-control"></asp:TextBox>
                             </td>
                             <td align="center" style="width: 120px;">
                                 &nbsp;
@@ -330,7 +330,7 @@
                                 <asp:Label ID="Label16" runat="server" Text="الجنسية"></asp:Label>
                             </td>
                             <td style="width: 160px;">
-                                <asp:TextBox ID="txtNat" runat="server" MaxLength="50" Width="150px"></asp:TextBox>
+                                <asp:TextBox ID="txtNat" runat="server" MaxLength="50" CssClass="form-control"></asp:TextBox>
                                 <asp:DropDownList ID="ddlNat" Width="150px" Visible="false" runat="server">
                                 </asp:DropDownList>
                             </td>
@@ -349,7 +349,7 @@
                                 <asp:Label ID="Label17" runat="server" Text="تاريخ الميلاد"></asp:Label>
                             </td>
                             <td style="width: 160px;">
-                                <asp:TextBox ID="txtDateofBirth" runat="server" MaxLength="12" Width="150px"></asp:TextBox>
+                                <asp:TextBox ID="txtDateofBirth" runat="server" MaxLength="12" CssClass="form-control"></asp:TextBox>
                                 <ajax:CalendarExtender ID="CalendarExtender1" runat="server" CssClass="MyCalendar"
                                     TargetControlID="txtDateofBirth" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
                                     PopupPosition="BottomLeft" />
@@ -363,7 +363,7 @@
                                 <asp:Label ID="Label14" runat="server" Text="نوع المركبة"></asp:Label>
                             </td>
                             <td style="width: 230px">
-                                <asp:TextBox ID="txtDCarType" runat="server" MaxLength="50" Width="150px"></asp:TextBox>
+                                <asp:TextBox ID="txtDCarType" runat="server" MaxLength="50" CssClass="form-control"></asp:TextBox>
                                 <asp:DropDownList ID="ddlDCareType" Visible="false" Width="150px" runat="server" AutoPostBack="True"
                                     OnSelectedIndexChanged="ddlDCareType_SelectedIndexChanged">
                                 </asp:DropDownList>
@@ -372,7 +372,7 @@
                                 <asp:Label ID="Label15" runat="server" Text="موديل المركبة"></asp:Label>
                             </td>
                             <td style="width: 160px;">
-                                <asp:TextBox ID="txtDCarModel" runat="server" MaxLength="50" Width="150px"></asp:TextBox>
+                                <asp:TextBox ID="txtDCarModel" runat="server" MaxLength="50" CssClass="form-control"></asp:TextBox>
                                 <asp:DropDownList ID="ddlDCarModel" Visible="false" Width="150px" runat="server">
                                 </asp:DropDownList>
                             </td>
@@ -385,13 +385,13 @@
                                 <asp:Label ID="Label18" runat="server" Text="الحمولة"></asp:Label>
                             </td>
                             <td style="width: 230px">
-                                <asp:TextBox ID="txtCarWeight" runat="server" MaxLength="20" Width="150px"></asp:TextBox>
+                                <asp:TextBox ID="txtCarWeight" runat="server" MaxLength="20" CssClass="form-control"></asp:TextBox>
                             </td>
                             <td style="width: 130px;">
                                 <asp:Label ID="Label19" runat="server" Text="اللون"></asp:Label>
                             </td>
                             <td style="width: 160px;">
-                                <asp:TextBox ID="txtDCarColor" runat="server" MaxLength="20" Width="150px"></asp:TextBox>
+                                <asp:TextBox ID="txtDCarColor" runat="server" MaxLength="20" CssClass="form-control"></asp:TextBox>
                             </td>
                             <td align="center" style="width: 120px;">
                                 &nbsp;
@@ -402,13 +402,13 @@
                                 <asp:Label ID="Label20" runat="server" Text="رقم اللوحة"></asp:Label>
                             </td>
                             <td style="width: 230px">
-                                <asp:TextBox ID="txtDPlateNo" runat="server" MaxLength="12" Width="150px"></asp:TextBox>
+                                <asp:TextBox ID="txtDPlateNo" runat="server" MaxLength="12" CssClass="form-control"></asp:TextBox>
                             </td>
                             <td style="width: 130px;">
                                 <asp:Label ID="Label21" runat="server" Text="اسم المالك"></asp:Label>
                             </td>
-                            <td colspan="2">
-                                <asp:TextBox ID="txtCarOwner" runat="server" MaxLength="50" Width="250px"></asp:TextBox>
+                             <td style="width: 160px;">
+                                <asp:TextBox ID="txtCarOwner" runat="server" MaxLength="50" CssClass="form-control"></asp:TextBox>
                             </td>
                         </tr>
                         <tr id="tr220" align="right">
@@ -416,13 +416,13 @@
                                 <asp:Label ID="Label22" runat="server" Text="رقم رخصة سير المركبة"></asp:Label>
                             </td>
                             <td style="width: 230px">
-                                <asp:TextBox ID="txtPHDate1" runat="server" MaxLength="12" Width="150px"></asp:TextBox>
+                                <asp:TextBox ID="txtPHDate1" runat="server" MaxLength="12" CssClass="form-control"></asp:TextBox>
                             </td>
                             <td style="width: 130px;">
                                 <asp:Label ID="Label23" runat="server" Text="سنة الصنع"></asp:Label>
                             </td>
                             <td style="width: 160px;">
-                                <asp:TextBox ID="txtPHDate2" runat="server" MaxLength="12" Width="150px"></asp:TextBox>
+                                <asp:TextBox ID="txtPHDate2" runat="server" MaxLength="12" CssClass="form-control"></asp:TextBox>
                             </td>
                             <td align="center" style="width: 120px;">
                                 &nbsp;
@@ -433,13 +433,13 @@
                                 <asp:Label ID="Label24" runat="server" Text="صلاحية التأمين"></asp:Label>
                             </td>
                             <td style="width: 230px">
-                                <asp:TextBox ID="txtPHDate3" runat="server" MaxLength="12" Width="150px"></asp:TextBox>
+                                <asp:TextBox ID="txtPHDate3" runat="server" MaxLength="12" CssClass="form-control"></asp:TextBox>
                             </td>
                             <td style="width: 130px;">
                                 <asp:Label ID="Label25" runat="server" Text="صلاحية تأمين الحمولة"></asp:Label>
                             </td>
                             <td style="width: 160px;">
-                                <asp:TextBox ID="txtPHDate4" runat="server" MaxLength="12" Width="150px"></asp:TextBox>
+                                <asp:TextBox ID="txtPHDate4" runat="server" MaxLength="12" CssClass="form-control"></asp:TextBox>
                             </td>
                             <td align="center" style="width: 120px;">
                                 &nbsp;
@@ -450,13 +450,13 @@
                                 <asp:Label ID="lblAccount01" runat="server" Text="الحساب البنكي 1"></asp:Label>
                             </td>
                             <td style="width: 230px">
-                                <asp:TextBox ID="txtAccountNo01" runat="server" MaxLength="100" Width="210px"></asp:TextBox>
+                                <asp:TextBox ID="txtAccountNo01" runat="server" MaxLength="100" CssClass="form-control"></asp:TextBox>
                             </td>
                             <td style="width: 130px;">
                                 <asp:CheckBox ID="ChkAccount01" runat="server" Text="تفعيل حساب البنك" />
                             </td>
                             <td style="width: 160px;">
-                                <asp:TextBox ID="txtAccountName01" runat="server" MaxLength="100" Width="150px"></asp:TextBox>
+                                <asp:TextBox ID="txtAccountName01" runat="server" MaxLength="100" CssClass="form-control"></asp:TextBox>
                             </td>
                             <td align="center" style="width: 120px;">
                                 <asp:Button ID="BtnView01" runat="server" Text="عرض صورة الحساب" OnClientClick="aspnetForm.target ='_blank';" />
@@ -467,14 +467,14 @@
                                 <asp:Label ID="lblAccount02" runat="server" Visible="false" Text="الحساب البنكي 2"></asp:Label>
                             </td>
                             <td style="width: 230px">
-                                <asp:TextBox ID="txtAccountNo02" runat="server" MaxLength="100" Visible="false" Width="210px"></asp:TextBox>
+                                <asp:TextBox ID="txtAccountNo02" runat="server" MaxLength="100" Visible="false" CssClass="form-control"></asp:TextBox>
                             </td>
                             <td style="width: 130px;">
                                 <asp:CheckBox ID="ChkAccount02" runat="server" Visible="false" Text="تفعيل حساب البنك" />
                             </td>
                             <td style="width: 160px;">
                                 <asp:TextBox ID="txtAccountName02" runat="server" Visible="false" MaxLength="100"
-                                    Width="150px"></asp:TextBox>
+                                    CssClass="form-control"></asp:TextBox>
                             </td>
                             <td align="center" style="width: 120px;">
                                 <asp:Button ID="BtnView02" runat="server" Text="عرض صورة الحساب" Visible="false"
@@ -486,14 +486,14 @@
                                 <asp:Label ID="lblAccount03" runat="server" Visible="false" Text="الحساب البنكي 3"></asp:Label>
                             </td>
                             <td style="width: 230px">
-                                <asp:TextBox ID="txtAccountNo03" runat="server" Visible="false" MaxLength="100" Width="210px"></asp:TextBox>
+                                <asp:TextBox ID="txtAccountNo03" runat="server" Visible="false" MaxLength="100" CssClass="form-control"></asp:TextBox>
                             </td>
                             <td style="width: 130px;">
                                 <asp:CheckBox ID="ChkAccount03" runat="server" Visible="false" Text="تفعيل حساب البنك" />
                             </td>
                             <td style="width: 160px;">
                                 <asp:TextBox ID="txtAccountName03" runat="server" Visible="false" MaxLength="100"
-                                    Width="150px"></asp:TextBox>
+                                   CssClass="form-control"></asp:TextBox>
                             </td>
                             <td align="center" style="width: 120px;">
                                 <asp:Button ID="BtnView03" runat="server" Text="عرض صورة الحساب" Visible="false"
@@ -505,14 +505,14 @@
                                 <asp:Label ID="lblAccount04" runat="server" Visible="false" Text="الحساب البنكي 4"></asp:Label>
                             </td>
                             <td style="width: 230px">
-                                <asp:TextBox ID="txtAccountNo04" runat="server" Visible="false" MaxLength="100" Width="210px"></asp:TextBox>
+                                <asp:TextBox ID="txtAccountNo04" runat="server" Visible="false" MaxLength="100" CssClass="form-control"></asp:TextBox>
                             </td>
                             <td style="width: 130px;">
                                 <asp:CheckBox ID="ChkAccount04" runat="server" Visible="false" Text="تفعيل حساب البنك" />
                             </td>
                             <td style="width: 160px;">
                                 <asp:TextBox ID="txtAccountName04" runat="server" Visible="false" MaxLength="100"
-                                    Width="150px"></asp:TextBox>
+                                    CssClass="form-control"></asp:TextBox>
                             </td>
                             <td align="center" style="width: 120px;">
                                 <asp:Button ID="BtnView04" runat="server" Text="عرض صورة الحساب" Visible="false"
@@ -527,7 +527,7 @@
                             <asp:Label ID="lblReason" runat="server" Visible="false" Text="سبب التعديل/الغاء"></asp:Label>
                         </td>
                         <td style="width: 250px;">
-                            <asp:TextBox ID="txtReason" Width="222px" Visible="false" runat="server" MaxLength="100"></asp:TextBox>
+                            <asp:TextBox ID="txtReason" CssClass="form-control" Visible="false" runat="server" MaxLength="100"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="ValReason" Enabled="false" runat="server" ControlToValidate="txtReason"
                                 ErrorMessage="يجب إدخال سبب التعديل/الالغاء" ForeColor="Red" Display="Dynamic"
                                 SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
@@ -796,7 +796,7 @@
                             <asp:Label ID="Label26" runat="server" Text="نوع الطلب"></asp:Label>
                         </td>
                         <td style="width: 130px">
-                            <asp:DropDownList ID="ddlOrderType" Width="120px" runat="server" 
+                            <asp:DropDownList ID="ddlOrderType" CssClass="form-control" runat="server" 
                                 AutoPostBack="True" onselectedindexchanged="ddlOrderType_SelectedIndexChanged">
                                     <asp:ListItem Selected="True" Value="0">الجميع</asp:ListItem>
                                     <asp:ListItem Value="1">نقل سيارات</asp:ListItem>
@@ -813,7 +813,7 @@
                             <asp:Label ID="Label37" runat="server" Text="حالة الطلب"></asp:Label>
                         </td>
                         <td style="width: 190px;">
-                            <asp:DropDownList ID="ddlStatus" Width="185px" runat="server" 
+                            <asp:DropDownList ID="ddlStatus" CssClass="form-control" runat="server" 
                                 AutoPostBack="True" onselectedindexchanged="ddlOrderType_SelectedIndexChanged">
                                 <asp:ListItem Selected="True" Value="*">الجميع</asp:ListItem>
                                 <asp:ListItem Value="-1">ملغي</asp:ListItem>
@@ -837,7 +837,7 @@
                                 <asp:ListItem Value="2">جوال المستلم</asp:ListItem>
                                 <asp:ListItem Value="3">جوال السائق</asp:ListItem>
                               </asp:DropDownList>
-                                <asp:TextBox ID="txtSearch2" MaxLength="20" Width="100px" placeholder="بحث" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtSearch2" MaxLength="20" CssClass="form-control" placeholder="بحث" runat="server"></asp:TextBox>
                                 <asp:ImageButton ID="BtnFind" runat="server" ValidationGroup="55" ImageUrl="~/images/zoom_16.png"
                                     ToolTip="البحث " onclick="BtnFind_Click" style="width: 16px" />
                         </td>

@@ -59,34 +59,36 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <center>
-        <div class="ColorRounded4Corners" style="width: 99.8%">
-            <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 99.5%;
-                border: solid 2px #800000">
+ 
+  <div class="ColorRounded4Corners col-md-12 col-sm-12 col-xs-12">
+           
                 <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
                     <b>[ Return Purchase ]</b></legend>
-                <center>
-                    <table width="99%" cellpadding="3" cellspacing="0"> 
-                        <tr>
-                            <td style="width: 15%;">
+               
+                     <div class="box box-info" align="right">
+                <div class="body">
+                    <div class="row">
+
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label1" runat="server" Text="Invoice No."></asp:Label>
-                                *
-                            </td>
-                            <td style="width: 35%;">
-                                <asp:TextBox ID="txtVouNo" MaxLength="10" runat="server"></asp:TextBox>
+                         
+                                <asp:TextBox ID="txtVouNo" MaxLength="10" runat="server" CssClass="form-control"></asp:TextBox>
                                 <asp:Label ID="lblBranch" runat="server" Text="Label"></asp:Label>
                                 <asp:ImageButton ID="BtnFind" runat="server" ValidationGroup="55" ImageUrl="~/images/zoom_16.png"
                                     ToolTip="Search for Invoice Data" OnClick="BtnFind_Click" />
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtVouNo"
                                     Display="Dynamic" ErrorMessage="You should Enter Invoice No." ForeColor="Red"
                                     SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                            </td>
-                            <td style="width: 15%;">
+                          </div></div></div>
+                           
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label2" runat="server" Text="Date"></asp:Label>
-                                *
-                            </td>
-                            <td style="width: 35%;" colspan="2">
-                                <asp:TextBox ID="txtVouDate" MaxLength="10" runat="server"></asp:TextBox>
+                               
+                                <asp:TextBox ID="txtVouDate" MaxLength="10" runat="server" CssClass="form-control"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtVouDate"
                                     Display="Dynamic" ErrorMessage="You Should Select Invoice Date" ForeColor="Red"
                                     SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
@@ -96,34 +98,33 @@
                                 <ajax:CalendarExtender ID="CalendarExtender1" runat="server" CssClass="MyCalendar"
                                     TargetControlID="txtVouDate" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
                                     PopupPosition="BottomLeft" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;">
+                         </div></div></div>
+                         <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label6" runat="server" Text="Doc#/Type"></asp:Label>
-                            </td>
-                            <td style="width: 35%;">
-                                <asp:TextBox ID="txtRefNo" Width="80px" MaxLength="10" runat="server"></asp:TextBox>
+                         
+                                <asp:TextBox ID="txtRefNo" CssClass="form-control" MaxLength="10" runat="server"></asp:TextBox>
                                 <asp:DropDownList ID="DropDownList1" runat="server">
                                     <asp:ListItem Selected="True" Value="0">Purchase Invoice</asp:ListItem>
                                     <asp:ListItem Value="1">Issue Note</asp:ListItem>
                                 </asp:DropDownList>
                                 <asp:ImageButton ID="BtnFind2" runat="server" ValidationGroup="55" ImageUrl="~/images/zoom_16.png"
                                     ToolTip="Search for Voucher Data" OnClick="BtnFind2_Click" />
-                            </td>
-                            <td style="width: 15%;">
+                           </div></div></div>
+                         <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label7" runat="server" Text="Remark"></asp:Label>
-                            </td>
-                            <td style="width: 35%;" colspan="2">
-                                <asp:TextBox ID="txtRemark" Width="200px" MaxLength="100" runat="server"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;">
+                          
+                                <asp:TextBox ID="txtRemark" CssClass="form-control" MaxLength="100" runat="server"></asp:TextBox>
+                           </div></div></div>
+                         <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="LblCode" runat="server" Text="Cash Account"></asp:Label>*
-                            </td>
-                            <td colspan="2">
-                                <asp:TextBox ID="txtCode" MaxLength="15" runat="server"></asp:TextBox>
+                          
+                                <asp:TextBox ID="txtCode" MaxLength="15" runat="server" CssClass="form-control"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtCode"
                                     Display="Dynamic" ErrorMessage="You Should Select Invoice Code" ForeColor="Red"
                                     SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
@@ -132,26 +133,25 @@
                                     MinimumPrefixLength="1" CompletionInterval="500" EnableCaching="true" CompletionSetCount="30"
                                     CompletionListCssClass="autocomplete_completionListElement" CompletionListItemCssClass="autocomplete_listItem"
                                     CompletionListHighlightedItemCssClass="autocomplete_highlightedListItem" />
-                                <asp:TextBox ID="txtName" MaxLength="100" Width="275px" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtName" MaxLength="100" CssClass="form-control" runat="server"></asp:TextBox>
                                 <ajax:AutoCompleteExtender ID="AutoCompleteExtender2" runat="server" TargetControlID="txtName"
                                     ServicePath="AutoComplete.asmx" ServiceMethod="GetCompletionList2" OnClientItemSelected="acc1_itemSelected"
                                     MinimumPrefixLength="1" CompletionInterval="500" EnableCaching="true" CompletionSetCount="30"
                                     CompletionListCssClass="autocomplete_completionListElement" CompletionListItemCssClass="autocomplete_listItem"
                                     CompletionListHighlightedItemCssClass="autocomplete_highlightedListItem" />
-                            </td>
-                            <td style="width: 15%;">
+                        </div></div></div>
+                         <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label10" runat="server" Text="Invoice Type"></asp:Label>
-                            </td>
-                            <td style="width: 20%;">
+                           
                                 <asp:RadioButtonList ID="rdoInvType" runat="server" RepeatColumns="2" CellPadding="2"
                                     CellSpacing="2" AutoPostBack="True" OnSelectedIndexChanged="rdoInvType_SelectedIndexChanged">
                                     <asp:ListItem Value="0" Selected="True">Cash</asp:ListItem>
                                     <asp:ListItem Value="1">Credit</asp:ListItem>
                                 </asp:RadioButtonList>
-                            </td>
-                        </tr>
-                    </table>
-                    <div style="width: 100%; overflow: none; overflow-x: auto; border: 1px solid #800000;">
+                           </div></div></div>
+                <div class="table-responsive">
                         <asp:GridView ID="grdCodes" runat="server" CellPadding="4" Width="99.95%" ForeColor="#333333"
                             ShowFooter="True" ViewStateMode="Enabled" GridLines="None" AutoGenerateColumns="False"
                             DataKeyNames="FNo" PageSize="250" OnPageIndexChanging="grdCodes_PageIndexChanging"
@@ -366,42 +366,30 @@
                             </td>
                         </tr>
                     </table>
-                    <table id="Table2" width="100%" cellpadding="0" cellspacing="0">
-                        <tr>
-                            <td colspan="4">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 70px;">
+               <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label14" runat="server" Text="User Name"></asp:Label>
-                            </td>
-                            <td style="width: 300px;">
-                                <asp:TextBox ID="txtUserName" Width="300px" runat="server" MaxLength="50" BackColor="#E8E8E8"
+                         
+                                <asp:TextBox ID="txtUserName" CssClass="form-control" runat="server" MaxLength="50" BackColor="#E8E8E8"
                                     Enabled="false"></asp:TextBox>
-                            </td>
-                            <td style="width: 70px;">
+                        </div></div></div>
+                         <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label15" runat="server" Text="Date"></asp:Label>
-                            </td>
-                            <td style="width: 300px;">
-                                <asp:TextBox ID="txtUserDate" Width="150px" runat="server" MaxLength="50" BackColor="#E8E8E8"
+                         
+                                <asp:TextBox ID="txtUserDate" CssClass="form-control" runat="server" MaxLength="50" BackColor="#E8E8E8"
                                     Enabled="false">                                                               
                                 </asp:TextBox>
+                                    </div></div></div>
+                         <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label27" runat="server" Text="* Required Fields"></asp:Label>
-                            </td>
-                        </tr>
-                        <tr align="center">
-                            <td colspan="4">
+                           
                                 <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
-                            </td>
-                        </tr>
-                        <tr align="right">
-                            <td colspan="4">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            </td>
-                        </tr>
-                        <tr align="center">
-                            <td colspan="4" style="width: 100%;">
+                           
                                 <asp:ImageButton ID="BtnNew" runat="server" AlternateText="New" CommandName="New"
                                     ImageUrl="~/images/insource_641.png" CssClass="ops" ToolTip="Add New Return Purchase Invoice"
                                     ValidationGroup="1" OnClientClick='return confirm("Adding New Return Purchase Invoice...Are You Sure?")'
@@ -422,11 +410,8 @@
                                 <asp:ImageButton ID="BtnPrint" runat="server" AlternateText="Print" CommandName="Print"
                                     ImageUrl="~/images/print_641.png" ValidationGroup="1" CssClass="ops" ToolTip="Print Return Purchase Invoice"
                                     OnClick="BtnPrint_Click" />
-                            </td>
-                        </tr>
-                    </table>
-                    <br />
-                </center>
+                        </div></div></div>
+                 
                 <div style="text-align: right; width: 50%; float: right;">
                     <asp:Panel ID="Panel2" runat="server" Height="30px" BackColor="#5D7B9D" Width="99.5%"
                         Direction="LeftToRight" ForeColor="#FFFF99">
@@ -492,7 +477,7 @@
                         ExpandDirection="Vertical" ExpandedImage="~/images/collapse.jpg" CollapsedImage="~/images/expand.jpg"
                         SuppressPostBack="true" />
                 </div>
-            </fieldset>
-        </div>
-    </center>
+       
+        </div></div></div></div>
+  
 </asp:Content>

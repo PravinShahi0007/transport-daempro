@@ -4,14 +4,20 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div>
-        <center>
-            <div class="ColorRounded4Corners">
-                <center>
+   
+        
+            <div class="ColorRounded4Corners col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+                
+                     <div class="box box-info" align="right">
+                <div class="body">
+                    <div class="row">
+                         <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                     <asp:Label ID="Label1" runat="server" Font-Size="Larger" meta:resourcekey="Label1"
                         Text=" البند"></asp:Label>
-                    &nbsp;&nbsp;&nbsp;
-                    <asp:DropDownList ID="ddlFtype" runat="server" Width="150px" AutoPostBack="True"
+                  
+                    <asp:DropDownList ID="ddlFtype" runat="server" CssClass="form-control" AutoPostBack="True"
                         OnSelectedIndexChanged="ddlFtype_SelectedIndexChanged">
                         <asp:ListItem Selected="True" Value="1" Text="الجنسية"></asp:ListItem>
                         <asp:ListItem Value="2" Text="الوظيفة"></asp:ListItem>
@@ -27,9 +33,8 @@
                         <asp:ListItem Value="20" Text="توقيتات الحضور و الانصراف"></asp:ListItem>
                         <asp:ListItem Value="30" Text="ملحقات الشاحنات"></asp:ListItem>
                     </asp:DropDownList>
-                </center>
-                <br />
-                <div style="width: 99%; overflow: auto; border: 1px solid #800000;">
+         </div></div></div>
+               <div class="table-responsive">
                     <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                         GridLines="None" AutoGenerateColumns="False" DataKeyNames="Code" 
                         AllowPaging="True" Width="99.9%" OnRowUpdating="grdCodes_RowUpdating" OnPageIndexChanging="grdCodes_PageIndexChanging"
@@ -116,8 +121,8 @@
                 </div>
                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
                 <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
-                <br />
+               
             </div>
-        </center>
-    </div>
+       
+    </div></div></div>
 </asp:Content>

@@ -17,48 +17,48 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <center>
-        <div class="ColorRounded4Corners" style="width: 99.8%">
-            <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 99.5%;
-                border: solid 2px #800000">
+   
+        <div class="ColorRounded4Corners col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+            <fieldset class="Rounded4CornersNoShadow col-md-10 col-md-offset-1 col-sm-12 col-xs-12" >
                 <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
                     <b>[ Job Work ]</b></legend>
-                <center>
-                    <table width="99%" cellpadding="3" cellspacing="0">
-                        <tr>
-                            <td style="width: 15%;">
+           
+                 <div class="box box-info" align="right">
+                <div class="body">
+                    <div class="row">
+                     <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label1" runat="server" Text="Order No."></asp:Label>
-                                *
-                            </td>
-                            <td style="width: 35%;">
-                                <asp:TextBox ID="txtVouNo" MaxLength="10" runat="server" CssClass="MouseStop" ReadOnly="true"></asp:TextBox>
+                                
+                       
+                                <asp:TextBox ID="txtVouNo" MaxLength="10" runat="server" CssClass="MouseStop form-control" ReadOnly="true"></asp:TextBox>
                                 <asp:Label ID="lblBranch2" runat="server" Text="Label"></asp:Label>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtVouNo"
                                     Display="Dynamic" ErrorMessage="You should Enter Job Work No." ForeColor="Red"
                                     SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                            </td>
-                            <td style="width: 15%;">
+                        </div></div></div>
+                         <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label3" runat="server" Text="Status"></asp:Label>
-                            </td>
-                            <td style="width: 20%;">
-                                <asp:DropDownList ID="ddlStatus" Width="100px" runat="server" 
+                       
+                                <asp:DropDownList ID="ddlStatus" CssClass="form-control" runat="server" 
                                     AutoPostBack="True" onselectedindexchanged="ddlStatus_SelectedIndexChanged">
                                     <asp:ListItem Value="0">Open</asp:ListItem>
                                     <asp:ListItem Value="1">Pause</asp:ListItem>
                                     <asp:ListItem Value="2">Close</asp:ListItem>
                                 </asp:DropDownList>
-                            </td>
-                            <td style="width: 15%;">
-                                <asp:TextBox ID="txtSearch" MaxLength="10" Width="90px" runat="server"></asp:TextBox>
+                         
+                                <asp:TextBox ID="txtSearch" MaxLength="10" CssClass="form-control" runat="server"></asp:TextBox>
                                 <asp:ImageButton ID="BtnFind" runat="server" ValidationGroup="55" ImageUrl="~/images/zoom_16.png"
                                     ToolTip="Search for Job Work Data" OnClick="BtnFind_Click" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;">
+                         </div></div></div>
+                       <div class="col-md-12 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label15" runat="server" Text="Order Type"></asp:Label>
-                            </td>
-                            <td colspan="4">
+                          
                                 <asp:CheckBoxList ID="ChkRepairType" runat="server" RepeatColumns="6" Width="100%">
                                     <asp:ListItem Value="0">Outside Repair</asp:ListItem>
                                     <asp:ListItem Value="1">Routine Services</asp:ListItem>
@@ -67,15 +67,14 @@
                                     <asp:ListItem Value="4">Inspector</asp:ListItem>
                                     <asp:ListItem Value="5">WorkShop</asp:ListItem>
                                 </asp:CheckBoxList>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;">
+                          </div></div></div>
+                        <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label2" runat="server" Text="Date In"></asp:Label>
-                                *
-                            </td>
-                            <td style="width: 35%;">
-                                <asp:TextBox ID="txtVouDate" MaxLength="10" Width="100px" runat="server"></asp:TextBox>
+                             
+                         
+                                <asp:TextBox ID="txtVouDate" MaxLength="10" CssClass="form-control" runat="server"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtVouDate"
                                     Display="Dynamic" ErrorMessage="You Should Select Order Date" ForeColor="Red"
                                     SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
@@ -85,45 +84,40 @@
                                 <ajax:CalendarExtender ID="CalendarExtender1" runat="server" CssClass="MyCalendar"
                                     TargetControlID="txtVouDate" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
                                     PopupPosition="BottomLeft" />
-                                <asp:TextBox ID="txtVouTime" MaxLength="15" ReadOnly="true" Width="100px" CssClass="MouseStop"
+                                <asp:TextBox ID="txtVouTime" MaxLength="15" ReadOnly="true"  CssClass="MouseStop form-control"
                                     runat="server"></asp:TextBox>
-                            </td>
-                            <td style="width: 15%;">
+                           </div></div></div>
+                          <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label6" runat="server" Text="Repair Req.#"></asp:Label>
-                            </td>
-                            <td style="width: 35%;" colspan="2">
-                                <asp:TextBox ID="txtRepairReq" MaxLength="10" runat="server" 
+                           
+                                <asp:TextBox ID="txtRepairReq" MaxLength="10" runat="server" CssClass="form-control" 
                                     AutoPostBack="True" ontextchanged="txtRepairReq_TextChanged"></asp:TextBox>
                                 <asp:ImageButton ID="BtnFind2" runat="server" ValidationGroup="55" ImageUrl="~/images/zoom_16.png"
                                     ToolTip="Search for Repair Request" onclick="BtnFind2_Click" />
                                 <asp:RequiredFieldValidator ID="ValRepairReq" runat="server" ControlToValidate="txtRepairReq"
                                     Display="Dynamic" ErrorMessage="You should Enter Repair Request No." ForeColor="Red"
                                     SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;">
+                          </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label5" runat="server" Text="Vehicle Type"></asp:Label>
-                            </td>
-                            <td style="width: 35%;">
-                                <asp:DropDownList ID="ddlVehType" Width="250" runat="server" Enabled="false"
+                         
+                                <asp:DropDownList ID="ddlVehType" CssClass="form-control" runat="server" Enabled="false"
                                     AutoPostBack="True" onselectedindexchanged="ddlVehType_SelectedIndexChanged">
                                 </asp:DropDownList>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="ddlVehType"
                                     InitialValue="-1" Display="Dynamic" ErrorMessage="You Should Select Vechile Type" ForeColor="Red"
                                     SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                            </td>
-                            <td style="width: 15%;">
-                            </td>
-                            <td style="width: 35%;" colspan="2">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;">
+                           </div></div></div>
+                    <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label4" runat="server" Text="Car No."></asp:Label>
-                            </td>
-                            <td style="width: 35%;">
-                                <asp:TextBox ID="txtCarNo" MaxLength="15" Width="50px" autocomplete="off" AutoPostBack="True" ReadOnly="true"
+                         
+                                <asp:TextBox ID="txtCarNo" MaxLength="15" CssClass="form-control" autocomplete="off" AutoPostBack="True" ReadOnly="true"
                                     runat="server"></asp:TextBox>
                                 <ajax:AutoCompleteExtender ID="AutoCompleteExtender03" runat="server" TargetControlID="txtCarNo"
                                     ServicePath="AutoComplete.asmx" ServiceMethod="GetCompletionCars20" OnClientItemSelected="Plate_itemSelected"
@@ -132,84 +126,81 @@
                                     CompletionListHighlightedItemCssClass="autocomplete_highlightedListItem" />
                                 <asp:ImageButton ID="BtnFindCar" runat="server" ValidationGroup="55" ImageUrl="~/images/zoom_16.png"
                                     ToolTip="Search for Car" onclick="BtnFindCar_Click" Enabled="false" />
-                                <asp:DropDownList ID="ddlCar" Width="208px" runat="server" AutoPostBack="True"  Enabled="false"
+                                <asp:DropDownList ID="ddlCar" CssClass="form-control" runat="server" AutoPostBack="True"  Enabled="false"
                                     onselectedindexchanged="ddlCar_SelectedIndexChanged">
                                 </asp:DropDownList>
                                 <asp:RequiredFieldValidator ID="ValCar" runat="server" ControlToValidate="ddlCar"
                                     InitialValue="-1" Display="Dynamic" ErrorMessage="You Should Select Car" ForeColor="Red"
                                     SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                            </td>
-                            <td style="width: 15%;">
+                       </div></div></div>
+                          <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label11" runat="server" Text="Driver"></asp:Label>
-                            </td>
-                            <td style="width: 35%;" colspan="2">
-                                <asp:DropDownList ID="ddlDriver" Width="200" runat="server">
+                           
+                                <asp:DropDownList ID="ddlDriver" CssClass="form-control" runat="server">
                                 </asp:DropDownList>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;">
+                          </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label9" runat="server" Text="K.M. Reading"></asp:Label>
-                            </td>
-                            <td style="width: 35%;">
-                                <asp:TextBox ID="txtKMReading" MaxLength="15" runat="server"></asp:TextBox>
-                            </td>
-                            <td style="width: 15%;">
+                          
+                                <asp:TextBox ID="txtKMReading" MaxLength="15" runat="server" CssClass="form-control"></asp:TextBox>
+                            </div></div></div>
+                             <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label12" runat="server" Text="Last Reading"></asp:Label>
-                            </td>
-                            <td style="width: 35%;" colspan="2">
-                                <asp:TextBox ID="txtKMReading2" ReadOnly="true" CssClass="MouseStop" MaxLength="15"
+                        
+                                <asp:TextBox ID="txtKMReading2" ReadOnly="true" CssClass="MouseStop form-control" MaxLength="15"
                                     runat="server"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;">
-                                <asp:Label ID="Label13" runat="server" Text="Formen"></asp:Label>
-                            </td>
-                            <td style="width: 35%;">
-                                <asp:DropDownList ID="ddlFormen" Width="200" runat="server">
+                           </div></div></div>
+                          <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                <asp:Label ID="Label13" runat="server" CssClass="form-control" Text="Formen"></asp:Label>
+                         
+                                <asp:DropDownList ID="ddlFormen" CssClass="form-control" runat="server">
                                 </asp:DropDownList>
-                            </td>
-                            <td style="width: 15%;">
+                           </div></div></div>
+                             <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label35" runat="server" Text="Date Out"></asp:Label>
-                            </td>
-                            <td style="width: 35%;" colspan="2">
-                                <asp:TextBox ID="txtEndDateTime" ReadOnly="true" Width="200px" CssClass="MouseStop"
+                         
+                                <asp:TextBox ID="txtEndDateTime" ReadOnly="true" CssClass="MouseStop form-control"
                                     MaxLength="25" runat="server"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;">
+                           </div></div></div>
+                          <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label21" runat="server" Text="Work Request"></asp:Label>
-                            </td>
-                            <td colspan="4">
-                                <asp:TextBox ID="txtWorkRequest" MaxLength="300" TextMode="MultiLine" Width="99%" Height="100px"
+                           
+                                <asp:TextBox ID="txtWorkRequest" MaxLength="300" TextMode="MultiLine" CssClass="form-control" Height="100px"
                                     runat="server"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;">
+                           </div></div></div>
+                          <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label22" runat="server" Text="Work Done"></asp:Label>
-                            </td>
-                            <td colspan="4">
-                                <asp:TextBox ID="txtWorkDone" MaxLength="300" TextMode="MultiLine" Width="99%" Height="100px"
+                          
+                                <asp:TextBox ID="txtWorkDone" MaxLength="300" TextMode="MultiLine" CssClass="form-control" Height="100px"
                                     runat="server"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;">
+                         </div></div></div>
+                          <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label7" runat="server" Text="Remark"></asp:Label>
-                            </td>
-                            <td colspan="4">
-                                <asp:TextBox ID="txtRemark" MaxLength="300" TextMode="MultiLine" Width="99%" Height="100px"
+                        
+                                <asp:TextBox ID="txtRemark" MaxLength="300" TextMode="MultiLine" CssClass="form-control" Height="100px"
                                     runat="server"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;">
+                         </div></div></div>
+                          <div class="col-md-12 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label14" runat="server" Text="Fault Type"></asp:Label>
-                            </td>
-                            <td colspan="4">
+                           
                                 <asp:CheckBoxList ID="ChkFaultType" runat="server" RepeatColumns="8" Width="100%">
                                     <asp:ListItem Value="0">Mechanical</asp:ListItem>
                                     <asp:ListItem Value="1">Electrical</asp:ListItem>
@@ -220,11 +211,11 @@
                                     <asp:ListItem Value="6">Tire</asp:ListItem>
                                     <asp:ListItem Value="0">Other</asp:ListItem>
                                 </asp:CheckBoxList>
-                            </td>
-                        </tr>
-                    </table>
-                    <br />
-                    <div width="99.8%">
+                          </div></div></div>
+                      <div class="col-md-12 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                   
                         <asp:Panel ID="PCheck" runat="server" Height="30px" BackColor="#3333CC" Width="99.5%"
                             Direction="LeftToRight" ForeColor="#FFFF99">
                             <div style="padding: 5px; cursor: pointer; vertical-align: middle;">
@@ -271,9 +262,11 @@
                             Collapsed="true" TextLabelID="lblAgree1" ImageControlID="ImgAgree1" ExpandedText="(Hide Details)"
                             CollapsedText="(Show Details)" ExpandDirection="Vertical" ExpandedImage="~/images/collapse.jpg"
                             CollapsedImage="~/images/expand.jpg" SuppressPostBack="true" />
-                    </div>
-                    <br />
-                    <div width="99.8%">
+                    </div></div></div>
+                 
+             <div class="col-md-12 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                         <asp:Panel ID="PHeader01" runat="server" Height="30px" BackColor="#990000" Width="99.5%"
                             Direction="LeftToRight" ForeColor="#FFFF99">
                             <div style="padding: 5px; cursor: pointer; vertical-align: middle;">
@@ -467,9 +460,12 @@
                             Collapsed="true" TextLabelID="lblAgree01" ImageControlID="ImgAgree01" ExpandedText="(Hide Details)"
                             CollapsedText="(Show Details)" ExpandDirection="Vertical" ExpandedImage="~/images/collapse.jpg"
                             CollapsedImage="~/images/expand.jpg" SuppressPostBack="true" />
-                    </div>
-                    <br />
-                    <div width="99.8%">
+                 
+                  </div></div></div>
+                         <div class="col-md-12 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
+             
                         <asp:Panel ID="PHeader02" runat="server" Height="30px" BackColor="#006699" Width="99.5%"
                             Direction="LeftToRight" ForeColor="#FFFF99">
                             <div style="padding: 5px; cursor: pointer; vertical-align: middle;">
@@ -582,9 +578,11 @@
                             Collapsed="true" TextLabelID="lblAgree02" ImageControlID="ImgAgree02" ExpandedText="(Hide Details)"
                             CollapsedText="(Show Details)" ExpandDirection="Vertical" ExpandedImage="~/images/collapse.jpg"
                             CollapsedImage="~/images/expand.jpg" SuppressPostBack="true" />
-                    </div>
-                    <br />
-                    <div width="99.8%">
+                </div></div></div>
+                    <div class="col-md-12 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                   
                         <asp:Panel ID="PHeader03" runat="server" Height="30px" BackColor="#006666" Width="99.5%"
                             Direction="LeftToRight" ForeColor="#FFFF99">
                             <div style="padding: 5px; cursor: pointer; vertical-align: middle;">
@@ -720,9 +718,11 @@
                             Collapsed="true" TextLabelID="lblAgree03" ImageControlID="ImgAgree03" ExpandedText="(Hide Details)"
                             CollapsedText="(Show Details)" ExpandDirection="Vertical" ExpandedImage="~/images/collapse.jpg"
                             CollapsedImage="~/images/expand.jpg" SuppressPostBack="true" />
-                    </div>
-                    <br />
-                    <div width="99.8%">
+                  </div></div></div>
+                  
+                    <div class="col-md-12 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                           <table width="50%" class="box-table-a" style="font-weight: bold">
                             <tbody>
                             <tr>
@@ -767,9 +767,9 @@
                             </tr>                                                   
                              </tbody>
                           </table>                                                                                                                         
-                    </div>
-                    <br />
-                </center>
+                  </div></div></div>
+              
+           
                 <div style="text-align: right; width: 50%; float: right;">
                     <asp:Panel ID="Panel2" runat="server" Height="30px" BackColor="#5D7B9D" Width="99.5%"
                         Direction="LeftToRight" ForeColor="#FFFF99">
@@ -834,51 +834,43 @@
                         ExpandDirection="Vertical" ExpandedImage="~/images/collapse.jpg" CollapsedImage="~/images/expand.jpg"
                         SuppressPostBack="true" />
                 </div>
-                <table width="100%">
-                    <tr>
-                        <td style="width: 15%;">
+              <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                             <asp:Label ID="Label16" runat="server" Text="User Name"></asp:Label>
-                        </td>
-                        <td style="width: 35%;">
-                            <asp:TextBox ID="txtUserName" Width="270px" runat="server" MaxLength="50" BackColor="#E8E8E8"
-                                CssClass="MouseStop" Enabled="false"></asp:TextBox>
-                        </td>
-                        <td style="width: 15%;">
+                       
+                            <asp:TextBox ID="txtUserName"  runat="server" MaxLength="50" BackColor="#E8E8E8"
+                                CssClass="MouseStop form-control" Enabled="false"></asp:TextBox>
+                    </div></div></div>
+                          <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                             <asp:Label ID="Label17" runat="server" Text="Date"></asp:Label>
-                        </td>
-                        <td style="width: 35%;" colspan="2">
-                            <asp:TextBox ID="txtUserDate" Width="100px" runat="server" MaxLength="50" BackColor="#E8E8E8"
-                                CssClass="MouseStop" Enabled="false">                                                               
+                      
+                            <asp:TextBox ID="txtUserDate"  runat="server" MaxLength="50" BackColor="#E8E8E8"
+                                CssClass="MouseStop form-control" Enabled="false">                                                               
                             </asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 15%;">
+                       </div></div></div>
+                        <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                             <asp:Label ID="lblReason" Visible="false" runat="server" Text="Reason of Edit"></asp:Label>
-                        </td>
-                        <td style="width: 35%;">
-                            <asp:TextBox ID="txtReason" Width="270px" Visible="false" runat="server" MaxLength="100"></asp:TextBox>
+                    
+                            <asp:TextBox ID="txtReason"  Visible="false" runat="server" MaxLength="100" CssClass="form-control"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="ValReason" Enabled="false" runat="server" ControlToValidate="txtReason"
                                 ErrorMessage="You should Enter Reason of Edit or Delete Order" ForeColor="Red"
                                 Display="Dynamic" SetFocusOnError="True" ValidationGroup="10">*</asp:RequiredFieldValidator>
-                        </td>
-                        <td style="width: 15%;">
-                            &nbsp;
-                        </td>
-                        <td style="width: 35%;" colspan="2">
-                            &nbsp;
-                        </td>
-                    </tr>
-                    <tr align="center">
-                        <td colspan="2">
+                      </div></div></div>
+                   <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                             <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
-                        </td>
-                        <td colspan="2">
+                       
                             <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ValidationGroup="1" />
-                        </td>
-                    </tr>
-                    <tr align="right">
-                        <td colspan="4" style="text-align: center">
+                       </div></div></div>
+                     <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                             <asp:ImageButton ID="BtnNew" runat="server" AlternateText="New" CommandName="New"
                                 ImageUrl="~/images/insource_641.png" CssClass="ops" ToolTip="Add New Job Work Order"
                                 ValidationGroup="1" OnClientClick='return confirm("Adding New Job Work Order...Are You Sure?")'
@@ -899,11 +891,9 @@
                             <asp:ImageButton ID="BtnPrint" runat="server" AlternateText="Print" CommandName="Print"
                                 ImageUrl="~/images/print_641.png" ValidationGroup="1" CssClass="ops" ToolTip="Print Job Work Order"
                                 OnClick="BtnPrint_Click" />
-                        </td>
-                    </tr>
-                </table>
+                       </div></div></div></div></div></div>
             </fieldset>
         </div>
         <br />
-    </center>
+    
 </asp:Content>

@@ -5,7 +5,7 @@
         <center>
             <div class="ColorRounded4Corners">
             <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 98%;
-                border: solid 2px #800000">
+                ">
                 <legend align="right" style="font-size: 18px; color: #800000; text-align: center;"><b>
                     [ الاجازات الرسمية ]</b></legend>             
                 <div style="width: 99%; overflow: auto; border: 1px solid #800000;">

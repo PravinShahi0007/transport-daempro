@@ -67,27 +67,24 @@
             return false;
         }
     </script>
-    <center dir="rtl">
-        <asp:Panel ID="Panel1" runat="server" CssClass="ColorRounded4Corners" >
-        <center>
-                <table id="Table1" dir="rtl"  cellpadding="2" style="color:Black">
-                
-                    <tr id="tr1">
-                     
-                        <td >
+   
+        <asp:Panel ID="Panel1" runat="server" CssClass="ColorRounded4Corners col-md-10 col-md-offset-1 col-sm-12 col-xs-12" >
+        <div class="box box-info" align="right">
+     <div class="body">
+                                    <div class="row">
+   <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
                              <asp:Label ID="LblCode" runat="server" Text="اسم مجموعة العمل"></asp:Label>
                        
                             <asp:TextBox ID="txtRoleName" CssClass="form-control"  runat="server" MaxLength="50"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="ValRoleName" runat="server" ControlToValidate="txtRoleName"
                                 ErrorMessage="يجب إدخال اسم مجموعة العمل" ForeColor="Red" SetFocusOnError="True"
                                 ValidationGroup="1">*</asp:RequiredFieldValidator>
-                        </td>
-                     
-                        
-                    </tr>
-                        <tr id="tr005" >
-                       
-                        <td style="width: 280px">
+                     </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
                               <asp:Label ID="Label2" runat="server" Text="نوع الواجهة"></asp:Label>
                        
                             <asp:DropDownList ID="ddlInterface" CssClass="form-control" runat="server" AutoPostBack="True" 
@@ -97,75 +94,63 @@
                                 <asp:ListItem Value="2">موردين</asp:ListItem>
                                 <asp:ListItem Value="3">عملاء</asp:ListItem>
                             </asp:DropDownList>
-                        </td>
-                        
-                        </tr>
-                        <tr id="tr2" align="right">
-                      
-                        <td style="width: 280px">
+                      </div></div></div>
+                     <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
                                 <asp:Label ID="Label4" runat="server" Text="نسخ مجموعة العمل"></asp:Label>
                      
                             <asp:DropDownList ID="ddlRoles" CssClass="form-control" runat="server" AutoPostBack="True" 
                                 onselectedindexchanged="ddlRoles_SelectedIndexChanged">
                             </asp:DropDownList>
-                        </td>
-                        <td style="width: 100px;">
-                            &nbsp;
-                        </td>
-                        </tr>
-                       <tr id="tr5" align="right">
-                        <td  colspan="2" style="width: 200px;">
+                        </div></div></div>
+                      
+                     <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
                             <div class="list_collapse" style="width:50%">
                                 <asp:CheckBoxList ID="ChkPass" Width="100%" runat="server" CssClass="chicklist">
                                 </asp:CheckBoxList>
-                            </div>
-                            <div class="card-footer">
+                            </div></div></div></div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
                             <input id="Button1" type="button" value="أختيار الجميع" class="btn btn-primary" onclick="ChangeState(true);" />
                             <input id="Button2" type="button" value="مسـح الجميع" class="btn btn-primary" onclick="ChangeState(false);" />
-                       </div> </td>
-                        <td style="width: 100px;">
-                            &nbsp;
-                        </td>
-                    </tr>
-                    <tr id="tr4" align="right">
-                        <td style="width: 100px;">
-                            <asp:Label ID="Label1" runat="server" Text="إدخلت بواسطة"></asp:Label>
-                        </td>
-                        <td >
-                            <asp:TextBox ID="txtUserName" CssClass="form-control" style="width: 105px;" runat="server" MaxLength="50" BackColor="#E8E8E8"
+                       </div> </div></div>
+                        
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                              <asp:Label ID="Label1" runat="server" Text="إدخلت بواسطة"></asp:Label>
+                            <asp:TextBox ID="txtUserName" CssClass="form-control" runat="server" MaxLength="50" BackColor="#E8E8E8"
                                 Enabled="false"></asp:TextBox>
-                        </td>
-                        <td >
-                            <asp:Label ID="Label3" runat="server" Text="بتاريخ"></asp:Label>
-                        </td>
-                        <td >
-                            <asp:TextBox ID="txtUserDate" CssClass="form-control" style="width: 105px;"  runat="server" MaxLength="50" BackColor="#E8E8E8"
+                     </div></div></div>
+                          <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                             <asp:Label ID="Label3" runat="server" Text="بتاريخ"></asp:Label>
+                            <asp:TextBox ID="txtUserDate" CssClass="form-control"   runat="server" MaxLength="50" BackColor="#E8E8E8"
                                 Enabled="false"></asp:TextBox>
-                        </td>
-                    </tr>
-                     <tr align="right">
-                         <td style="width: 100px;">
+                       </div></div></div>
+                     <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
                                 <asp:Label ID="lblReason" runat="server" Visible="false" Text="سبب التعديل/الغاء"></asp:Label>
-                         </td>
-                            <td style="width: 300px;">
+                        
                                 <asp:TextBox ID="txtReason" CssClass="form-control" Visible="false" runat="server" MaxLength="100"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="ValReason" Enabled="false" runat="server" ControlToValidate="txtReason"
                                     ErrorMessage="يجب إدخال سبب التعديل/الالغاء" ForeColor="Red" Display="Dynamic" SetFocusOnError="True"
                                     ValidationGroup="1">*</asp:RequiredFieldValidator>
-                            </td>
-                          
-                        
-                        </tr>
+                          </div></div></div>
 
-                    <tr id="tr3" align="right">
-                    
-                        <td >
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
                             <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ValidationGroup="1" />
                             <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
-                        </td>
-                       
-                        <td  rowspan="4">
-                            <div  >
+                    </div></div></div>
+                                          <div class="table-responsive">
                                 <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" EmptyDataText="لا توجد بيانات"
                                     GridLines="None" AutoGenerateColumns="False" DataKeyNames="RoleName" AllowPaging="True"
                                     ShowFooter="True" PageSize="5"  OnPageIndexChanging="grdCodes_PageIndexChanging"
@@ -198,17 +183,11 @@
                                     <SortedDescendingCellStyle BackColor="#FFFDF8" />
                                     <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                                 </asp:GridView>
-                            </div>
-                        </td>
-
-                    </tr>
-                </table></center>
-        
-                <table id="Table2" dir="rtl" width="100%" cellpadding="0" cellspacing="0">
-                    <tr align="center">
-                        <td style="width: 200px;">
-                        </td>
-                        <td style="width: 350px;">
+                          </div>
+       
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
                             <asp:ImageButton ID="BtnNew" runat="server" AlternateText="جديد" CommandName="New"
                                 ImageUrl="~/images/insource_642.png"   ToolTip="أضافة مجموعة عمل جديدة"
                                 ValidationGroup="1" OnClick="BtnNew_Click" OnClientClick='return confirm("هل أنت متاكد من حفظ البيانات؟")' />
@@ -224,15 +203,15 @@
                             <asp:ImageButton ID="BtnSearch" runat="server" AlternateText="بحث" CommandName="Find"
                                 ImageUrl="~/images/binoculars_642.png"   ToolTip="البحث عن بيانات مجموعة عمل"
                                 OnClick="BtnSearch_Click" />
-                        </td>
-                         <td id="td1" runat="server" style="width: 200px; text-align: right">
+                      </div></div></div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
                             <asp:Label ID="Label11" runat="server" Text="بحث :"></asp:Label>
                             <asp:TextBox ID="txtSearch" CssClass="form-control" MaxLength="200" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                </table>
+                        </div></div></div>
+                  </div></div></div>
           
         </asp:Panel>
-        <br />
-    </center>
+      
 </asp:Content>

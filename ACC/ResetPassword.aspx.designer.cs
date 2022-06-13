@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ACC {
-    
-    
-    public partial class ResetPassword {
-        
+namespace ACC
+{
+
+
+    public partial class ResetPassword
+    {
+
         /// <summary>
         /// Panel12 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel Panel12;
-        
+
         /// <summary>
         /// Div7 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div7;
-        
+
         /// <summary>
         /// Div16 control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div16;
-        
+
         /// <summary>
         /// Ul1 control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Ul1;
-        
+
         /// <summary>
         /// Home control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Home;
-        
+
         /// <summary>
         /// lblRstPass control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblRstPass;
-        
+
         /// <summary>
         /// lblLogout control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblLogout;
-        
+
         /// <summary>
         /// center1 control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl center1;
-        
+
         /// <summary>
         /// Panel3 control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel Panel3;
-        
+
         /// <summary>
         /// Label4 control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label4;
-        
+
         /// <summary>
         /// Table1 control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTable Table1;
-        
+
         /// <summary>
         /// tr1 control.
         /// </summary>
@@ -119,7 +121,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow tr1;
-        
+
         /// <summary>
         /// LblCode control.
         /// </summary>
@@ -128,7 +130,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LblCode;
-        
+
         /// <summary>
         /// txtOldPassword control.
         /// </summary>
@@ -137,7 +139,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtOldPassword;
-        
+
         /// <summary>
         /// ValOldPassword control.
         /// </summary>
@@ -146,7 +148,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator ValOldPassword;
-        
+
         /// <summary>
         /// tr2 control.
         /// </summary>
@@ -155,7 +157,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow tr2;
-        
+
         /// <summary>
         /// Label1 control.
         /// </summary>
@@ -164,7 +166,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-        
+
         /// <summary>
         /// txtNewPassword control.
         /// </summary>
@@ -173,7 +175,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNewPassword;
-        
+
         /// <summary>
         /// ValNewPassword control.
         /// </summary>
@@ -182,7 +184,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator ValNewPassword;
-        
+
         /// <summary>
         /// tr3 control.
         /// </summary>
@@ -191,7 +193,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow tr3;
-        
+
         /// <summary>
         /// Label2 control.
         /// </summary>
@@ -200,7 +202,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label2;
-        
+
         /// <summary>
         /// txtNewPassword2 control.
         /// </summary>
@@ -209,7 +211,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNewPassword2;
-        
+
         /// <summary>
         /// ValNewPassword2 control.
         /// </summary>
@@ -218,7 +220,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator ValNewPassword2;
-        
+
         /// <summary>
         /// ValNewPassword3 control.
         /// </summary>
@@ -227,7 +229,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CompareValidator ValNewPassword3;
-        
+
         /// <summary>
         /// tr50 control.
         /// </summary>
@@ -236,7 +238,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow tr50;
-        
+
         /// <summary>
         /// ltHome control.
         /// </summary>
@@ -245,7 +247,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltHome;
-        
+
         /// <summary>
         /// tr5 control.
         /// </summary>
@@ -254,7 +256,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow tr5;
-        
+
         /// <summary>
         /// ValidationSummary1 control.
         /// </summary>
@@ -263,7 +265,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
-        
+
         /// <summary>
         /// lblError control.
         /// </summary>
@@ -272,7 +274,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblError;
-        
+
         /// <summary>
         /// tr6 control.
         /// </summary>
@@ -281,7 +283,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow tr6;
-        
+
         /// <summary>
         /// lblReason control.
         /// </summary>
@@ -290,7 +292,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblReason;
-        
+
         /// <summary>
         /// txtReason control.
         /// </summary>
@@ -299,7 +301,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtReason;
-        
+
         /// <summary>
         /// ValReason control.
         /// </summary>
@@ -308,7 +310,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator ValReason;
-        
+
         /// <summary>
         /// tr4 control.
         /// </summary>
@@ -317,7 +319,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow tr4;
-        
+
         /// <summary>
         /// BtnConfirm control.
         /// </summary>
@@ -326,7 +328,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnConfirm;
-        
+
         /// <summary>
         /// BtnClear control.
         /// </summary>

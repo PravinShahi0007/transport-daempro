@@ -4,76 +4,71 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <center style="direction: rtl">
-        <div class="Round4Courner" style="width: 99%">
-            <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 99%;
-                border: solid 2px #800000">
+   
+      <div class="ColorRounded4Corners col-md-12 col-sm-12 col-xs-12">
+            <fieldset class="Rounded4CornersNoShadow" >
                 <legend align="right" style="font-size: 18px; color: #800000; text-align: center;"><b>
                     [ بيانات المخازن و الورش ]</b></legend>
-                <br />
-                <center>
-                    <table dir="rtl" width="100%" cellpadding="2px">
-                        <tr align="right">
-                            <td style="width: 120px;">
+              
+                   <div class="box box-info" align="right">
+                <div class="body">
+                    <div class="row">
+
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label1" runat="server" Text="كود الورشة/المخزن"></asp:Label>
-                            </td>
-                            <td style="width: 270px">
-                                <asp:TextBox ID="txtNumber" Width="100px" runat="server" MaxLength="5"></asp:TextBox>
+                   
+                                <asp:TextBox ID="txtNumber" CssClass="form-control" runat="server" MaxLength="5"></asp:TextBox>
                                 <asp:ImageButton ID="BtnFind" runat="server" ValidationGroup="55" ImageUrl="~/images/zoom_16.png"
                                     ToolTip="البحث عن كود الورشة/المخزن" OnClick="BtnFind_Click" />
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtNumber"
                                     ErrorMessage="يجب إدخال كود الورشة/المخزن" ForeColor="Red" SetFocusOnError="True"
                                     Display="Dynamic" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                            </td>
-                            <td style="width: 130px;">                                
-                            </td>
-                            <td style="width: 270px;">
-                            </td>
-                        </tr>
-                        <tr align="right">
-                            <td style="width: 120px;">
+                          </div></div></div>
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label2" runat="server" Text="الاسم عربي"></asp:Label>
-                            </td>
-                            <td style="width: 270px;">
-                                <asp:TextBox ID="txtName1" Width="300px" runat="server" MaxLength="50"></asp:TextBox>
-                            </td>
-                            <td style="width: 130px;">
+                         
+                                <asp:TextBox ID="txtName1" CssClass="form-control" runat="server" MaxLength="50"></asp:TextBox>
+                       </div></div></div>
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label3" runat="server" Text="الاسم أنجليزي"></asp:Label>
-                            </td>
-                            <td style="width: 270px;">
-                                <asp:TextBox ID="txtName2" Width="300px" runat="server" MaxLength="50"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr align="right">
-                            <td style="width: 120px;">
+                        
+                                <asp:TextBox ID="txtName2" CssClass="form-control" runat="server" MaxLength="50"></asp:TextBox>
+                          </div></div></div>
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label4" runat="server" Text="المدير المسئول"></asp:Label>
-                            </td>
-                            <td style="width: 270px;">
-                                <asp:TextBox ID="txtManager" Width="300px" runat="server" MaxLength="50"></asp:TextBox>
-                            </td>
-                            <td style="width: 130px;">
+                        
+                                <asp:TextBox ID="txtManager" CssClass="form-control" runat="server" MaxLength="50"></asp:TextBox>
+                          </div></div></div>
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label5" runat="server" Text="العنوان"></asp:Label>
-                            </td>
-                            <td style="width: 270px;">
-                                <asp:TextBox ID="txtAddress" runat="server" MaxLength="50" Width="300px"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr align="right">
-                            <td style="width: 120px;">
+                       
+                                <asp:TextBox ID="txtAddress" runat="server" MaxLength="50" CssClass="form-control"></asp:TextBox>
+                           </div></div></div>
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label8" runat="server" Text="رقم التليفون"></asp:Label>
-                            </td>
-                            <td style="width: 270px;">
-                                <asp:TextBox ID="txtTel" Width="300px" runat="server" MaxLength="50"></asp:TextBox>
-                            </td>
-                            <td style="width: 130px;">
+                         
+                                <asp:TextBox ID="txtTel" CssClass="form-control" runat="server" MaxLength="50"></asp:TextBox>
+                        </div></div></div>
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label32" runat="server" Text="ملاحظات"></asp:Label>
-                            </td>
-                            <td style="width: 270px;">
-                                <asp:TextBox ID="txtRemark" runat="server" MaxLength="50" Width="300px"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr align="center">
-                            <td colspan="4">
+                          
+                                <asp:TextBox ID="txtRemark" runat="server" MaxLength="50" CssClass="form-control"></asp:TextBox>
+                          </div></div></div>
+                          
                                 <asp:Panel ID="Panel2" runat="server" Height="30px" BackColor="#5D7B9D" Width="99.5%"
                                     Direction="RightToLeft" ForeColor="#FFFF99">
                                     <div style="padding: 5px; cursor: pointer; vertical-align: middle;">
@@ -95,14 +90,14 @@
                                                 <asp:Label ID="Label14" runat="server" Text="حساب المبيعات النقدية"></asp:Label>
                                             </td>
                                             <td align="right" style="width: 25%">
-                                                <asp:DropDownList ID="ddlCSal" Width="100%" runat="server">
+                                                <asp:DropDownList ID="ddlCSal" CssClass="form-control" runat="server">
                                                 </asp:DropDownList>
                                             </td>
                                             <td style="width: 25%; text-align: center">
                                                 <asp:Label ID="Label15" runat="server" Text="حساب المبيعات الآجلة"></asp:Label>
                                             </td>
                                             <td align="right" style="width: 25%">
-                                                <asp:DropDownList ID="ddlCRSal" Width="100%" runat="server">
+                                                <asp:DropDownList ID="ddlCRSal" CssClass="form-control" runat="server">
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
@@ -111,14 +106,14 @@
                                                 <asp:Label ID="Label16" runat="server" Text="حساب ترجيع المبيعات النقدية"></asp:Label>
                                             </td>
                                             <td align="right" style="width: 25%">
-                                                <asp:DropDownList ID="ddlRCSal" Width="100%" runat="server">
+                                                <asp:DropDownList ID="ddlRCSal" CssClass="form-control" runat="server">
                                                 </asp:DropDownList>
                                             </td>
                                             <td style="width: 25%; text-align: center">
                                                 <asp:Label ID="Label17" runat="server" Text="حساب ترجيع المبيعات الآجلة"></asp:Label>
                                             </td>
                                             <td align="right" style="width: 25%">
-                                                <asp:DropDownList ID="ddlRCRSal" Width="100%" runat="server">
+                                                <asp:DropDownList ID="ddlRCRSal" CssClass="form-control" runat="server">
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
@@ -127,14 +122,14 @@
                                                 <asp:Label ID="Label18" runat="server" Text="حساب المشتريات النقدية"></asp:Label>
                                             </td>
                                             <td align="right" style="width: 25%">
-                                                <asp:DropDownList ID="ddlCPur" Width="100%" runat="server">
+                                                <asp:DropDownList ID="ddlCPur" CssClass="form-control" runat="server">
                                                 </asp:DropDownList>
                                             </td>
                                             <td style="width: 25%; text-align: center">
                                                 <asp:Label ID="Label19" runat="server" Text="حساب المشتريات الآجلة"></asp:Label>
                                             </td>
                                             <td align="right" style="width: 25%">
-                                                <asp:DropDownList ID="ddlCRPur" Width="100%" runat="server">
+                                                <asp:DropDownList ID="ddlCRPur" CssClass="form-control" runat="server">
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
@@ -143,14 +138,14 @@
                                                 <asp:Label ID="Label20" runat="server" Text="حساب ترجيع المشتريات النقدية"></asp:Label>
                                             </td>
                                             <td align="right" style="width: 25%">
-                                                <asp:DropDownList ID="ddlRCPur" Width="100%" runat="server">
+                                                <asp:DropDownList ID="ddlRCPur" CssClass="form-control" runat="server">
                                                 </asp:DropDownList>
                                             </td>
                                             <td style="width: 25%; text-align: center">
                                                 <asp:Label ID="Label21" runat="server" Text="حساب ترجيع المشتريات الآجلة"></asp:Label>
                                             </td>
                                             <td align="right" style="width: 25%">
-                                                <asp:DropDownList ID="ddlRCRPur" Width="100%" runat="server">
+                                                <asp:DropDownList ID="ddlRCRPur" CssClass="form-control" runat="server">
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
@@ -159,14 +154,14 @@
                                                 <asp:Label ID="Label22" runat="server" Text="حساب النقدية"></asp:Label>
                                             </td>
                                             <td align="right" style="width: 25%">
-                                                <asp:DropDownList ID="ddlCash" Width="100%" runat="server">
+                                                <asp:DropDownList ID="ddlCash" CssClass="form-control" runat="server">
                                                 </asp:DropDownList>
                                             </td>
                                             <td style="width: 25%; text-align: center">
                                                 <asp:Label ID="Label28" runat="server" Text="حساب الخدمات"></asp:Label>
                                             </td>
                                             <td align="right" style="width: 25%">
-                                                <asp:DropDownList ID="ddlService" runat="server" Width="100%">
+                                                <asp:DropDownList ID="ddlService" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
@@ -175,14 +170,14 @@
                                                 <asp:Label ID="Label24" runat="server" Text="حساب الخصم المكتسب"></asp:Label>
                                             </td>
                                             <td align="right" style="width: 25%">
-                                                <asp:DropDownList ID="ddlPDisc" Width="100%" runat="server">
+                                                <asp:DropDownList ID="ddlPDisc" CssClass="form-control" runat="server">
                                                 </asp:DropDownList>
                                             </td>
                                             <td style="width: 25%; text-align: center">
                                                 <asp:Label ID="Label26" runat="server" Text="حساب الخصم المسموح به"></asp:Label>
                                             </td>
                                             <td align="right" style="width: 25%">
-                                                <asp:DropDownList ID="ddlSDisc" runat="server" Width="100%">
+                                                <asp:DropDownList ID="ddlSDisc" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
@@ -193,23 +188,14 @@
                                     ImageControlID="Image1" ExpandedText="(أخفاء التفاصيل)" CollapsedText="(عرض التفاصيل)"
                                     ExpandDirection="Vertical" ExpandedImage="~/images/collapse.jpg" CollapsedImage="~/images/expand.jpg"
                                     SuppressPostBack="true" />
-                            </td>
-                        </tr>
-                        <tr align="right">
-                            <td style="width: 70px;">
-                            </td>
-                            <td style="width: 300px;">
+                         
                                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ValidationGroup="1"
                                     EnableClientScript="true" ShowSummary="true" ShowMessageBox="true" />
-                            </td>
-                            <td style="width: 70px;">
-                            </td>
-                            <td style="width: 300px;">
+                         <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
-                            </td>
-                        </tr>
-                        <tr align="center">
-                            <td colspan="4">
+                          
                                 <asp:ImageButton ID="BtnNew" runat="server" AlternateText="جديد" CommandName="New"
                                     ImageUrl="~/images/insource_642.png" CssClass="ops" ToolTip="أضافة مخزن/معرض جديد"
                                     ValidationGroup="1" OnClientClick='return confirm("هل أنت متاكد من حفظ بيانات المخزن/المعرض؟")'
@@ -227,10 +213,8 @@
                                 <asp:ImageButton ID="BtnSearch" runat="server" AlternateText="بحث" CommandName="Find"
                                     ImageUrl="~/images/binoculars_642.png" CssClass="ops" ToolTip="البحث عن بيانات المخزن/المعرض"
                                     OnClick="BtnSearch_Click" />
-                            </td>
-                        </tr>
-                    </table>
-                    <div style="width: 100%; overflow:none; overflow-x:auto ; border: 1px solid #800000;">
+                       </div></div></div>
+                       <div class="table-responsive">
                         <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                             GridLines="None" AutoGenerateColumns="False" DataKeyNames="number" AllowPaging="True"
                             PageSize="5" Width="99.9%" EmptyDataText="لا توجد بيانات" OnPageIndexChanging="grdCodes_PageIndexChanging"
@@ -278,9 +262,8 @@
                             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                         </asp:GridView>
                     </div>
-                    <br />
-                </center>
+                 </div></div></div>
             </fieldset>
         </div>
-    </center>
+  
 </asp:Content>

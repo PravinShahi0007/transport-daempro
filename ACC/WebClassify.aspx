@@ -4,9 +4,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div>
-        <center>
-            <div class="Round4Courner" style="width: 98%">
+    
+       
+           <div class="ColorRounded4Corners col-md-12 col-sm-12 col-xs-12">
                 <asp:LinkButton ID="LbtnLevel1" runat="server" CommandName="1" Text="أنواع الأصناف"
                     Visible="true" OnCommand="LbtnLevel1_Command" Font-Size="Larger" />
                 <asp:LinkButton ID="LbtnLevel2" runat="server" CommandName="2" Visible="false" OnCommand="LbtnLevel1_Command"
@@ -17,7 +17,7 @@
                     Font-Size="Larger" />
                 <asp:LinkButton ID="LbtnLevel5" runat="server" CommandName="5" Visible="false" OnCommand="LbtnLevel1_Command"
                     Font-Size="Larger" />
-                <div style="width: 100%; overflow:none; overflow-x:auto ; border: 1px solid #800000;">
+               <div class="table-responsive">
                     <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                         GridLines="None" AutoGenerateColumns="False" DataKeyNames="FCode;Code" 
                         AllowPaging="True" Width="99.9%" OnRowUpdating="grdCodes_RowUpdating" OnPageIndexChanging="grdCodes_PageIndexChanging"
@@ -102,8 +102,8 @@
                     </asp:GridView>
                 </div>
                 <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
-                <br />
-            </div>
-        </center>
+              
+           
+       
     </div>
 </asp:Content>

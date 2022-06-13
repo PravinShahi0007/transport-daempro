@@ -37,32 +37,32 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="Round4Courner" style="width: 99%">
-        <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 99%;
-            border: solid 2px #800000">
+    <div class="ColorRounded4Corners col-md-12 col-sm-12 col-xs-12">
+        <fieldset class="Rounded4CornersNoShadow" >
             <legend id="leg1" runat="server" align="<%$ Resources:Resource, dir2 %>" style="font-size: 18px;
                 color: #800000; text-align: center;"><b>
                     <asp:Literal ID="Literal2" Text="Manual Inventory Data Entry" runat="server"></asp:Literal>
                     <!-- [ بيانات الأصناف ] -->
                 </b></legend>
-            <br />
-            <center>
-                <table width="100%" cellpadding="2px">
-                    <tr>
-                        <td style="width: 120px;">
+        
+                <div class="box box-info" align="right">
+                <div class="body">
+                    <div class="row">
+
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                             <asp:Label ID="Label22" runat="server" Text="Select Store:"></asp:Label>
-                        </td>
-                        <td style="width: 250px;">
-                            <asp:DropDownList ID="ddlStore" Width="240px" runat="server">
+                    
+                            <asp:DropDownList ID="ddlStore" CssClass="form-control" runat="server">
                             </asp:DropDownList>
-                        </td>
-                        <td style="width: 50px;">
-                        </td>
-                        <td style="width: 120px;">
+                      </div></div></div>
+                          <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                             <asp:Label ID="Label1" runat="server" Text="Inventory Date"></asp:Label>
-                        </td>
-                        <td style="width: 200px;">
-                            <asp:TextBox ID="txtFYear" MaxLength="10" Width="100px" runat="server"></asp:TextBox>
+                    
+                            <asp:TextBox ID="txtFYear" MaxLength="10" CssClass="form-control" runat="server"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFYear"
                                 Display="Dynamic" ErrorMessage="You Should Enter Inventory Date" ForeColor="Red" SetFocusOnError="True"
                                 ValidationGroup="1">*</asp:RequiredFieldValidator>
@@ -74,30 +74,21 @@
                                 <ajax:CalendarExtender ID="CalendarExtender1" runat="server" CssClass="MyCalendar"
                                     TargetControlID="txtFYear" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
                                     PopupPosition="BottomLeft" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 120px;">
-                            &nbsp;</td>
-                        <td style="width: 250px;">
-                            &nbsp;</td>
-                        <td style="width: 50px;">
-                            &nbsp;</td>
-                        <td style="width: 120px;">
+                      </div></div></div>
+                          <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                             <asp:Label ID="Label23" runat="server" Text="Type"></asp:Label>
-                        </td>
-                        <td style="width: 200px;">
-                            <asp:DropDownList ID="ddlType" runat="server" AutoPostBack="True"  ValidationGroup="1"
+                      
+                            <asp:DropDownList ID="ddlType" runat="server" CssClass="form-control" AutoPostBack="True"  ValidationGroup="1"
                                 onselectedindexchanged="ddlType_SelectedIndexChanged">
                                 <asp:ListItem Selected="True" Value="0">ALL</asp:ListItem>
                                 <asp:ListItem Value="1">Addition & Lost</asp:ListItem>
                                 <asp:ListItem Value="2">Lost</asp:ListItem>
                                 <asp:ListItem Value="3">Addition</asp:ListItem>
                             </asp:DropDownList>
-                        </td>
-                    </tr>
-                </table>
-                <div style="width: 100%; overflow: none; overflow-x: auto; border: 1px solid #800000;">
+                      </div></div></div>
+              <div class="table-responsive">
                     <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                         GridLines="None" AutoGenerateColumns="False" AllowPaging="true" PageSize="50"
                         DataKeyNames="Code" Width="99.9%" OnPageIndexChanging="grdCodes_PageIndexChanging">
@@ -180,15 +171,12 @@
                         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                     </asp:GridView>
                 </div>
+                          <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                 <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
-                <br />
-                <div id="divEdit" runat="server" visible="false" class="DivButtons" style="width: 95%">
-                    <table id="Table2" dir="rtl" width="100%" cellpadding="0" cellspacing="0">
-                        <tr align="center">
-                            <td style="width: 250px;">
-                                &nbsp;
-                            </td>
-                            <td style="width: 250px;">
+            
+              
                                 <asp:ImageButton ID="BtnEdit" runat="server" AlternateText="Edit" CommandName="Edit"
                                     ImageUrl="~/images/draw_pen_641.png" CssClass="ops" ToolTip="Edit Stock Item Inventory"
                                     Width="64px" ValidationGroup="1" OnClick="BtnEdit_Click" />
@@ -199,18 +187,13 @@
                                     ImageUrl="~/images/Process.png" ToolTip="ترحيل االقيد"  />
                                 <asp:ImageButton ID="BtnPrint1" Visible="false" ToolTip="Print" CommandName="1" runat="server" ImageUrl="~/images/print_641.png"
                                       OnCommand="BtnPrint1_Command" OnClientClick="aspnetForm.target ='_blank';" />                                                                    
-                            </td>
-                            <td id="td1" runat="server" style="width: 250px; text-align: right">
-                                &nbsp;
+                         
                                 <asp:HyperLink ID="BtnAdd" target="_blank" Visible="false" runat="server" Text= "+ معالجة الزيادة"></asp:HyperLink>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              
                                 <asp:HyperLink ID="BtnDed" target="_blank" Visible="false"  runat="server" Text= "- معالجة النقص"></asp:HyperLink>
-                            </td>
-                        </tr>
-                    </table>
+                       </div></div></div>
                 </div>
-                <br />
-            </center>
+               
 
              <div style="text-align: left; width: 50%; float: left;">
                                     <asp:Panel ID="Panel2" runat="server" Height="30px" BackColor="#5D7B9D" Width="99.5%"
@@ -269,7 +252,7 @@
                                         ImageControlID="Image1" ExpandedText="(أخفاء التفاصيل)" CollapsedText="(عرض التفاصيل)"
                                         ExpandDirection="Vertical" ExpandedImage="~/images/collapse.jpg" CollapsedImage="~/images/expand.jpg"
                                         SuppressPostBack="true" />
-                                </div>
+                                </div></div></div>
         </fieldset>
     </div>
 </asp:Content>

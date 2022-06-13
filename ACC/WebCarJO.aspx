@@ -2,25 +2,24 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  <center>
-        <div class="ColorRound4Courner">
-            <div style="text-align: right; float: right; display: block;">
-            </div>
-            <center>
-                <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 98%;
-                    border: solid 2px #800000">
+  
+        <div class="ColorRounded4Corners col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+           
+           
+                <fieldset class="Rounded4CornersNoShadow" >
                     <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
                         <asp:Label ID="lblHead" runat="server" Text="أجمالي مصروفات الشاحنات" meta:resourcekey="lblHead"></asp:Label>
                     </legend>
-                    <table width="99%">
-                        <tr>
-                            <td style="width: 100px">
+                     <div class="box box-info" align="right">
+                <div class="body">
+                    <div class="row">
+                  <div class="col-md-3 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:CheckBox ID="ChkPeriod" runat="server" Checked="True" Text="جميع الفترات" AutoPostBack="True" oncheckedchanged="ChkPeriod_CheckedChanged" meta:resourcekey="ChkPeriod" />
-                            </td>
-                            <td align="right" >
+                         
                                 <asp:Label ID="LblFDate" runat="server" Visible="false" Text="من تاريخ"  meta:resourcekey="LblFDate"></asp:Label>
-                            </td>
-                            <td align="right" >
+                          
                                 <asp:TextBox ID="txtFDate" MaxLength="10" Width="100px" Visible="false" 
                                     runat="server" AutoPostBack="True" ontextchanged="txtFDate_TextChanged"></asp:TextBox>
                                 <asp:CompareValidator ID="ValFDate" runat="server" ControlToValidate="txtFDate"
@@ -29,8 +28,10 @@
                                 <ajax:CalendarExtender ID="CalendarExtender1" runat="server" CssClass="MyCalendar"
                                     TargetControlID="txtFDate" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
                                     PopupPosition="BottomLeft" />
-                            </td>
-                            <td rowspan="3" style="text-align: center">
+                       </div></div></div>
+                           <div class="col-md-3 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:ImageButton ID="BtnPrint" ToolTip="<%$ Resources: PrintTooltip %>" AlternateText="<%$ Resources: Print %>" CommandName="1" runat="server" ImageUrl="<%$ Resources: PrintImage %>"
                                       OnCommand="BtnPrint1_Command" OnClientClick="aspnetForm.target ='_blank';" />                                    
                                 <asp:ImageButton ID="BtnExcel" runat="server" AlternateText="<%$ Resources: Excel %>" CommandName="Excel"  
@@ -38,16 +39,14 @@
                                     OnClick="BtnExcel_Click" />
                                 <asp:ImageButton ID="BtnProcess" runat="server" AlternateText="<%$ Resources: Process %>" ValidationGroup="1"   
                                     ImageUrl="<%$ Resources: ProcessImage %>" ToolTip="<%$ Resources: ProcessTooltip %>" OnClick="BtnProcess_Click" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 100px">
-                            </td>
-                            <td align="right" >
+                 
+                                    </div></div></div>
+                           <div class="col-md-3 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="LblEDate" runat="server" Visible="false" Text="إلى تاريخ" meta:resourcekey="LblEDate"></asp:Label>
-                            </td>
-                            <td align="right" >
-                               <asp:TextBox ID="txtEDate" MaxLength="10" Width="100px" Visible="false" 
+                        
+                               <asp:TextBox ID="txtEDate" MaxLength="10" CssClass="form-control" Visible="false" 
                                     runat="server" AutoPostBack="True" ontextchanged="txtEDate_TextChanged"></asp:TextBox>
                                 <asp:CompareValidator ID="ValEDate" runat="server" ControlToValidate="txtEDate"
                                     CultureInvariantValues="true" Display="Dynamic" ErrorMessage="<%$ Resources: DateValue %>"
@@ -55,14 +54,13 @@
                                 <ajax:CalendarExtender ID="CalendarExtender2" runat="server" CssClass="MyCalendar"
                                     TargetControlID="txtEDate" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
                                     PopupPosition="BottomLeft" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 100px">
+                          </div></div></div>
+                           <div class="col-md-3 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label4" runat="server" Text="عرض السجلات" meta:resourcekey="Label4"></asp:Label>
-                            </td>
-                            <td style="width: 100px">
-                                <asp:DropDownList ID="ddlRecordsPerPage" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlRecordsPerPage_SelectedIndexChanged">
+                        
+                                <asp:DropDownList ID="ddlRecordsPerPage" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlRecordsPerPage_SelectedIndexChanged">
                                     <asp:ListItem Value="10">10</asp:ListItem>
                                     <asp:ListItem Value="20">20</asp:ListItem>
                                     <asp:ListItem Value="50">50</asp:ListItem>
@@ -73,16 +71,17 @@
                                     <asp:ListItem Value="2000">2000</asp:ListItem>
                                     <asp:ListItem Value="-1" Text="<%$ Resources: All %>"></asp:ListItem>
                                 </asp:DropDownList>
-                            </td>
-                            <td style="text-align: right;">
+                        </div></div></div>
+                           <div class="col-md-3 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="lblCount" runat="server" Text=""></asp:Label>
-                                &nbsp;
+                           
                                 <asp:Label ID="Label6" runat="server" Text="سجل" meta:resourcekey="Label6"></asp:Label>
-                            </td>
-                        </tr>
-                    </table>
-                </fieldset>
-                <div style="width: 100%; height:500px; overflow:none; overflow-x:auto ;border: 1px solid #800000;">
+                         
+                                    </div></div></div>
+              
+                <div class="table-responsive">
                     <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                         GridLines="None" AutoGenerateColumns="False" AllowPaging="True" PageSize="20"
                         Width="99.9%" OnPageIndexChanging="grdCodes_PageIndexChanging">
@@ -137,8 +136,9 @@
                     </asp:GridView>
                 </div>
                 <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
-                <br />
-            </center>
+                        </div></div></div>
+             </fieldset>   
+           
         </div>
-    </center>
+  
 </asp:Content>

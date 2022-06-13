@@ -51,15 +51,6 @@ namespace ACC
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// logoText control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl logoText;
-
-        /// <summary>
         /// Label4 control.
         /// </summary>
         /// <remarks>
@@ -348,69 +339,6 @@ namespace ACC
         protected global::System.Web.UI.WebControls.Literal Literal153;
 
         /// <summary>
-        /// LoginStatus1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LoginStatus LoginStatus1;
-
-        /// <summary>
-        /// DivContainer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DivContainer;
-
-        /// <summary>
-        /// myArea control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField myArea;
-
-        /// <summary>
-        /// AccSite control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField AccSite;
-
-        /// <summary>
-        /// myStore control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField myStore;
-
-        /// <summary>
-        /// ClosedPeriod control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField ClosedPeriod;
-
-        /// <summary>
-        /// menu control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl menu;
-
-        /// <summary>
         /// liA1 control.
         /// </summary>
         /// <remarks>
@@ -418,15 +346,6 @@ namespace ACC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liA1;
-
-        /// <summary>
-        /// Literal84 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal84;
 
         /// <summary>
         /// Literal85 control.
@@ -636,13 +555,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liA26;
 
         /// <summary>
-        /// Literal011 control.
+        /// Literal12 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal011;
+        protected global::System.Web.UI.WebControls.Literal Literal12;
 
         /// <summary>
         /// li27 control.
@@ -672,13 +591,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liA27;
 
         /// <summary>
-        /// Literal12 control.
+        /// Literal13 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal12;
+        protected global::System.Web.UI.WebControls.Literal Literal13;
 
         /// <summary>
         /// liA28 control.
@@ -690,13 +609,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liA28;
 
         /// <summary>
-        /// Literal13 control.
+        /// Literal14 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal13;
+        protected global::System.Web.UI.WebControls.Literal Literal14;
 
         /// <summary>
         /// liA29 control.
@@ -708,13 +627,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liA29;
 
         /// <summary>
-        /// Literal14 control.
+        /// Literal15 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal14;
+        protected global::System.Web.UI.WebControls.Literal Literal15;
 
         /// <summary>
         /// liA30 control.
@@ -726,13 +645,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liA30;
 
         /// <summary>
-        /// Literal15 control.
+        /// Literal16 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal15;
+        protected global::System.Web.UI.WebControls.Literal Literal16;
 
         /// <summary>
         /// li33 control.
@@ -771,13 +690,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liA35;
 
         /// <summary>
-        /// Literal16 control.
+        /// Literal17 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal16;
+        protected global::System.Web.UI.WebControls.Literal Literal17;
 
         /// <summary>
         /// liA36 control.
@@ -789,13 +708,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liA36;
 
         /// <summary>
-        /// Literal17 control.
+        /// Literal18 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal17;
+        protected global::System.Web.UI.WebControls.Literal Literal18;
 
         /// <summary>
         /// liA37 control.
@@ -807,13 +726,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liA37;
 
         /// <summary>
-        /// Literal18 control.
+        /// Literal19 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal18;
+        protected global::System.Web.UI.WebControls.Literal Literal19;
 
         /// <summary>
         /// liA38 control.
@@ -825,13 +744,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liA38;
 
         /// <summary>
-        /// Literal19 control.
+        /// Literal20 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal19;
+        protected global::System.Web.UI.WebControls.Literal Literal20;
 
         /// <summary>
         /// Literal88 control.
@@ -852,13 +771,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liA40;
 
         /// <summary>
-        /// Literal20 control.
+        /// Literal21 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal20;
+        protected global::System.Web.UI.WebControls.Literal Literal21;
 
         /// <summary>
         /// liA41 control.
@@ -870,13 +789,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liA41;
 
         /// <summary>
-        /// Literal21 control.
+        /// Literal22 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal21;
+        protected global::System.Web.UI.WebControls.Literal Literal22;
 
         /// <summary>
         /// liA42 control.
@@ -888,13 +807,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liA42;
 
         /// <summary>
-        /// Literal22 control.
+        /// Literal23 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal22;
+        protected global::System.Web.UI.WebControls.Literal Literal23;
 
         /// <summary>
         /// liA43 control.
@@ -906,13 +825,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liA43;
 
         /// <summary>
-        /// Literal23 control.
+        /// Literal24 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal23;
+        protected global::System.Web.UI.WebControls.Literal Literal24;
 
         /// <summary>
         /// liA44 control.
@@ -924,13 +843,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liA44;
 
         /// <summary>
-        /// Literal24 control.
+        /// Literal25 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal24;
+        protected global::System.Web.UI.WebControls.Literal Literal25;
 
         /// <summary>
         /// liA45 control.
@@ -942,13 +861,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liA45;
 
         /// <summary>
-        /// Literal25 control.
+        /// Literal26 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal25;
+        protected global::System.Web.UI.WebControls.Literal Literal26;
 
         /// <summary>
         /// liA46 control.
@@ -960,13 +879,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liA46;
 
         /// <summary>
-        /// Literal26 control.
+        /// Literal27 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal26;
+        protected global::System.Web.UI.WebControls.Literal Literal27;
 
         /// <summary>
         /// liA47 control.
@@ -978,13 +897,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liA47;
 
         /// <summary>
-        /// Literal27 control.
+        /// Literal28 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal27;
+        protected global::System.Web.UI.WebControls.Literal Literal28;
 
         /// <summary>
         /// li272 control.
@@ -1050,13 +969,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liA60;
 
         /// <summary>
-        /// Literal28 control.
+        /// Literal29 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal28;
+        protected global::System.Web.UI.WebControls.Literal Literal29;
 
         /// <summary>
         /// liA61 control.
@@ -1068,13 +987,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liA61;
 
         /// <summary>
-        /// Literal29 control.
+        /// Literal30 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal29;
+        protected global::System.Web.UI.WebControls.Literal Literal30;
 
         /// <summary>
         /// liA62 control.
@@ -1086,13 +1005,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liA62;
 
         /// <summary>
-        /// Literal30 control.
+        /// Literal31 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal30;
+        protected global::System.Web.UI.WebControls.Literal Literal31;
 
         /// <summary>
         /// liA63 control.
@@ -1104,13 +1023,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liA63;
 
         /// <summary>
-        /// Literal31 control.
+        /// Literal134 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal31;
+        protected global::System.Web.UI.WebControls.Literal Literal134;
 
         /// <summary>
         /// li14 control.
@@ -1122,13 +1041,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl li14;
 
         /// <summary>
-        /// Literal134 control.
+        /// Literal137 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal134;
+        protected global::System.Web.UI.WebControls.Literal Literal137;
 
         /// <summary>
         /// li17 control.
@@ -1140,13 +1059,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl li17;
 
         /// <summary>
-        /// Literal137 control.
+        /// Literal138 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal137;
+        protected global::System.Web.UI.WebControls.Literal Literal138;
 
         /// <summary>
         /// li18 control.
@@ -1158,13 +1077,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl li18;
 
         /// <summary>
-        /// Literal138 control.
+        /// Literal183 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal138;
+        protected global::System.Web.UI.WebControls.Literal Literal183;
 
         /// <summary>
         /// li04090 control.
@@ -1176,13 +1095,13 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl li04090;
 
         /// <summary>
-        /// Literal183 control.
+        /// Literal194 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal183;
+        protected global::System.Web.UI.WebControls.Literal Literal194;
 
         /// <summary>
         /// liB1 control.
@@ -1192,15 +1111,6 @@ namespace ACC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liB1;
-
-        /// <summary>
-        /// Literal89 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal89;
 
         /// <summary>
         /// Literal90 control.
@@ -2337,15 +2247,6 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liC1;
 
         /// <summary>
-        /// Literal82 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal82;
-
-        /// <summary>
         /// Literal104 control.
         /// </summary>
         /// <remarks>
@@ -2895,15 +2796,6 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liC01;
 
         /// <summary>
-        /// Literal108 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal108;
-
-        /// <summary>
         /// Literal109 control.
         /// </summary>
         /// <remarks>
@@ -3408,15 +3300,6 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liD1;
 
         /// <summary>
-        /// Literal95 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal95;
-
-        /// <summary>
         /// Literal96 control.
         /// </summary>
         /// <remarks>
@@ -3867,15 +3750,6 @@ namespace ACC
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liK1;
 
         /// <summary>
-        /// Literal99 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal99;
-
-        /// <summary>
         /// Literal100 control.
         /// </summary>
         /// <remarks>
@@ -4099,6 +3973,69 @@ namespace ACC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal Literal83;
+
+        /// <summary>
+        /// LoginStatus1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LoginStatus LoginStatus1;
+
+        /// <summary>
+        /// DivContainer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DivContainer;
+
+        /// <summary>
+        /// myArea control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField myArea;
+
+        /// <summary>
+        /// AccSite control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField AccSite;
+
+        /// <summary>
+        /// myStore control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField myStore;
+
+        /// <summary>
+        /// ClosedPeriod control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField ClosedPeriod;
+
+        /// <summary>
+        /// menu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl menu;
 
         /// <summary>
         /// ScriptManager1 control.

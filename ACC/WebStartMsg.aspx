@@ -11,14 +11,19 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  <div>
-        <center>
+  
+      
             <div class="ColorRounded4Corners">
-                <center>
-                    <asp:Label ID="Label1" runat="server" Font-Size="Larger" meta:resourcekey="Label1"
+                    <div class="box box-info">
+     <div class="body">
+                                    <div class="row">
+                                          <div class="col-md-6 col-sm-12 col-xs-12" align="center">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                    <asp:Label ID="Label1" runat="server"  Font-Size="Larger" meta:resourcekey="Label1"
                         Text=" البند"></asp:Label>
-                    &nbsp;&nbsp;&nbsp;
-                    <asp:DropDownList ID="ddlFtype" runat="server" Width="250px" AutoPostBack="True"
+                   
+                    <asp:DropDownList ID="ddlFtype" CssClass="form-control" runat="server" Width="250" AutoPostBack="True"
                         OnSelectedIndexChanged="ddlFtype_SelectedIndexChanged">
                         <asp:ListItem Selected="True" Value="1" Text="حسابات بنوك الناقلات البرية"></asp:ListItem>
                         <asp:ListItem Value="2" Text="حسابات بنوك الإدارة"></asp:ListItem>
@@ -27,17 +32,17 @@
                         <asp:ListItem Value="5" Text="أرقام الاتصال "></asp:ListItem>
                         <asp:ListItem Value="6" Text="مواقع و بيانات الاتصال بالفروع"></asp:ListItem>
                     </asp:DropDownList>
-                </center>
-                <br />
-                <div style="width: 99%; overflow: auto; border: 1px solid #800000;">
-                    <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="false" 
+                
+              </div></div></div>
+                <div class="table-responsive">
+                    <asp:GridView ID="grdCodes" runat="server" CssClass="table table-hover"  ShowFooter="false" 
                         GridLines="None" AutoGenerateColumns="false" DataKeyNames="FType,FNo"  AllowPaging="false"
-                        Width="99.9%">
+                        >
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <Columns>
                             <asp:TemplateField HeaderText="البند 1" SortExpression="Fd1" ItemStyle-HorizontalAlign="Center">
                                 <ItemTemplate>
-                                    <asp:TextBox ID="txtFd1" MaxLength="100" Text='<%# Bind("Fd1") %>' runat="server" Width="99%" />
+                                    <asp:TextBox ID="txtFd1" MaxLength="100" Text='<%# Bind("Fd1") %>' runat="server"  />
                                 </ItemTemplate>
                                 <ControlStyle Width="175px" />
                                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
@@ -84,14 +89,15 @@
                         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                     </asp:GridView>
                 </div>
-              <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
-                <br />
+                                           <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+              <asp:Label ID="LblCodesResult" runat="server" ></asp:Label>
+               
                                     <asp:ImageButton ID="BtnEdit" runat="server" 
                     AlternateText="Edit" CommandName="Edit"
                                     ImageUrl="~/images/draw_pen_641.png" CssClass="ops" ToolTip="Edit Stock Item Inventory"
-                                    Width="64px" onclick="BtnEdit_Click"/>
+                                    Width="64px" onclick="BtnEdit_Click"/></div>
+                                        </div></div></div>
                                 
             </div>
-        </center>
-    </div>
+        
 </asp:Content>

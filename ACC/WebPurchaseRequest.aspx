@@ -63,33 +63,34 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <center>
-        <div class="ColorRounded4Corners" style="width: 99.8%">
-            <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 99.5%;
-                border: solid 2px #800000">
+   
+       <div class="ColorRounded4Corners col-md-12 col-sm-12 col-xs-12">
+         
                 <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
                     <b>[ Purchase Request ]</b></legend>              
-                    <table width="99%" cellpadding="3" cellspacing="0">
-                        <tr>
-                            <td style="width: 15%;">
+                  <div class="box box-info" align="right">
+                <div class="body">
+                    <div class="row">
+
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label1" runat="server" Text="Request No."></asp:Label>
-                                *
-                            </td>
-                            <td style="width: 35%;">
-                                <asp:TextBox ID="txtVouNo" MaxLength="10" runat="server"></asp:TextBox>
+                            
+                                <asp:TextBox ID="txtVouNo" MaxLength="10" runat="server" CssClass="form-control"></asp:TextBox>
                                 <asp:Label ID="lblBranch" runat="server" Text="Label"></asp:Label>
                                 <asp:ImageButton ID="BtnFind" runat="server" ValidationGroup="55" ImageUrl="~/images/zoom_16.png"
                                     ToolTip="Search for Request Data" onclick="BtnFind_Click" />
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtVouNo"
                                     Display="Dynamic" ErrorMessage="You should Enter Request No." ForeColor="Red"
                                     SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                            </td>
-                            <td style="width: 15%;">
+                          </div></div></div>
+                         <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label2" runat="server" Text="Request Date"></asp:Label>
-                                *
-                            </td>
-                            <td style="width: 35%;">
-                                <asp:TextBox ID="txtVouDate" MaxLength="10" runat="server"></asp:TextBox>
+                             
+                                <asp:TextBox ID="txtVouDate" MaxLength="10" runat="server" CssClass="form-control"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtVouDate"
                                     Display="Dynamic" ErrorMessage="You Should Select Request Date" ForeColor="Red"
                                     SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
@@ -99,37 +100,36 @@
                                 <ajax:CalendarExtender ID="CalendarExtender1" runat="server" CssClass="MyCalendar"
                                     TargetControlID="txtVouDate" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
                                     PopupPosition="BottomLeft" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;">
+                           </div></div></div>
+                         <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label6" runat="server" Text="Job Order No."></asp:Label>
-                            </td>
-                            <td style="width: 35%;">
-                                <asp:TextBox ID="txtJobOrder" MaxLength="10" runat="server"></asp:TextBox>
-                            </td>
-                            <td style="width: 15%;">
+                          
+                                <asp:TextBox ID="txtJobOrder" MaxLength="10" runat="server" CssClass="form-control"></asp:TextBox>
+                        </div></div></div>
+                         <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label7" runat="server" Text="Remark"></asp:Label>
-                            </td>
-                            <td style="width: 35%;">
-                                <asp:TextBox ID="txtRemark" Width="200px" MaxLength="100" runat="server"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;">
+                         
+                                <asp:TextBox ID="txtRemark" CssClass="form-control" MaxLength="100" runat="server"></asp:TextBox>
+                          </div></div></div>
+                         <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label8" runat="server" Text="Part No."></asp:Label>                                    
-                            </td>
-                            <td style="width: 35%;">
-                                <asp:TextBox ID="txtItemCode" Width="200px" MaxLength="100" runat="server" 
+                        
+                                <asp:TextBox ID="txtItemCode" CssClass="form-control" MaxLength="100" runat="server" 
                                     AutoPostBack="True" ontextchanged="txtItemCode_TextChanged"></asp:TextBox>
-                            </td>
-                            <td colspan="2">
+                          </div></div></div>
+                         <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                  <asp:Label ID="lblStatus" runat="server"  CssClass="blink" ForeColor="Red" Text=""></asp:Label>
-                            </td>
-                        </tr>
-                    </table>
-                </fieldset>
-                    <div style="width: 100%; overflow: none; overflow-x: auto; border: 1px solid #800000;">
+                           </div></div></div>
+           
+                      <div class="table-responsive">
                         <asp:GridView ID="grdCodes" runat="server" CellPadding="4" Width="99.95%" ForeColor="#333333"
                             ShowFooter="True" ViewStateMode="Enabled" GridLines="None" AutoGenerateColumns="False"
                             DataKeyNames="FNo" AllowPaging="True" PageSize="100" OnPageIndexChanging="grdCodes_PageIndexChanging"
@@ -282,74 +282,50 @@
                         </asp:GridView>
                         <!--OnInit="ddlArea_Init"-->
                     </div>
-                    <table width="100%" cellpadding="3" cellspacing="0" border="2px">
-                        <tr>
-                            <td style="width: 17%;">
-                            </td>
-                            <td style="width: 17%;">
-                            </td>
-                            <td style="width: 17%;">
-                            </td>
-                            <td style="width: 17%;">
-                            </td>
-                            <td style="width: 16%;">
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label3" runat="server" Text="Total Qty:"></asp:Label>
-                            </td>
-                            <td style="width: 16%;">
+                           
                                 <asp:Label ID="lblTotalQty" runat="server" Text=""></asp:Label>
-                            </td>
-                        </tr>
-                    </table>
-                    <table id="Table2" width="100%" cellpadding="0" cellspacing="0">
-                        <tr>
-                            <td colspan="4">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 70px;">
+                          </div></div></div>
+                           <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                          
                                 <asp:Label ID="Label14" runat="server" Text="User Name"></asp:Label>
-                            </td>
-                            <td style="width: 300px;">
-                                <asp:TextBox ID="txtUserName" Width="300px" runat="server" MaxLength="50" BackColor="#E8E8E8"
+                       
+                                <asp:TextBox ID="txtUserName" CssClass="form-control" runat="server" MaxLength="50" BackColor="#E8E8E8"
                                     Enabled="false"></asp:TextBox>
-                            </td>
-                            <td style="width: 70px;">
+                          </div></div></div>
+                                <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label15" runat="server" Text="Date"></asp:Label>
-                            </td>
-                            <td style="width: 300px;">
-                                <asp:TextBox ID="txtUserDate" Width="150px" runat="server" MaxLength="50" BackColor="#E8E8E8"
+                       
+                                <asp:TextBox ID="txtUserDate" CssClass="form-control" runat="server" MaxLength="50" BackColor="#E8E8E8"
                                     Enabled="false">                                                               
                                 </asp:TextBox>
+                                    </div></div></div>
+                                <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label27" runat="server" Text="* Required Fields"></asp:Label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 70px;">
+                          </div></div></div>
+                                <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label4" runat="server" Text="Password"></asp:Label>
-                            </td>
-                            <td style="width: 300px;">
-                                <asp:TextBox ID="txtPassword" Width="200px" TextMode="Password" runat="server" MaxLength="50"></asp:TextBox>
-                                <asp:Button ID="BtnUnlock" runat="server" Text="Unlock" 
+                         
+                                <asp:TextBox ID="txtPassword" CssClass="form-control" TextMode="Password" runat="server" MaxLength="50"></asp:TextBox>
+                                <asp:Button ID="BtnUnlock" runat="server" CssClass="btn btn-primary " Text="Unlock" 
                                     onclick="BtnUnlock_Click" />
-                            </td>
-                            <td style="width: 70px;">
-                            </td>
-                            <td style="width: 300px;">
-                            </td>
-                        </tr>
-                        <tr align="center">
-                            <td colspan="4">
+                           </div></div></div>
+                                <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
-                            </td>
-                        </tr>
-                        <tr align="right">
-                            <td colspan="4">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            </td>
-                        </tr>
-                        <tr align="center">
-                            <td colspan="4" style="width: 100%;">
+                         
                                 <asp:ImageButton ID="BtnNew" runat="server" AlternateText="New" CommandName="New"
                                     ImageUrl="~/images/insource_641.png" CssClass="ops" ToolTip="Add New Request"
                                     ValidationGroup="1" 
@@ -371,9 +347,7 @@
                                 <asp:ImageButton ID="BtnPrint" runat="server" AlternateText="Print" CommandName="Print"
                                     ImageUrl="~/images/print_641.png" ValidationGroup="1" CssClass="ops" 
                                     ToolTip="Print Request" onclick="BtnPrint_Click" />
-                            </td>
-                        </tr>
-                    </table>
+                         </div></div></div>
               
                 <div style="text-align: right; width: 50%;">
                     <asp:Panel ID="Panel2" runat="server" Height="30px" BackColor="#5D7B9D" Width="99.5%"
@@ -425,7 +399,7 @@
                         <table width="100%">
                             <tr>
                                 <td align="left">
-                                    <asp:FileUpload ID="FileUpload1" runat="server" />
+                                    <asp:FileUpload ID="FileUpload1" CssClass="form-control" runat="server" />
                                 </td>
                                 <td align="right">
                                     <asp:ImageButton ID="BtnAttach" runat="server" AlternateText="Attach" CommandName="Attach"
@@ -442,6 +416,6 @@
                         SuppressPostBack="true" />
                 </div>
             
-        </div>
-    </center>
+        </div></div></div></div>
+ 
 </asp:Content>
