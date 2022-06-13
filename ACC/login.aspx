@@ -25,7 +25,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="login-box">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 login_col_div">
                 <div class="login_col">
                     <div class="card-body login-card-body">
                         <div class="login_page_logo">
@@ -60,7 +60,7 @@
                 <div class="col-sm-6 back">
                 </div>
             </div>
-            <div class="col-md-6" style="background: url('dist/img/login_left_img.png'); min-height: 100vh; background-size: cover; background-position: center; margin: 0px; padding: 0px;">
+            <div class="col-md-6 background_div" style="background: url('dist/img/0login_left_img.png'); min-height: 100vh; background-size: cover; background-position: center; margin: 0px; padding: 0px;">
                 <div class="silde_img">
                 </div>
             </div>
