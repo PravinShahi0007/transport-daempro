@@ -7,32 +7,28 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <center>
-        <div class="ColorRound4Courner">
-            <div style="text-align: right; float: right; display: block;">
-            </div>
-            <center>
-                <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 98%;
-                    border: solid 2px #800000">
-                    <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
-                        أجمالي أنشطة العملاء</legend>
-                    <table width="99%">
-                        <tr>
-                            <td style="width: 90px">
-                                &nbsp;
-                            </td>
-                            <td style="width: 100px">
-                                &nbsp;
-                            </td>
-                            <td style="width: 140px">
+    <div class="card col-md-12 col-sm-12 col-xs-12">
+        <div class="card-header">
+            <h4>
+                        أجمالي أنشطة العملاء</h4>
+        </div>
+        <div class="box box-info card-body" align="right">
+            <div class="body">
+                <div class="row">
+                    
+                     <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                                 <asp:CheckBox ID="ChkPeriod" runat="server" Checked="True" Text="جميع الفترات" AutoPostBack="True"
                                     OnCheckedChanged="ChkPeriod_CheckedChanged" />
-                            </td>
-                            <td style="width: 80px">
+                          </div></div></div>
+                      <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                                 <asp:Label ID="LblFDate" runat="server" Visible="false" Text="من تاريخ"></asp:Label>
-                            </td>
-                            <td style="width: 140px">
-                                <asp:TextBox ID="txtFDate" MaxLength="10" Width="100px" Visible="false" 
+                         
+
+                                <asp:TextBox ID="txtFDate" MaxLength="10" CssClass="form-control" Visible="false" 
                                     runat="server" AutoPostBack="True" ontextchanged="txtFDate_TextChanged"></asp:TextBox>
                                 <asp:CompareValidator ID="ValFDate" runat="server" ControlToValidate="txtFDate" CultureInvariantValues="true"
                                     Display="Dynamic" ErrorMessage="يجب أن تكون القيمة تاريخ" ForeColor="Red" Type="Date"
@@ -40,35 +36,24 @@
                                 <ajax:CalendarExtender ID="CalendarExtender1" runat="server" CssClass="MyCalendar"
                                     TargetControlID="txtFDate" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
                                     PopupPosition="BottomLeft" />
-                            </td>
-                            <td style="width: 50px">
-                            </td>
-                            <td rowspan="3">
+                         
+
                                 <asp:ImageButton ID="BtnProcess" runat="server" AlternateText="تشغيل" ValidationGroup="1"
-                                      ImageUrl="~/images/Process.png" ToolTip="تشغيل التقرير" OnClick="BtnProcess_Click" />
+                                      ImageUrl="~/images/setting.png" ToolTip="تشغيل التقرير" OnClick="BtnProcess_Click" />
                                 <asp:ImageButton ID="BtnPrint1" Visible="false" ToolTip="Print" CommandName="1" runat="server"
-                                    ImageUrl="~/images/print_64A.png"   OnCommand="BtnPrint1_Command"
+                                    ImageUrl="~/images/print.png"   OnCommand="BtnPrint1_Command"
                                     OnClientClick="aspnetForm.target ='_blank';" />
                                 <asp:ImageButton ID="BtnExcel" Visible="false" runat="server" AlternateText="تصدير للإكسل"
-                                    CommandName="Excel"   ImageUrl="~/images/Excel.png" ToolTip="'طباعة بيانات التقرير"
+                                    CommandName="Excel"   ImageUrl="~/images/sheet.png" ToolTip="'طباعة بيانات التقرير"
                                     OnClientClick="aspnetForm.target ='_blank';" OnClick="BtnExcel_Click" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 100px">
-                                &nbsp;
-                            </td>
-                            <td style="width: 100px">
-                                &nbsp;
-                            </td>
-                            <td style="width: 130px">
-                                &nbsp;
-                            </td>
-                            <td style="width: 80px">
+                           </div></div></div>
+                      <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                                 <asp:Label ID="LblEDate" runat="server" Visible="false" Text="إلى تاريخ"></asp:Label>
-                            </td>
-                            <td style="width: 140px">
-                                <asp:TextBox ID="txtEDate" MaxLength="10" Width="100px" Visible="false" 
+                          
+
+                                <asp:TextBox ID="txtEDate" MaxLength="10" CssClass="form-control" Visible="false" 
                                     runat="server" AutoPostBack="True" ontextchanged="txtEDate_TextChanged"></asp:TextBox>
                                 <asp:CompareValidator ID="ValEDate" runat="server" ControlToValidate="txtEDate" CultureInvariantValues="true"
                                     Display="Dynamic" ErrorMessage="يجب أن تكون القيمة تاريخ" ForeColor="Red" Type="Date"
@@ -76,18 +61,13 @@
                                 <ajax:CalendarExtender ID="CalendarExtender2" runat="server" CssClass="MyCalendar"
                                     TargetControlID="txtEDate" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
                                     PopupPosition="BottomLeft" />
-                            </td>
-                            <td style="width: 50px">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" align="right">
-                                &nbsp;
-                            </td>
-                            <td colspan="2" align="right">
+                         </div></div></div>
+                      <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
                                 <asp:Label ID="Label4" runat="server" Text="عرض السجلات"></asp:Label>
-                                &nbsp; &nbsp;
-                                <asp:DropDownList ID="ddlRecordsPerPage" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlRecordsPerPage_SelectedIndexChanged">
+                       
+                                <asp:DropDownList ID="ddlRecordsPerPage" CssClass="form-control" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlRecordsPerPage_SelectedIndexChanged">
                                     <asp:ListItem Value="10">10</asp:ListItem>
                                     <asp:ListItem Selected="True" Value="20">20</asp:ListItem>
                                     <asp:ListItem Value="50">50</asp:ListItem>
@@ -98,23 +78,17 @@
                                     <asp:ListItem Value="2000">2000</asp:ListItem>
                                     <asp:ListItem Value="-1">الكل</asp:ListItem>
                                 </asp:DropDownList>
-                            </td>
-                            <td style="width: 140px">
+                            
+
                                 <asp:Label ID="lblCount" runat="server" Text=""></asp:Label>&nbsp;
                                 <asp:Label ID="Label6" runat="server" Text="سجل"></asp:Label>
-                            </td>
-                            <td style="width: 50px">
-                                &nbsp;
-                            </td>
-                            <td>
-                            </td>
-                        </tr>
-                    </table>
-                </fieldset>
-                <div style="width: 100%; height: 500px; overflow: none; overflow-x: auto; border: 1px solid #800000;">
+                           </div></div></div>
+             
+
+                 <div class=" table table-responsive table-hover text-center">
                     <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                         GridLines="None" AutoGenerateColumns="False" AllowPaging="True" PageSize="20"
-                        Width="99.9%" OnPageIndexChanging="grdCodes_PageIndexChanging">
+                        Width="100%" OnPageIndexChanging="grdCodes_PageIndexChanging">
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <Columns>
                             <asp:TemplateField HeaderText="م" SortExpression="FNo" ItemStyle-HorizontalAlign="Center">
@@ -206,8 +180,10 @@
                     </asp:GridView>
                 </div>
                 <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
-                <div>   
-                    <asp:Chart ID="Chart1" runat="server"  Width="900px" Height="700px" >
+                 <div class="col-md-10 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                    <asp:Chart ID="Chart1" runat="server"  CssClass="form-control" Height="700px" >
                         <Titles>
                             <asp:Title Font="Arial, 16pt, style=Bold" Name="Title1"  ForeColor="Blue"
                                 Text="أجمالي أنشطة العملاء">
@@ -227,9 +203,10 @@
                             </asp:ChartArea>                                                      
                         </ChartAreas>                        
                     </asp:Chart>
-                </div>
-                <br />
-            </center>
-        </div>
-    </center>
+                </div></div></div>
+           
+
+        </div></div></div></div>
+ 
+
 </asp:Content>

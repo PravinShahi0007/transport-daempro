@@ -5,19 +5,19 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 98%;
-        border: solid 2px #800000">
-        <legend align="right" style="font-size: 18px; color: #800000; text-align: center;"><b>
-            [ تشغيل اهلاكات الاصول الثابتة ]</b></legend>
-        <center>
+    <fieldset style="">
+        <div class="form-group">
+            <h4 class="text-center panel panel-heading">
+                [ تشغيل اهلاكات الاصول الثابتة ]
+            </h4>
             <br />
-            <table dir="rtl" width="99%" cellpadding="2px">
-                <tr align="center">
-                    <td style="width: 120px">
-                        <asp:Label ID="LblFDate" runat="server" Text="من تاريخ"></asp:Label>
-                    </td>
-                    <td style="width: 120px">
-                        <asp:TextBox ID="txtFDate" MaxLength="10" Width="100px" runat="server"></asp:TextBox>
+        </div>
+     <div class="form-row">
+         <div class="form-group col-sm-1">
+             <asp:Label ID="Label2" runat="server" Text="من تاريخ"></asp:Label>
+         </div>
+         <div class="form-group col-sm-3">
+             <asp:TextBox ID="txtFDate" MaxLength="10" CssClass="form-control" runat="server"></asp:TextBox>
                         <asp:CompareValidator ID="ValFDate" runat="server" ControlToValidate="txtFDate" CultureInvariantValues="true"
                             Display="Dynamic" ErrorMessage="يجب أن تكون القيمة تاريخ" ForeColor="Red" Type="Date"
                             ValidationGroup="1" SetFocusOnError="True" Operator="DataTypeCheck">*</asp:CompareValidator>
@@ -27,14 +27,12 @@
                         <asp:RequiredFieldValidator ID="ValSType2" runat="server" ControlToValidate="txtFDate"
                             ForeColor="Red" InitialValue="0" SetFocusOnError="True" Display="Dynamic" ErrorMessage='يجب أختيار تاريخ بداية الفترة'
                             ValidationGroup="1">*</asp:RequiredFieldValidator>
-                    </td>
-                    <td style="width: 60px">
-                    </td>
-                    <td style="width: 120px">
-                        <asp:Label ID="LblEDate" runat="server" Text="إلى تاريخ"></asp:Label>
-                    </td>
-                    <td style="width: 120px">
-                        <asp:TextBox ID="txtEDate" MaxLength="10" Width="100px" runat="server"></asp:TextBox>
+         </div>
+         <div class="form-group col-sm-1">
+             <asp:Label ID="LblEDate" runat="server" Text="إلى تاريخ"></asp:Label>
+         </div>
+         <div class="form-group col-sm-3">
+             <asp:TextBox ID="txtEDate" MaxLength="10" CssClass="form-control" runat="server"></asp:TextBox>
                         <asp:CompareValidator ID="ValEDate" runat="server" ControlToValidate="txtEDate" CultureInvariantValues="true"
                             Display="Dynamic" ErrorMessage="يجب أن تكون القيمة تاريخ" ForeColor="Red" Type="Date"
                             ValidationGroup="1" SetFocusOnError="True" Operator="DataTypeCheck">*</asp:CompareValidator>
@@ -44,84 +42,112 @@
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtEDate"
                             ForeColor="Red" SetFocusOnError="True" Display="Dynamic" ErrorMessage='يجب أختيار تاريخ نهاية الفترة'
                             ValidationGroup="1">*</asp:RequiredFieldValidator>
-                    </td>
-                    <td style="width: 60px">
-                    </td>
-                    <td style="width: 120px">
-                        <asp:Label ID="Label1" runat="server" Text="بداية القيود"></asp:Label>
-                    </td>
-                    <td style="width: 150px">
-                            <asp:TextBox ID="txtStart" MaxLength="10" Width="100px" runat="server"></asp:TextBox>
+         </div>
+         <div class="form-group col-sm-1">
+             <asp:Label ID="Label1" runat="server" Text="بداية القيود"></asp:Label>
+         </div>
+         <div class="form-group col-sm-3">
+             <asp:TextBox ID="txtStart" MaxLength="10" CssClass="form-control" runat="server"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtStart"
                             ForeColor="Red" SetFocusOnError="True" Display="Dynamic" ErrorMessage='يجب أدخل تاريخ بداية تسلسل قيود الاهلاك'
                             ValidationGroup="1">*</asp:RequiredFieldValidator>
-
-                    </td>
-                </tr>
-            </table>
-            <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ValidationGroup="1"
+         </div>
+     </div>
+        <br />
+        <div class="form-row">
+            <div class="form-group col-sm-2">
+                <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ValidationGroup="1"
                 EnableClientScript="true" ShowSummary="true" />
-            <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
-            <br />
-            <asp:ImageButton ID="BtnProcess" runat="server" AlternateText="تشغيل" ValidationGroup="1"
-                  ImageUrl="~/images/Refresh_642.png" ToolTip="تشغيل" OnClick="BtnProcess_Click" />
-            <br />
+            </div>
+            <div class="form-group col-sm-2">
+                <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
+            </div>
+            <div class="form-group col-sm-2"> </div>
+            <div class="form-group col-sm-2">
+                <asp:ImageButton ID="BtnProcess" runat="server" AlternateText="تشغيل" ValidationGroup="1"
+                  ImageUrl="~/images/reload2.png" ToolTip="تشغيل" OnClick="BtnProcess_Click" />
+            </div>
+            
+            <div class="form-group col-sm-2">
+                <asp:ImageButton ID="BtnPost" runat="server" Visible="false" AlternateText="ترحيل االقيد" ValidationGroup="1"
+                  ImageUrl="~/images/Process.png" ToolTip="ترحيل االقيد" OnClick="BtnPost_Click" />
+            </div>
+            <div class="form-group col-sm-2"></div>
+        </div>
+      <div class="form">
             <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="true"
                 GridLines="None" AutoGenerateColumns="False" AllowPaging="false"
-                Width="99.9%" EmptyDataText="لا توجد بيانات">
+                EmptyDataText="لا توجد بيانات">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>
                     <asp:TemplateField HeaderText="الحساب" SortExpression="Code" ItemStyle-HorizontalAlign="Center">
                         <ItemTemplate>
-                            <asp:Label ID="lblCode" Text='<%# Bind("Code") %>' runat="server"></asp:Label>
+                            <div class="form-group">
+                                <asp:Label ID="lblCode" Text='<%# Bind("Code") %>' runat="server"></asp:Label>
+                            </div>
+                            
                         </ItemTemplate>
-                        <ControlStyle Width="100px" />
-                        <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                        
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="من تاريخ" SortExpression="FDate" ItemStyle-HorizontalAlign="Center">
                         <ItemTemplate>
-                            <asp:Label ID="lblFDate" Text='<%# Eval("fDate","{0:d}") %>' runat="server"></asp:Label>
+                            <div class="form-group">
+                                <asp:Label ID="lblFDate" Text='<%# Eval("fDate","{0:d}") %>' runat="server"></asp:Label>
+                            </div>
+                            
                         </ItemTemplate>
-                        <ControlStyle Width="100px" />
-                        <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                       
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="إلى تاريخ" SortExpression="TDate" ItemStyle-HorizontalAlign="Center">
                         <ItemTemplate>
-                            <asp:Label ID="lblTDate" Text='<%# Eval("TDate","{0:d}") %>' runat="server"></asp:Label>
+                            <div class="form-group">
+                                <asp:Label ID="lblTDate" Text='<%# Eval("TDate","{0:d}") %>' runat="server"></asp:Label>
+                            </div>
+                            
                         </ItemTemplate>
-                        <ControlStyle Width="100px" />
-                        <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                        
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="قيمة الاصل/الاضافة " SortExpression="Amount" ItemStyle-HorizontalAlign="Center">
                         <ItemTemplate>
-                            <asp:Label ID="lblAmount" Text='<%# Eval("Amount","{0:N2}") %>' runat="server"></asp:Label>
+                            <div class="form-group">
+                                <asp:Label ID="lblAmount" Text='<%# Eval("Amount","{0:N2}") %>' runat="server"></asp:Label>
+                            </div>
+                            
                         </ItemTemplate>
-                        <ControlStyle Width="100px" />
-                        <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                       
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="النسبة" SortExpression="Per" ItemStyle-HorizontalAlign="Center">
                         <ItemTemplate>
-                            <asp:Label ID="lblPer" Text='<%# Bind("Per") %>' runat="server"></asp:Label>
+                            <div class="form-group">
+                                <asp:Label ID="lblPer" Text='<%# Bind("Per") %>' runat="server"></asp:Label>
+                            </div>
+                            
                         </ItemTemplate>
-                        <ControlStyle Width="100px" />
-                        <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                       
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="الاهلاك" SortExpression="Total2" ItemStyle-HorizontalAlign="Center">
                         <ItemTemplate>
-                            <asp:Label ID="lblTotal" Text='<%# Eval("Total","{0:N2}") %>' runat="server"></asp:Label>
+                            <div class="form-group">
+                                 <asp:Label ID="lblTotal" Text='<%# Eval("Total","{0:N2}") %>' runat="server"></asp:Label>
+                            </div>
+                           
                         </ItemTemplate>
                         <FooterTemplate>
-                            <asp:Label ID="lblTot" Text='<%# Tot %>' runat="server"></asp:Label>
+                            <div class="form-group">
+                                <asp:Label ID="lblTot" Text='<%# Tot %>' runat="server"></asp:Label>
+                            </div>
+                            
                         </FooterTemplate>
-                        <ControlStyle Width="100px" />
-                        <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                        
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="صافي الاصل" SortExpression="Net2" ItemStyle-HorizontalAlign="Center">
                         <ItemTemplate>
-                            <asp:Label ID="lblNet2" Text='<%# Eval("Net2","{0:N2}") %>' runat="server"></asp:Label>
+                            <div class="form-group">
+                                <asp:Label ID="lblNet2" Text='<%# Eval("Net2","{0:N2}") %>' runat="server"></asp:Label>
+                            </div>
+                            
                         </ItemTemplate>
-                        <ControlStyle Width="100px" />
-                        <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                   
                     </asp:TemplateField>
                 </Columns>
                 <EditRowStyle BackColor="#999999" />
@@ -136,8 +162,7 @@
                 <SortedDescendingCellStyle BackColor="#FFFDF8" />
                 <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
             </asp:GridView>
-        </center>
-            <asp:ImageButton ID="BtnPost" runat="server" Visible="false" AlternateText="ترحيل االقيد" ValidationGroup="1"
-                  ImageUrl="~/images/Process.png" ToolTip="ترحيل االقيد" OnClick="BtnPost_Click" />
+          </div>
+            
     </fieldset>
 </asp:Content>

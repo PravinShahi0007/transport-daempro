@@ -2,9 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div>
-        <center>
-            <div class="Round4Courner" style="width: 98%">
+   <center>
+            <div class="Round4Courner">
                 <asp:LinkButton ID="LbtnLevel1" runat="server" CommandName="1" Text="<%$ Resources:ItemCat %>"
                     Visible="true" OnCommand="LbtnLevel1_Command" Font-Size="Larger" />
                 <asp:LinkButton ID="LbtnLevel2" runat="server" CommandName="2" Visible="false" OnCommand="LbtnLevel1_Command"
@@ -15,10 +14,10 @@
                     Font-Size="Larger" />
                 <asp:LinkButton ID="LbtnLevel5" runat="server" CommandName="5" Visible="false" OnCommand="LbtnLevel1_Command"
                     Font-Size="Larger" />
-                <div style="width: 100%; overflow:none; overflow-x:auto ; border: 1px solid #800000;">                
-                    <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
+                <div class="table table-responsive table-hover text-center">                
+                    <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True" CssClass="table"
                         GridLines="None" AutoGenerateColumns="False" DataKeyNames="FCode;Code" 
-                        AllowPaging="True" Width="99.8%" OnRowUpdating="grdCodes_RowUpdating" OnPageIndexChanging="grdCodes_PageIndexChanging"
+                        AllowPaging="True" Width="100%" OnRowUpdating="grdCodes_RowUpdating" OnPageIndexChanging="grdCodes_PageIndexChanging"
                         OnRowCancelingEdit="grdCodes_RowCancelingEdit" OnRowCommand="grdCodes_RowCommand"
                         OnRowDeleting="grdCodes_RowDeleting" OnRowEditing="grdCodes_RowEditing" 
                         OnSelectedIndexChanging="grdCodes_SelectedIndexChanging">
@@ -49,10 +48,10 @@
                                     <asp:Label ID="lblName1" Text='<%# Bind("Name1") %>' runat="server"></asp:Label>
                                 </ItemTemplate>
                                 <EditItemTemplate>
-                                    <asp:TextBox ID="txtName1" Text='<%# Bind("Name1") %>' runat="server" Width="100%" />
+                                    <asp:TextBox ID="txtName1" Text='<%# Bind("Name1") %>' runat="server" CssClass="form-control" />
                                 </EditItemTemplate>
                                 <FooterTemplate>
-                                    <asp:TextBox ID="txtName1" runat="server" Width="100%" />
+                                    <asp:TextBox ID="txtName1" runat="server" CssClass="form-control"/>
                                 </FooterTemplate>
                                 <ControlStyle Width="250px" />
                                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
@@ -62,10 +61,10 @@
                                     <asp:Label ID="lblName2" Text='<%# Bind("Name2") %>' runat="server"></asp:Label>
                                 </ItemTemplate>
                                 <EditItemTemplate>
-                                    <asp:TextBox ID="txtName2" Text='<%# Bind("Name2") %>' runat="server" Width="100%" />
+                                    <asp:TextBox ID="txtName2" Text='<%# Bind("Name2") %>' runat="server" CssClass="form-control" />
                                 </EditItemTemplate>
                                 <FooterTemplate>
-                                    <asp:TextBox ID="txtName2" runat="server" Width="100%" />
+                                    <asp:TextBox ID="txtName2" runat="server" CssClass="form-control" />
                                 </FooterTemplate>
                                 <ControlStyle Width="250px" />
                                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
@@ -76,10 +75,10 @@
                                     <asp:Label ID="lblCSal_Acc" Text='<%# Bind("CSal_Acc") %>' runat="server"></asp:Label>
                                 </ItemTemplate>
                                 <EditItemTemplate>
-                                    <asp:TextBox ID="txtCSal_Acc" Text='<%# Bind("CSal_Acc") %>' runat="server" Width="100%" />
+                                    <asp:TextBox ID="txtCSal_Acc" Text='<%# Bind("CSal_Acc") %>' runat="server" CssClass="form-control" />
                                 </EditItemTemplate>
                                 <FooterTemplate>
-                                    <asp:TextBox ID="txtCSal_Acc2" runat="server" Width="100%" />
+                                    <asp:TextBox ID="txtCSal_Acc2" runat="server" CssClass="form-control" />
                                 </FooterTemplate>
                                 <ControlStyle Width="80px" />
                                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
@@ -89,10 +88,10 @@
                                     <asp:Label ID="lblCRSal_Acc" Text='<%# Bind("CRSal_Acc") %>' runat="server"></asp:Label>
                                 </ItemTemplate>
                                 <EditItemTemplate>
-                                    <asp:TextBox ID="txtCRSal_Acc" Text='<%# Bind("CRSal_Acc") %>' runat="server" Width="100%" />
+                                    <asp:TextBox ID="txtCRSal_Acc" Text='<%# Bind("CRSal_Acc") %>' runat="server" CssClass="form-control" />
                                 </EditItemTemplate>
                                 <FooterTemplate>
-                                    <asp:TextBox ID="txtCRSal_Acc2" runat="server" Width="100%" />
+                                    <asp:TextBox ID="txtCRSal_Acc2" runat="server" CssClass="form-control"/>
                                 </FooterTemplate>
                                 <ControlStyle Width="80px" />
                                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
@@ -102,10 +101,10 @@
                                     <asp:Label ID="lblRCSal_Acc" Text='<%# Bind("RCSal_Acc") %>' runat="server"></asp:Label>
                                 </ItemTemplate>
                                 <EditItemTemplate>
-                                    <asp:TextBox ID="txtRCSal_Acc" Text='<%# Bind("RCSal_Acc") %>' runat="server" Width="100%" />
+                                    <asp:TextBox ID="txtRCSal_Acc" Text='<%# Bind("RCSal_Acc") %>' runat="server" CssClass="form-control" />
                                 </EditItemTemplate>
                                 <FooterTemplate>
-                                    <asp:TextBox ID="txtRCSal_Acc2" runat="server" Width="100%" />
+                                    <asp:TextBox ID="txtRCSal_Acc2" runat="server" CssClass="form-control" />
                                 </FooterTemplate>
                                 <ControlStyle Width="80px" />
                                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
@@ -115,10 +114,10 @@
                                     <asp:Label ID="lblRCRSal_Acc" Text='<%# Bind("RCRSal_Acc") %>' runat="server"></asp:Label>
                                 </ItemTemplate>
                                 <EditItemTemplate>
-                                    <asp:TextBox ID="txtRCRSal_Acc" Text='<%# Bind("RCRSal_Acc") %>' runat="server" Width="100%" />
+                                    <asp:TextBox ID="txtRCRSal_Acc" Text='<%# Bind("RCRSal_Acc") %>' runat="server" CssClass="form-control" />
                                 </EditItemTemplate>
                                 <FooterTemplate>
-                                    <asp:TextBox ID="txtRCRSal_Acc2" runat="server" Width="100%" />
+                                    <asp:TextBox ID="txtRCRSal_Acc2" runat="server" CssClass="form-control" />
                                 </FooterTemplate>
                                 <ControlStyle Width="80px" />
                                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
@@ -128,10 +127,10 @@
                                     <asp:Label ID="lblCPur_Acc" Text='<%# Bind("CPur_Acc") %>' runat="server"></asp:Label>
                                 </ItemTemplate>
                                 <EditItemTemplate>
-                                    <asp:TextBox ID="txtCPur_Acc" Text='<%# Bind("CPur_Acc") %>' runat="server" Width="100%" />
+                                    <asp:TextBox ID="txtCPur_Acc" Text='<%# Bind("CPur_Acc") %>' runat="server" CssClass="form-control" />
                                 </EditItemTemplate>
                                 <FooterTemplate>
-                                    <asp:TextBox ID="txtCPur_Acc2" runat="server" Width="100%" />
+                                    <asp:TextBox ID="txtCPur_Acc2" runat="server" CssClass="form-control" />
                                 </FooterTemplate>
                                 <ControlStyle Width="80px" />
                                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
@@ -141,10 +140,10 @@
                                     <asp:Label ID="lblCRPur_Acc" Text='<%# Bind("CRPur_Acc") %>' runat="server"></asp:Label>
                                 </ItemTemplate>
                                 <EditItemTemplate>
-                                    <asp:TextBox ID="txtCRPur_Acc" Text='<%# Bind("CRPur_Acc") %>' runat="server" Width="100%" />
+                                    <asp:TextBox ID="txtCRPur_Acc" Text='<%# Bind("CRPur_Acc") %>' runat="server" CssClass="form-control" />
                                 </EditItemTemplate>
                                 <FooterTemplate>
-                                    <asp:TextBox ID="txtCRPur_Acc2" runat="server" Width="100%" />
+                                    <asp:TextBox ID="txtCRPur_Acc2" runat="server" CssClass="form-control" />
                                 </FooterTemplate>
                                 <ControlStyle Width="80px" />
                                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
@@ -154,10 +153,10 @@
                                     <asp:Label ID="lblRCPur_Acc" Text='<%# Bind("RCPur_Acc") %>' runat="server"></asp:Label>
                                 </ItemTemplate>
                                 <EditItemTemplate>
-                                    <asp:TextBox ID="txtRCPur_Acc" Text='<%# Bind("RCPur_Acc") %>' runat="server" Width="100%" />
+                                    <asp:TextBox ID="txtRCPur_Acc" Text='<%# Bind("RCPur_Acc") %>' runat="server" CssClass="form-control" />
                                 </EditItemTemplate>
                                 <FooterTemplate>
-                                    <asp:TextBox ID="txtRCPur_Acc2" runat="server" Width="100%" />
+                                    <asp:TextBox ID="txtRCPur_Acc2" runat="server" CssClass="form-control" />
                                 </FooterTemplate>
                                 <ControlStyle Width="80px" />
                                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
@@ -167,10 +166,10 @@
                                     <asp:Label ID="lblRCRPur_Acc" Text='<%# Bind("RCRPur_Acc") %>' runat="server"></asp:Label>
                                 </ItemTemplate>
                                 <EditItemTemplate>
-                                    <asp:TextBox ID="txtRCRPur_Acc" Text='<%# Bind("RCRPur_Acc") %>' runat="server" Width="100%" />
+                                    <asp:TextBox ID="txtRCRPur_Acc" Text='<%# Bind("RCRPur_Acc") %>' runat="server" CssClass="form-control" />
                                 </EditItemTemplate>
                                 <FooterTemplate>
-                                    <asp:TextBox ID="txtRCRPur_Acc2" runat="server" Width="100%" />
+                                    <asp:TextBox ID="txtRCRPur_Acc2" runat="server" CssClass="form-control" />
                                 </FooterTemplate>
                                 <ControlStyle Width="80px" />
                                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
@@ -192,6 +191,5 @@
                 <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
                 <br />
             </div>
-        </center>
-    </div>
+       </center>
 </asp:Content>

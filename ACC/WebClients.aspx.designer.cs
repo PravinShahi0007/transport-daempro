@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ACC {
-    
-    
-    public partial class WebClients {
-        
+namespace ACC
+{
+
+
+    public partial class WebClients
+    {
+
         /// <summary>
         /// LblCode control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LblCode;
-        
+
         /// <summary>
         /// txtCode control.
         /// </summary>
@@ -29,16 +31,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCode;
-        
-        /// <summary>
-        /// BtnFind control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton BtnFind;
-        
+
         /// <summary>
         /// ValCode control.
         /// </summary>
@@ -47,7 +40,16 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator ValCode;
-        
+
+        /// <summary>
+        /// BtnFind control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton BtnFind;
+
         /// <summary>
         /// Label2 control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label2;
-        
+
         /// <summary>
         /// txtName1 control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtName1;
-        
+
         /// <summary>
         /// Label3 control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label3;
-        
+
         /// <summary>
         /// txtName2 control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtName2;
-        
+
         /// <summary>
         /// Label4 control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label4;
-        
+
         /// <summary>
         /// txtIqamaNo control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtIqamaNo;
-        
+
         /// <summary>
         /// Label1 control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-        
+
         /// <summary>
         /// rdoIDType control.
         /// </summary>
@@ -119,7 +121,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList rdoIDType;
-        
+
         /// <summary>
         /// Label5 control.
         /// </summary>
@@ -128,7 +130,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label5;
-        
+
         /// <summary>
         /// txtIqamaFrom control.
         /// </summary>
@@ -137,7 +139,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtIqamaFrom;
-        
+
         /// <summary>
         /// Label8 control.
         /// </summary>
@@ -146,7 +148,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label8;
-        
+
         /// <summary>
         /// txtIqamaDate control.
         /// </summary>
@@ -155,7 +157,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtIqamaDate;
-        
+
         /// <summary>
         /// Label6 control.
         /// </summary>
@@ -164,7 +166,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label6;
-        
+
         /// <summary>
         /// txtAddress control.
         /// </summary>
@@ -173,7 +175,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddress;
-        
+
         /// <summary>
         /// Label11 control.
         /// </summary>
@@ -182,7 +184,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label11;
-        
+
         /// <summary>
         /// txtMobileNo control.
         /// </summary>
@@ -191,7 +193,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMobileNo;
-        
+
         /// <summary>
         /// Label7 control.
         /// </summary>
@@ -200,7 +202,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label7;
-        
+
         /// <summary>
         /// txtPostal control.
         /// </summary>
@@ -209,7 +211,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPostal;
-        
+
         /// <summary>
         /// Label9 control.
         /// </summary>
@@ -218,7 +220,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label9;
-        
+
         /// <summary>
         /// txtEmail control.
         /// </summary>
@@ -227,7 +229,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
-        
+
         /// <summary>
         /// Label13 control.
         /// </summary>
@@ -236,7 +238,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label13;
-        
+
         /// <summary>
         /// txtOfficeNo control.
         /// </summary>
@@ -245,7 +247,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtOfficeNo;
-        
+
         /// <summary>
         /// Label16 control.
         /// </summary>
@@ -254,7 +256,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label16;
-        
+
         /// <summary>
         /// rdoPayment control.
         /// </summary>
@@ -263,7 +265,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList rdoPayment;
-        
+
         /// <summary>
         /// Label17 control.
         /// </summary>
@@ -272,7 +274,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label17;
-        
+
         /// <summary>
         /// lblCust control.
         /// </summary>
@@ -281,7 +283,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblCust;
-        
+
         /// <summary>
         /// ddlAccount control.
         /// </summary>
@@ -290,7 +292,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlAccount;
-        
+
         /// <summary>
         /// Label18 control.
         /// </summary>
@@ -299,7 +301,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label18;
-        
+
         /// <summary>
         /// txtAddr1 control.
         /// </summary>
@@ -308,7 +310,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddr1;
-        
+
         /// <summary>
         /// Label19 control.
         /// </summary>
@@ -317,7 +319,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label19;
-        
+
         /// <summary>
         /// txtAddr2 control.
         /// </summary>
@@ -326,7 +328,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddr2;
-        
+
         /// <summary>
         /// Label20 control.
         /// </summary>
@@ -335,7 +337,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label20;
-        
+
         /// <summary>
         /// txtAddr3 control.
         /// </summary>
@@ -344,7 +346,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddr3;
-        
+
         /// <summary>
         /// Label21 control.
         /// </summary>
@@ -353,7 +355,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label21;
-        
+
         /// <summary>
         /// txtAddr4 control.
         /// </summary>
@@ -362,7 +364,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddr4;
-        
+
         /// <summary>
         /// Label22 control.
         /// </summary>
@@ -371,7 +373,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label22;
-        
+
         /// <summary>
         /// txtAddr5 control.
         /// </summary>
@@ -380,7 +382,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddr5;
-        
+
         /// <summary>
         /// Label23 control.
         /// </summary>
@@ -389,7 +391,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label23;
-        
+
         /// <summary>
         /// txtAddr6 control.
         /// </summary>
@@ -398,7 +400,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddr6;
-        
+
         /// <summary>
         /// Label24 control.
         /// </summary>
@@ -407,7 +409,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label24;
-        
+
         /// <summary>
         /// txtAddr7 control.
         /// </summary>
@@ -416,7 +418,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddr7;
-        
+
         /// <summary>
         /// Label25 control.
         /// </summary>
@@ -425,7 +427,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label25;
-        
+
         /// <summary>
         /// txtAddr8 control.
         /// </summary>
@@ -434,7 +436,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddr8;
-        
+
         /// <summary>
         /// Label10 control.
         /// </summary>
@@ -443,7 +445,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label10;
-        
+
         /// <summary>
         /// Label12 control.
         /// </summary>
@@ -452,7 +454,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label12;
-        
+
         /// <summary>
         /// Label14 control.
         /// </summary>
@@ -461,7 +463,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label14;
-        
+
         /// <summary>
         /// Label15 control.
         /// </summary>
@@ -470,7 +472,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label15;
-        
+
         /// <summary>
         /// txtManage1 control.
         /// </summary>
@@ -479,7 +481,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtManage1;
-        
+
         /// <summary>
         /// txtJob1 control.
         /// </summary>
@@ -488,7 +490,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtJob1;
-        
+
         /// <summary>
         /// txtMobileNo1 control.
         /// </summary>
@@ -497,7 +499,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMobileNo1;
-        
+
         /// <summary>
         /// txtEmail1 control.
         /// </summary>
@@ -506,7 +508,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail1;
-        
+
         /// <summary>
         /// txtManage2 control.
         /// </summary>
@@ -515,7 +517,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtManage2;
-        
+
         /// <summary>
         /// txtJob2 control.
         /// </summary>
@@ -524,7 +526,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtJob2;
-        
+
         /// <summary>
         /// txtMobileNo2 control.
         /// </summary>
@@ -533,7 +535,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMobileNo2;
-        
+
         /// <summary>
         /// txtEmail2 control.
         /// </summary>
@@ -542,7 +544,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail2;
-        
+
         /// <summary>
         /// txtManage3 control.
         /// </summary>
@@ -551,7 +553,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtManage3;
-        
+
         /// <summary>
         /// txtJob3 control.
         /// </summary>
@@ -560,7 +562,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtJob3;
-        
+
         /// <summary>
         /// txtMobileNo3 control.
         /// </summary>
@@ -569,7 +571,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMobileNo3;
-        
+
         /// <summary>
         /// txtEmail3 control.
         /// </summary>
@@ -578,7 +580,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail3;
-        
+
         /// <summary>
         /// grdDetails control.
         /// </summary>
@@ -587,7 +589,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView grdDetails;
-        
+
         /// <summary>
         /// ValidationSummary1 control.
         /// </summary>
@@ -596,7 +598,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
-        
+
         /// <summary>
         /// LblCodesResult control.
         /// </summary>
@@ -605,7 +607,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LblCodesResult;
-        
+
         /// <summary>
         /// BtnNew control.
         /// </summary>
@@ -614,7 +616,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton BtnNew;
-        
+
         /// <summary>
         /// BtnEdit control.
         /// </summary>
@@ -623,7 +625,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton BtnEdit;
-        
+
         /// <summary>
         /// BtnClear control.
         /// </summary>
@@ -632,7 +634,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton BtnClear;
-        
+
         /// <summary>
         /// BtnDelete control.
         /// </summary>
@@ -641,7 +643,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton BtnDelete;
-        
+
         /// <summary>
         /// BtnSearch control.
         /// </summary>
@@ -650,7 +652,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton BtnSearch;
-        
+
         /// <summary>
         /// grdCodes control.
         /// </summary>

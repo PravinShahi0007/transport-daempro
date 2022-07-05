@@ -112,7 +112,7 @@ namespace ACC
                     {
                         string txt = Request.Form["ctl00$ContentPlaceHolder1$txtMobileNo" + i.ToString()];
                         sms.SendMessage("شكرا لتعاملك مع ناقلات البرية موقع " + vBranch[i] + " " + vLat[i], "naqelat", "966" + txt.Substring(1, 9));
-                        //Request.Form["ctl00$ContentPlaceHolder1$txtMobileNo" + i.ToString()] = "لقد تم الارسال بنجاح";
+                      //  Request.Form["ctl00$ContentPlaceHolder1$txtMobileNo" + i.ToString()] = "لقد تم الارسال بنجاح";
                     }
                 }
                 Response.Redirect(Request.RawUrl);

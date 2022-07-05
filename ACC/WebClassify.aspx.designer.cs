@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ACC {
-    
-    
-    public partial class WebClassify {
-        
+namespace ACC
+{
+
+
+    public partial class WebClassify
+    {
+
         /// <summary>
         /// LbtnLevel1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton LbtnLevel1;
-        
+
         /// <summary>
         /// LbtnLevel2 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton LbtnLevel2;
-        
+
         /// <summary>
         /// LbtnLevel3 control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton LbtnLevel3;
-        
+
         /// <summary>
         /// LbtnLevel4 control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton LbtnLevel4;
-        
+
         /// <summary>
         /// LbtnLevel5 control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton LbtnLevel5;
-        
+
         /// <summary>
         /// grdCodes control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView grdCodes;
-        
+
         /// <summary>
         /// LblCodesResult control.
         /// </summary>

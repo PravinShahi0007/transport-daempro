@@ -3,34 +3,46 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-          <div class="ColorRound4Courner">
-                <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 98%;
-                    border: solid 2px #800000">
-                    <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
-                        أستيراد بيانات الحضور و الانصراف</legend>
+       <div class="card">
+                <fieldset>
+                    <div class="card-header">
+                        <h4 class="card-title">
+                        أستيراد بيانات الحضور و الانصراف
+                            </h4></div>
+                       <div class="box box-info" align="right">
+                <div class="body card-body">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                    <asp:FileUpload ID="Fp1" runat="server" CssClass="form-control" />
+                                    </div></div></div>
+                         <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                
                     <asp:RadioButtonList ID="rdoTimers" runat="server">
                     </asp:RadioButtonList>
-                    <asp:Button ID="btnConnect" runat="server" Visible="false" Text="Connect" 
+                    <asp:Button ID="btnConnect" runat="server"  Visible="false" Text="Connect" 
                         onclick="btnConnect_Click" /> 
-                        <br /> 
-                    <asp:Button ID="Button2" runat="server" Visible="false" Text="عدد السجلات" 
+                     
+                    <asp:Button ID="Button2" runat="server"  Visible="false" Text="عدد السجلات" 
                         onclick="Button2_Click" />
-                    <asp:Button ID="Button1" runat="server" Visible="false" Text="استيراد البيانات" 
+                    <asp:Button ID="Button1" runat="server"  Visible="false" Text="استيراد البيانات" 
                         onclick="Button1_Click" />
-                    <asp:Button ID="Button3" runat="server" Visible="false" Text="مسح البيانات" 
-                        onclick="Button3_Click"  />
-                    <br /><br />
-                    <asp:FileUpload ID="Fp1" runat="server" />
-                    <asp:Button ID="btnImportFromFile" runat="server" 
+                    <asp:Button ID="Button3" runat="server"  Visible="false" Text="مسح البيانات" 
+                        onclick="Button3_Click"  /></div></div></div>
+                    
+                                      <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                    <asp:Button ID="btnImportFromFile" runat="server"  CssClass="btn btn-primary"
                         onclick="btnImportFromFile_Click" Text="استيراد من ملف" />
-                    <br />
-
-
-
-                    <br />
-                    <asp:Label ID="lblError" runat="server" Text=""></asp:Label><br />
-                    <asp:Label ID="lblResult" runat="server" Text=""></asp:Label><br /> <br />       
-    <asp:GridView ID="GridView1" runat="server" GridLines="None" AllowPaging="False" 
+                  
+                    <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
+                    <asp:Label ID="lblResult" runat="server" Text=""></asp:Label></div>     </div></div>
+    <div class="table-responsive">
+                    <asp:GridView ID="GridView1" runat="server" GridLines="None" AllowPaging="False" 
         PageSize="200" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>
@@ -88,7 +100,7 @@
                 <SortedAscendingHeaderStyle BackColor="#506C8C" />
                 <SortedDescendingCellStyle BackColor="#FFFDF8" />
                 <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-            </asp:GridView>
+            </asp:GridView></div></div></div></div>
         </fieldset>
     </div>           
 </asp:Content>

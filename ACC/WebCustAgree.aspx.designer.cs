@@ -7,20 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ACC {
-    
-    
-    public partial class WebCustAgree {
-        
-        /// <summary>
-        /// lblHead control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHead;
-        
+namespace ACC
+{
+
+
+    public partial class WebCustAgree
+    {
+
         /// <summary>
         /// LblFDate control.
         /// </summary>
@@ -29,7 +22,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LblFDate;
-        
+
         /// <summary>
         /// txtFDate control.
         /// </summary>
@@ -38,7 +31,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFDate;
-        
+
         /// <summary>
         /// ValFDate control.
         /// </summary>
@@ -47,7 +40,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CompareValidator ValFDate;
-        
+
         /// <summary>
         /// CalendarExtender2 control.
         /// </summary>
@@ -56,7 +49,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::AjaxControlToolkit.CalendarExtender CalendarExtender2;
-        
+
         /// <summary>
         /// RdoType control.
         /// </summary>
@@ -65,7 +58,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList RdoType;
-        
+
         /// <summary>
         /// BtnPrint control.
         /// </summary>
@@ -74,7 +67,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton BtnPrint;
-        
+
         /// <summary>
         /// lblAccount control.
         /// </summary>
@@ -83,7 +76,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAccount;
-        
+
         /// <summary>
         /// txtCode control.
         /// </summary>
@@ -92,7 +85,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCode;
-        
+
         /// <summary>
         /// AutoCompleteExtender02 control.
         /// </summary>
@@ -101,7 +94,7 @@ namespace ACC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::AjaxControlToolkit.AutoCompleteExtender AutoCompleteExtender02;
-        
+
         /// <summary>
         /// LblCodesResult control.
         /// </summary>

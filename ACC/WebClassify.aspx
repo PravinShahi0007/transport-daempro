@@ -4,10 +4,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div>
-        <center>
-            <div class="Round4Courner" style="width: 98%">
-                <asp:LinkButton ID="LbtnLevel1" runat="server" CommandName="1" Text="أنواع الأصناف"
+    
+       
+            <div class="col-md-12  col-sm-12 col-xs-12">
+                <asp:LinkButton ID="LbtnLevel1" runat="server" CssClass="text-center form-control" CommandName="1" Text="أنواع الأصناف"
                     Visible="true" OnCommand="LbtnLevel1_Command" Font-Size="Larger" />
                 <asp:LinkButton ID="LbtnLevel2" runat="server" CommandName="2" Visible="false" OnCommand="LbtnLevel1_Command"
                     Font-Size="Larger" />
@@ -17,10 +17,10 @@
                     Font-Size="Larger" />
                 <asp:LinkButton ID="LbtnLevel5" runat="server" CommandName="5" Visible="false" OnCommand="LbtnLevel1_Command"
                     Font-Size="Larger" />
-                <div style="width: 100%; overflow:none; overflow-x:auto ; border: 1px solid #800000;">
+               <div class="table table-responsive table-hover text-center">
                     <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                         GridLines="None" AutoGenerateColumns="False" DataKeyNames="FCode;Code" 
-                        AllowPaging="True" Width="99.9%" OnRowUpdating="grdCodes_RowUpdating" OnPageIndexChanging="grdCodes_PageIndexChanging"
+                        AllowPaging="True" Width="100%" OnRowUpdating="grdCodes_RowUpdating" OnPageIndexChanging="grdCodes_PageIndexChanging"
                         OnRowCancelingEdit="grdCodes_RowCancelingEdit" OnRowCommand="grdCodes_RowCommand"
                         OnRowDeleting="grdCodes_RowDeleting" OnRowEditing="grdCodes_RowEditing" 
                         OnSelectedIndexChanging="grdCodes_SelectedIndexChanging">
@@ -51,10 +51,10 @@
                                     <asp:Label ID="lblName1" Text='<%# Bind("Name1") %>' runat="server"></asp:Label>
                                 </ItemTemplate>
                                 <EditItemTemplate>
-                                    <asp:TextBox ID="txtName1" Text='<%# Bind("Name1") %>' runat="server" Width="99%" />
+                                    <asp:TextBox ID="txtName1" Text='<%# Bind("Name1") %>' runat="server" CssClass="form-control" />
                                 </EditItemTemplate>
                                 <FooterTemplate>
-                                    <asp:TextBox ID="txtName1" runat="server" Width="99%" />
+                                    <asp:TextBox ID="txtName1" runat="server" CssClass="form-control" />
                                 </FooterTemplate>
                                 <ControlStyle Width="250px" />
                                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
@@ -64,10 +64,10 @@
                                     <asp:Label ID="lblName2" Text='<%# Bind("Name2") %>' runat="server"></asp:Label>
                                 </ItemTemplate>
                                 <EditItemTemplate>
-                                    <asp:TextBox ID="txtName2" Text='<%# Bind("Name2") %>' runat="server" Width="99%" />
+                                    <asp:TextBox ID="txtName2" Text='<%# Bind("Name2") %>' runat="server" CssClass="form-control" />
                                 </EditItemTemplate>
                                 <FooterTemplate>
-                                    <asp:TextBox ID="txtName2" runat="server" Width="99%" />
+                                    <asp:TextBox ID="txtName2" runat="server" CssClass="form-control" />
                                 </FooterTemplate>
                                 <ControlStyle Width="250px" />
                                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
@@ -77,12 +77,12 @@
                                     <asp:Label ID="lblFype" Text='<%# Bind("ftype2") %>' runat="server"></asp:Label>
                                 </ItemTemplate>
                                 <EditItemTemplate>
-                                    <asp:DropDownList ID="dllFType2" runat="server" Width="99%" EnableViewState="false"
+                                    <asp:DropDownList ID="dllFType2" runat="server" CssClass="form-control" EnableViewState="false"
                                         OnInit="dllFType2_Init">
                                     </asp:DropDownList>
                                 </EditItemTemplate>
                                 <FooterTemplate>
-                                    <asp:DropDownList ID="ddlFType" runat="server" Width="99%" />
+                                    <asp:DropDownList ID="ddlFType" runat="server" CssClass="form-control" />
                                 </FooterTemplate>
                                 <ControlStyle Width="200px" />
                                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
@@ -102,8 +102,8 @@
                     </asp:GridView>
                 </div>
                 <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
-                <br />
-            </div>
-        </center>
+              
+           
+       
     </div>
 </asp:Content>

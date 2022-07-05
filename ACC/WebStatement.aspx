@@ -38,151 +38,107 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <center>
-        <div class="ColorRound4Courner">
-            <div style="text-align: right; float: right; display: block;">
-            </div>
-            <center>
-                <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 98%;
-                    border: solid 2px #800000">
-                    <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
-                        كشف حساب تفصيلي</legend>
-                    <table width="99%">
-                        <tr>
-                            <td style="width: 100px">
-                                <asp:CheckBox ID="ChkPeriod" runat="server" Checked="True" Text="جميع الفترات" AutoPostBack="True"
+   <div class="row">
+       <div class="col-sm-12">
+           <h4 class="text-center panel-heading">
+                        كشف حساب تفصيلي</h4>
+       </div>
+   </div>
+
+ <fieldset class="border border-primary card">   
+                        <div class="form-row">
+                       <div class="form-group col-sm-3">
+                                <asp:CheckBox ID="ChkPeriod" CssClass="form-control" runat="server" Checked="True" Text="جميع الفترات" AutoPostBack="True"
                                     OnCheckedChanged="ChkPeriod_CheckedChanged" />
-                            </td>
-                            <td style="width: 100px">
-                                <asp:Label ID="LblFDate" runat="server" Visible="false" Text="من تاريخ"></asp:Label>
-                            </td>
-                            <td style="width: 130px">
-                                <asp:TextBox ID="txtFDate" MaxLength="10" Width="100px" Visible="false" 
-                                    runat="server" AutoPostBack="True" ontextchanged="txtFDate_TextChanged"></asp:TextBox>
-                                <asp:CompareValidator ID="ValFDate" runat="server" ControlToValidate="txtFDate" CultureInvariantValues="true"
-                                    Display="Dynamic" ErrorMessage="يجب أن تكون القيمة تاريخ" ForeColor="Red" Type="Date"
-                                    ValidationGroup="1" SetFocusOnError="True" Operator="DataTypeCheck">*</asp:CompareValidator>
-                                <ajax:CalendarExtender ID="CalendarExtender1" runat="server" CssClass="MyCalendar"
-                                    TargetControlID="txtFDate" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
-                                    PopupPosition="BottomLeft" />
-                            </td>
-                            <td style="width: 100px">
-                                <asp:Label ID="LblEDate" runat="server" Visible="false" Text="إلى تاريخ"></asp:Label>
-                            </td>
-                            <td style="width: 140px">
-                                <asp:TextBox ID="txtEDate" MaxLength="10" Width="100px" Visible="false" 
-                                    runat="server" AutoPostBack="True" ontextchanged="txtEDate_TextChanged"></asp:TextBox>
-                                <asp:CompareValidator ID="ValEDate" runat="server" ControlToValidate="txtEDate" CultureInvariantValues="true"
-                                    Display="Dynamic" ErrorMessage="يجب أن تكون القيمة تاريخ" ForeColor="Red" Type="Date"
-                                    ValidationGroup="1" SetFocusOnError="True" Operator="DataTypeCheck">*</asp:CompareValidator>
-                                <ajax:CalendarExtender ID="CalendarExtender2" runat="server" CssClass="MyCalendar"
-                                    TargetControlID="txtEDate" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
-                                    PopupPosition="BottomLeft" />
-                            </td>
-                            <td style="width: 80px">
-                            </td>
-                            <td rowspan="6" align="left">
-                                <asp:ImageButton ID="BtnProcess" runat="server" AlternateText="تشغيل" ValidationGroup="1"
-                                      ImageUrl="~/images/Process.png" ToolTip="تشغيل التقرير" OnClick="BtnProcess_Click" />
-                                    <br />
-                                <asp:ImageButton ID="BtnPrint1" ToolTip="Print" CommandName="1" runat="server" ImageUrl="~/images/print_64A.png"
-                                      OnCommand="BtnPrint1_Command" OnClientClick="aspnetForm.target ='_blank';" />
-                                    <br />
-                                <asp:ImageButton ID="BtnExcel" runat="server" AlternateText="تصدير للإكسل" CommandName="Excel"
-                                      ImageUrl="~/images/Excel.png" ToolTip="'طباعة بيانات التقرير"
-                                    OnClientClick="aspnetForm.target ='_blank';" OnClick="BtnExcel_Click" />
-                                    <br />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 100px">
-                                <asp:Label ID="Label1" runat="server" Text="الحساب"></asp:Label>
-                            </td>
-                            <td style="width: 100px">
-                                <asp:TextBox ID="txtCode" Width="100px"  runat="server" AutoPostBack="True" 
+                            <asp:Label ID="LblFDate" runat="server" Visible="false" Text="من تاريخ"></asp:Label>
+             </div><div class="form-group col-sm-4">
+                
+                   </div>
+                        <div class="form-group col-sm-5">
+                            
+                        </div>
+                           
+                       </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-1">
+                          <asp:Label ID="Label1" runat="server" Text="الحساب"></asp:Label>
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <asp:TextBox ID="txtCode"  runat="server" AutoPostBack="True" CssClass="form-control"
                                     ontextchanged="txtCode_TextChanged"></asp:TextBox>
                                 <ajax:AutoCompleteExtender ID="AutoCompleteExtender1" runat="server" TargetControlID="txtCode"
                                     ServicePath="AutoComplete.asmx" ServiceMethod="GetCompletionListAll" OnClientItemSelected="ace2_itemSelected"
                                     MinimumPrefixLength="1" CompletionInterval="500" EnableCaching="true" CompletionSetCount="12"
                                     CompletionListCssClass="autocomplete_completionListElement" CompletionListItemCssClass="autocomplete_listItem"
                                     CompletionListHighlightedItemCssClass="autocomplete_highlightedListItem" />
-
-                            </td>
-                            <td colspan="2">
-                                <asp:TextBox ID="txtName" Width="230px" runat="server" AutoPostBack="True" 
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <asp:TextBox ID="txtName" Width="230px" runat="server" AutoPostBack="True" CssClass="form-control"
                                     ontextchanged="txtName_TextChanged"></asp:TextBox>
                                 <ajax:AutoCompleteExtender ID="AutoCompleteExtender2" runat="server" TargetControlID="txtName"
                                     ServicePath="AutoComplete.asmx" ServiceMethod="GetCompletionListAll2" OnClientItemSelected="ace1_itemSelected"
                                     MinimumPrefixLength="1" CompletionInterval="500" EnableCaching="true" CompletionSetCount="12"
                                     CompletionListCssClass="autocomplete_completionListElement" CompletionListItemCssClass="autocomplete_listItem"
                                     CompletionListHighlightedItemCssClass="autocomplete_highlightedListItem" />
-                            </td>
-                            <td colspan="2">
-                                <asp:CheckBox ID="ChkDetailsPrint" Text="طباعة تفصيلية" runat="server" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 100px">
-                                <asp:Label ID="Label2" runat="server" Text="المنطقة"></asp:Label>
-                            </td>
-                            <td colspan="2">
-                                <asp:DropDownList ID="ddlArea" Width="230px" runat="server" AutoPostBack="True" 
+                        </div>
+                        <div class="form-group col-sm-5">
+                            <asp:CheckBox ID="ChkDetailsPrint" CssClass="form-control" Text="طباعة تفصيلية" runat="server" />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-1">
+                            <asp:Label ID="Label2" runat="server" Text="المنطقة"></asp:Label> 
+                        </div>
+                        <div class="form-group col-sm-5">
+                            <asp:DropDownList ID="ddlArea" CssClass="form-control" runat="server" AutoPostBack="True" 
                                     onselectedindexchanged="ddlArea_SelectedIndexChanged">
                                 </asp:DropDownList>
-                            </td>
-                            <td style="width: 100px">
-                                 <asp:Label ID="Label3" runat="server" Text="الفرع"></asp:Label>
-                            </td>
-                            <td colspan="2">
-                                <asp:DropDownList ID="ddlCostCenter" Width="220px" runat="server" 
+                        </div>
+                        <div class="form-group col-sm-1">
+                            <asp:Label ID="Label3" runat="server" Text="الفرع"></asp:Label>
+                        </div>
+                        <div class="form-group col-sm-5">
+                            <asp:DropDownList ID="ddlCostCenter" CssClass="form-control" runat="server" 
                                     AutoPostBack="True" onselectedindexchanged="ddlCostCenter_SelectedIndexChanged">
                                 </asp:DropDownList>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td style="width: 100px">
-                                <asp:Label ID="Label5" runat="server" Text="المشروع"></asp:Label>
-                            </td>
-                            <td colspan="2">
-                                <asp:DropDownList ID="ddlProject" Width="230px" runat="server" 
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-1"><asp:Label ID="Label5" runat="server" Text="المشروع"></asp:Label></div>
+                        <div class="form-group col-sm-5">
+                            <asp:DropDownList ID="ddlProject" CssClass="form-control" runat="server" 
                                     AutoPostBack="True" onselectedindexchanged="ddlProject_SelectedIndexChanged">
                                 </asp:DropDownList>
-                            </td>
-                            <td style="width: 100px">
-                                <asp:Label ID="Label7" runat="server" Text="حساب التكاليف"></asp:Label>
-                            </td>
-                            <td colspan="2">
-                                <asp:DropDownList ID="ddlCostAcc" Width="220px" runat="server" 
+                        </div>
+                        <div class="form-group col-sm-1">
+                            <asp:Label ID="Label7" runat="server" Text="حساب التكاليف"></asp:Label>
+                        </div>
+                        <div class="form-group col-sm-5">
+                             <asp:DropDownList ID="ddlCostAcc" CssClass="form-control" runat="server" 
                                     AutoPostBack="True" onselectedindexchanged="ddlCostAcc_SelectedIndexChanged">
                                 </asp:DropDownList>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td style="width: 100px">
-                                <asp:Label ID="Label8" runat="server" Text="الموظف"></asp:Label>
-                            </td>
-                            <td colspan="2">
-                                <asp:DropDownList ID="ddlEmp" Width="230px" runat="server" AutoPostBack="True" 
+                        </div>
+                    </div>
+                            <div class="form-row">
+                                <div class="form-group col-sm-1"><asp:Label ID="Label8" runat="server" Text="الموظف"></asp:Label></div>
+                                <div class="form-group col-sm-5">
+                                    <asp:DropDownList ID="ddlEmp" CssClass="form-control" runat="server" AutoPostBack="True" 
                                     onselectedindexchanged="ddlEmp_SelectedIndexChanged">
                                 </asp:DropDownList>
-                            </td>
-                            <td style="width: 100px">
-                                <asp:Label ID="Label9" runat="server" Text="مركز الحسابات"></asp:Label>
-                            </td>
-                            <td colspan="2">
-                                <asp:DropDownList ID="ddlCenter" Width="220px" runat="server" 
+                                </div>
+                                <div class="form-group col-sm-1">
+                                    <asp:Label ID="Label9" runat="server" Text="مركز الحسابات"></asp:Label>
+                                </div>
+                                <div class="form-group col-sm-5">
+                                    <asp:DropDownList ID="ddlCenter" CssClass="form-control" runat="server" 
                                     AutoPostBack="True" onselectedindexchanged="ddlCenter_SelectedIndexChanged">
                                 </asp:DropDownList>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 100px">
-                                <asp:Label ID="Label4" runat="server" Text="عرض السجلات"></asp:Label>
-                            </td>
-                            <td style="width: 100px">
-                                <asp:DropDownList ID="ddlRecordsPerPage" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlRecordsPerPage_SelectedIndexChanged">
+                                </div>
+                            </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-1"><asp:Label ID="Label4" runat="server" Text="عرض السجلات"></asp:Label></div>
+                        <div class="form-group col-sm-5">
+                            <asp:DropDownList ID="ddlRecordsPerPage" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlRecordsPerPage_SelectedIndexChanged">
                                     <asp:ListItem Value="10">10</asp:ListItem>
                                     <asp:ListItem Value="20">20</asp:ListItem>
                                     <asp:ListItem Value="50">50</asp:ListItem>
@@ -193,24 +149,65 @@
                                     <asp:ListItem Value="2000">2000</asp:ListItem>
                                     <asp:ListItem Value="-1">الكل</asp:ListItem>
                                 </asp:DropDownList>
-                            </td>
-                            <td style="width: 130px">
-                                <asp:Label ID="lblCount" runat="server" Text=""></asp:Label>
+                        </div>
+                        <div class="form-group col-sm-1">
+                            <asp:Label ID="lblCount" runat="server" Text=""></asp:Label>
                                 &nbsp;
                                 <asp:Label ID="Label6" runat="server" Text="سجل"></asp:Label>
-                            </td>
-                            <td style="width: 100px">
-                                <asp:Label ID="Label10" runat="server" Text="الشاحنة"></asp:Label>
-                            </td>
-                            <td colspan="2">
-                                <asp:DropDownList ID="ddlCars" Width="220px" runat="server" AutoPostBack="True" 
+                            <asp:Label ID="Label10" runat="server" Text="الشاحنة"></asp:Label>
+                        </div>
+                        <div class="form-group col-sm-5">
+                            <asp:DropDownList ID="ddlCars" CssClass="form-control" runat="server" AutoPostBack="True" 
                                     onselectedindexchanged="ddlCars_SelectedIndexChanged">
                                 </asp:DropDownList>
-                            </td>
-                        </tr>
-                    </table>
+                        </div>
+                    </div>
+
+       <div class="form-row"><div class="form-group col-sm-3"></div>
+           <div class="form-group col-sm-2">
+                  <asp:ImageButton ID="BtnProcess" runat="server" AlternateText="تشغيل" ValidationGroup="1"
+                                      ImageUrl="~/images/setting.png" ToolTip="تشغيل التقرير" OnClick="BtnProcess_Click" />
+                          </div>
+           <div class="form-group col-sm-2">
+                                <asp:ImageButton ID="BtnPrint1" ToolTip="Print" CommandName="1" runat="server" ImageUrl="~/images/print.png"
+                                      OnCommand="BtnPrint1_Command" OnClientClick="aspnetForm.target ='_blank';" />
+                               </div>
+           <div class="form-group col-sm-2">
+                                <asp:ImageButton ID="BtnExcel" runat="server" AlternateText="تصدير للإكسل" CommandName="Excel"
+                                      ImageUrl="~/images/sheet.png" ToolTip="'طباعة بيانات التقرير"
+                                    OnClientClick="aspnetForm.target ='_blank';" OnClick="BtnExcel_Click" />
+               </div>
+           <div class="form-group col-sm-3"></div>
+       </div>
+     <div class="from-row">
+         <div class="form-group col-sm-6">
+              <asp:TextBox ID="txtEDate" MaxLength="10" CssClass="form-control" Visible="false" 
+                                    runat="server" AutoPostBack="True" ontextchanged="txtEDate_TextChanged"></asp:TextBox>
+                                <asp:CompareValidator ID="ValEDate" runat="server" ControlToValidate="txtEDate" CultureInvariantValues="true"
+                                    Display="Dynamic" ErrorMessage="يجب أن تكون القيمة تاريخ" ForeColor="Red" Type="Date"
+                                    ValidationGroup="1" SetFocusOnError="True" Operator="DataTypeCheck">*</asp:CompareValidator>
+                                <ajax:CalendarExtender ID="CalendarExtender2" runat="server" CssClass="MyCalendar"
+                                    TargetControlID="txtEDate" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
+                                    PopupPosition="BottomLeft" />
+         </div>
+         <div class="form-group col-sm-6">
+             <!--star here this is hidden in form group-->      <asp:TextBox ID="txtFDate" Visible="false" 
+                                    runat="server" AutoPostBack="True" ontextchanged="txtFDate_TextChanged"></asp:TextBox>
+                                <asp:CompareValidator ID="ValFDate" runat="server" ControlToValidate="txtFDate" CultureInvariantValues="true"
+                                    Display="Dynamic" ErrorMessage="يجب أن تكون القيمة تاريخ" ForeColor="Red" Type="Date"
+                                    ValidationGroup="1" SetFocusOnError="True" Operator="DataTypeCheck">*</asp:CompareValidator>
+                                <ajax:CalendarExtender ID="CalendarExtender1" runat="server" CssClass="MyCalendar"
+                                    TargetControlID="txtFDate" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
+                                    PopupPosition="BottomLeft" />
+                        <asp:Label ID="LblEDate" runat="server" Visible="false" Text="إلى تاريخ"></asp:Label>
+                        <!--this End here is hidden in form group-->  
+         </div>
+     </div>
+ 
                 </fieldset>
-                <div style="width: 100%;  height:500px; overflow:none; overflow-x:auto ; border: 1px solid #800000;">
+    <br />
+    <br />
+                <div class="border border-primary card" style="width: 100%;  height:500px; overflow:none; overflow-x:auto;">
                     <asp:GridView ID="grdCodes" runat="server" Width="700px" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                         GridLines="None" AutoGenerateColumns="False" AllowPaging="True" PageSize="20"
                         OnPageIndexChanging="grdCodes_PageIndexChanging">
@@ -315,7 +312,6 @@
                 </div>
                 <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
                 <br />
-            </center>
-        </div>
-    </center>
+            
+       
 </asp:Content>

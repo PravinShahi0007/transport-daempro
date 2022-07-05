@@ -49,33 +49,35 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
- <center>
-        <div class="ColorRounded4Corners" style="width: 99.8%;">
-            <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 99.5%;
-                border: solid 2px #800000">
-                <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
-                    <b>[ Purchase Order ]</b></legend>
-                    <table width="99%" cellpadding="3" cellspacing="0">
-                        <tr>
-                            <td style="width: 15%;">
+
+      <div class="col-md-12  col-sm-12 col-xs-12">
+      <div class="card card-body">
+           
+                <h3 align="center">
+                 [ Purchase Order ]</h3>
+                     <div class="box box-info" align="right">
+                <div class="body">
+                    <div class="row">
+
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label1" runat="server" Text="Order No."></asp:Label>
-                                *
-                            </td>
-                            <td style="width: 35%;">
-                                <asp:TextBox ID="txtVouNo" MaxLength="10" runat="server"></asp:TextBox>
+                               
+                                <asp:TextBox ID="txtVouNo" MaxLength="10" runat="server" CssClass="form-control"></asp:TextBox>
                                 <asp:Label ID="lblBranch" runat="server" Text="Label"></asp:Label>
                                 <asp:ImageButton ID="BtnFind" runat="server" ValidationGroup="55" ImageUrl="~/images/zoom_16.png"
                                     ToolTip="Search for Job Order Data" onclick="BtnFind_Click" />
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtVouNo"
                                     Display="Dynamic" ErrorMessage="You should Enter Order No." ForeColor="Red"
                                     SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                            </td>
-                            <td style="width: 15%;">
+                           </div></div></div>
+                          <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label2" runat="server" Text="Order Date"></asp:Label>
-                                *
-                            </td>
-                            <td style="width: 35%;">
-                                <asp:TextBox ID="txtVouDate" MaxLength="10" runat="server"></asp:TextBox>
+                              
+                                <asp:TextBox ID="txtVouDate" MaxLength="10" runat="server" CssClass="form-control"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtVouDate"
                                     Display="Dynamic" ErrorMessage="You Should Select Order Date" ForeColor="Red"
                                     SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
@@ -85,38 +87,31 @@
                                 <ajax:CalendarExtender ID="CalendarExtender1" runat="server" CssClass="MyCalendar"
                                     TargetControlID="txtVouDate" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
                                     PopupPosition="BottomLeft" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;">
+                           </div></div></div>
+                          <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label6" runat="server" Text="Request No."></asp:Label>
-                            </td>
-                            <td style="width: 35%;">
-                                <asp:TextBox ID="txtRefNo" MaxLength="10" runat="server"></asp:TextBox>
+                         
+                                <asp:TextBox ID="txtRefNo" MaxLength="10" runat="server" CssClass="form-control"></asp:TextBox>
                                 <asp:ImageButton ID="BtnFind2" runat="server" ValidationGroup="55" ImageUrl="~/images/zoom_16.png"
                                     ToolTip="Search for Request Data" onclick="BtnFind2_Click" 
                                     style="width: 16px" />
-                            </td>
-                            <td style="width: 15%;">
+                          </div></div></div>
+                          <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label7" runat="server" Text="Remark"></asp:Label>
-                            </td>
-                            <td style="width: 35%;">
-                                <asp:TextBox ID="txtRemark" Width="200px" MaxLength="100" runat="server"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;">
-                                &nbsp;</td>
-                            <td style="width: 35%;">
-                                &nbsp;</td>
-                            <td colspan="2">
+                          
+                                <asp:TextBox ID="txtRemark" CssClass="form-control" MaxLength="100" runat="server"></asp:TextBox>
+                          </div></div></div>
+                          <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="lblStatus" runat="server"  CssClass="blink" ForeColor="Red" Text=""></asp:Label>
-                            </td>
-                        </tr>
-                    </table>
-                </fieldset>
-                    <div style="width: 100%; overflow: none; overflow-x: auto; border: 1px solid #800000;">
-                        <asp:GridView ID="grdCodes" runat="server" CellPadding="4" Width="99.95%" ForeColor="#333333"
+                         </div></div></div>
+                        <div class="table table-responsive text-hover text-center">
+                        <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333"
                             ShowFooter="True" ViewStateMode="Enabled" GridLines="None" AutoGenerateColumns="False"
                             DataKeyNames="FNo" AllowPaging="True" PageSize="100" OnPageIndexChanging="grdCodes_PageIndexChanging"
                             OnRowCancelingEdit="grdCodes_RowCancelingEdit" OnRowCommand="grdCodes_RowCommand"
@@ -155,7 +150,7 @@
                                         <asp:Label ID="lblITCode" Text='<%# Bind("ITCode") %>' runat="server"></asp:Label>
                                     </ItemTemplate>
                                     <EditItemTemplate>
-                                        <asp:TextBox ID="txtITCode" Text='<%# Bind("ITCode") %>' runat="server" Width="100px"/>
+                                        <asp:TextBox ID="txtITCode" Text='<%# Bind("ITCode") %>' runat="server" CssClass="form-control"/>
                                         <ajax:AutoCompleteExtender ID="AutoCompleteExtender1" runat="server" TargetControlID="txtITCode"
                                             ServicePath="AutoComplete.asmx" ServiceMethod="GetCompletionStock" OnClientItemSelected="ace2_itemSelected"
                                             MinimumPrefixLength="1" CompletionInterval="500" EnableCaching="true" CompletionSetCount="30"
@@ -163,7 +158,7 @@
                                             CompletionListHighlightedItemCssClass="autocomplete_highlightedListItem" />
                                     </EditItemTemplate>
                                     <FooterTemplate>
-                                            <asp:TextBox ID="txtITCode2" runat="server" autocomplete="off" Width="100px" />
+                                            <asp:TextBox ID="txtITCode2" runat="server" autocomplete="off" CssClass="form-control" />
                                             <ajax:AutoCompleteExtender ID="AutoCompleteExtender1" runat="server" TargetControlID="txtITCode2"
                                             ServicePath="AutoComplete.asmx" ServiceMethod="GetCompletionStock" OnClientItemSelected="ace1_itemSelected"
                                             MinimumPrefixLength="1" CompletionInterval="500" EnableCaching="true" CompletionSetCount="30"
@@ -178,7 +173,7 @@
                                         <asp:Label ID="lblITName" Text='<%# Bind("ITName2") %>' runat="server" Width="200px" ></asp:Label>
                                     </ItemTemplate>
                                     <EditItemTemplate>
-                                        <asp:TextBox ID="txtITName" Text='<%# Bind("ITName2") %>' autocomplete="off" Width="200px" runat="server" />
+                                        <asp:TextBox ID="txtITName" Text='<%# Bind("ITName2") %>' autocomplete="off" CssClass="form-control" runat="server" />
                                             <ajax:AutoCompleteExtender ID="AutoCompleteExtender4" runat="server" TargetControlID="txtITName"
                                                 ServicePath="AutoComplete.asmx" ServiceMethod="GetCompletionStock2" MinimumPrefixLength="1"
                                                 OnClientItemSelected="ace3_itemSelected" CompletionInterval="500" EnableCaching="true"
@@ -186,7 +181,7 @@
                                                 CompletionListItemCssClass="autocomplete_listItem" CompletionListHighlightedItemCssClass="autocomplete_highlightedListItem" />
                                     </EditItemTemplate>
                                     <FooterTemplate>
-                                        <asp:TextBox ID="txtITName2" runat="server"  autocomplete="off" Width="200px" />
+                                        <asp:TextBox ID="txtITName2" runat="server"  autocomplete="off" CssClass="form-control" />
                                             <ajax:AutoCompleteExtender ID="AutoCompleteExtender4" runat="server" TargetControlID="txtITName2"
                                                 ServicePath="AutoComplete.asmx" ServiceMethod="GetCompletionStock2" MinimumPrefixLength="1"
                                                 OnClientItemSelected="ace1_itemSelected" CompletionInterval="500" EnableCaching="true"
@@ -198,14 +193,14 @@
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Unit" SortExpression="Unitname2" ItemStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
-                                        <asp:Label ID="lblUnit" Text='<%# bind("UnitName2") %>' runat="server"></asp:Label>
+                                        <asp:Label ID="lblUnit" Text='<%# Bind("UnitName2") %>' runat="server"></asp:Label>
                                     </ItemTemplate>
                                     <EditItemTemplate>
-                                        <asp:DropDownList ID="ddlUnit" EnableViewState="false"  OnInit="ddlUnit2_Init" runat="server">
+                                        <asp:DropDownList ID="ddlUnit" EnableViewState="false" CssClass="form-control"  OnInit="ddlUnit2_Init" runat="server">
                                         </asp:DropDownList>
                                     </EditItemTemplate>
                                     <FooterTemplate>
-                                        <asp:DropDownList ID="ddlUnit2"  runat="server" OnInit="ddlUnit2_Init">
+                                        <asp:DropDownList ID="ddlUnit2" CssClass="form-control"  runat="server" OnInit="ddlUnit2_Init">
                                         </asp:DropDownList>
                                     </FooterTemplate>
                                     <ControlStyle Width="50px" />
@@ -213,43 +208,43 @@
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Bal" SortExpression="Bal" ItemStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
-                                        <asp:Label ID="lblBal" Text='<%# bind("Bal") %>' runat="server"></asp:Label>
+                                        <asp:Label ID="lblBal" Text='<%# Bind("Bal") %>' runat="server"></asp:Label>
                                     </ItemTemplate>
                                     <ControlStyle Width="75px" />
                                     <ItemStyle HorizontalAlign="Center" Width="75px"></ItemStyle>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Qty" SortExpression="Quan" ItemStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
-                                        <asp:Label ID="lblQuan" Text='<%# bind("Quan") %>' runat="server"></asp:Label>
+                                        <asp:Label ID="lblQuan" Text='<%# Bind("Quan") %>' runat="server"></asp:Label>
                                     </ItemTemplate>
                                     <EditItemTemplate>
-                                        <asp:TextBox ID="txtQuan" Text='<%# bind("Quan") %>' Width="75px" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtQuan" Text='<%# Bind("Quan") %>' CssClass="form-control" runat="server"></asp:TextBox>
                                     </EditItemTemplate>
                                     <FooterTemplate>
-                                        <asp:TextBox ID="txtQuan2" runat="server" Width="75px"></asp:TextBox>
+                                        <asp:TextBox ID="txtQuan2" runat="server" CssClass="form-control"></asp:TextBox>
                                     </FooterTemplate>
                                     <ControlStyle Width="75px" />
                                     <ItemStyle HorizontalAlign="Center" Width="75px"></ItemStyle>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Price" SortExpression="Price" ItemStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
-                                        <asp:Label ID="lblPrice" Text='<%# bind("Price") %>' runat="server"></asp:Label>
+                                        <asp:Label ID="lblPrice" Text='<%# Bind("Price") %>' runat="server"></asp:Label>
                                     </ItemTemplate>
                                     <EditItemTemplate>
-                                        <asp:TextBox ID="txtPrice" Text='<%# bind("Price") %>' Width="75px" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtPrice" Text='<%# Bind("Price") %>' CssClass="form-control" runat="server"></asp:TextBox>
                                     </EditItemTemplate>
                                     <FooterTemplate>
-                                        <asp:TextBox ID="txtPrice2" runat="server" Width="75px"></asp:TextBox>
+                                        <asp:TextBox ID="txtPrice2" runat="server" CssClass="form-control"></asp:TextBox>
                                     </FooterTemplate>
                                     <ControlStyle Width="75px" />
                                     <ItemStyle HorizontalAlign="Center" Width="75px"></ItemStyle>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Amount" SortExpression="Amount" ItemStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
-                                        <asp:Label ID="lblAmount" Text='<%# bind("Amount") %>' runat="server"></asp:Label>
+                                        <asp:Label ID="lblAmount" Text='<%# Bind("Amount") %>' runat="server"></asp:Label>
                                     </ItemTemplate>
                                     <EditItemTemplate>
-                                        <asp:Label ID="lblAmount2" Text='<%# bind("Amount") %>' runat="server"></asp:Label>
+                                        <asp:Label ID="lblAmount2" Text='<%# Bind("Amount") %>' runat="server"></asp:Label>
                                     </EditItemTemplate>
                                     <ControlStyle Width="75px" />
                                     <ItemStyle HorizontalAlign="Center" Width="75px"></ItemStyle>
@@ -269,141 +264,99 @@
                         </asp:GridView>
                         <!--OnInit="ddlArea_Init"-->
                     </div>
-                    <table width="100%" cellpadding="3" cellspacing="0" border="2px">
-                        <tr>
-                            <td style="width: 17%;">
+                   <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label3" runat="server" Text="Total Qty:"></asp:Label>
-                            </td>
-                            <td style="width: 17%;">
-                                <asp:Label ID="lblTotalQty" runat="server" Text=""></asp:Label>
-                            </td>
-                            <td style="width: 17%;">
-                            </td>
-                            <td style="width: 17%;">
-                            </td>
-                            <td style="width: 16%;">
+                         
+                                <asp:Label ID="lblTotalQty" CssClass="form-control" runat="server" Text=""></asp:Label>
+                          
                                 <asp:Label ID="Label4" runat="server" Text="Amount:"></asp:Label>
-                            </td>
-                            <td style="width: 16%;">
-                                <asp:Label ID="LblTotal" runat="server" Text=""></asp:Label>
-                            </td>
-                        </tr>
-                <tr>
-                    <td style="width: 17%;">
-                        &nbsp;</td>
-                    <td style="width: 17%;">
-                        &nbsp;</td>
-                    <td style="width: 15%;">
-                    </td>
-                    <td style="width: 19%;">
-                    </td>
-                    <td style="width: 16%;">
+                          
+                                <asp:Label ID="LblTotal" CssClass="form-control" runat="server" Text=""></asp:Label>
+                          </div></div></div>
+                         <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                         <asp:Label ID="Label12" runat="server" Text="VAT 5%:"></asp:Label>
-                    </td>
-                    <td style="width: 16%;">
-                        <asp:TextBox ID="txtTax" MaxLength="15" runat="server" AutoPostBack="True" 
+                   
+                        <asp:TextBox ID="txtTax" MaxLength="15" CssClass="form-control" runat="server" AutoPostBack="True" 
                             ontextchanged="txtTax_TextChanged"></asp:TextBox>
                         <asp:CompareValidator ID="CompareValidator280" runat="server" ControlToValidate="txtTax"
                             Display="Dynamic" ErrorMessage="You Should Enter Numeric Value" ForeColor="Red"
                             Type="Currency" ValidationGroup="1" SetFocusOnError="True" Operator="DataTypeCheck">*</asp:CompareValidator>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 17%;">
-                        &nbsp;</td>
-                    <td colspan="2" style="width: 32%;">
-                        &nbsp;</td>
-                    <td style="width: 19%;">
-                    </td>
-                    <td style="width: 16%;">
+                   </div></div></div>
+                         <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                         <asp:Label ID="Label18" runat="server" Text="Total:"></asp:Label>
-                    </td>
-                    <td style="width: 16%;">
-                        <asp:Label ID="LblTotNet" runat="server" Text=""></asp:Label>
-                    </td>
-                </tr>
-
-                    </table>
-                    <table id="Table2" width="100%" cellpadding="0" cellspacing="0">
-                        <tr>
-                            <td colspan="4">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 70px;">
+                 
+                        <asp:Label ID="LblTotNet" runat="server" CssClass="form-control" Text=""></asp:Label>
+                 </div></div></div>
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label14" runat="server" Text="User Name"></asp:Label>
-                            </td>
-                            <td style="width: 300px;">
-                                <asp:TextBox ID="txtUserName" Width="300px" runat="server" MaxLength="50" BackColor="#E8E8E8"
+                          
+                                <asp:TextBox ID="txtUserName" CssClass="form-control" runat="server" MaxLength="50" BackColor="#E8E8E8"
                                     Enabled="false"></asp:TextBox>
-                            </td>
-                            <td style="width: 70px;">
+                          </div></div></div>
+                         <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="Label15" runat="server" Text="Date"></asp:Label>
-                            </td>
-                            <td style="width: 300px;">
-                                <asp:TextBox ID="txtUserDate" Width="150px" runat="server" MaxLength="50" BackColor="#E8E8E8"
+                          
+                                <asp:TextBox ID="txtUserDate" CssClass="form-control" runat="server" MaxLength="50" BackColor="#E8E8E8"
                                     Enabled="false">                                                               
                                 </asp:TextBox>
                                 <asp:Label ID="Label27" runat="server" Text="* Required Fields"></asp:Label>
-                            </td>
-                        </tr>
-                        <tr align="center">
-                            <td colspan="4">
+                           </div></div></div>
+                         <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                                 <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
-                            </td>
-                        </tr>
-                        <tr align="right">
-                            <td colspan="4">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            </td>
-                        </tr>
-                        <tr align="center">
-                            <td colspan="4" style="width: 100%;">
+                          
                                 <asp:ImageButton ID="BtnNew" runat="server" AlternateText="New" CommandName="New"
-                                    ImageUrl="~/images/insource_641.png" CssClass="ops" ToolTip="Add New Purchase Order"
+                                    ImageUrl="~/images/data add.png" CssClass="ops" ToolTip="Add New Purchase Order"
                                     ValidationGroup="1" 
                                     OnClientClick='return confirm("Adding New Purchase Order...Are You Sure?")' 
                                     onclick="BtnNew_Click" />
                                 <asp:ImageButton ID="BtnEdit" runat="server" AlternateText="Edit" CommandName="Edit"
-                                    ImageUrl="~/images/draw_pen_641.png" CssClass="ops" ToolTip="Edit Purchase Order" Width="64px"
+                                    ImageUrl="~/images/edit2.png" CssClass="ops" ToolTip="Edit Purchase Order" Width="64px"
                                     ValidationGroup="1" onclick="BtnEdit_Click" />
                                 <asp:ImageButton ID="BtnClear" runat="server" AlternateText="Clear" CommandName="Clear"
-                                    ImageUrl="~/images/erasure_641.png" CssClass="ops" 
+                                    ImageUrl="~/images/clear all.png" CssClass="ops" 
                                     ToolTip="Clear Form Fields" onclick="BtnClear_Click" />
                                 <asp:ImageButton ID="BtnDelete" runat="server" AlternateText="Delete" CommandName="Delete"
-                                    ImageUrl="~/images/cut_641.png" CssClass="ops" ToolTip="Delete Purchase Order" 
+                                    ImageUrl="~/images/delete2.png" CssClass="ops" ToolTip="Delete Purchase Order" 
                                     OnClientClick='return confirm("Delete This Purchase Order...Are You Sure?")' 
                                     onclick="BtnDelete_Click" />
                                 <asp:ImageButton ID="BtnSearch" runat="server" AlternateText="Find" CommandName="Find"
-                                    ImageUrl="~/images/binoculars_641.png" CssClass="ops" 
+                                    ImageUrl="~/images/data search.png" CssClass="ops" 
                                     ToolTip="Search for Purchase Order" onclick="BtnSearch_Click" />
                                 <asp:ImageButton ID="BtnPrint" runat="server" AlternateText="Print" CommandName="Print"
-                                    ImageUrl="~/images/print_641.png" ValidationGroup="1" CssClass="ops" 
+                                    ImageUrl="~/images/print.png" ValidationGroup="1" CssClass="ops" 
                                     ToolTip="Print Purchase Order" onclick="BtnPrint_Click" />
-                            </td>
-                        </tr>
-                    </table>
-                <br />
-                <div  style="text-align: right; width: 50%;">
-                    <asp:Panel ID="Panel2" runat="server" Height="30px" BackColor="#5D7B9D" Width="99.5%"
-                        Direction="LeftToRight" ForeColor="#FFFF99">
-                        <div style="padding: 5px; cursor: pointer; vertical-align: middle;">
-                            <div style="float: left;">
-                                Attach Files</div>
-                            <div style="float: left; margin-right: 20px;">
-                                <asp:Label ID="Label34" runat="server">(Show Details...)</asp:Label>
-                            </div>
-                            <div style="float: right; vertical-align: middle;">
-                                <asp:ImageButton ID="Image1" runat="server" ImageUrl="~/images/expand_blue.jpg" AlternateText="(Show Details...)" />
-                            </div>
-                        </div>
-                    </asp:Panel>
-                    <asp:Panel ID="Panel1" runat="server" Height="0" BackColor="#FFFFCC" Width="99.3%"
-                        BorderColor="Maroon">
+                         </div></div></div>
+             
+                        <div class="col-md-12 col-sm-12 col-xm-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Attach Files
+                                        <asp:Label ID="Label34" runat="server">(Show Details...)</asp:Label>
+                                    </h4>
+                                    <div class="card-tools">
+                                  <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                              </div>
+                                </div>
+                                <div class="card-body" style="display:none">
+                                    <asp:Panel ID="Panel2" runat="server">
+                      <asp:Panel ID="Panel1" runat="server">
                         <asp:GridView ID="grdAttach" runat="server" CellPadding="4" ForeColor="#333333"
                             ShowHeader="False" GridLines="None" AutoGenerateColumns="False" DataKeyNames="FNo"
-                            Width="99%" OnRowDeleting="grdAttach_RowDeleting">
+                            Width="100%" OnRowDeleting="grdAttach_RowDeleting">
                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                             <Columns>
                                 <asp:TemplateField>
@@ -432,26 +385,30 @@
                             <SortedDescendingCellStyle BackColor="#FFFDF8" />
                             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                         </asp:GridView>
-                        <table width="100%">
-                            <tr>
-                                <td align="left">
-                                    <asp:FileUpload ID="FileUpload1" runat="server" />
-                                </td>
-                                <td align="right">
-                                    <asp:ImageButton ID="BtnAttach" runat="server" AlternateText="Attach" CommandName="Attach"
-                                        CssClass="ops" ImageUrl="~/images/attach1.png" ToolTip="Attach File" 
-                                        ValidationGroup="1" onclick="BtnAttach_Click" />
-                                </td>
-                            </tr>
-                        </table>
-                    </asp:Panel>
-                    <ajax:CollapsiblePanelExtender ID="cpeDemo" runat="Server" TargetControlID="Panel1"
+                        <ajax:CollapsiblePanelExtender ID="cpeDemo" runat="Server" TargetControlID="Panel1"
                         ExpandControlID="Panel2" CollapseControlID="Panel2" Collapsed="True" TextLabelID="Label13"
                         ImageControlID="Image1" ExpandedText="(Hide Details)" CollapsedText="(Show Details)"
                         ExpandDirection="Vertical" ExpandedImage="~/images/collapse.jpg" CollapsedImage="~/images/expand.jpg"
                         SuppressPostBack="true" />
-                </div>               
-        </div>
-    </center>
+                    </asp:Panel>
+                                        <div class="form-row">
+                            
+                                <div class="form-group col-md-6 col-sm-12 col-xm-12">
+                                    <asp:FileUpload ID="FileUpload1" runat="server" />
+                                </div>
+                                <div class="form-group col-md-6 col-sm-12 col-xm-12">
+                                    <asp:ImageButton ID="BtnAttach" runat="server" AlternateText="Attach" CommandName="Attach"
+                                        CssClass="ops" ImageUrl="~/images/attach1.png" ToolTip="Attach File" 
+                                        ValidationGroup="1" onclick="BtnAttach_Click" />
+                                </div>
+                        
+                        </div>
+                    </asp:Panel>
+                                </div>
+                            </div>
+                        </div>
+                           
+        </div></div></div></div>
+ </div>
 </asp:Content>
 

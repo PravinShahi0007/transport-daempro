@@ -80,24 +80,25 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div id="mdiv1" runat="server" class="Rounded4Corners div1" style="width:185px; height:500px; float:right; border: thin solid #444444; overflow:hidden; overflow-x:hidden; overflow-y:auto;">
-        <center>
-            <b>
-                <asp:Label ID="Label1" ForeColor="#800000" Font-Underline="true" runat="server" Text="[ أصدار معاملة جديدة ]"
-                    meta:resourcekey="Label1"></asp:Label></b></center>
+    <section class="content">
+<div class="row">
+<div class="col-md-6">
+    <div id="mdiv1" runat="server" class="Rounded4Corners div1">
+       <div class="text-center">
+                <asp:Label ID="Label1" ForeColor="#800000"  Font-Underline="true" runat="server" Text="[ أصدار معاملة جديدة ]"
+                    meta:resourcekey="Label1"></asp:Label></div>
         <asp:BulletedList ID="BulletedList1" Target="_blank" Width="95%" DisplayMode="HyperLink"
             CssClass="Bullet" runat="server">
         </asp:BulletedList>
     </div>
-    <span id="span1" runat="server" style="float:right;">&nbsp;&nbsp;&nbsp;</span>
-    <div id="mdiv2" runat="server" class="Rounded4Corners div2" style="width:715px; height:500px; float:right; border: thin solid #444444; overflow:hidden; overflow-x:hidden; overflow-y:auto; z-index:-1;">
-        <table width="100%">
-            <tr>
-                <td style="width:50px">
-                    <asp:Label ID="Label3" runat="server" Text="النوع"></asp:Label>
-                </td>
-                <td style="width:200px">
-                    <asp:DropDownList ID="ddlType" runat="server" AutoPostBack="True" 
+   </div><div class="col-md-6">
+    <div id="mdiv2" runat="server" class="Rounded4Corners div2">
+        <table >
+            <tr align="right">
+               
+                <td style="width:50%">
+                     <asp:Label ID="Label3" runat="server" Text="النوع"></asp:Label>
+                    <asp:DropDownList ID="ddlType" CssClass="form-control" runat="server" AutoPostBack="True" 
                         onselectedindexchanged="ddlMonth_SelectedIndexChanged">
                     </asp:DropDownList>
                 </td>
@@ -105,17 +106,23 @@
                     <b><asp:Label ID="Label5" ForeColor="#800000" Font-Underline="true" runat="server" Text="[ معاملات معلقة ]"></asp:Label></b>
                 </td>
                 <td style="width:50px">
-                    <asp:Label ID="Label4" runat="server" Text="الشهر"></asp:Label>
+                  
                 </td>
-                <td style="width:100px">
-                    <asp:DropDownList ID="ddlMonth" runat="server" AutoPostBack="True" 
+                <td style="width:50%">
+                      <asp:Label ID="Label4" runat="server" Text="الشهر"></asp:Label>
+                    <asp:DropDownList ID="ddlMonth" CssClass="form-control" runat="server" AutoPostBack="True" 
                         onselectedindexchanged="ddlMonth_SelectedIndexChanged">
                     </asp:DropDownList>
                 </td>
-                <td align="left" style="width:100px">
-                    <i class="fa fa fa-wrench" ></i><a target="_blank" href='<%= string.Format("WebDealOut.aspx?AreaNo={0}&StoreNo={1}{2}",AreaNo,StoreNo,(Request.QueryString["Support"] != null ? "&Support=1" : "")) %>'><asp:Literal ID="Literal142" Text="أعدادات" runat="server"></asp:Literal></a>
+               
+            </tr>     
+            <tr align="right">
+         
+                     <td  >
+                    <i class="fa fa fa-wrench" ></i><a target="_blank" href='<%= string.Format("WebDealOut.aspx?AreaNo={0}&StoreNo={1}{2}",AreaNo,StoreNo,(Request.QueryString["Support"] != null ? "&Support=1" : "")) %>'><asp:Literal ID="Literal142" Text="أعدادات" runat="server" ></asp:Literal></a>
                 </td>
-            </tr>                
+    
+            </tr>
         </table>
         <asp:GridView ID="grdActiveTran" CellPadding="4" AutoGenerateColumns="False" runat="server" AllowPaging="false"
                 ForeColor="#333333" GridLines="None" PageSize="20" DataKeyNames="DocNo" Width="99.9%">
@@ -149,16 +156,19 @@
                 <SortedDescendingCellStyle BackColor="#E9EBEF" />
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
-      </div>
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <div id="mdiv3" runat="server" class="Rounded4Corners div1" style="width:915px; height:2000px; float:right; border: thin solid #444444; overflow:hidden; overflow-x:hidden; overflow-y:auto;">
-        <table width="100%">
-            <tr>
+      </div></div>
+   </div></section><section class="content">
+<div class="row">
+    <div class="col-md-12">
+        <div id="mdiv3" runat="server" class="Rounded4Corners div1">
+        <table >
+            <tr align="right">
                 <td style="width:50px">
-                    <asp:Label ID="Label6" runat="server" Text="النوع"></asp:Label>
+                  
                 </td>
-                <td style="width:150px">
-                    <asp:DropDownList ID="ddlType2" runat="server" AutoPostBack="True" 
+                <td style="width:50%">
+                      <asp:Label ID="Label6" runat="server" Text="النوع"></asp:Label>
+                    <asp:DropDownList ID="ddlType2" CssClass="form-control" runat="server" AutoPostBack="True" 
                         onselectedindexchanged="ddlMonth2_SelectedIndexChanged">
                     </asp:DropDownList>
                 </td>
@@ -166,10 +176,11 @@
                     <b><asp:Label ID="Label2" ForeColor="#800000" Font-Underline="true" runat="server" Text="[ أرشيف المعاملات ]" meta:resourcekey="Label1"></asp:Label></b>
                 </td>
                 <td style="width:50px">
-                    <asp:Label ID="Label8" runat="server" Text="الشهر"></asp:Label>
+                    
                 </td>
-                <td style="width:100px">
-                    <asp:DropDownList ID="ddlMonth2" runat="server" AutoPostBack="True" 
+                <td style="width:50%">
+                    <asp:Label ID="Label8" runat="server" Text="الشهر"></asp:Label>
+                    <asp:DropDownList ID="ddlMonth2" CssClass="form-control" runat="server" AutoPostBack="True" 
                         onselectedindexchanged="ddlMonth2_SelectedIndexChanged">
                     </asp:DropDownList>
                 </td>
@@ -217,8 +228,7 @@
                 <SortedDescendingCellStyle BackColor="#E9EBEF" />
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
-        </div>    
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </div>  </div>  
+   </div></section>
     <asp:Label ID="LblCodesResult" runat="server" Text=""></asp:Label>
 </asp:Content>

@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WHS {
-    
-    
-    public partial class WebStores {
-        
+namespace WHS
+{
+
+
+    public partial class WebStores
+    {
+
         /// <summary>
         /// Label1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-        
+
         /// <summary>
         /// txtNumber control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNumber;
-        
+
         /// <summary>
         /// BtnFind control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton BtnFind;
-        
+
         /// <summary>
         /// RequiredFieldValidator1 control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-        
+
         /// <summary>
         /// Label2 control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label2;
-        
+
         /// <summary>
         /// txtName1 control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtName1;
-        
+
         /// <summary>
         /// Label3 control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label3;
-        
+
         /// <summary>
         /// txtName2 control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtName2;
-        
+
         /// <summary>
         /// Label4 control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label4;
-        
+
         /// <summary>
         /// txtManager control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtManager;
-        
+
         /// <summary>
         /// Label5 control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label5;
-        
+
         /// <summary>
         /// txtAddress control.
         /// </summary>
@@ -119,7 +121,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddress;
-        
+
         /// <summary>
         /// Label8 control.
         /// </summary>
@@ -128,7 +130,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label8;
-        
+
         /// <summary>
         /// txtTel control.
         /// </summary>
@@ -137,7 +139,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTel;
-        
+
         /// <summary>
         /// Label32 control.
         /// </summary>
@@ -146,7 +148,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label32;
-        
+
         /// <summary>
         /// txtRemark control.
         /// </summary>
@@ -155,16 +157,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtRemark;
-        
-        /// <summary>
-        /// Panel2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel2;
-        
+
         /// <summary>
         /// Label13 control.
         /// </summary>
@@ -173,16 +166,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label13;
-        
-        /// <summary>
-        /// Image1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton Image1;
-        
+
         /// <summary>
         /// Panel1 control.
         /// </summary>
@@ -191,7 +175,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel Panel1;
-        
+
         /// <summary>
         /// Label14 control.
         /// </summary>
@@ -200,7 +184,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label14;
-        
+
         /// <summary>
         /// ddlCSal control.
         /// </summary>
@@ -209,7 +193,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCSal;
-        
+
         /// <summary>
         /// Label15 control.
         /// </summary>
@@ -218,7 +202,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label15;
-        
+
         /// <summary>
         /// ddlCRSal control.
         /// </summary>
@@ -227,7 +211,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCRSal;
-        
+
         /// <summary>
         /// Label16 control.
         /// </summary>
@@ -236,7 +220,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label16;
-        
+
         /// <summary>
         /// ddlRCSal control.
         /// </summary>
@@ -245,7 +229,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlRCSal;
-        
+
         /// <summary>
         /// Label17 control.
         /// </summary>
@@ -254,7 +238,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label17;
-        
+
         /// <summary>
         /// ddlRCRSal control.
         /// </summary>
@@ -263,7 +247,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlRCRSal;
-        
+
         /// <summary>
         /// Label18 control.
         /// </summary>
@@ -272,7 +256,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label18;
-        
+
         /// <summary>
         /// ddlCPur control.
         /// </summary>
@@ -281,7 +265,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCPur;
-        
+
         /// <summary>
         /// Label19 control.
         /// </summary>
@@ -290,7 +274,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label19;
-        
+
         /// <summary>
         /// ddlCRPur control.
         /// </summary>
@@ -299,7 +283,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCRPur;
-        
+
         /// <summary>
         /// Label20 control.
         /// </summary>
@@ -308,7 +292,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label20;
-        
+
         /// <summary>
         /// ddlRCPur control.
         /// </summary>
@@ -317,7 +301,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlRCPur;
-        
+
         /// <summary>
         /// Label21 control.
         /// </summary>
@@ -326,7 +310,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label21;
-        
+
         /// <summary>
         /// ddlRCRPur control.
         /// </summary>
@@ -335,7 +319,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlRCRPur;
-        
+
         /// <summary>
         /// Label22 control.
         /// </summary>
@@ -344,7 +328,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label22;
-        
+
         /// <summary>
         /// ddlCash control.
         /// </summary>
@@ -353,7 +337,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCash;
-        
+
         /// <summary>
         /// Label28 control.
         /// </summary>
@@ -362,7 +346,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label28;
-        
+
         /// <summary>
         /// ddlService control.
         /// </summary>
@@ -371,7 +355,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlService;
-        
+
         /// <summary>
         /// Label24 control.
         /// </summary>
@@ -380,7 +364,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label24;
-        
+
         /// <summary>
         /// ddlPDisc control.
         /// </summary>
@@ -389,7 +373,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlPDisc;
-        
+
         /// <summary>
         /// Label26 control.
         /// </summary>
@@ -398,7 +382,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label26;
-        
+
         /// <summary>
         /// ddlSDisc control.
         /// </summary>
@@ -407,16 +391,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlSDisc;
-        
-        /// <summary>
-        /// cpeDemo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.CollapsiblePanelExtender cpeDemo;
-        
+
         /// <summary>
         /// ValidationSummary1 control.
         /// </summary>
@@ -425,16 +400,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
-        
-        /// <summary>
-        /// LblCodesResult control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblCodesResult;
-        
+
         /// <summary>
         /// BtnNew control.
         /// </summary>
@@ -443,7 +409,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton BtnNew;
-        
+
         /// <summary>
         /// BtnEdit control.
         /// </summary>
@@ -452,7 +418,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton BtnEdit;
-        
+
         /// <summary>
         /// BtnClear control.
         /// </summary>
@@ -461,7 +427,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton BtnClear;
-        
+
         /// <summary>
         /// BtnDelete control.
         /// </summary>
@@ -470,7 +436,7 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton BtnDelete;
-        
+
         /// <summary>
         /// BtnSearch control.
         /// </summary>
@@ -479,7 +445,16 @@ namespace WHS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton BtnSearch;
-        
+
+        /// <summary>
+        /// LblCodesResult control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblCodesResult;
+
         /// <summary>
         /// grdCodes control.
         /// </summary>

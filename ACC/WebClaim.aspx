@@ -4,33 +4,29 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <center>
-        <div class="ColorRounded4Corners" style="width: 99.8%">
-            <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 99.5%;
-                border: solid 2px #800000">
-                <legend align="right" style="font-size: 18px; color: #800000; text-align: center;"><b>
+        <div class="card">
+            <fieldset>
+                <div class="card-header"><h4 class="card-title">
                     <asp:Label ID="lblHead" runat="server" Text="[ المطالبة المالية ]"></asp:Label>
-                </b></legend>
-                <center>
-                    <table width="99%" cellpadding="3" cellspacing="0">
-                        <tr>
-                            <td align="right" style="width: 15%;">
-                                <asp:Label ID="Label1" runat="server" Text="رقم المطالبة"></asp:Label>
+                </h4></div>
+                <div class="card-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-2 col-sm-12 col-xm-12">
+                             <asp:Label ID="Label1" runat="server" Text="رقم المطالبة"></asp:Label>
                                 *
-                            </td>
-                            <td align="right" style="width: 35%;">
-                                <asp:TextBox ID="txtDocNo" MaxLength="10" runat="server" CssClass="MouseStop"></asp:TextBox>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xm-12">
+                            <asp:TextBox ID="txtDocNo" MaxLength="10" runat="server" CssClass="MouseStop form-control"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtDocNo"
                                     Display="Dynamic" ErrorMessage="يجب أختيار رقم المطالبة" ForeColor="Red" SetFocusOnError="True"
                                     ValidationGroup="1">*</asp:RequiredFieldValidator>
-                            </td>
-                            <td align="right" style="width: 1%;">
-                            </td>
-                            <td align="center" style="width: 15%;">
-                                <asp:Label ID="Label2" runat="server" Text="تاريخ المطالبة"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-2 col-sm-12 col-xm-12">
+                            <asp:Label ID="Label2" runat="server" Text="تاريخ المطالبة"></asp:Label>
                                 *
-                            </td>
-                            <td align="right" style="width: 17%;">
-                                <asp:TextBox ID="txtDocDate" MaxLength="10" runat="server"></asp:TextBox>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xm-12">
+                            <asp:TextBox ID="txtDocDate" MaxLength="10" runat="server" CssClass="form-control"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtDocDate"
                                     Display="Dynamic" ErrorMessage="يجب أختيار تاريخ المطالبة" ForeColor="Red" SetFocusOnError="True"
                                     ValidationGroup="1">*</asp:RequiredFieldValidator>
@@ -40,101 +36,88 @@
                                 <ajax:CalendarExtender ID="CalendarExtender1" runat="server" CssClass="MyCalendar"
                                     TargetControlID="txtDocDate" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
                                     PopupPosition="BottomLeft" />
-                            </td>
-                            <td align="left" style="width: 17%;">
-                                <asp:TextBox ID="txtSearch" MaxLength="10" Width="100px" placeholder="بحث" runat="server"></asp:TextBox>
+                        </div>
+                        <div class="form-group col-md-2 col-sm-12 col-xm-12">
+                            <asp:TextBox ID="txtSearch" MaxLength="10" CssClass="form-control" placeholder="بحث" runat="server"></asp:TextBox>
                                 <asp:ImageButton ID="BtnFind" runat="server" ValidationGroup="55" ImageUrl="~/images/zoom_16.png"
                                     ToolTip="البحث عن بيانات المطالبة المالية" OnClick="BtnFind_Click" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="right" style="width: 15%;">
-                                <asp:Label ID="Label4" runat="server" Text="حساب العميل*"></asp:Label>
-                            </td>
-                            <td align="right" style="width: 35%;">
-                                <asp:DropDownList ID="ddlCustomer" Width="250px" runat="server" 
+                        </div>
+                        
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-2 col-sm-12 col-xm-12">
+                            <asp:Label ID="Label4" runat="server" Text="حساب العميل*"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-2 col-sm-12 col-xm-12">
+                             <asp:DropDownList ID="ddlCustomer" CssClass="form-control" runat="server" 
                                     AutoPostBack="True" onselectedindexchanged="ddlCustomer_SelectedIndexChanged"></asp:DropDownList>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="ddlCustomer"
                                     InitialValue="-1" Display="Dynamic" ErrorMessage="يجب أختيار حساب العميل" ForeColor="Red"
                                     SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                            </td>
-                            <td align="right" style="width: 1%;">
-                            </td>
-                            <td align="center" style="width: 15%;">
-                                <asp:CheckBox ID="ChkPeriod" runat="server" Checked="True" 
+                        </div>
+                        <div class="form-group col-md-2 col-sm-12 col-xm-12">
+                            <asp:CheckBox ID="ChkPeriod" runat="server" Checked="True" 
                                     Text="جميع الفترات" AutoPostBack="True" 
                                     oncheckedchanged="ChkPeriod_CheckedChanged" />
-                            </td>
-                            <td align="right" style="width: 17%;">
-                                <asp:Label ID="LblFDate" runat="server" Visible="false" Text="من تاريخ"></asp:Label>
-                                </td>
-                            <td align="left" style="width: 17%;">
-                               <asp:TextBox ID="txtFDate" MaxLength="10" Width="100px" Visible="false" runat="server"></asp:TextBox>
+                        </div>
+                        <div class="form-group col-md-2 col-sm-12 col-xm-12">
+                            <asp:Label ID="LblFDate" runat="server" Visible="false" Text="من تاريخ"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-2 col-sm-12 col-xm-12">
+                            <asp:TextBox ID="txtFDate" MaxLength="10" CssClass="form-control" Visible="false" runat="server"></asp:TextBox>
                                 <asp:CompareValidator ID="ValFDate" runat="server" ControlToValidate="txtFDate"
                                     CultureInvariantValues="true" Display="Dynamic" ErrorMessage="يجب أن تكون القيمة تاريخ"
                                     ForeColor="Red" Type="Date" ValidationGroup="1" SetFocusOnError="True" Operator="DataTypeCheck">*</asp:CompareValidator>
                                 <ajax:CalendarExtender ID="CalendarExtender2" runat="server" CssClass="MyCalendar"
                                     TargetControlID="txtFDate" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
                                     PopupPosition="BottomLeft" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="right" style="width: 15%;">
-                                <asp:Label ID="Label3" runat="server" Text="أسم الجهة*"></asp:Label>
-                            </td>
-                            <td align="right" style="width: 35%;">
-                                <asp:TextBox ID="txtCustomer" MaxLength="100" Width="250px" runat="server"></asp:TextBox>
+                        </div>
+                        <div class="form-group col-md-2 col-sm-12 col-xm-12"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3 col-sm-12 col-xm-12">
+                             <asp:Label ID="Label3" runat="server" Text="أسم الجهة*"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xm-12">
+                            <asp:TextBox ID="txtCustomer" MaxLength="100" CssClass="form-control" runat="server"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtCustomer"
                                     Display="Dynamic" ErrorMessage="يجب أختيار الجهة" ForeColor="Red"
                                     SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                            </td>
-                            <td align="right" style="width: 1%;">
-                            </td>
-                            <td align="center" style="width: 15%;">
-                            </td>
-                            <td align="right" style="width: 17%;">
-                                 <asp:Label ID="LblEDate" runat="server" Visible="false" Text="إلى تاريخ"></asp:Label>
-                             </td>
-                            <td align="left" style="width: 17%;">
-                               <asp:TextBox ID="txtEDate" MaxLength="10" Width="100px" Visible="false" runat="server"></asp:TextBox>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xm-12">
+                            <asp:Label ID="LblEDate" runat="server" Visible="false" Text="إلى تاريخ"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xm-12">
+                            <asp:TextBox ID="txtEDate" MaxLength="10" CssClass="form-control" Visible="false" runat="server"></asp:TextBox>
                                 <asp:CompareValidator ID="ValEDate" runat="server" ControlToValidate="txtEDate"
                                     CultureInvariantValues="true" Display="Dynamic" ErrorMessage="يجب أن تكون القيمة تاريخ"
                                     ForeColor="Red" Type="Date" ValidationGroup="1" SetFocusOnError="True" Operator="DataTypeCheck">*</asp:CompareValidator>
                                 <ajax:CalendarExtender ID="CalendarExtender3" runat="server" CssClass="MyCalendar"
                                     TargetControlID="txtEDate" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
                                     PopupPosition="BottomLeft" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="right" rowspan="2" colspan="2">
-                                <asp:ImageButton ID="BtnProcess" runat="server" AlternateText="تشغيل" ValidationGroup="1"   
-                                    ImageUrl="~/images/Process.png" ToolTip="تشغيل التقرير" OnClick="BtnProcess_Click" />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3 col-sm-12 col-xm-12">
+                             <asp:ImageButton ID="BtnProcess" runat="server" AlternateText="تشغيل" ValidationGroup="1"   
+                                    ImageUrl="~/images/setting.png" ToolTip="تشغيل التقرير" OnClick="BtnProcess_Click" />
                                 <a id="BtnPay" runat="server" target="_blank" href="~/WebRVou1.aspx?FType=1&AreaNo=0&StoreNo=0"><img alt="تحصيل" src='images/Pay_642.png'/></a>
-                            </td>
-                            <td align="right" style="width: 1%;">
-                                &nbsp;</td>
-                            <td align="center" style="width: 15%;">
-                                &nbsp;</td>
-                            <td align="right" style="width: 17%;">
-                                 &nbsp;</td>
-                            <td align="left" style="width: 17%;">
-                             </td>
-                        </tr>
-                        <tr>
-                            <td align="right" style="width: 1%;">
-                                &nbsp;</td>
-                            <td align="center" style="width: 15%;">
-                                &nbsp;</td>
-                            <td align="right" style="width: 17%;">
-                                 &nbsp;</td>
-                            <td align="left" style="width: 17%;">
-                                 <asp:Label ID="lblStatus" runat="server"  CssClass="blink" ForeColor="Red" Text=""></asp:Label>
-                             </td>
-                        </tr>
 
-                        </table>
-                        <div style="width: 99%; overflow: none; overflow-x: auto; border: 1px solid #800000;">
-                        <asp:GridView ID="grdCodes" runat="server" CellPadding="4" Width="99.95%" ForeColor="#333333"
+                        </div>
+                        <div class="form-group col-md-9 col-sm-12 col-xm-12"></div>
+                      
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-9 col-sm-12 col-xm-12"></div>
+                     
+                        <div class="form-group col-md-3 col-sm-12 col-xm-12">
+                             <asp:Label ID="lblStatus" runat="server"  CssClass="blink" ForeColor="Red" Text=""></asp:Label>
+
+                        </div>
+                    </div>
+                       <div class="form-row table-responsive text-center">
+                           <div class="form-group col-md-12 col-sm-12 col-xm-12">
+                                  <asp:GridView ID="grdCodes" runat="server" CellPadding="4" Width="100%" ForeColor="#333333"
                             ShowFooter="True" ViewStateMode="Enabled" GridLines="None" AutoGenerateColumns="False"
                             DataKeyNames="Fno" PageSize="250" AllowPaging="false">
                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -213,7 +196,7 @@
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="المرجع" SortExpression="Ref" ItemStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
-                                        <asp:TextBox ID="txtRef" Text='<%# Bind("Ref") %>' MaxLength="30" 
+                                        <asp:TextBox ID="txtRef" Text='<%# Bind("Ref") %>' MaxLength="30" CssClass="form-control"
                                             runat="server" AutoPostBack="True" ontextchanged="txtRef_TextChanged"></asp:TextBox>
                                     </ItemTemplate>
                                     <ControlStyle Width="100px" />
@@ -232,76 +215,76 @@
                             <SortedDescendingCellStyle BackColor="#FFFDF8" />
                             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                         </asp:GridView>
-                    </div>
-                    <br />
-                    <table id="Table2" width="100%" cellpadding="0" cellspacing="0">
-                        <tr align="right">
-                            <td style="width: 70px;">
-                                <asp:Label ID="Label14" runat="server" Text="المستخدم"></asp:Label>
-                            </td>
-                            <td style="width: 300px;">
-                                <asp:TextBox ID="txtUserName" Width="285px" runat="server" MaxLength="50" BackColor="#E8E8E8"
+                           </div>
+                           </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3 col-sm-12 col-xm-12">
+                              <asp:Label ID="Label14" runat="server" Text="المستخدم"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xm-12">
+                             <asp:TextBox ID="txtUserName" CssClass="form-control" runat="server" MaxLength="50" BackColor="#E8E8E8"
                                     Enabled="false"></asp:TextBox>
-                            </td>
-                            <td style="width: 70px;">
-                                <asp:Label ID="Label15" runat="server" Text="بتاريخ"></asp:Label>
-                            </td>
-                            <td style="width: 300px;">
-                                <asp:TextBox ID="txtUserDate" Width="150px" runat="server" MaxLength="50" BackColor="#E8E8E8"
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xm-12">
+                            <asp:Label ID="Label15" runat="server" Text="بتاريخ"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xm-12">
+                             <asp:TextBox ID="txtUserDate" CssClass="form-control" runat="server" MaxLength="50" BackColor="#E8E8E8"
                                     Enabled="false">                                                               
                                 </asp:TextBox>
                                 <asp:Label ID="Label27" runat="server" Text="* حقول الزامية"></asp:Label>
-                            </td>
-                        </tr>
-                        <tr align="right">
-                            <td style="width: 70px;">
-                                <asp:Label ID="lblReason" Visible="false" runat="server" Text="سبب التعديل/الغاء"></asp:Label>
-                            </td>
-                            <td style="width: 300px;">
-                                <asp:TextBox ID="txtReason" Width="285px" Visible="false" runat="server" MaxLength="100"></asp:TextBox>
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3 col-sm-12 col-xm-12">
+                             <asp:Label ID="lblReason" Visible="false" runat="server" Text="سبب التعديل/الغاء"></asp:Label>
+
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xm-12">
+                            <asp:TextBox ID="txtReason" CssClass="form-control" Visible="false" runat="server" MaxLength="100"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="ValReason" Enabled="false" runat="server" ControlToValidate="txtReason"
                                     ErrorMessage="يجب إدخال سبب التعديل/الالغاء" ForeColor="Red" Display="Dynamic"
                                     SetFocusOnError="True" ValidationGroup="10">*</asp:RequiredFieldValidator>
-                            </td>
-                            <td style="width: 70px;">
-                            </td>
-                            <td style="width: 300px;">
-                            </td>
-                        </tr>
-                        <tr align="center">
-                            <td colspan="2">
-                                <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
-                            </td>
-                            <td colspan="2">
-                                <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ValidationGroup="1" />
-                            </td>
-                        </tr>
-                        <tr align="right">
-                            <td colspan="4" style="text-align: center">
-                                <asp:ImageButton ID="BtnNew" runat="server" AlternateText="جديد" CommandName="New"
-                                    ImageUrl="~/images/insource_642.png" ToolTip="أضافة مطالبة جديدة" ValidationGroup="1"
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xm-12"></div>
+                        <div class="form-group col-md-3 col-sm-12 col-xm-12"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6 col-sm-12 col-xm-12">
+                             <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-6 col-sm-12 col-xm-12">
+                             <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ValidationGroup="1" />
+
+                        </div>
+                        
+                    </div>
+                     <div class="form-row text-center">
+                        <div class="form-group col-md-12 col-sm-12 col-xm-12">
+                             <asp:ImageButton ID="BtnNew" runat="server" AlternateText="جديد" CommandName="New"
+                                    ImageUrl="~/images/data add.png" ToolTip="أضافة مطالبة جديدة" ValidationGroup="1"
                                     OnClientClick='return confirm("هل أنت متاكد من حفظ بيانات المطالبة؟")' OnClick="BtnNew_Click" />
                                 <asp:ImageButton ID="BtnEdit" runat="server" AlternateText="تعديل" CommandName="Edit"
-                                    ImageUrl="~/images/draw_pen_642.png" ToolTip="تعديل بيانات المطالبة"
+                                    ImageUrl="~/images/edit2.png" ToolTip="تعديل بيانات المطالبة"
                                     Width="64px" ValidationGroup="1" OnClick="BtnEdit_Click" />
                                 <asp:ImageButton ID="BtnClear" runat="server" AlternateText="مسح" CommandName="Clear"
-                                    ImageUrl="~/images/erasure_642.png" ToolTip="مسح خانات الشاشة" OnClick="BtnClear_Click" />
+                                    ImageUrl="~/images/clear all.png" ToolTip="مسح خانات الشاشة" OnClick="BtnClear_Click" />
                                 <asp:ImageButton ID="BtnDelete" runat="server" AlternateText="إلغاء" CommandName="Delete"
-                                    ValidationGroup="1" ImageUrl="~/images/cut_642.png" ToolTip="إلغاء بيانات المطالبة"
+                                    ValidationGroup="1" ImageUrl="~/images/delete2.png" ToolTip="إلغاء بيانات المطالبة"
                                     OnClick="BtnDelete_Click" />
                                 <asp:ImageButton ID="BtnSearch" runat="server" AlternateText="بحث" CommandName="Find"
-                                    ImageUrl="~/images/binoculars_642.png" ToolTip="البحث عن بيانات المطالبة" OnClick="BtnSearch_Click" />
+                                    ImageUrl="~/images/data search.png" ToolTip="البحث عن بيانات المطالبة" OnClick="BtnSearch_Click" />
                                 <asp:ImageButton ID="BtnPrint" runat="server" AlternateText="طباعة" CommandName="Print"
-                                    ImageUrl="~/images/print_64A.png" ValidationGroup="1" ToolTip="طباعة التحويل"
+                                    ImageUrl="~/images/print.png" ValidationGroup="1" ToolTip="طباعة التحويل"
                                     OnClick="BtnPrint_Click" />
-                            </td>
-                        </tr>
-                    </table>
-                </center>
-
-                   <br />
-                    <div style="width: 100%; overflow: none; overflow-x: auto; border: 1px solid #800000;">
-                        <asp:GridView ID="grdList" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="form-row table-responsive text-center">
+                        <div class="form-group col-md-12 col-sm-12 col-xm-12">
+                            <asp:GridView ID="grdList" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                             GridLines="None" AutoGenerateColumns="False" DataKeyNames="DocNo" AllowPaging="True"
                             PageSize="30" Width="99.9%" EmptyDataText="لا توجد بيانات" OnPageIndexChanging="grdList_PageIndexChanging"
                             OnSelectedIndexChanging="grdList_SelectedIndexChanging">
@@ -361,26 +344,37 @@
                             <SortedDescendingCellStyle BackColor="#FFFDF8" />
                             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                         </asp:GridView>
-                    </div>
-                <br />
-
-
-                <div style="text-align: left; width: 50%; float: left;">
-                    <asp:Panel ID="Panel2" runat="server" Height="30px" BackColor="#5D7B9D" Width="99.5%"
-                        Direction="RightToLeft" ForeColor="#FFFF99">
-                        <div style="padding: 5px; cursor: pointer; vertical-align: middle;">
-                            <div style="float: right;">
-                                المرفقات</div>
-                            <div style="float: right; margin-right: 20px;">
-                                <asp:Label ID="Label34" runat="server">(عرض التفاصيل)</asp:Label>
-                            </div>
-                            <div style="float: left; vertical-align: middle;">
-                                <asp:ImageButton ID="Image1" runat="server" ImageUrl="~/images/expand_blue.jpg" AlternateText="(Show Details...)" />
-                            </div>
+    
                         </div>
-                    </asp:Panel>
-                    <asp:Panel ID="Panel1" runat="server" Height="0" BackColor="#FFFFCC" Width="99.3%"
-                        BorderColor="Maroon">
+                        </div>
+                  <%--  <div class="form-row">
+                        <div class="form-group col-md-3 col-sm-12 col-xm-12"></div>
+                        <div class="form-group col-md-3 col-sm-12 col-xm-12"></div>
+                        <div class="form-group col-md-3 col-sm-12 col-xm-12"></div>
+                        <div class="form-group col-md-3 col-sm-12 col-xm-12"></div>
+                    </div>--%>
+                </div>
+                    
+                      
+                    <!--editing by chanda verma-->
+                <div class="form-row">
+                    <div class="form-group col-md-12 col-sm-12 col-xm-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">
+                                    المرفقات
+                                     <asp:Label ID="Label34" runat="server">(عرض التفاصيل)</asp:Label>
+                                </h4>
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body" style="display: none;">
+                                <!--editing by chanda verma-->
+                                 <asp:Panel ID="Panel2" runat="server">
+                       <asp:Panel ID="Panel1" runat="server">
                         <asp:GridView ID="grdAttach" runat="server" CellPadding="4" ForeColor="#333333" ShowHeader="False"
                             GridLines="None" AutoGenerateColumns="False" DataKeyNames="FNo" Width="99%" OnRowDeleting="grdAttach_RowDeleting">
                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -411,26 +405,34 @@
                             <SortedDescendingCellStyle BackColor="#FFFDF8" />
                             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                         </asp:GridView>
-                        <table width="100%">
-                            <tr>
-                                <td align="right">
-                                    <asp:FileUpload ID="FileUpload1" runat="server" />
-                                </td>
-                                <td align="left">
-                                    <asp:ImageButton ID="BtnAttach" runat="server" AlternateText="مرفقات" CommandName="Attach"
-                                        ImageUrl="~/images/attach2.png" OnClick="BtnAttach_Click" ToolTip="المرفقات"
-                                        ValidationGroup="1" />
-                                </td>
-                            </tr>
-                        </table>
-                    </asp:Panel>
-                    <ajax:CollapsiblePanelExtender ID="cpeDemo" runat="Server" TargetControlID="Panel1"
+                            <ajax:CollapsiblePanelExtender ID="cpeDemo" runat="Server" TargetControlID="Panel1"
                         ExpandControlID="Panel2" CollapseControlID="Panel2" Collapsed="True" TextLabelID="Label34"
                         ImageControlID="Image1" ExpandedText="(أخفاء التفاصيل)" CollapsedText="(عرض التفاصيل)"
                         ExpandDirection="Vertical" ExpandedImage="~/images/collapse.jpg" CollapsedImage="~/images/expand.jpg"
                         SuppressPostBack="true" />
+                        
+                    </asp:Panel>
+                                     <div class="form-row">
+                                        <div class="col-sm-6">
+                                             <asp:FileUpload ID="FileUpload1" runat="server" />
+                                        </div>
+                                        <div class="col-sm-6">
+                                           <asp:ImageButton ID="BtnAttach" runat="server" AlternateText="مرفقات" CommandName="Attach"
+                                        ImageUrl="~/images/attach2.png" OnClick="BtnAttach_Click" ToolTip="المرفقات"
+                                        ValidationGroup="1" />
+                                        </div>
+                                    </div>
+                    </asp:Panel>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+
+                
+                   
+                    
+                   
                 </div>
-            </fieldset>
-        </div>
-    </center>
+            
+    
 </asp:Content>

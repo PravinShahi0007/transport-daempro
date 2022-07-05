@@ -3,46 +3,41 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<div>
-        <center>
-            <div class="Round4Courner" style="width: 99.9%">
-                <center>
+
+                  <div class="ColorRounded4Corners col-md-12 col-sm-12 col-xs-12">
+              
                     <asp:Label ID="Label1" runat="server" Font-Size="Larger" ForeColor="Blue"
                         Text="سياسة التسعير"></asp:Label>
-                </center>
-                <table cellpadding="5px" cellspacing="5px" width="100%" style="text-align:right; color:Black; ">
-                    <tr>
-                        <td style="width:120px;">
+              <div class="box box-info" align="right">
+                <div class="body">
+                    <div class="row">
+
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                             <asp:Label ID="Label4" runat="server" Text="العميل"></asp:Label>
-                        </td>
-                        <td style="width:300px;">
-                            <asp:DropDownList ID="ddlCustomer" Width="180px" runat="server" 
+                  
+                            <asp:DropDownList ID="ddlCustomer" CssClass="form-control" runat="server" 
                                 AutoPostBack="True" OnSelectedIndexChanged="ddlCustomer_SelectedIndexChanged">
                             </asp:DropDownList>
-                        </td>
-                        <td style="width:120px;">
-                        </td>
-                        <td style="width:300px;">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width:120px;">
+                    </div></div></div>
+                          <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                             <asp:Label ID="Label3" runat="server" Text="مستوى التسعير"></asp:Label>
-                        </td>
-                        <td style="width:300px;">
-                            <asp:DropDownList ID="ddlLevel" Width="180px" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlCity_SelectedIndexChanged">
+                     
+                            <asp:DropDownList ID="ddlLevel" CssClass="form-control" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlCity_SelectedIndexChanged">
                             </asp:DropDownList>
-                        </td>
-                        <td style="width:120px;">
+                       </div></div></div>
+                          <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
                             <asp:Label ID="Label2" runat="server" Text="المدينة"></asp:Label>
-                        </td>
-                        <td style="width:300px;">
-                            <asp:DropDownList ID="ddlCity" Width="200px" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlCity_SelectedIndexChanged">
+                    
+                            <asp:DropDownList ID="ddlCity" CssClass="form-control" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlCity_SelectedIndexChanged">
                             </asp:DropDownList>
-                        </td>
-                    </tr>
-                </table>
-                <div style="width: 100%; overflow: none; overflow-x: auto; border: 1px solid #800000;">
+                      </div></div></div>
+             <div class="table table-hover table-responsive">
                     <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="False"
                         GridLines="None" AutoGenerateColumns="False" DataKeyNames="FromCode,ToCode" AllowPaging="True"
                         PageSize="10" Width="99.9%" OnRowUpdating="grdCodes_RowUpdating" OnPageIndexChanging="grdCodes_PageIndexChanging"
@@ -496,8 +491,7 @@
                     </asp:GridView>
                 </div>
                 <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
-                <br />
-            </div>
-        </center>
-    </div>
+             
+            </div></div></div></div>
+       
 </asp:Content>

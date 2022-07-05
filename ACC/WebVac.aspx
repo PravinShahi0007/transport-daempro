@@ -3,15 +3,15 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <center>
-            <div class="ColorRounded4Corners">
-            <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 98%;
-                border: solid 2px #800000">
-                <legend align="right" style="font-size: 18px; color: #800000; text-align: center;"><b>
-                    [ الاجازات الرسمية ]</b></legend>             
-                <div style="width: 99%; overflow: auto; border: 1px solid #800000;">
+            <div class="card">
+            <fieldset>
+                
+                <div class="card-header"><h4 class="card-title">
+                    [ الاجازات الرسمية ]</h4></div>             
+                <div class="card-body table-responsive">
                     <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                         GridLines="None" AutoGenerateColumns="False" DataKeyNames="FNo" PageSize = "100"  
-                        AllowPaging="True" Width="99.9%" OnPageIndexChanging="grdCodes_PageIndexChanging"
+                        AllowPaging="True" Width="100%" OnPageIndexChanging="grdCodes_PageIndexChanging"
                         OnRowCommand="grdCodes_RowCommand" OnRowDeleting="grdCodes_RowDeleting">
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <Columns>
@@ -30,7 +30,7 @@
                                     <asp:Label ID="lblFDate" Text='<%# Bind("FDate") %>' runat="server"></asp:Label>
                                 </ItemTemplate>
                                 <FooterTemplate>
-                                    <asp:TextBox ID="txtFDate" MaxLength="10" runat="server" Width="99%" />
+                                    <asp:TextBox ID="txtFDate" MaxLength="10" runat="server" CssClass="form-control" />
                                     <asp:RequiredFieldValidator ID="ValFDate" runat="server" ControlToValidate="txtFDate"
                                     Display="Dynamic" ErrorMessage="يجب أختيار تاريخ الاجازة" ForeColor="Red" SetFocusOnError="True"
                                     ValidationGroup="1">*</asp:RequiredFieldValidator>
@@ -46,7 +46,7 @@
                                     <asp:Label ID="lblName" Text='<%# Bind("Name") %>' runat="server"></asp:Label>
                                 </ItemTemplate>
                                 <FooterTemplate>
-                                    <asp:TextBox ID="txtName" MaxLength="50" runat="server" Width="99%" />
+                                    <asp:TextBox ID="txtName" MaxLength="50" runat="server" CssClass="form-control" />
                                     <asp:RequiredFieldValidator ID="ValName" runat="server" ControlToValidate="txtName"
                                     Display="Dynamic" ErrorMessage="يجب أختيار بيان الاجازة" ForeColor="Red" SetFocusOnError="True"
                                     ValidationGroup="1">*</asp:RequiredFieldValidator>

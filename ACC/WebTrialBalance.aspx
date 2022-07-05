@@ -5,22 +5,23 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <center>
-        <div class="ColorRound4Courner">
-            <div style="text-align: right; float: right; display: block;">
-            </div>
-            <center>
-                <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 98%;
-                    border: solid 2px #800000">
-                    <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
-                        ميزان المراجعة</legend>
-                    <table width="99%">
-                        <tr>
-                            <td style="width: 100px">
-                                <asp:Label ID="Label2" runat="server" Text="المستوى"></asp:Label>
-                            </td>
-                            <td style="width: 100px">
-                                <asp:DropDownList ID="ddlLevel" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlLevel_SelectedIndexChanged">
+   
+        <div class="card">
+           
+                <fieldset>
+                    <div class="form-group">
+                        <h4 class="text-center text-muted">
+                            ميزان المراجعة
+                        </h4>
+                    </div>
+                    <hr />
+                    <br />
+                    <div class="form-row">
+                        <div class="form-group col-sm-2">
+                            <asp:Label ID="Label2" runat="server" Text="المستوى"></asp:Label>
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <asp:DropDownList ID="ddlLevel" CssClass="form-control" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlLevel_SelectedIndexChanged">
                                     <asp:ListItem Value="0">الجميـع</asp:ListItem>
                                     <asp:ListItem Value="1">المستوى 1</asp:ListItem>
                                     <asp:ListItem Value="2">المستوى 2</asp:ListItem>
@@ -28,36 +29,36 @@
                                     <asp:ListItem Value="4">المستوى 4</asp:ListItem>
                                     <asp:ListItem Value="5">المستوى 5</asp:ListItem>
                                 </asp:DropDownList>
-                            </td>
-                            <td style="width: 100px">
-                                <asp:Label ID="Label3" runat="server" Text="الحساب الرئيسي"></asp:Label>
-                            </td>
-                            <td style="width: 400px" colspan="2">
-                                <asp:DropDownList ID="ddlFather" Width="300px" runat="server" AutoPostBack="True"
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <asp:Label ID="Label3" runat="server" Text="الحساب الرئيسي"></asp:Label>
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <asp:DropDownList ID="ddlFather" CssClass="form-control" runat="server" AutoPostBack="True"
                                     OnSelectedIndexChanged="ddlLevel_SelectedIndexChanged">
                                 </asp:DropDownList>
-                                <asp:CheckBox ID="chkCode" Text="كود الحساب" runat="server" AutoPostBack="true" OnCheckedChanged="chkCode_CheckedChanged" />
-                            </td>
-                            <td rowspan="4" style="text-align: center">
-                                <asp:ImageButton ID="BtnProcess" runat="server" AlternateText="تشغيل" ValidationGroup="1"
-                                    ImageUrl="~/images/Process.png" ToolTip="تشغيل التقرير" OnClick="BtnProcess_Click" />
-                                <asp:ImageButton ID="BtnPrint1" ToolTip="Print" CommandName="1" runat="server" ImageUrl="~/images/print_64A.png"
-                                    OnCommand="BtnPrint1_Command" OnClientClick="aspnetForm.target ='_blank';" />
-                                <asp:ImageButton ID="BtnExcel" runat="server" AlternateText="تصدير للإكسل" CommandName="Excel"
-                                    ImageUrl="~/images/Excel.png" ToolTip="'طباعة بيانات التقرير" OnClientClick="aspnetForm.target ='_blank';"
-                                    OnClick="BtnExcel_Click" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 100px">
-                                <asp:CheckBox ID="ChkPeriod" runat="server" Checked="True" Text="جميع الفترات" AutoPostBack="True"
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <asp:CheckBox ID="chkCode" CssClass="form-control" Text="كود الحساب" runat="server" AutoPostBack="true" OnCheckedChanged="chkCode_CheckedChanged" />
+                        </div>
+                        <div class="form-group col-sm-1">
+                            <asp:ImageButton ID="BtnProcess" runat="server" AlternateText="تشغيل" ValidationGroup="1"
+                                    ImageUrl="~/images/setting.png" ToolTip="تشغيل التقرير" OnClick="BtnProcess_Click" />
+                                
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-sm-2"></div>
+                        <div class="form-group col-sm-2">
+                            <asp:CheckBox ID="ChkPeriod" runat="server" Checked="True" CssClass="form-control" Text="جميع الفترات" AutoPostBack="True"
                                     OnCheckedChanged="ChkPeriod_CheckedChanged" />
-                            </td>
-                            <td style="width: 100px">
-                                <asp:Label ID="LblFDate" runat="server" Visible="false" Text="من تاريخ"></asp:Label>
-                            </td>
-                            <td style="width: 120px">
-                                <asp:TextBox ID="txtFDate" MaxLength="10" Width="100px" Visible="false" 
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <asp:Label ID="LblFDate" runat="server" Visible="false" Text="من تاريخ"></asp:Label>
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <asp:TextBox ID="txtFDate" MaxLength="10" CssClass="form-control" Visible="false" 
                                     runat="server" AutoPostBack="True" ontextchanged="txtFDate_TextChanged"></asp:TextBox>
                                 <asp:CompareValidator ID="ValFDate" runat="server" ControlToValidate="txtFDate" CultureInvariantValues="true"
                                     Display="Dynamic" ErrorMessage="يجب أن تكون القيمة تاريخ" ForeColor="Red" Type="Date"
@@ -65,12 +66,12 @@
                                 <ajax:CalendarExtender ID="CalendarExtender1" runat="server" CssClass="MyCalendar"
                                     TargetControlID="txtFDate" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
                                     PopupPosition="BottomLeft" />
-                            </td>
-                            <td style="width: 100px">
-                                <asp:Label ID="LblEDate" runat="server" Visible="false" Text="إلى تاريخ"></asp:Label>
-                            </td>
-                            <td style="width: 300px">
-                                <asp:TextBox ID="txtEDate" MaxLength="10" Width="100px" Visible="false" 
+                        </div>
+                        <div class="form-group col-sm-1">
+                            <asp:Label ID="LblEDate" runat="server" Visible="false" Text="إلى تاريخ"></asp:Label>
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <asp:TextBox ID="txtEDate" MaxLength="10" CssClass="form-control" Visible="false" 
                                     runat="server" AutoPostBack="True" ontextchanged="txtEDate_TextChanged"></asp:TextBox>
                                 <asp:CompareValidator ID="ValEDate" runat="server" ControlToValidate="txtEDate" CultureInvariantValues="true"
                                     Display="Dynamic" ErrorMessage="يجب أن تكون القيمة تاريخ" ForeColor="Red" Type="Date"
@@ -78,31 +79,18 @@
                                 <ajax:CalendarExtender ID="CalendarExtender2" runat="server" CssClass="MyCalendar"
                                     TargetControlID="txtEDate" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
                                     PopupPosition="BottomLeft" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 100px">
-                                &nbsp;
-                            </td>
-                            <td style="width: 100px">
-                                &nbsp;
-                            </td>
-                            <td style="width: 120px">
-                                &nbsp;
-                            </td>
-                            <td style="width: 100px">
-                                &nbsp;
-                            </td>
-                            <td style="width: 300px">
-                                &nbsp;
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 100px">
-                                <asp:Label ID="Label4" runat="server" Text="عرض السجلات"></asp:Label>
-                            </td>
-                            <td style="width: 100px">
-                                <asp:DropDownList ID="ddlRecordsPerPage" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlRecordsPerPage_SelectedIndexChanged">
+                        </div>
+                        <div class="form-group col-sm-1">
+                            <asp:ImageButton ID="BtnPrint1" ToolTip="Print" CommandName="1" runat="server" ImageUrl="~/images/print.png"
+                                    OnCommand="BtnPrint1_Command" OnClientClick="aspnetForm.target ='_blank';" />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-2">
+                            <asp:Label ID="Label4" runat="server" Text="عرض السجلات"></asp:Label>
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <asp:DropDownList ID="ddlRecordsPerPage" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlRecordsPerPage_SelectedIndexChanged">
                                     <asp:ListItem Value="10">10</asp:ListItem>
                                     <asp:ListItem Value="20">20</asp:ListItem>
                                     <asp:ListItem Value="50">50</asp:ListItem>
@@ -113,16 +101,23 @@
                                     <asp:ListItem Value="2000">2000</asp:ListItem>
                                     <asp:ListItem Value="-1">الكل</asp:ListItem>
                                 </asp:DropDownList>
-                            </td>
-                            <td colspan="3" style="text-align: right;">
-                                <asp:Label ID="lblCount" runat="server" Text=""></asp:Label>
-                                &nbsp;
-                                <asp:Label ID="Label6" runat="server" Text="سجل"></asp:Label>
-                            </td>
-                        </tr>
-                    </table>
+                        </div>
+                        <div class="form-group col-sm-5"></div>
+                        <div class="form-group col-sm-2">
+                            <asp:Label ID="lblCount" runat="server" Text=""></asp:Label>
+                            <asp:Label ID="Label6" runat="server" Text="سجل"></asp:Label>
+                        </div>
+                        <div class="form-group col-sm-1">
+                            <asp:ImageButton ID="BtnExcel" runat="server" AlternateText="تصدير للإكسل" CommandName="Excel"
+                                    ImageUrl="~/images/sheet.png" ToolTip="'طباعة بيانات التقرير" OnClientClick="aspnetForm.target ='_blank';"
+                                    OnClick="BtnExcel_Click" />
+                        </div>
+                    </div>
+                  <!--..........................Ankur Kumar.......................-->
                 </fieldset>
-                <div style="width: 100%; height: 500px; overflow: none; overflow-x: auto; border: 1px solid #800000;">
+                <hr />
+                <br />
+                <div class="form">
                     <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                         GridLines="None" AutoGenerateColumns="False" AllowPaging="True" PageSize="20"
                         Width="99.9%" OnPageIndexChanging="grdCodes_PageIndexChanging" 
@@ -131,136 +126,113 @@
                         <Columns>
                             <asp:TemplateField HeaderText="كود الحساب" SortExpression="Code" ItemStyle-HorizontalAlign="Left">
                                 <ItemTemplate>
-                                    <asp:HyperLink ID="lblCode" Text='<%# Bind("Code") %>' NavigateUrl='<%# string.Format("~/WebStatement.aspx?Code={0}",Eval("Code")) %>'
-                                        Target="_blank" runat="server"></asp:HyperLink>
+                                    <div class="form-group"><asp:HyperLink ID="lblCode" Text='<%# Bind("Code") %>' NavigateUrl='<%# string.Format("~/WebStatement.aspx?Code={0}",Eval("Code")) %>'
+                                        Target="_blank" runat="server"></asp:HyperLink></div>
+                                    
                                 </ItemTemplate>
-                                <FooterTemplate>
-                                    <asp:Label ID="lbltot" Text="الاجمالي" runat="server"></asp:Label>
+                                <FooterTemplate><div class="form-group"><asp:Label ID="lbltot" Text="الاجمالي" runat="server"></asp:Label></div>
+                                    
                                 </FooterTemplate>
-                                <ControlStyle Width="50px" />
-                                <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                                
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="أسم الحساب" SortExpression="Name1" ItemStyle-HorizontalAlign="Center">
                                 <ItemTemplate>
-                                    <asp:Label ID="lblName1" Text='<%# Bind("Name1") %>' runat="server"></asp:Label>
+                                    <div class="form-group"> <asp:Label ID="lblName1" Text='<%# Bind("Name1") %>' runat="server"></asp:Label></div>
+                                   
                                 </ItemTemplate>
-                                <ControlStyle Width="250px" />
-                                <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                                
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="أول مدين" SortExpression="odacc" ItemStyle-HorizontalAlign="Center">
                                 <HeaderTemplate>
-                                <table width="100%" cellpadding="2" cellspacing="2">
-                                    <tr>
-                                        <th colspan="2">
-                                            أول الفترة
-                                        </th>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                           مدين
-                                        </th>
-                                        <th>
-                                            دائن
-                                        </th>
-                                    </tr>
-                                </table>
+                                    <div class="form-group">أول الفترة</div>
+                                    <div class="form-row">
+                                        <div class="form-group col-sm-6">مدين</div>
+                                        <div class="form-group col-sm-6">دائن</div>
+                                    </div>
+                             
                                 </HeaderTemplate>
-                                <ItemTemplate>
-                                    <asp:Label ID="lblTotodacc" Text='<%# Eval("odacc","{0:N2}") %>' runat="server"></asp:Label>
+                                <ItemTemplate><div class="form-group"><asp:Label ID="lblTotodacc" Text='<%# Eval("odacc","{0:N2}") %>' runat="server"></asp:Label></div>
+                                    
                                 </ItemTemplate>
-                                <FooterTemplate>
-                                    <asp:Label ID="lblTotalodacc" Text='<%# Totalodacc %>' runat="server"></asp:Label>
+                                <FooterTemplate><div class="form-group"><asp:Label ID="lblTotalodacc" Text='<%# Totalodacc %>' runat="server"></asp:Label></div>
+                                    
                                 </FooterTemplate>
-                                <ControlStyle Width="100px" />
-                                <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                                
                             </asp:TemplateField>
                             <asp:TemplateField ItemStyle-HorizontalAlign="Center">
                                 <HeaderTemplate></HeaderTemplate>
                                 <ItemTemplate>
-                                    <asp:Label ID="lblTotocacc" Text='<%# Eval("ocacc","{0:N2}") %>' runat="server"></asp:Label>
+                                    <div class="form-group"><asp:Label ID="lblTotocacc" Text='<%# Eval("ocacc","{0:N2}") %>' runat="server"></asp:Label></div>
+                                    
                                 </ItemTemplate>
                                 <FooterTemplate>
-                                    <asp:Label ID="lblTotalocacc" Text='<%# Totalocacc %>' runat="server"></asp:Label>
+                                    <div class="form-group"><asp:Label ID="lblTotalocacc" Text='<%# Totalocacc %>' runat="server"></asp:Label></div>
+                                    
                                 </FooterTemplate>
-                                <ControlStyle Width="100px" />
-                                <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                             
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="حركة مدينة" SortExpression="dacc" ItemStyle-HorizontalAlign="Center">
                                 <HeaderTemplate>
-                                <table width="100%" cellpadding="2" cellspacing="2">
-                                    <tr>
-                                        <th colspan="2">
-                                            حركة حالية
-                                        </th>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                           مدين
-                                        </th>
-                                        <th>
-                                            دائن
-                                        </th>
-                                    </tr>
-                                </table>
+                                    <div class="form-group">حركة حالية</div>
+                                    <div class="form-row">
+                                        <div class="form-group col-sm-6">مدين</div>
+                                        <div class="form-group col-sm-6">دائن</div>
+                                    </div>
+                             
                                 </HeaderTemplate>
                                 
                                 <ItemTemplate>
-                                    <asp:Label ID="lblTotdacc" Text='<%# Eval("dacc","{0:N2}") %>' runat="server"></asp:Label>
+                                    <div class="form-group"><asp:Label ID="lblTotdacc" Text='<%# Eval("dacc","{0:N2}") %>' runat="server"></asp:Label></div>
+                                    
                                 </ItemTemplate>
                                 <FooterTemplate>
-                                    <asp:Label ID="lblTotaldacc" Text='<%# Totaldacc %>' runat="server"></asp:Label>
+                                    <div class="form-group"><asp:Label ID="lblTotaldacc" Text='<%# Totaldacc %>' runat="server"></asp:Label></div>
+                                    
                                 </FooterTemplate>
-                                <ControlStyle Width="100px" />
-                                <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                                
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="حركة دائنة" SortExpression="cacc" ItemStyle-HorizontalAlign="Center">
                                 <HeaderTemplate></HeaderTemplate>
                                 <ItemTemplate>
-                                    <asp:Label ID="lblTotcacc" Text='<%# Eval("cacc","{0:N2}") %>' runat="server"></asp:Label>
+                                    <div class="form-group"><asp:Label ID="lblTotcacc" Text='<%# Eval("cacc","{0:N2}") %>' runat="server"></asp:Label></div>
+                                    
                                 </ItemTemplate>
                                 <FooterTemplate>
-                                    <asp:Label ID="lblTotalcacc" Text='<%# Totalcacc %>' runat="server"></asp:Label>
+                                    <div class="form-group"><asp:Label ID="lblTotalcacc" Text='<%# Totalcacc %>' runat="server"></asp:Label></div>
+                                    
                                 </FooterTemplate>
-                                <ControlStyle Width="100px" />
-                                <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                                
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="رصيد مدين" SortExpression="DBal" ItemStyle-HorizontalAlign="Center">
                                 <HeaderTemplate>
-                                <table width="100%" cellpadding="2" cellspacing="2">
-                                    <tr>
-                                        <th colspan="2">
-                                            رصيد نهاية الفترة
-                                        </th>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                           مدين
-                                        </th>
-                                        <th>
-                                            دائن
-                                        </th>
-                                    </tr>
-                                </table>
+                                    <div class="form-group">رصيد نهاية الفترة</div>
+                                    <div class="form-row">
+                                        <div class="form-group col-sm-6">مدين</div>
+                                        <div class="form-group col-sm-6">دائن</div>
+                                    </div>
+                               
                                 </HeaderTemplate>
                                 <ItemTemplate>
-                                    <asp:Label ID="lblTotDBal" Text='<%# Eval("DBal","{0:N2}") %>' runat="server"></asp:Label>
+                                    <div class="form-group"><asp:Label ID="lblTotDBal" Text='<%# Eval("DBal","{0:N2}") %>' runat="server"></asp:Label></div>
+                                    
                                 </ItemTemplate>
                                 <FooterTemplate>
-                                    <asp:Label ID="lblTotalDBal" Text='<%# TotalDBal %>' runat="server"></asp:Label>
+                                    <div class="form-group"><asp:Label ID="lblTotalDBal" Text='<%# TotalDBal %>' runat="server"></asp:Label></div>
+                                    
                                 </FooterTemplate>
-                                <ControlStyle Width="100px" />
-                                <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                               
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="رصيد دائن" SortExpression="CBal" ItemStyle-HorizontalAlign="Center">
                                 <HeaderTemplate></HeaderTemplate>
                                 <ItemTemplate>
-                                    <asp:Label ID="lblTotCBal" Text='<%# Eval("CBal","{0:N2}") %>' runat="server"></asp:Label>
+                                    <div class="form-group"><asp:Label ID="lblTotCBal" Text='<%# Eval("CBal","{0:N2}") %>' runat="server"></asp:Label></div>
+                                    
                                 </ItemTemplate>
                                 <FooterTemplate>
-                                    <asp:Label ID="lblTotalCBal" Text='<%# TotalCBal %>' runat="server"></asp:Label>
+                                    <div class="form-group"><asp:Label ID="lblTotalCBal" Text='<%# TotalCBal %>' runat="server"></asp:Label></div>
+                                    
                                 </FooterTemplate>
-                                <ControlStyle Width="100px" />
-                                <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                                
                             </asp:TemplateField>
                         </Columns>
                         <EditRowStyle BackColor="#999999" />
@@ -276,9 +248,10 @@
                         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                     </asp:GridView>
                 </div>
-                <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
-                <br />
-            </center>
+                <div class="form-group">
+                    <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
+                </div>
+                
+          
         </div>
-    </center>
 </asp:Content>

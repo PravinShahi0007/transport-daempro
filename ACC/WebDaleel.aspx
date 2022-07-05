@@ -4,22 +4,22 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <center>
-        <div class="ColorRound4Courner">
-            <div style="text-align: right; float: right; display: block;">
-            </div>
-            <center>
-                <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 98%;
-                    border: solid 2px #800000">
-                    <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
-                        تقرير دليل الحسابات</legend>
-                    <table width="99%">
-                        <tr>
-                            <td style="width: 100px">
-                                <asp:Label ID="Label2" runat="server" Text="المستوى"></asp:Label>
-                            </td>
-                            <td style="width: 100px">
-                                <asp:DropDownList ID="ddlLevel" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlLevel_SelectedIndexChanged">
+        <div class="card text-center">
+                <fieldset class="form">
+                    <div class="form-group text-center">
+                        <h4>
+                            تقرير دليل الحسابات
+                        </h4>
+                        <hr />
+                    </div>
+                    <br />
+                    <div class="form-row">
+                        <!--*********************************chanda verma******************************-->
+                        <div class="form-group col-sm-2">
+                            <asp:Label ID="Label2" runat="server" Text="المستوى"></asp:Label>
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <asp:DropDownList ID="ddlLevel" runat="server" AutoPostBack="True" CssClass="form-control" OnSelectedIndexChanged="ddlLevel_SelectedIndexChanged">
                                     <asp:ListItem Value="0">الجميـع</asp:ListItem>
                                     <asp:ListItem Value="1">المستوى 1</asp:ListItem>
                                     <asp:ListItem Value="2">المستوى 2</asp:ListItem>
@@ -27,30 +27,33 @@
                                     <asp:ListItem Value="4">المستوى 4</asp:ListItem>
                                     <asp:ListItem Value="5">المستوى 5</asp:ListItem>
                                 </asp:DropDownList>
-                            </td>
-                            <td style="width: 100px">
-                                <asp:Label ID="Label3" runat="server" Text="الحساب الرئيسي"></asp:Label>
-                            </td>
-                            <td style="width: 400px">
-                                <asp:DropDownList ID="ddlFather" Width="300px" runat="server" AutoPostBack="True"
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <asp:Label ID="Label3" runat="server" Text="الحساب الرئيسي"></asp:Label>
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <asp:DropDownList ID="ddlFather" CssClass="form-control" runat="server" AutoPostBack="True"
                                     OnSelectedIndexChanged="ddlLevel_SelectedIndexChanged">
                                 </asp:DropDownList>
-                                <asp:CheckBox ID="chkCode" Text="كود الحساب" runat="server" AutoPostBack="true" OnCheckedChanged="chkCode_CheckedChanged" />
-                            </td>
-                            <td rowspan="2" style="text-align: center">
-                                <asp:ImageButton ID="BtnPrint1" ToolTip="Print" CommandName="1" runat="server" ImageUrl="~/images/print_64A.png"
+                        </div>
+                        <div class="form-group col-sm-1">
+                            <asp:CheckBox ID="chkCode" Text="كود الحساب" runat="server" AutoPostBack="true" OnCheckedChanged="chkCode_CheckedChanged" />
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <asp:ImageButton ID="BtnPrint1" ToolTip="Print" CommandName="1" runat="server" ImageUrl="~/images/print.png"
                                       OnCommand="BtnPrint1_Command" OnClientClick="aspnetForm.target ='_blank';" />                                    
                                 <asp:ImageButton ID="BtnExcel" runat="server" AlternateText="تصدير للإكسل" CommandName="Excel"  
-                                    ImageUrl="~/images/Excel.png" ToolTip="'طباعة بيانات التقرير" OnClientClick="aspnetForm.target ='_blank';"
+                                    ImageUrl="~/images/sheet.png" ToolTip="'طباعة بيانات التقرير" OnClientClick="aspnetForm.target ='_blank';"
                                     OnClick="BtnExcel_Click" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 100px">
-                                <asp:Label ID="Label4" runat="server" Text="عرض السجلات"></asp:Label>
-                            </td>
-                            <td style="width: 100px">
-                                <asp:DropDownList ID="ddlRecordsPerPage" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlRecordsPerPage_SelectedIndexChanged">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-sm-2">
+                            <asp:Label ID="Label4" runat="server" Text="عرض السجلات"></asp:Label>
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <asp:DropDownList ID="ddlRecordsPerPage" runat="server" AutoPostBack="True" CssClass="form-control" OnSelectedIndexChanged="ddlRecordsPerPage_SelectedIndexChanged">
                                     <asp:ListItem Value="10">10</asp:ListItem>
                                     <asp:ListItem Value="20">20</asp:ListItem>
                                     <asp:ListItem Value="50">50</asp:ListItem>
@@ -61,48 +64,59 @@
                                     <asp:ListItem Value="2000">2000</asp:ListItem>
                                     <asp:ListItem Value="-1">الكل</asp:ListItem>
                                 </asp:DropDownList>
-                            </td>
-                            <td colspan="2" style="text-align: right;">
-                                <asp:Label ID="lblCount" runat="server" Text=""></asp:Label>
-                                &nbsp;
-                                <asp:Label ID="Label6" runat="server" Text="سجل"></asp:Label>
-                            </td>
-                        </tr>
-                    </table>
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <asp:Label ID="lblCount" runat="server" Text=""></asp:Label>
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <asp:Label ID="Label6" runat="server" Text="سجل"></asp:Label>
+                        </div>
+                        <div class="form-group col-sm-4"></div>
+                    </div>
+                    <hr />
                 </fieldset>
-                <div style="width: 100%; height:500px; overflow:none; overflow-x:auto ;border: 1px solid #800000;">
+                <br />
+                <div class="text-center">
                     <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                         GridLines="None" AutoGenerateColumns="False" AllowPaging="True" PageSize="20"
-                        Width="99.9%" OnPageIndexChanging="grdCodes_PageIndexChanging">
+                        Width="100%" OnPageIndexChanging="grdCodes_PageIndexChanging">
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <Columns>
                             <asp:TemplateField HeaderText="كود الحساب" SortExpression="Code" ItemStyle-HorizontalAlign="Left">
                                 <ItemTemplate>
-                                    <asp:Label ID="lblCode" Text='<%# Bind("Code") %>' runat="server"></asp:Label>
+                                    <div class="form-group">
+                                        <asp:Label ID="lblCode" Text='<%# Bind("Code") %>' runat="server"></asp:Label>
+                                    </div>
+                                    
                                 </ItemTemplate>
-                                <ControlStyle Width="50px" />
-                                <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                                
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="الوصف بالعربي" SortExpression="Name1" ItemStyle-HorizontalAlign="Center">
                                 <ItemTemplate>
-                                    <asp:Label ID="lblName1" Text='<%# Bind("Name1") %>' runat="server"></asp:Label>
+                                    <div class="form-group">
+                                        <asp:Label ID="lblName1" Text='<%# Bind("Name1") %>' runat="server"></asp:Label>
+                                    </div>
+                                    
                                 </ItemTemplate>
-                                <ControlStyle Width="250px" />
-                                <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                               
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="الوصف بالانجليزي" SortExpression="Name2" ItemStyle-HorizontalAlign="Center">
                                 <ItemTemplate>
-                                    <asp:Label ID="lblName2" Text='<%# Bind("Name2") %>' runat="server"></asp:Label>
+                                    <div class="form-group">
+                                        <asp:Label ID="lblName2" Text='<%# Bind("Name2") %>' runat="server"></asp:Label>
+                                    </div>
+                                    
                                 </ItemTemplate>
-                                <ControlStyle Width="250px" />
-                                <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                               
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="النوع" Visible="true" ItemStyle-HorizontalAlign="Center">
                                 <ItemTemplate>
-                                    <asp:Label ID="lblFype" Text='<%# Bind("ftype2") %>' runat="server"></asp:Label>
+                                    <div class="form-group">
+                                        <asp:Label ID="lblFype" Text='<%# Bind("ftype2") %>' runat="server"></asp:Label>
+                                    </div>
+                                    
                                 </ItemTemplate>
-                                <ControlStyle Width="150px" />
-                                <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                                
                             </asp:TemplateField>
                         </Columns>
                         <EditRowStyle BackColor="#999999" />
@@ -118,9 +132,9 @@
                         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                     </asp:GridView>
                 </div>
-                <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
-                <br />
-            </center>
+                <div class="form-group">
+                    <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
+                </div>
+           
         </div>
-    </center>
 </asp:Content>

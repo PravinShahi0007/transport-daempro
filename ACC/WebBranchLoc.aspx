@@ -3,14 +3,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<asp:Panel ID="DivInfo2" runat="server" class="Rounded4Corners div1" style="<%$ Resources: mDivInfo %>">
-        <center>               
-             <table cellpadding="3px" cellspacing="3px" class="Infotable">
+<asp:Panel ID="DivInfo2" runat="server">             
+             <table class="table table-responsive table-striped table-hover table-bordered">
                 <thead>
-                    <tr>
-                        <th colspan="3" align="center">
+                    <tr class="text-center text-bold">
                             <asp:Literal ID="Literal3" Text="<%$ Resources:BranchDescr %>" runat="server"></asp:Literal>
-                        </th>
                     </tr>
                     <tr>
                         <th>
@@ -25,7 +22,6 @@
                      <%=getStartData(6)%>                     
                 </tbody>
             </table>                        
-        </center>
      </asp:Panel>
 
     <asp:Label ID="lblError" runat="server" Text=""></asp:Label>

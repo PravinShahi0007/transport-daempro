@@ -11,35 +11,35 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <center dir="rtl">
-        <div style="" class="Round4Courner">
-            <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 98%;
-                border: solid 2px #800000">
-                <legend align="right" style="font-size: 18px; color: #800000; text-align: center;"><b>
+        <div style="" class="card">
+            <fieldset class="card-body">
+                <div class="card-header">
+                    <h4 class="card-title">
                     <asp:Label ID="LblHeader" runat="server" Text="[ خط سير الرحلة ]"></asp:Label>
-                    </b></legend>
-                <center>
-                    <table id="Table1" dir="rtl" width="98%" cellpadding="2" style="color: Black">
-                        <tr id="tr2" align="right">
-                            <td style="width: 100px;">
-                                <asp:Label ID="Label2" runat="server" Text="من"></asp:Label>
-                            </td>
-                            <td style="width: 300px">
-                                <asp:DropDownList ID="ddlFromCity" Width="250" runat="server" 
+                    </h4>
+                </div>
+                <br />
+         <div id="Table1" class="card-body">
+             <div class="form-row" id="tr2">
+             <div class="form-group col-md-2 col-sm-6 col-xs-12">
+                 <asp:Label ID="Label2" runat="server" Text="من"></asp:Label>
+             </div>
+             <div class="form-group col-md-4 col-sm-6 col-xs-12">
+                 <asp:DropDownList ID="ddlFromCity" CssClass="form-control" runat="server" 
                                     AutoPostBack="True" onselectedindexchanged="ddlFromCity_SelectedIndexChanged">
                                 </asp:DropDownList>
-                            </td>
-                            <td style="width: 100px;">
-                                <asp:Label ID="Label1" runat="server" Text="إلى"></asp:Label>
-                            </td>
-                            <td style="width: 300px">
-                                <asp:DropDownList ID="ddlToCity" Width="250" runat="server" AutoPostBack="True" 
+             </div>
+             <div class="form-group col-md-2 col-sm-6 col-xs-12">
+                 <asp:Label ID="Label1" runat="server" Text="إلى"></asp:Label>
+             </div>
+             <div class="form-group col-md-4 col-sm-6 col-xs-12">
+                 <asp:DropDownList ID="ddlToCity" CssClass="form-control" runat="server" AutoPostBack="True" 
                                     onselectedindexchanged="ddlFromCity_SelectedIndexChanged">
                                 </asp:DropDownList>
-                            </td>
-                        </tr>
-                    </table>
-                    <div style="width: 100%; overflow: auto; border: 1px solid #800000;">
+             </div></div>
+         </div>
+                    
+                    <div class="table table-responsive table-hover text-center">
                         <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                             GridLines="None" AutoGenerateColumns="False" DataKeyNames="FNo"
                             PageSize="50" Width="99.9%" EmptyDataText="لا توجد بيانات">
@@ -54,35 +54,35 @@
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="من موقع" SortExpression="Area1" ItemStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
-                                        <asp:TextBox ID="txtArea1" Text='<%# Bind("Area1") %>' MaxLength="50" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtArea1" Text='<%# Bind("Area1") %>' MaxLength="50" CssClass="form-control" runat="server"></asp:TextBox>
                                     </ItemTemplate>
                                     <ControlStyle Width="120px" />
                                     <ItemStyle HorizontalAlign="Center"></ItemStyle>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="إلى موقع" SortExpression="Area2" ItemStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
-                                        <asp:TextBox ID="txtArea2" Text='<%# Bind("Area2") %>' MaxLength="50" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtArea2" Text='<%# Bind("Area2") %>' MaxLength="50" CssClass="form-control" runat="server"></asp:TextBox>
                                     </ItemTemplate>
                                     <ControlStyle Width="120px" />
                                     <ItemStyle HorizontalAlign="Center"></ItemStyle>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="المسافة" SortExpression="KM" ItemStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
-                                        <asp:TextBox ID="txtKM" Text='<%# Bind("KM") %>' MaxLength="15" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtKM" Text='<%# Bind("KM") %>' MaxLength="15" CssClass="form-control" runat="server"></asp:TextBox>
                                     </ItemTemplate>
                                     <ControlStyle Width="80" />
                                     <ItemStyle HorizontalAlign="Center"></ItemStyle>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="المصروف" SortExpression="Cost" ItemStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
-                                        <asp:TextBox ID="txtCost" Text='<%# Bind("Cost") %>' MaxLength="15" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtCost" Text='<%# Bind("Cost") %>' MaxLength="15" CssClass="form-control" runat="server"></asp:TextBox>
                                     </ItemTemplate>
                                     <ControlStyle Width="80px" />
                                     <ItemStyle HorizontalAlign="Center"></ItemStyle>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="العميل" SortExpression="CustCode" ItemStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
-                                        <asp:DropDownList ID="ddlCust" runat="server" OnInit="ddlCust_Init" EnableViewState="false">
+                                        <asp:DropDownList ID="ddlCust" runat="server" CssClass="form-control" OnInit="ddlCust_Init" EnableViewState="false">
                                         </asp:DropDownList>
                                     </ItemTemplate>
                                     <ControlStyle Width="250px" />
@@ -103,27 +103,20 @@
                             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                         </asp:GridView>
                     </div>
-                    <table width="98%" cellpadding="2">
-                        <tr id="tr3" align="right">
-                            <td style="width: 200px;">
-                            </td>
-                            <td style="width: 400px" align="center">
-                                <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
-                            </td>
-                            <td style="width: 200px;">
-                            </td>
-                        </tr>
-                        <tr align="center">
-                            <td colspan="3">
-                                <asp:ImageButton ID="BtnEdit" runat="server" AlternateText="تعديل" CommandName="Edit"
-                                    ImageUrl="~/images/draw_pen_642.png"   ToolTip="تعديل بيانات خط سير الرحلة"
+
+                <div class="form-row" id="tr3">
+                    <div class="form-group col-md-4 col-sm-6 col-xs-12"></div>
+                    <div class="form-group col-md-4 col-sm-6 col-xs-12">
+                        <asp:ImageButton ID="BtnEdit" runat="server" AlternateText="تعديل" CommandName="Edit"
+                                    ImageUrl="~/images/edit2.png"   ToolTip="تعديل بيانات خط سير الرحلة"
                                     Width="64px" ValidationGroup="1" OnClick="BtnEdit_Click" />
-                            </td>
-                        </tr>
-                    </table>
+                    </div>
+                    <div class="form-group col-md-4 col-sm-6 col-xs-12">
+                        <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
+                    </div>
+                </div>
+                 
                     <br />
-                </center>
             </fieldset>
         </div>
-    </center>
 </asp:Content>

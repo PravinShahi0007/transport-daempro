@@ -5,15 +5,15 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 98%;
-        border: solid 2px #800000">
-        <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
-            <b>[
+    <fieldset class="card">
+        <div class="card-header">
+            <h4>[
                 <asp:Literal ID="Literal2" Text="متابعة رسائل الوصول" runat="server"></asp:Literal>
-                ]</b></legend>
+                ]</h4></div>
+        <div class="card-body table table-responsive table-hover text-center">
         <asp:GridView ID="grdDCars" CellPadding="4" AutoGenerateColumns="False" runat="server"
             AllowPaging="false" ForeColor="#333333" GridLines="None" PageSize="200" DataKeyNames="FNo"
-            Width="99.9%">
+            Width="100%">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:TemplateField HeaderText="<%$ Resources:SNo %>" SortExpression="FNo" ItemStyle-HorizontalAlign="Center">
@@ -87,5 +87,6 @@
             <SortedDescendingCellStyle BackColor="#D4DFE1" />
             <SortedDescendingHeaderStyle BackColor="#15524A" />
         </asp:GridView>
+            </div>
     </fieldset>
 </asp:Content>

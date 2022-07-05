@@ -3,62 +3,34 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <center>
-        <div class="ColorRound4Courner">
-            <div style="text-align: right; float: right; display: block;">
-            </div>
-            <center>
-                <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 98%;
-                    border: solid 2px #800000">
+   
+       <div class="ColorRounded4Corners col-md-12 col-sm-12 col-xs-12">
+        <div class="box box-info" align="right">
+            <div class="body">
+                <div class="row">
+   
+   
                     <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
                         الحركة اليومية للفرع</legend>
-                    <table width="99%">
-                        <tr>
-                            <td style="width: 90px">
+                   <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
                                 <asp:Label ID="Label2" runat="server" Text="الفرع"></asp:Label>
-                            </td>
-                            <td style="width: 100px">
-                                <asp:DropDownList ID="ddlBranch" runat="server" AutoPostBack="True" 
+                       
+                                <asp:DropDownList ID="ddlBranch" CssClass="form-control" runat="server" AutoPostBack="True" 
                                     onselectedindexchanged="ddlBranch_SelectedIndexChanged">                                  
                                 </asp:DropDownList>
-                            </td>
-                            <td style="width: 140px">                                
+                   
+                    
                                 <asp:CheckBox ID="ChkPeriod" runat="server" Checked="True" 
                                     Text="اليوم" AutoPostBack="True" 
-                                    oncheckedchanged="ChkPeriod_CheckedChanged" />
-                            </td>
-                            <td style="width: 80px">
-                                <asp:Label ID="LblFDate" runat="server" Visible="false" Text="من تاريخ"></asp:Label>
-                            </td>
-                            <td style="width: 140px">
-                               <asp:TextBox ID="txtFDate" MaxLength="10" Width="100px" Visible="false" 
-                                    runat="server" AutoPostBack="True" ontextchanged="txtFDate_TextChanged"></asp:TextBox>
-                                <asp:CompareValidator ID="ValFDate" runat="server" ControlToValidate="txtFDate"
-                                    CultureInvariantValues="true" Display="Dynamic" ErrorMessage="يجب أن تكون القيمة تاريخ"
-                                    ForeColor="Red" Type="Date" ValidationGroup="1" SetFocusOnError="True" Operator="DataTypeCheck">*</asp:CompareValidator>
-                                <ajax:CalendarExtender ID="CalendarExtender1" runat="server" CssClass="MyCalendar"
-                                    TargetControlID="txtFDate" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
-                                    PopupPosition="BottomLeft" />
-                            </td>
-                            <td style="width: 100px">
-                            </td>
-                            <td rowspan="2">
-                                <asp:ImageButton ID="BtnProcess" runat="server" AlternateText="تشغيل" ValidationGroup="1"   
-                                    ImageUrl="~/images/Process.png" ToolTip="تشغيل التقرير" OnClick="BtnProcess_Click" />
-                                <asp:ImageButton ID="BtnPrint1" Visible="false" ToolTip="Print" CommandName="1" runat="server" ImageUrl="~/images/print_64A.png"
-                                      OnCommand="BtnPrint1_Command" OnClientClick="aspnetForm.target ='_blank';" />                                    
-                                <asp:ImageButton ID="BtnExcel" Visible="false" runat="server" AlternateText="تصدير للإكسل" CommandName="Excel"  
-                                    ImageUrl="~/images/Excel.png" ToolTip="'طباعة بيانات التقرير" OnClientClick="aspnetForm.target ='_blank';"
-                                    OnClick="BtnExcel_Click" />
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 100px">
+                                    oncheckedchanged="ChkPeriod_CheckedChanged" />       </div></div></div>   
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
                                 <asp:Label ID="Label4" runat="server" Text="عرض السجلات"></asp:Label>
-                            </td>
-                            <td style="width: 100px">
-                                <asp:DropDownList ID="ddlRecordsPerPage" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlRecordsPerPage_SelectedIndexChanged">
+                          
+                                <asp:DropDownList ID="ddlRecordsPerPage" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlRecordsPerPage_SelectedIndexChanged">
                                     <asp:ListItem Value="10">10</asp:ListItem>
                                     <asp:ListItem Selected="True" Value="20">20</asp:ListItem>
                                     <asp:ListItem Value="50">50</asp:ListItem>
@@ -69,17 +41,41 @@
                                     <asp:ListItem Value="2000">2000</asp:ListItem>
                                     <asp:ListItem Value="-1">الكل</asp:ListItem>
                                 </asp:DropDownList>
-                            </td>
-                            <td style="width: 130px">                                
+                         </div></div></div>
+                           <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                <asp:Label ID="LblFDate" runat="server" Visible="false" Text="من تاريخ"></asp:Label>
+                          
+                               <asp:TextBox ID="txtFDate" MaxLength="10" CssClass="form-control" Visible="false" 
+                                    runat="server" AutoPostBack="True" ontextchanged="txtFDate_TextChanged"></asp:TextBox>
+                                <asp:CompareValidator ID="ValFDate" runat="server" ControlToValidate="txtFDate"
+                                    CultureInvariantValues="true" Display="Dynamic" ErrorMessage="يجب أن تكون القيمة تاريخ"
+                                    ForeColor="Red" Type="Date" ValidationGroup="1" SetFocusOnError="True" Operator="DataTypeCheck">*</asp:CompareValidator>
+                                <ajax:CalendarExtender ID="CalendarExtender1" runat="server" CssClass="MyCalendar"
+                                    TargetControlID="txtFDate" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
+                                    PopupPosition="BottomLeft" />
+                        
+                                <asp:ImageButton ID="BtnProcess" runat="server" AlternateText="تشغيل" ValidationGroup="1"   
+                                    ImageUrl="~/images/setting.png" ToolTip="تشغيل التقرير" OnClick="BtnProcess_Click" />
+                                <asp:ImageButton ID="BtnPrint1" Visible="false" ToolTip="Print" CommandName="1" runat="server" ImageUrl="~/images/print.png"
+                                      OnCommand="BtnPrint1_Command" OnClientClick="aspnetForm.target ='_blank';" />                                    
+                                <asp:ImageButton ID="BtnExcel" Visible="false" runat="server" AlternateText="تصدير للإكسل" CommandName="Excel"  
+                                    ImageUrl="~/images/sheet.png" ToolTip="'طباعة بيانات التقرير" OnClientClick="aspnetForm.target ='_blank';"
+                                    OnClick="BtnExcel_Click" />
+
+                           </div></div></div>
+                                                      
+                                                      <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
                                 <asp:Label ID="lblCount" runat="server" Text=""></asp:Label>
                                 &nbsp;
                                 <asp:Label ID="Label6" runat="server" Text="سجل"></asp:Label>
-                            </td>
-                            <td style="width: 80px">
+                          
                                 <asp:Label ID="LblEDate" runat="server" Visible="false" Text="إلى تاريخ"></asp:Label>
-                            </td>
-                            <td style="width: 140px">
-                               <asp:TextBox ID="txtEDate" MaxLength="10" Width="100px" Visible="false" 
+                           
+                               <asp:TextBox ID="txtEDate" MaxLength="10" CssClass="form-control" Visible="false" 
                                     runat="server" AutoPostBack="True" ontextchanged="txtEDate_TextChanged"></asp:TextBox>
                                 <asp:CompareValidator ID="ValEDate" runat="server" ControlToValidate="txtEDate"
                                     CultureInvariantValues="true" Display="Dynamic" ErrorMessage="يجب أن تكون القيمة تاريخ"
@@ -87,14 +83,9 @@
                                 <ajax:CalendarExtender ID="CalendarExtender2" runat="server" CssClass="MyCalendar"
                                     TargetControlID="txtEDate" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
                                     PopupPosition="BottomLeft" />
-                            </td>
-                            <td style="width: 100px">
-
-                            </td>
-                        </tr>
-                    </table>
-                </fieldset>
-                <div style="width: 100%;  height:500px; overflow:none; overflow-x:auto ; border: 1px solid #800000;">
+                          </div></div></div>
+            
+             <div class="table-responsive">
                     <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                         GridLines="None" AutoGenerateColumns="False" AllowPaging="True" PageSize="20"
                         Width="99.9%" OnPageIndexChanging="grdCodes_PageIndexChanging">
@@ -324,145 +315,123 @@
                     </asp:GridView>
                 </div>
                 <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
-                <br />
-            </center>
+              
         </div>
-         <div class="ColorRound4Courner">
-                <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 98%;
-                    border: solid 2px #800000">
-                    <table width="99%"  border="2px">
-                        <tr>
-                            <td style="width: 200px">
-                                <asp:Label ID="Label1" runat="server" Text="الرصيد المرحل"></asp:Label>
-                            </td>
-                            <td style="width: 200px">
-                                <asp:Label ID="lblOldBal" runat="server" Text=""></asp:Label>
-                            </td>
-                            <td style="width: 80px">                                
-                            </td>
-                            <td style="width: 200px">
-                                <asp:Label ID="Label11" runat="server" Text="أجمالي الشبكة"></asp:Label>
-                            </td>
-                            <td style="width: 200px">
-                                <asp:Label ID="lblShabaka" runat="server" Text=""></asp:Label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 200px">
-                                <asp:Label ID="Label8" runat="server" Text="متحصلات نقدية"></asp:Label>
-                            </td>
-                            <td style="width: 200px">
-                                <asp:Label ID="lblCash" runat="server" Text=""></asp:Label>
-                            </td>
-                            <td style="width: 80px">                                
-                            </td>
-                            <td style="width: 200px">
-                               <asp:Label ID="Label14" runat="server" Text="مصاريف الشبكة"></asp:Label>
-                            </td>
-                            <td style="width: 200px">
-                               <asp:Label ID="lblShabakaDiscount" runat="server" Text=""></asp:Label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 200px">
-                                 <asp:Label ID="Label12" runat="server" Text="المجموع"></asp:Label>
-                            </td>
-                            <td style="width: 200px">
-                                <asp:Label ID="lblTot" runat="server" Text=""></asp:Label>
-                            </td>
-                            <td style="width: 80px">                                
-                            </td>
-                            <td style="width: 200px">
-                                <asp:Label ID="Label16" runat="server" Text="صافي تحويلات الشبكة"></asp:Label>
-
-                            </td>
-                            <td style="width: 200px">
-                                <asp:Label ID="lblShabakaNet" runat="server" Text=""></asp:Label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 200px">
-                                <asp:Label ID="Label5" runat="server" Text="الرصيد النقدي"></asp:Label>
-                            </td>
-                            <td style="width: 200px">
-                                <asp:Label ID="lblBal" runat="server" Text=""></asp:Label>
-                            </td>
-                            <td style="width: 80px">                                
-                            </td>
-                            <td style="width: 200px">
-                              <asp:Label ID="Label17" runat="server" Text="إجمالي الإيداعات"></asp:Label>
-                            </td>
-                            <td style="width: 200px">
-                                <asp:Label ID="lblNetDeposit" runat="server" Text=""></asp:Label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 200px">
-                                 <asp:Label ID="Label9" runat="server" Text="العهدة اول الفترة"></asp:Label>
-                            </td>
-                            <td style="width: 200px">
-                                <asp:Label ID="lblLoan" runat="server" Text=""></asp:Label>
-                            </td>
-                            <td style="width: 80px">                                
-                            </td>
-                            <td style="width: 200px">
-                                <asp:Label ID="Label3" runat="server" Text="إجمالي الإيداعات والشبكة"></asp:Label>
-                            </td>
-                            <td style="width: 200px">
-                                <asp:Label ID="lblDeposit" runat="server" Text=""></asp:Label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 200px">
-                                 <asp:Label ID="Label13" runat="server" Text="أجمالي الصرف"></asp:Label>
-                            </td>
-                            <td style="width: 200px">
-                                <asp:Label ID="lblPay" runat="server" Text=""></asp:Label>
-                            </td>
-                            <td style="width: 80px">                                
-                            </td>
-                            <td style="width: 200px">
-                                <asp:Label ID="Label7" runat="server" Text="إجمالي الإيراد"></asp:Label>
-                            </td>
-                            <td style="width: 200px">
-                                <asp:Label ID="lblIncome" runat="server" Text=""></asp:Label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 200px">
-                                 <asp:Label ID="Label15" runat="server" Text="أستعاضة العهدة"></asp:Label>
-                            </td>
-                            <td style="width: 200px">
-                                <asp:Label ID="lblLoanAdd" runat="server" Text=""></asp:Label>
-                            </td>
-                            <td style="width: 80px">                                
-                            </td>
-                            <td style="width: 200px">
-                                <asp:Label ID="Label10" runat="server" Text="خصومات"></asp:Label>
-                            </td>
-                            <td style="width: 200px">
-                                <asp:Label ID="lblDiscount" runat="server" Text=""></asp:Label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 200px">
-                                 <asp:Label ID="Label18" runat="server" Text="العهدة أخر الفترة"></asp:Label>
-                            </td>
-                            <td style="width: 200px">
-                                <asp:Label ID="lblLoan2" runat="server" Text=""></asp:Label>
-                            </td>
-                            <td style="width: 80px">                                
-                            </td>
-                            <td style="width: 200px">
-                                <asp:Label ID="Label19" runat="server" Text="الضريبة"></asp:Label>
-                            </td>
-                            <td style="width: 200px">
-                                <asp:Label ID="lblVat2" runat="server" Text=""></asp:Label>
-                            </td>
-                        </tr>
-
-                    </table>
+         <div class="card">
+                <fieldset class="card-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="Label1" CssClass="form-control" runat="server" Text="الرصيد المرحل"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="lblOldBal" runat="server" CssClass="form-control" Text=""></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="Label11" runat="server" CssClass="form-control" Text="أجمالي الشبكة"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="lblShabaka" runat="server" CssClass="form-control" Text=""></asp:Label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="Label8" runat="server" CssClass="form-control" Text="متحصلات نقدية"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="lblCash" runat="server" CssClass="form-control" Text=""></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="Label14" runat="server" CssClass="form-control" Text="مصاريف الشبكة"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="lblShabakaDiscount" CssClass="form-control" runat="server" Text=""></asp:Label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="Label12" CssClass="form-control" runat="server" Text="المجموع"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="lblTot" CssClass="form-control" runat="server" Text=""></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="Label16" runat="server" CssClass="form-control" Text="صافي تحويلات الشبكة"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="lblShabakaNet" CssClass="form-control" runat="server" Text=""></asp:Label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="Label5" runat="server" CssClass="form-control" Text="الرصيد النقدي"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="lblBal" runat="server" CssClass="form-control" Text=""></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="Label17" runat="server" CssClass="form-control" Text="إجمالي الإيداعات"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                             <asp:Label ID="lblNetDeposit" CssClass="form-control" runat="server" Text=""></asp:Label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="Label9" runat="server" CssClass="form-control" Text="العهدة اول الفترة"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="lblLoan" runat="server" CssClass="form-control" Text=""></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="Label3" runat="server" CssClass="form-control" Text="إجمالي الإيداعات والشبكة"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="lblDeposit" runat="server" CssClass="form-control" Text=""></asp:Label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="Label13" runat="server" CssClass="form-control" Text="أجمالي الصرف"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="lblPay" runat="server" CssClass="form-control" Text=""></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="Label7" runat="server" CssClass="form-control" Text="إجمالي الإيراد"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="lblIncome" runat="server" CssClass="form-control" Text=""></asp:Label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="Label15" runat="server" CssClass="form-control" Text="أستعاضة العهدة"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="lblLoanAdd" runat="server" CssClass="form-control" Text=""></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="Label10" runat="server" CssClass="form-control" Text="خصومات"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="lblDiscount" runat="server" CssClass="form-control" Text=""></asp:Label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="Label18" runat="server" CssClass="form-control" Text="العهدة أخر الفترة"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="lblLoan2" runat="server" CssClass="form-control" Text=""></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="Label19" runat="server" CssClass="form-control" Text="الضريبة"></asp:Label>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                            <asp:Label ID="lblVat2" runat="server" CssClass="form-control" Text=""></asp:Label>
+                        </div>
+                    </div>
                 </fieldset>
             </div>
-    </center>
+  </div></div></div>
 </asp:Content>

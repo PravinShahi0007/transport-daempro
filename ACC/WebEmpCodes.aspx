@@ -4,14 +4,18 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div>
-        <center>
-            <div class="ColorRounded4Corners">
-                <center>
+     <div class="col-md-12  col-sm-12 col-xs-12">
+        <div class="card card-body">
+                     <div class="box box-info" align="right">
+                <div class="body">
+                    <div class="row">
+                         <div class="col-md-6 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
                     <asp:Label ID="Label1" runat="server" Font-Size="Larger" meta:resourcekey="Label1"
                         Text=" البند"></asp:Label>
-                    &nbsp;&nbsp;&nbsp;
-                    <asp:DropDownList ID="ddlFtype" runat="server" Width="150px" AutoPostBack="True"
+                  <!--Ankur Kumar-->
+                    <asp:DropDownList ID="ddlFtype" runat="server" CssClass="form-control" AutoPostBack="True"
                         OnSelectedIndexChanged="ddlFtype_SelectedIndexChanged">
                         <asp:ListItem Selected="True" Value="1" Text="الجنسية"></asp:ListItem>
                         <asp:ListItem Value="2" Text="الوظيفة"></asp:ListItem>
@@ -27,12 +31,11 @@
                         <asp:ListItem Value="20" Text="توقيتات الحضور و الانصراف"></asp:ListItem>
                         <asp:ListItem Value="30" Text="ملحقات الشاحنات"></asp:ListItem>
                     </asp:DropDownList>
-                </center>
-                <br />
-                <div style="width: 99%; overflow: auto; border: 1px solid #800000;">
+         </div></div></div>
+               <div class="table-responsive table text-center">
                     <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                         GridLines="None" AutoGenerateColumns="False" DataKeyNames="Code" 
-                        AllowPaging="True" Width="99.9%" OnRowUpdating="grdCodes_RowUpdating" OnPageIndexChanging="grdCodes_PageIndexChanging"
+                        AllowPaging="True" Width="100%" OnRowUpdating="grdCodes_RowUpdating" OnPageIndexChanging="grdCodes_PageIndexChanging"
                         OnRowCancelingEdit="grdCodes_RowCancelingEdit" OnRowCommand="grdCodes_RowCommand"
                         OnRowDeleting="grdCodes_RowDeleting" OnRowEditing="grdCodes_RowEditing" 
                         OnSelectedIndexChanging="grdCodes_SelectedIndexChanging">
@@ -64,10 +67,10 @@
                                 </ItemTemplate>
                                 <EditItemTemplate>
                                     <asp:TextBox ID="txtName1" MaxLength="50" Text='<%# Bind("Name1") %>' runat="server"
-                                        Width="99%" />
+                                        CssClass="form-control" />
                                 </EditItemTemplate>
                                 <FooterTemplate>
-                                    <asp:TextBox ID="txtName1" MaxLength="50" runat="server" Width="99%" />
+                                    <asp:TextBox ID="txtName1" MaxLength="50" runat="server" CssClass="form-control" />
                                 </FooterTemplate>
                                 <ControlStyle Width="200px" />
                                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
@@ -78,10 +81,10 @@
                                 </ItemTemplate>
                                 <EditItemTemplate>
                                     <asp:TextBox ID="txtName2" MaxLength="50" Text='<%# Bind("Name2") %>' runat="server"
-                                        Width="99%" />
+                                        CssClass="form-control" />
                                 </EditItemTemplate>
                                 <FooterTemplate>
-                                    <asp:TextBox ID="txtName2" MaxLength="50" runat="server" Width="99%" />
+                                    <asp:TextBox ID="txtName2" MaxLength="50" runat="server" CssClass="form-control" />
                                 </FooterTemplate>
                                 <ControlStyle Width="200px" />
                                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
@@ -92,10 +95,10 @@
                                 </ItemTemplate>
                                 <EditItemTemplate>
                                     <asp:TextBox ID="txtFType" MaxLength="50" Text='<%# Bind("FType2") %>' runat="server"
-                                        Width="99%" />
+                                        CssClass="form-control" />
                                 </EditItemTemplate>
                                 <FooterTemplate>
-                                    <asp:TextBox ID="txtFType" MaxLength="50" runat="server" Width="99%" />
+                                    <asp:TextBox ID="txtFType" MaxLength="50" runat="server" CssClass="form-control" />
                                 </FooterTemplate>
                                 <ControlStyle Width="200px" />
                                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
@@ -116,8 +119,8 @@
                 </div>
                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
                 <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
-                <br />
+               
             </div>
-        </center>
-    </div>
+       
+    </div></div></div></div>
 </asp:Content>

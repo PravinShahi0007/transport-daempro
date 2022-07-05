@@ -19,12 +19,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <center dir="rtl">
-        <div class="ColorRounded4Corners">
-            <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 99%;
-                border: solid 2px #800000">
-                <legend align="right" style="font-size: 18px; color: #800000; text-align: center;"><b>
-                    [ إعدادات النظام ]</b></legend>
-                <center>
+        <div class="card">
+            <fieldset>
+                <div class="card-header"><h4 class="card-title">
+                    [ إعدادات النظام ]</h4></div>
+<div class="card-body">
                     <div class="demo">
                         <%--<div id="tabs" style="visibility:hidden;">--%>
                         <div id="tabs" >
@@ -35,8 +34,8 @@
                                 <li><a href="#tabs-4">أجهزة البصمة</a></li>
                                 <li><a href="#tabs-1">توقيتات الحضور و الانصراف</a></li>
                             </ul>                 
-                            <div id="tabs-2">
-                                <table class="box-table-a" width="100%" style="text-align: right">
+                            <div id="tabs-2" class="table-responsive">
+                                <table class="table" width="100%" style="text-align: right">
                                     <tbody>
                                         <tr>
                                             <td colspan="2">
@@ -44,7 +43,7 @@
                                                     <strong>اسم النشاط - عربي</strong></p>
                                             </td>
                                             <td colspan="3" align="right">                                                
-                                                <asp:TextBox ID="txtCompanyName" MaxLength="100" Width="400px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtCompanyName" MaxLength="100" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td style="width: 120px">                                                
                                             </td>
@@ -57,7 +56,7 @@
                                                     <strong>اسم النشاط - أنجليزي</strong></p>
                                             </td>
                                             <td colspan="3" align="right">                                                
-                                                <asp:TextBox ID="txtCompanyName2" MaxLength="100" Width="400px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtCompanyName2" MaxLength="100" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td style="width: 120px">                                                
                                             </td>
@@ -67,8 +66,8 @@
                                     </tbody>
                                 </table>                                      
                             </div>
-                            <div id="tabs-3">
-                                <table class="box-table-a" width="100%">
+                            <div id="tabs-3" class="table-responsive">
+                                <table class="table">
                                     <tbody>
                                         <tr>
                                             <td colspan="2">
@@ -82,82 +81,92 @@
                                         </tr>
                                         <tr>
                                             <td>01-
-                                                <asp:TextBox ID="txtPaper1" MaxLength="20" Width="150px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtPaper1" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtPaperE1" MaxLength="20" Width="150px" runat="server"></asp:TextBox>
+                                                <br />
+                                                <asp:TextBox ID="txtPaperE1" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>02-
-                                                <asp:TextBox ID="txtPaper2" MaxLength="20" Width="150px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtPaper2" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtPaperE2" MaxLength="20" Width="150px" runat="server"></asp:TextBox>
+                                                <br />
+                                                <asp:TextBox ID="txtPaperE2" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>03-
-                                                <asp:TextBox ID="txtPaper3" MaxLength="20" Width="150px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtPaper3" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtPaperE3" MaxLength="20" Width="150px" runat="server"></asp:TextBox>
+                                                <br />
+                                                <asp:TextBox ID="txtPaperE3" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>04-
-                                                <asp:TextBox ID="txtPaper4" MaxLength="20" Width="150px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtPaper4" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtPaperE4" MaxLength="20" Width="150px" runat="server"></asp:TextBox>
+                                                <br />
+                                                <asp:TextBox ID="txtPaperE4" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>05-
-                                                <asp:TextBox ID="txtPaper5" MaxLength="20" Width="150px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtPaper5" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtPaperE5" MaxLength="20" Width="150px" runat="server"></asp:TextBox>
+                                                <br />
+                                                <asp:TextBox ID="txtPaperE5" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>06-
-                                                <asp:TextBox ID="txtPaper6" MaxLength="20" Width="150px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtPaper6" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtPaperE6" MaxLength="20" Width="150px" runat="server"></asp:TextBox>
+                                                <br />
+                                                <asp:TextBox ID="txtPaperE6" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>07-
-                                                <asp:TextBox ID="txtPaper7" MaxLength="20" Width="150px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtPaper7" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtPaperE7" MaxLength="20" Width="150px" runat="server"></asp:TextBox>
+                                                <br />
+                                                <asp:TextBox ID="txtPaperE7" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>08-
-                                                <asp:TextBox ID="txtPaper8" MaxLength="20" Width="150px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtPaper8" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtPaperE8" MaxLength="20" Width="150px" runat="server"></asp:TextBox>
+                                                <br />
+                                                <asp:TextBox ID="txtPaperE8" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>09-
-                                                <asp:TextBox ID="txtPaper9" MaxLength="20" Width="150px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtPaper9" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtPaperE9" MaxLength="20" Width="150px" runat="server"></asp:TextBox>
+                                                <br />
+                                                <asp:TextBox ID="txtPaperE9" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>10-
-                                                <asp:TextBox ID="txtPaper10" MaxLength="20" Width="150px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtPaper10" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtPaperE10" MaxLength="20" Width="150px" runat="server"></asp:TextBox>
+                                                <br />
+                                                <asp:TextBox ID="txtPaperE10" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
-                            <div id="tabs-4">
+                            <div id="tabs-4" class="table-responsive">
 
                        <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                         GridLines="None" AutoGenerateColumns="False" AllowPaging="False" PageSize="200" Font-Size="Smaller"
-                        Width="99.9%" >
+                        Width="100%" >
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <Columns>
                             <asp:TemplateField HeaderText="رقم الساعة" SortExpression="Code" ItemStyle-HorizontalAlign="Left">
@@ -230,8 +239,8 @@
                         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                     </asp:GridView>           
                             </div>
-                            <div id="tabs-5">
-                                <table class="box-table-a" width="100%">
+                            <div id="tabs-5" class="table-responsive">
+                                <table class="table">
                                     <tbody>
                                         <tr>
                                             <td colspan="2">
@@ -251,271 +260,301 @@
                                         </tr>
                                         <tr>
                                             <td>01-
-                                                <asp:TextBox ID="txtAdd01" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtAdd201" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd01" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd201" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlAdd01" runat="server" Width="180px">                                                    
+                                                <br />
+                                                <asp:DropDownList ID="ddlAdd01" CssClass="form-control" runat="server" >                                                    
                                                 </asp:DropDownList>
                                             </td>
                                             <td>01-
-                                                <asp:TextBox ID="txtDed01" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtDed201" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed01" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed201" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlDed01" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlDed01" CssClass="form-control" runat="server">
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>02-
-                                                <asp:TextBox ID="txtAdd02" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtAdd202" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd02" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd202" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlAdd02" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlAdd02" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                             <td>02-
-                                                <asp:TextBox ID="txtDed02" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtDed202" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed02" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed202" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlDed02" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlDed02" CssClass="form-control" runat="server" >
                                                 </asp:DropDownList>
                                             </td>                                        
                                         </tr>
                                         <tr>
                                             <td>03-
-                                                <asp:TextBox ID="txtAdd03" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtAdd203" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd03" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd203" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlAdd03" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlAdd03" CssClass="form-control" runat="server" >
                                                 </asp:DropDownList>
                                             </td>
                                             <td>03-
-                                                <asp:TextBox ID="txtDed03" MaxLength="30" Width="75px" runat="server"></asp:TextBox>                                           
-                                                <asp:TextBox ID="txtDed203" MaxLength="30" Width="75px" runat="server"></asp:TextBox>                                           
+                                                <asp:TextBox ID="txtDed03" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>                                           
+                                                <asp:TextBox ID="txtDed203" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>                                           
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlDed03" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlDed03" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>04-
-                                                <asp:TextBox ID="txtAdd04" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtAdd204" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd04" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd204" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlAdd04" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlAdd04" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                             <td>04-
-                                                <asp:TextBox ID="txtDed04" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtDed204" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed04" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed204" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlDed04" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlDed04" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>05-
-                                                <asp:TextBox ID="txtAdd05" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtAdd205" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd05" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd205" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlAdd05" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlAdd05" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                             <td>05-
-                                                <asp:TextBox ID="txtDed05" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtDed205" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed05" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed205" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlDed05" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlDed05" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>06-
-                                                <asp:TextBox ID="txtAdd06" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtAdd206" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd06" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd206" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlAdd06" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlAdd06" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                             <td>06-
-                                                <asp:TextBox ID="txtDed06" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtDed206" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed06" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed206" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlDed06" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlDed06" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>07-
-                                                <asp:TextBox ID="txtAdd07" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtAdd207" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd07" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd207" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlAdd07" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlAdd07" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                             <td>07-
-                                                <asp:TextBox ID="txtDed07" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtDed207" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed07" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed207" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlDed07" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlDed07" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>08-
-                                                <asp:TextBox ID="txtAdd08" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtAdd208" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd08" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd208" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlAdd08" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlAdd08" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                             <td>08-
-                                                <asp:TextBox ID="txtDed08" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtDed208" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed08" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed208" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlDed08" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlDed08" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>09-
-                                                <asp:TextBox ID="txtAdd09" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtAdd209" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd09" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd209" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlAdd09" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlAdd09" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                             <td>09-
-                                                <asp:TextBox ID="txtDed09" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtDed209" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed09" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed209" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlDed09" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlDed09" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>10-
-                                                <asp:TextBox ID="txtAdd10" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtAdd210" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd10" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd210" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlAdd10" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlAdd10" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                             <td>10-
-                                                <asp:TextBox ID="txtDed10" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtDed210" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed10" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed210" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlDed10" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlDed10" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>11-
-                                                <asp:TextBox ID="txtAdd11" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtAdd211" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd11" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd211" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlAdd11" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlAdd11" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                             <td>11-
-                                                <asp:TextBox ID="txtDed11" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtDed211" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed11" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed211" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlDed11" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlDed11" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>12-
-                                                <asp:TextBox ID="txtAdd12" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtAdd212" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd12" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd212" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlAdd12" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlAdd12" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                             <td>12-
-                                                <asp:TextBox ID="txtDed12" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtDed212" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed12" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed212" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlDed12" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlDed12" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>13-
-                                                <asp:TextBox ID="txtAdd13" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtAdd213" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd13" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd213" MaxLength="30" CssClass="form-control" Width="75px" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlAdd13" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlAdd13" CssClass="form-control" runat="server" >
                                                 </asp:DropDownList>
                                             </td>
                                             <td>13-
-                                                <asp:TextBox ID="txtDed13" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtDed213" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed13" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed213" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlDed13" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlDed13" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>14-
-                                                <asp:TextBox ID="txtAdd14" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtAdd214" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd14" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd214" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlAdd14" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlAdd14" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                             <td>14-
-                                                <asp:TextBox ID="txtDed14" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtDed214" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed14" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed214" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlDed14" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlDed14" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td align="right">15-
-                                                <asp:TextBox ID="txtAdd15" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtAdd215" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd15" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAdd215" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlAdd15" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlAdd15" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                             <td>15-
-                                                <asp:TextBox ID="txtDed15" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
-                                                <asp:TextBox ID="txtDed215" MaxLength="30" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed15" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDed215" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlDed15" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlDed15" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
@@ -523,7 +562,8 @@
                                             <td align="right">16- الراتب الاساسي                                                
                                             </td>
                                             <td>
-                                                <asp:DropDownList ID="ddlBasic" runat="server" Width="180px">
+                                                <br />
+                                                <asp:DropDownList ID="ddlBasic" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
                                             <td>
@@ -534,14 +574,14 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div id="tabs-1">
-                                <table class="box-table-a" width="100%">
+                            <div id="tabs-1" class="table-responsive">
+                                <table class="table">
                                     <tbody>
                                         <tr>
                                             <td colspan="3">
                                                 <p style="text-align: right">
                                                     <strong>توقيتات الحضور و الانصراف</strong>&nbsp;&nbsp;
-                                                    <asp:DropDownList ID="ddlShift" Width="250px" runat="server" 
+                                                    <asp:DropDownList ID="ddlShift" CssClass="form-control" runat="server" 
                                                         AutoPostBack="True" onselectedindexchanged="ddlShift_SelectedIndexChanged">
                                                     </asp:DropDownList>
                                                     
@@ -565,7 +605,7 @@
                                                 <asp:Label ID="lblFTime" runat="server" Text="وقت الحضور"></asp:Label>
                                             </td>
                                             <td colspan="2">                                            
-                                                <asp:TextBox ID="txtFTime" MaxLength="10" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtFTime" MaxLength="10" CssClass="form-control" runat="server"></asp:TextBox>
                                                 <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtFTime" ValidationGroup="1"
                                                     Text="*" SetFocusOnError="true" ValidationExpression="^((0?[1-9]|1[012])(:[0-5]\d){0,2}(\ [AP]M))$|^([01]\d|2[0-3])(:[0-5]\d){0,2}$"
                                                     Display="Dynamic" ErrorMessage="يجب أن تكون القيمة وقت"></asp:RegularExpressionValidator>
@@ -574,7 +614,7 @@
                                                 <asp:Label ID="lblETime" runat="server" Text="وقت الانصراف"></asp:Label>
                                             </td>
                                             <td colspan="2">
-                                                <asp:TextBox ID="txtETime" MaxLength="10" Width="75px" runat="server"></asp:TextBox>                                                
+                                                <asp:TextBox ID="txtETime" MaxLength="10" CssClass="form-control" runat="server"></asp:TextBox>                                                
                                                 <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtETime" ValidationGroup="1"
                                                     Text="*" SetFocusOnError="true" ValidationExpression="^((0?[1-9]|1[012])(:[0-5]\d){0,2}(\ [AP]M))$|^([01]\d|2[0-3])(:[0-5]\d){0,2}$"
                                                     Display="Dynamic" ErrorMessage="يجب أن تكون القيمة وقت"></asp:RegularExpressionValidator>
@@ -591,7 +631,7 @@
                                                 <asp:Label ID="lblSFTime" runat="server" Text="وقت الحضور"></asp:Label>
                                             </td>
                                             <td colspan="2">                                            
-                                                <asp:TextBox ID="txtSFTime" MaxLength="5" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtSFTime" MaxLength="5" CssClass="form-control" runat="server"></asp:TextBox>
                                                 <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtSFTime" ValidationGroup="1"
                                                     Text="*" SetFocusOnError="true" ValidationExpression="^((0?[1-9]|1[012])(:[0-5]\d){0,2}(\ [AP]M))$|^([01]\d|2[0-3])(:[0-5]\d){0,2}$"
                                                     Display="Dynamic" ErrorMessage="يجب أن تكون القيمة وقت"></asp:RegularExpressionValidator>
@@ -600,7 +640,7 @@
                                                 <asp:Label ID="lblSETime" runat="server" Text="وقت الانصراف"></asp:Label>
                                             </td>
                                             <td colspan="2">
-                                                <asp:TextBox ID="txtSETime" MaxLength="5" Width="75px" runat="server"></asp:TextBox>                                                
+                                                <asp:TextBox ID="txtSETime" MaxLength="5" CssClass="form-control" runat="server"></asp:TextBox>                                                
                                                 <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtSETime" ValidationGroup="1"
                                                     Text="*" SetFocusOnError="true" ValidationExpression="^((0?[1-9]|1[012])(:[0-5]\d){0,2}(\ [AP]M))$|^([01]\d|2[0-3])(:[0-5]\d){0,2}$"
                                                     Display="Dynamic" ErrorMessage="يجب أن تكون القيمة وقت"></asp:RegularExpressionValidator>
@@ -617,7 +657,7 @@
                                                 <asp:Label ID="lblRFTime" runat="server" Text="وقت الحضور"></asp:Label>
                                             </td>
                                             <td colspan="2">                                            
-                                                <asp:TextBox ID="txtRFTime" MaxLength="5" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtRFTime" MaxLength="5" CssClass="form-control" runat="server"></asp:TextBox>
                                                 <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="txtRFTime" ValidationGroup="1"
                                                     Text="*" SetFocusOnError="true" ValidationExpression="^((0?[1-9]|1[012])(:[0-5]\d){0,2}(\ [AP]M))$|^([01]\d|2[0-3])(:[0-5]\d){0,2}$"
                                                     Display="Dynamic" ErrorMessage="يجب أن تكون القيمة وقت"></asp:RegularExpressionValidator>
@@ -626,7 +666,7 @@
                                                 <asp:Label ID="lblRETime" runat="server" Text="وقت الانصراف"></asp:Label>
                                             </td>
                                             <td colspan="2">
-                                                <asp:TextBox ID="txtRETime" MaxLength="5" Width="75px" runat="server"></asp:TextBox>                                                
+                                                <asp:TextBox ID="txtRETime" MaxLength="5" CssClass="form-control" runat="server"></asp:TextBox>                                                
                                                 <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ControlToValidate="txtRETime" ValidationGroup="1"
                                                     Text="*" SetFocusOnError="true" ValidationExpression="^((0?[1-9]|1[012])(:[0-5]\d){0,2}(\ [AP]M))$|^([01]\d|2[0-3])(:[0-5]\d){0,2}$"
                                                     Display="Dynamic" ErrorMessage="يجب أن تكون القيمة وقت"></asp:RegularExpressionValidator>
@@ -646,7 +686,7 @@
                                                 <asp:Label ID="lblDLate" runat="server" Text="يومي"></asp:Label>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtDLate" MaxLength="5" Width="75px" runat="server"></asp:TextBox>                                                
+                                                <asp:TextBox ID="txtDLate" MaxLength="5" CssClass="form-control" runat="server"></asp:TextBox>                                                
                                                 <asp:CompareValidator ID="CompareValidator6" runat="server" ControlToValidate="txtDLate" ValidationGroup="1"
                                                     ErrorMessage="يجب أن تكون القيمة رقمية" ForeColor="Red" Type="Integer" SetFocusOnError="True"
                                                     Operator="DataTypeCheck">*</asp:CompareValidator>
@@ -655,7 +695,7 @@
                                                 <asp:Label ID="lblMDLate" runat="server" Text="شهري"></asp:Label>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtMDLate" MaxLength="5" Width="75px" runat="server"></asp:TextBox>                                                
+                                                <asp:TextBox ID="txtMDLate" MaxLength="5" CssClass="form-control" runat="server"></asp:TextBox>                                                
                                                 <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="txtMDLate" ValidationGroup="1"
                                                     ErrorMessage="يجب أن تكون القيمة رقمية" ForeColor="Red" Type="Integer" SetFocusOnError="True"
                                                     Operator="DataTypeCheck">*</asp:CompareValidator>
@@ -664,7 +704,7 @@
                                                 <asp:Label ID="lblYDLate" runat="server" Text="سنوي"></asp:Label>
                                             </td>                                        
                                             <td>
-                                                <asp:TextBox ID="txtYDLate" MaxLength="5" Width="75px" runat="server"></asp:TextBox>                                                
+                                                <asp:TextBox ID="txtYDLate" MaxLength="5" CssClass="form-control" runat="server"></asp:TextBox>                                                
                                                 <asp:CompareValidator ID="CompareValidator2" runat="server" ControlToValidate="txtYDLate" ValidationGroup="1"
                                                     ErrorMessage="يجب أن تكون القيمة رقمية" ForeColor="Red" Type="Integer" SetFocusOnError="True"
                                                     Operator="DataTypeCheck">*</asp:CompareValidator>
@@ -682,7 +722,7 @@
                                                 <asp:Label ID="lblMDLateNo" runat="server" Text="شهري"></asp:Label>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtMDLateNo" MaxLength="5" Width="75px" runat="server"></asp:TextBox>                                                
+                                                <asp:TextBox ID="txtMDLateNo" MaxLength="5" CssClass="form-control" runat="server"></asp:TextBox>                                                
                                                 <asp:CompareValidator ID="CompareValidator4" runat="server" ControlToValidate="txtMDLateNo" ValidationGroup="1"
                                                     ErrorMessage="يجب أن تكون القيمة رقمية" ForeColor="Red" Type="Integer" SetFocusOnError="True"
                                                     Operator="DataTypeCheck">*</asp:CompareValidator>
@@ -691,7 +731,7 @@
                                                 <asp:Label ID="lblYDLateNo" runat="server" Text="سنوي"></asp:Label>
                                             </td>                                        
                                             <td>
-                                                <asp:TextBox ID="txtYDLateNo" MaxLength="5" Width="75px" runat="server"></asp:TextBox>                                                
+                                                <asp:TextBox ID="txtYDLateNo" MaxLength="5" CssClass="form-control" runat="server"></asp:TextBox>                                                
                                                 <asp:CompareValidator ID="CompareValidator5" runat="server" ControlToValidate="txtYDLateNo" ValidationGroup="1"
                                                     ErrorMessage="يجب أن تكون القيمة رقمية" ForeColor="Red" Type="Integer" SetFocusOnError="True"
                                                     Operator="DataTypeCheck">*</asp:CompareValidator>
@@ -705,7 +745,7 @@
                                                 <asp:Label ID="lblDEarly" runat="server" Text="يومي"></asp:Label>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtDEarly" MaxLength="10" Width="75px" runat="server"></asp:TextBox>                                                
+                                                <asp:TextBox ID="txtDEarly" MaxLength="10" CssClass="form-control" runat="server"></asp:TextBox>                                                
                                                 <asp:CompareValidator ID="CompareValidator7" runat="server" ControlToValidate="txtDEarly" ValidationGroup="1"
                                                     ErrorMessage="يجب أن تكون القيمة رقمية" ForeColor="Red" Type="Integer" SetFocusOnError="True"
                                                     Operator="DataTypeCheck">*</asp:CompareValidator>
@@ -714,7 +754,7 @@
                                                 <asp:Label ID="lblMDEarly" runat="server" Text="شهري"></asp:Label>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtMDEarly" MaxLength="10" Width="75px" runat="server"></asp:TextBox>                                                
+                                                <asp:TextBox ID="txtMDEarly" MaxLength="10" CssClass="form-control" runat="server"></asp:TextBox>                                                
                                                 <asp:CompareValidator ID="CompareValidator8" runat="server" ControlToValidate="txtMDEarly" ValidationGroup="1"
                                                     ErrorMessage="يجب أن تكون القيمة رقمية" ForeColor="Red" Type="Integer" SetFocusOnError="True"
                                                     Operator="DataTypeCheck">*</asp:CompareValidator>
@@ -723,7 +763,7 @@
                                                 <asp:Label ID="lblYDEarly" runat="server" Text="سنوي"></asp:Label>
                                             </td>                                        
                                             <td>
-                                                <asp:TextBox ID="txtYDEarly" MaxLength="10" Width="75px" runat="server"></asp:TextBox>                                                
+                                                <asp:TextBox ID="txtYDEarly" MaxLength="10" CssClass="form-control" runat="server"></asp:TextBox>                                                
                                                 <asp:CompareValidator ID="CompareValidator9" runat="server" ControlToValidate="txtYDEarly" ValidationGroup="1"
                                                     ErrorMessage="يجب أن تكون القيمة رقمية" ForeColor="Red" Type="Integer" SetFocusOnError="True"
                                                     Operator="DataTypeCheck">*</asp:CompareValidator>
@@ -741,7 +781,7 @@
                                                 <asp:Label ID="lblMDEarlyNo" runat="server" Text="شهري"></asp:Label>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtMDEarlyNo" MaxLength="10" Width="75px" runat="server"></asp:TextBox>                                                
+                                                <asp:TextBox ID="txtMDEarlyNo" MaxLength="10" CssClass="form-control" runat="server"></asp:TextBox>                                                
                                                 <asp:CompareValidator ID="CompareValidator11" runat="server" ControlToValidate="txtMDEarlyNo" ValidationGroup="1"
                                                     ErrorMessage="يجب أن تكون القيمة رقمية" ForeColor="Red" Type="Integer" SetFocusOnError="True"
                                                     Operator="DataTypeCheck">*</asp:CompareValidator>
@@ -750,7 +790,7 @@
                                                 <asp:Label ID="lblYDEarlyNo" runat="server" Text="سنوي"></asp:Label>
                                             </td>                                        
                                             <td>
-                                                <asp:TextBox ID="txtYDEarlyNo" MaxLength="10" Width="75px" runat="server"></asp:TextBox>                                                
+                                                <asp:TextBox ID="txtYDEarlyNo" MaxLength="10" CssClass="form-control" runat="server"></asp:TextBox>                                                
                                                 <asp:CompareValidator ID="CompareValidator12" runat="server" ControlToValidate="txtYDEarlyNo" ValidationGroup="1"
                                                     ErrorMessage="يجب أن تكون القيمة رقمية" ForeColor="Red" Type="Integer" SetFocusOnError="True"
                                                     Operator="DataTypeCheck">*</asp:CompareValidator>
@@ -764,7 +804,7 @@
                                                 <asp:Label ID="lblMForget" runat="server" Text="شهري"></asp:Label>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtMForget" MaxLength="10" Width="75px" runat="server"></asp:TextBox>                                                
+                                                <asp:TextBox ID="txtMForget" MaxLength="10" CssClass="form-control" runat="server"></asp:TextBox>                                                
                                                 <asp:CompareValidator ID="CompareValidator13" runat="server" ControlToValidate="txtMForget" ValidationGroup="1"
                                                     ErrorMessage="يجب أن تكون القيمة رقمية" ForeColor="Red" Type="Integer" SetFocusOnError="True"
                                                     Operator="DataTypeCheck">*</asp:CompareValidator>
@@ -773,7 +813,7 @@
                                                 <asp:Label ID="lblYForget" runat="server" Text="سنوي"></asp:Label>
                                             </td>                                        
                                             <td>
-                                                <asp:TextBox ID="txtYForget" MaxLength="10" Width="75px" runat="server"></asp:TextBox>                                                
+                                                <asp:TextBox ID="txtYForget" MaxLength="10" CssClass="form-control" runat="server"></asp:TextBox>                                                
                                                 <asp:CompareValidator ID="CompareValidator14" runat="server" ControlToValidate="txtYForget" ValidationGroup="1"
                                                     ErrorMessage="يجب أن تكون القيمة رقمية" ForeColor="Red" Type="Integer" SetFocusOnError="True"
                                                     Operator="DataTypeCheck">*</asp:CompareValidator>
@@ -784,7 +824,7 @@
                                                 <asp:Label ID="lblNoTime" runat="server" Text="عدد ساعات العمل شهرياً"></asp:Label>
                                             </td>
                                             <td colspan="2">                                            
-                                                <asp:TextBox ID="txtNoTime" MaxLength="10" Width="75px" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtNoTime" MaxLength="10" CssClass="form-control" runat="server"></asp:TextBox>
                                                 <asp:CompareValidator ID="CompareValidator15" runat="server" ControlToValidate="txtNoTime" ValidationGroup="1"
                                                     ErrorMessage="يجب أن تكون القيمة رقمية" ForeColor="Red" Type="Currency" SetFocusOnError="True"
                                                     Operator="DataTypeCheck">*</asp:CompareValidator>
@@ -793,7 +833,7 @@
                                                 <asp:Label ID="Label1" runat="server" Text="عدد ساعات الخصم في حالة نسيان تسجيل الحضور أو الانصراف"></asp:Label>
                                             </td>
                                             <td colspan="2">
-                                                <asp:TextBox ID="txtForget" MaxLength="10" Width="75px" runat="server"></asp:TextBox>                                                
+                                                <asp:TextBox ID="txtForget" MaxLength="10" CssClass="form-control" runat="server"></asp:TextBox>                                                
                                                 <asp:CompareValidator ID="CompareValidator16" runat="server" ControlToValidate="txtForget" ValidationGroup="1"
                                                     ErrorMessage="يجب أن تكون القيمة رقمية" ForeColor="Red" Type="Integer" SetFocusOnError="True"
                                                     Operator="DataTypeCheck">*</asp:CompareValidator>
@@ -803,7 +843,7 @@
                                 </table>
                             </div>
 
-                            <div class="mytd">
+                           
                             <table  cellpadding="5px" cellspacing="5px"  width="100%" style="color:Black;" >
                             <tr>
                              <td colspan="3" >
@@ -815,17 +855,17 @@
                              <td style="width:20%; text-align:center" >
                                     <asp:ImageButton ID="BtnEdit" runat="server" AlternateText="تعديل" 
                                         CommandName="Edit" ValidationGroup="1"
-                                        ImageUrl="~/images/draw_pen_642.png" ToolTip="تعديل بيانات أعدادات النظام"
+                                        ImageUrl="~/images/edit2.png" ToolTip="تعديل بيانات أعدادات النظام"
                                         Width="64px" onclick="BtnEdit_Click"   />
 
                              </td>
                             </tr>
                             </table>
-                            </div>
+                           
                         </div>
                     </div>
                     <!-- End demo -->
-                </center>
+   </div>       
             </fieldset>
         </div>
         <asp:HiddenField ID="hdnSelectedTab" runat="server" Value="0" />
