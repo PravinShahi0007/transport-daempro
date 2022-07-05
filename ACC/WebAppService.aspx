@@ -3,10 +3,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<<<<<<< HEAD
 <div class="col-md-12  col-sm-12 col-xs-12">
       <div class="card card-body">
                 <h3 align="center" ><b>
                     [بطاقة خدمة / التطبيق ]</b></h3>
+=======
+ <div class="ColorRounded4Corners col-md-12 col-sm-12 col-xs-12">
+           
+                <legend align="right" style="font-size: 18px; color: #800000; text-align: center;"><b>
+                    [بطاقة خدمة / التطبيق ]</b></legend>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                <div class="box box-info" align="right">
                 <div class="body">
                     <div class="row">
@@ -25,7 +32,11 @@
                            <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="form-group form-float">
                                 <div class="form-line">
+<<<<<<< HEAD
                                     <br />
+=======
+
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                 <asp:TextBox ID="txtSearch" MaxLength="10" CssClass="form-control" placeholder="بحث" runat="server"></asp:TextBox>
                                 <asp:ImageButton ID="BtnFind" runat="server" ValidationGroup="55" ImageUrl="~/images/zoom_16.png"
                                     ToolTip="البحث عن بيانات الخدمة" OnClick="BtnFind_Click"  Text="بحث"/>
@@ -111,6 +122,7 @@
                                 <asp:ImageButton ID="BtnClear" runat="server" AlternateText="مسح" CommandName="Clear"
                                     ImageUrl="~/images/clear all.png" ToolTip="مسح خانات الشاشة" OnClick="BtnClear_Click" Text="مسح"/>
                                 <asp:ImageButton ID="BtnDelete" runat="server" AlternateText="إلغاء" CommandName="Delete"
+<<<<<<< HEAD
                                     ImageUrl="~/images/delete2.png" ToolTip="إلغاء بيانات الخدمة" OnClientClick='return confirm("هل أنت متاكد من الغاء بيانات الخدمة؟")' OnClick="BtnDelete_Click" Text="إلغاء"/>
                            </div></div></div>
             
@@ -118,6 +130,15 @@
                     [ الأصناف ]</h3>
               
                           <div class="table table-responsive table-hove text-center">
+=======
+                                    ImageUrl="~/images/cut_642.png" ToolTip="إلغاء بيانات الخدمة" OnClientClick='return confirm("هل أنت متاكد من الغاء بيانات الخدمة؟")' OnClick="BtnDelete_Click" Text="إلغاء"/>
+                           </div></div></div>
+            
+                <legend align="right" style="font-size: 18px; color: #800000; text-align: center;"><b>
+                    [ الأصناف ]</b></legend>
+              
+                          <div class="table-responsive">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                
                 <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="Black" GridLines="None"
                     AutoGenerateColumns="False" DataKeyNames="SCode" Width="99.9%" EmptyDataText="لا توجد بيانات" >
@@ -178,7 +199,11 @@
            
          </div></div></div>
         </div>
+<<<<<<< HEAD
    </div>
+=======
+   
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
 
 </asp:Content>
 

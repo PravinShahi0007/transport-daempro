@@ -3,6 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
  
+<<<<<<< HEAD
          <div class="card">
           
           
@@ -12,6 +13,14 @@
                         أجمالي مصروفات الشاحنات
                             </h4></div>
                     <div class="card-body">
+=======
+         <div class="ColorRounded4Corners col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+          
+          
+                <fieldset class="Rounded4CornersNoShadow" >
+                    <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
+                        أجمالي مصروفات الشاحنات</legend>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                   <div class="box box-info" align="right">
                 <div class="body">
                     <div class="row">
@@ -74,6 +83,7 @@
                                 <div class="col-md-6 col-sm-12 col-xs-12" >
                             <div class="form-group form-float">
                                 <div class="form-line">
+<<<<<<< HEAD
                           <asp:ImageButton ID="BtnPrint" ToolTip="Print" CommandName="1" runat="server" ImageUrl="~/images/print.png"
                                       OnCommand="BtnPrint1_Command" OnClientClick="aspnetForm.target ='_blank';" />                                    
                                 <asp:ImageButton ID="BtnExcel" runat="server" AlternateText="تصدير للإكسل" CommandName="Excel"  
@@ -83,6 +93,17 @@
                                     ImageUrl="~/images/setting.png" ToolTip="تشغيل التقرير" OnClick="BtnProcess_Click" />
                          </div></div></div>
               <div class="table table-responsive table-hover text-center">
+=======
+                          <asp:ImageButton ID="BtnPrint" ToolTip="Print" CommandName="1" runat="server" ImageUrl="~/images/print_64A.png"
+                                      OnCommand="BtnPrint1_Command" OnClientClick="aspnetForm.target ='_blank';" />                                    
+                                <asp:ImageButton ID="BtnExcel" runat="server" AlternateText="تصدير للإكسل" CommandName="Excel"  
+                                    ImageUrl="~/images/Excel.png" ToolTip="'طباعة بيانات التقرير" OnClientClick="aspnetForm.target ='_blank';"
+                                    OnClick="BtnExcel_Click" />
+                                <asp:ImageButton ID="BtnProcess" runat="server" AlternateText="تشغيل" ValidationGroup="1"   
+                                    ImageUrl="~/images/Process.png" ToolTip="تشغيل التقرير" OnClick="BtnProcess_Click" />
+                         </div></div></div>
+              <div class="table-responsive">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                     <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                         GridLines="None" AutoGenerateColumns="False" AllowPaging="True" PageSize="20"
                         Width="100%" OnPageIndexChanging="grdCodes_PageIndexChanging">
@@ -138,7 +159,10 @@
                 </div>
                 <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
              </div></div></div>
+<<<<<<< HEAD
                         </div>
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
           </fieldset>
         </div>
    

@@ -3,6 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   
+<<<<<<< HEAD
         <div class="card">
            
            
@@ -12,6 +13,15 @@
                         <asp:Label ID="lblHead" runat="server" Text="أجمالي مصروفات الشاحنات" meta:resourcekey="lblHead"></asp:Label></h4>
                     </div>
                     <div class="card-body">
+=======
+        <div class="ColorRounded4Corners col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+           
+           
+                <fieldset class="Rounded4CornersNoShadow" >
+                    <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
+                        <asp:Label ID="lblHead" runat="server" Text="أجمالي مصروفات الشاحنات" meta:resourcekey="lblHead"></asp:Label>
+                    </legend>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                      <div class="box box-info" align="right">
                 <div class="body">
                     <div class="row">
@@ -19,10 +29,17 @@
                             <div class="form-group form-float">
                                 <div class="form-line">
                                 <asp:CheckBox ID="ChkPeriod" runat="server" Checked="True" Text="جميع الفترات" AutoPostBack="True" oncheckedchanged="ChkPeriod_CheckedChanged" meta:resourcekey="ChkPeriod" />
+<<<<<<< HEAD
                          <br />
                                 <asp:Label ID="LblFDate" runat="server" Visible="false" Text="من تاريخ"  meta:resourcekey="LblFDate"></asp:Label>
                           
                                 <asp:TextBox ID="txtFDate" MaxLength="10" CssClass="form-control" Visible="false" 
+=======
+                         
+                                <asp:Label ID="LblFDate" runat="server" Visible="false" Text="من تاريخ"  meta:resourcekey="LblFDate"></asp:Label>
+                          
+                                <asp:TextBox ID="txtFDate" MaxLength="10" Width="100px" Visible="false" 
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                     runat="server" AutoPostBack="True" ontextchanged="txtFDate_TextChanged"></asp:TextBox>
                                 <asp:CompareValidator ID="ValFDate" runat="server" ControlToValidate="txtFDate"
                                     CultureInvariantValues="true" Display="Dynamic" ErrorMessage="<%$ Resources: DateValue %>"
@@ -31,11 +48,29 @@
                                     TargetControlID="txtFDate" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
                                     PopupPosition="BottomLeft" />
                        </div></div></div>
+<<<<<<< HEAD
                            
                            <div class="col-md-3 col-sm-12 col-xs-12" >
                             <div class="form-group form-float">
                                 <div class="form-line">
                                     <br />
+=======
+                           <div class="col-md-3 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                <asp:ImageButton ID="BtnPrint" ToolTip="<%$ Resources: PrintTooltip %>" AlternateText="<%$ Resources: Print %>" CommandName="1" runat="server" ImageUrl="<%$ Resources: PrintImage %>"
+                                      OnCommand="BtnPrint1_Command" OnClientClick="aspnetForm.target ='_blank';" />                                    
+                                <asp:ImageButton ID="BtnExcel" runat="server" AlternateText="<%$ Resources: Excel %>" CommandName="Excel"  
+                                    ImageUrl="<%$ Resources: ExcelImage %>" ToolTip="<%$ Resources: ExcelTooltip %>"  OnClientClick="aspnetForm.target ='_blank';"
+                                    OnClick="BtnExcel_Click" />
+                                <asp:ImageButton ID="BtnProcess" runat="server" AlternateText="<%$ Resources: Process %>" ValidationGroup="1"   
+                                    ImageUrl="<%$ Resources: ProcessImage %>" ToolTip="<%$ Resources: ProcessTooltip %>" OnClick="BtnProcess_Click" />
+                 
+                                    </div></div></div>
+                           <div class="col-md-3 col-sm-12 col-xs-12" >
+                            <div class="form-group form-float">
+                                <div class="form-line">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                 <asp:Label ID="LblEDate" runat="server" Visible="false" Text="إلى تاريخ" meta:resourcekey="LblEDate"></asp:Label>
                         
                                <asp:TextBox ID="txtEDate" MaxLength="10" CssClass="form-control" Visible="false" 
@@ -50,7 +85,10 @@
                            <div class="col-md-3 col-sm-12 col-xs-12" >
                             <div class="form-group form-float">
                                 <div class="form-line">
+<<<<<<< HEAD
                                     <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                 <asp:Label ID="Label4" runat="server" Text="عرض السجلات" meta:resourcekey="Label4"></asp:Label>
                         
                                 <asp:DropDownList ID="ddlRecordsPerPage" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlRecordsPerPage_SelectedIndexChanged">
@@ -65,6 +103,7 @@
                                     <asp:ListItem Value="-1" Text="<%$ Resources: All %>"></asp:ListItem>
                                 </asp:DropDownList>
                         </div></div></div>
+<<<<<<< HEAD
                         <div class="col-md-3 col-sm-12 col-xs-12" >
                             <div class="form-group form-float">
                                 <div class="form-line">
@@ -77,6 +116,8 @@
                                     ImageUrl="~/images/setting.png" ToolTip="<%$ Resources: ProcessTooltip %>" OnClick="BtnProcess_Click" />
                  
                                     </div></div></div>
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                            <div class="col-md-3 col-sm-12 col-xs-12" >
                             <div class="form-group form-float">
                                 <div class="form-line">
@@ -86,7 +127,11 @@
                          
                                     </div></div></div>
               
+<<<<<<< HEAD
                 <div class="table table-responsive table-hover text-center">
+=======
+                <div class="table-responsive">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                     <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                         GridLines="None" AutoGenerateColumns="False" AllowPaging="True" PageSize="20"
                         Width="100%" OnPageIndexChanging="grdCodes_PageIndexChanging">
@@ -142,7 +187,10 @@
                 </div>
                 <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
                         </div></div></div>
+<<<<<<< HEAD
                         </div>
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
              </fieldset>   
            
         </div>

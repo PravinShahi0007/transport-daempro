@@ -63,10 +63,18 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<<<<<<< HEAD
     <div class="col-md-12  col-sm-12 col-xs-12">
       <div class="card card-body">
                 <h3 Class="text-center">
                     [ Purchase Request ]</h3>              
+=======
+   
+       <div class="ColorRounded4Corners col-md-12 col-sm-12 col-xs-12">
+         
+                <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
+                    <b>[ Purchase Request ]</b></legend>              
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                   <div class="box box-info" align="right">
                 <div class="body">
                     <div class="row">
@@ -128,8 +136,13 @@
                                  <asp:Label ID="lblStatus" runat="server"  CssClass="blink" ForeColor="Red" Text=""></asp:Label>
                            </div></div></div>
            
+<<<<<<< HEAD
                       <div class="table table-responsive table-hover text-center">
                         <asp:GridView ID="grdCodes" runat="server" CellPadding="4" Width="100%" ForeColor="#333333"
+=======
+                      <div class="table-responsive">
+                        <asp:GridView ID="grdCodes" runat="server" CellPadding="4" Width="99.95%" ForeColor="#333333"
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                             ShowFooter="True" ViewStateMode="Enabled" GridLines="None" AutoGenerateColumns="False"
                             DataKeyNames="FNo" AllowPaging="True" PageSize="100" OnPageIndexChanging="grdCodes_PageIndexChanging"
                             OnRowCancelingEdit="grdCodes_RowCancelingEdit" OnRowCommand="grdCodes_RowCommand"
@@ -286,7 +299,11 @@
                                 <div class="form-line">
                                 <asp:Label ID="Label3" runat="server" Text="Total Qty:"></asp:Label>
                            
+<<<<<<< HEAD
                                 <asp:Label ID="lblTotalQty" runat="server" CssClass="form-control" Text=""></asp:Label>
+=======
+                                <asp:Label ID="lblTotalQty" runat="server" Text=""></asp:Label>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                           </div></div></div>
                            <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="form-group form-float">
@@ -320,6 +337,7 @@
                                 <asp:Button ID="BtnUnlock" runat="server" CssClass="btn btn-primary " Text="Unlock" 
                                     onclick="BtnUnlock_Click" />
                            </div></div></div>
+<<<<<<< HEAD
                        
                         <div class="form-group">
                              <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
@@ -329,6 +347,12 @@
                             <div class="form-group form-float">
                                 <div class="form-line">
                                
+=======
+                                <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                          
                                 <asp:ImageButton ID="BtnNew" runat="server" AlternateText="New" CommandName="New"
                                     ImageUrl="~/images/data add.png" CssClass="ops" ToolTip="Add New Request"
@@ -352,6 +376,7 @@
                                     ImageUrl="~/images/print.png" ValidationGroup="1" CssClass="ops" 
                                     ToolTip="Print Request" onclick="BtnPrint_Click" />
                          </div></div></div>
+<<<<<<< HEAD
             
                   <div class="col-md-12 col-sm-12 col-xm-12">
                       <div class="card">
@@ -370,6 +395,25 @@
                               <asp:Panel ID="Panel2" runat="server">
                               <asp:Panel ID="Panel1" runat="server" >
                         <div class="table table-responsive table-hover text-center">
+=======
+              
+                <div style="text-align: right; width: 50%;">
+                    <asp:Panel ID="Panel2" runat="server" Height="30px" BackColor="#5D7B9D" Width="99.5%"
+                        Direction="LeftToRight" ForeColor="#FFFF99">
+                        <div style="padding: 5px; cursor: pointer; vertical-align: middle;">
+                            <div style="float: left;">
+                                Attach Files</div>
+                            <div style="float: left; margin-right: 20px;">
+                                <asp:Label ID="Label34" runat="server">(Show Details...)</asp:Label>
+                            </div>
+                            <div style="float: right; vertical-align: middle;">
+                                <asp:ImageButton ID="Image1" runat="server" ImageUrl="~/images/expand_blue.jpg" AlternateText="(Show Details...)" />
+                            </div>
+                        </div>
+                    </asp:Panel>
+                    <asp:Panel ID="Panel1" runat="server" Height="0" BackColor="#FFFFCC" Width="99.3%"
+                        BorderColor="Maroon">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                         <asp:GridView ID="grdAttach" runat="server" CellPadding="4" ForeColor="#333333"
                             ShowHeader="False" GridLines="None" AutoGenerateColumns="False" DataKeyNames="FNo"
                             Width="99%" OnRowDeleting="grdAttach_RowDeleting">
@@ -401,9 +445,26 @@
                             <SortedDescendingCellStyle BackColor="#FFFDF8" />
                             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                         </asp:GridView>
+<<<<<<< HEAD
                             </div>
                         
                                   <ajax:CollapsiblePanelExtender ID="cpeDemo" runat="Server" TargetControlID="Panel1"
+=======
+                        <table width="100%">
+                            <tr>
+                                <td align="left">
+                                    <asp:FileUpload ID="FileUpload1" CssClass="form-control" runat="server" />
+                                </td>
+                                <td align="right">
+                                    <asp:ImageButton ID="BtnAttach" runat="server" AlternateText="Attach" CommandName="Attach"
+                                        CssClass="ops" ImageUrl="~/images/attach1.png" ToolTip="Attach File" 
+                                        ValidationGroup="1" onclick="BtnAttach_Click" />
+                                </td>
+                            </tr>
+                        </table>
+                    </asp:Panel>
+                    <ajax:CollapsiblePanelExtender ID="cpeDemo" runat="Server" TargetControlID="Panel1"
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                         ExpandControlID="Panel2" CollapseControlID="Panel2" Collapsed="True" TextLabelID="Label13"
                         ImageControlID="Image1" ExpandedText="(Hide Details)" CollapsedText="(Show Details)"
                         ExpandDirection="Vertical" ExpandedImage="~/images/collapse.jpg" CollapsedImage="~/images/expand.jpg"
@@ -434,5 +495,9 @@
                 </div>--%>
             
         </div></div></div></div>
+<<<<<<< HEAD
  </div>
+=======
+ 
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
 </asp:Content>

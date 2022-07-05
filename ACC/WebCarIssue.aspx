@@ -4,11 +4,19 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+<<<<<<< HEAD
     <div class="col-md-12  col-sm-12 col-xs-12">
         <div class="card card-body">
             <h3 align="center">
                 <asp:Label ID="lblHead" runat="server" Text="أجمالي مصروفات الشاحنات" meta:resourcekey="lblHead"></asp:Label>
             </h3>
+=======
+    <div class="ColorRounded4Corners col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+        <fieldset class="Rounded4CornersNoShadow">
+            <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
+                <asp:Label ID="lblHead" runat="server" Text="أجمالي مصروفات الشاحنات" meta:resourcekey="lblHead"></asp:Label>
+            </legend>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
             <div class="box box-info" align="right">
                 <div class="body">
                     <div class="row">
@@ -37,6 +45,7 @@
                             <div class="col-md-3 col-sm-12 col-xs-12">
                               <div class="form-group form-float">
                                   <div class="form-line">
+<<<<<<< HEAD
                                       <asp:ImageButton ID="BtnPrint" ToolTip="<%$ Resources: PrintTooltip %>" AlternateText="<%$ Resources: Print %>" CommandName="1" runat="server" ImageUrl="~/images/print.png"
                                           OnCommand="BtnPrint1_Command" OnClientClick="aspnetForm.target ='_blank';" />
                                       <asp:ImageButton ID="BtnExcel" runat="server" AlternateText="<%$ Resources: Excel %>" CommandName="Excel"
@@ -44,6 +53,15 @@
                                           OnClick="BtnExcel_Click" />
                                       <asp:ImageButton ID="BtnProcess" runat="server" AlternateText="<%$ Resources: Process %>" ValidationGroup="1"
                                           ImageUrl="~/images/setting.png" ToolTip="<%$ Resources: ProcessTooltip %>" OnClick="BtnProcess_Click" />
+=======
+                                      <asp:ImageButton ID="BtnPrint" ToolTip="<%$ Resources: PrintTooltip %>" AlternateText="<%$ Resources: Print %>" CommandName="1" runat="server" ImageUrl="<%$ Resources: PrintImage %>"
+                                          OnCommand="BtnPrint1_Command" OnClientClick="aspnetForm.target ='_blank';" />
+                                      <asp:ImageButton ID="BtnExcel" runat="server" AlternateText="<%$ Resources: Excel %>" CommandName="Excel"
+                                          ImageUrl="<%$ Resources: ExcelImage %>" ToolTip="<%$ Resources: ExcelTooltip %>" OnClientClick="aspnetForm.target ='_blank';"
+                                          OnClick="BtnExcel_Click" />
+                                      <asp:ImageButton ID="BtnProcess" runat="server" AlternateText="<%$ Resources: Process %>" ValidationGroup="1"
+                                          ImageUrl="<%$ Resources: ProcessImage %>" ToolTip="<%$ Resources: ProcessTooltip %>" OnClick="BtnProcess_Click" />
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                   </div>
                             </div>
                         </div>
@@ -79,6 +97,7 @@
                                         <asp:ListItem Value="2000">2000</asp:ListItem>
                                         <asp:ListItem Value="-1" Text="<%$ Resources: All %>"></asp:ListItem>
                                     </asp:DropDownList>
+<<<<<<< HEAD
                                      <asp:Label ID="lblCount" runat="server" Text=""></asp:Label>
 
                                     <asp:Label ID="Label6" runat="server" Text="سجل" meta:resourcekey="Label6"></asp:Label>
@@ -89,6 +108,22 @@
                          
 
                         <div class="table-responsive table">
+=======
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-md-3 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <asp:Label ID="lblCount" runat="server" Text=""></asp:Label>
+
+                                    <asp:Label ID="Label6" runat="server" Text="سجل" meta:resourcekey="Label6"></asp:Label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                             <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                                 GridLines="None" AutoGenerateColumns="False" AllowPaging="True" PageSize="20"
                                 Width="99.9%" OnPageIndexChanging="grdCodes_PageIndexChanging">
@@ -146,7 +181,12 @@
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
 
     </div></div>
+=======
+        </fieldset>
+    </div>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
 
 </asp:Content>

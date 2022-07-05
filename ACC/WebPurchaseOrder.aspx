@@ -50,11 +50,18 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+<<<<<<< HEAD
       <div class="col-md-12  col-sm-12 col-xs-12">
       <div class="card card-body">
            
                 <h3 align="center">
                  [ Purchase Order ]</h3>
+=======
+        <div class="ColorRounded4Corners col-md-12 col-sm-12 col-xs-12">
+           
+                <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
+                    <b>[ Purchase Order ]</b></legend>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                      <div class="box box-info" align="right">
                 <div class="body">
                     <div class="row">
@@ -110,8 +117,13 @@
                                 <div class="form-line">
                                 <asp:Label ID="lblStatus" runat="server"  CssClass="blink" ForeColor="Red" Text=""></asp:Label>
                          </div></div></div>
+<<<<<<< HEAD
                         <div class="table table-responsive text-hover text-center">
                         <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333"
+=======
+                        <div class="table-responsive">
+                        <asp:GridView ID="grdCodes" runat="server" CellPadding="4" Width="99.95%" ForeColor="#333333"
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                             ShowFooter="True" ViewStateMode="Enabled" GridLines="None" AutoGenerateColumns="False"
                             DataKeyNames="FNo" AllowPaging="True" PageSize="100" OnPageIndexChanging="grdCodes_PageIndexChanging"
                             OnRowCancelingEdit="grdCodes_RowCancelingEdit" OnRowCommand="grdCodes_RowCommand"
@@ -269,11 +281,19 @@
                                 <div class="form-line">
                                 <asp:Label ID="Label3" runat="server" Text="Total Qty:"></asp:Label>
                          
+<<<<<<< HEAD
                                 <asp:Label ID="lblTotalQty" CssClass="form-control" runat="server" Text=""></asp:Label>
                           
                                 <asp:Label ID="Label4" runat="server" Text="Amount:"></asp:Label>
                           
                                 <asp:Label ID="LblTotal" CssClass="form-control" runat="server" Text=""></asp:Label>
+=======
+                                <asp:Label ID="lblTotalQty" runat="server" Text=""></asp:Label>
+                          
+                                <asp:Label ID="Label4" runat="server" Text="Amount:"></asp:Label>
+                          
+                                <asp:Label ID="LblTotal" runat="server" Text=""></asp:Label>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                           </div></div></div>
                          <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="form-group form-float">
@@ -291,7 +311,11 @@
                                 <div class="form-line">
                         <asp:Label ID="Label18" runat="server" Text="Total:"></asp:Label>
                  
+<<<<<<< HEAD
                         <asp:Label ID="LblTotNet" runat="server" CssClass="form-control" Text=""></asp:Label>
+=======
+                        <asp:Label ID="LblTotNet" runat="server" Text=""></asp:Label>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                  </div></div></div>
                   <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="form-group form-float">
@@ -339,6 +363,7 @@
                                     ToolTip="Print Purchase Order" onclick="BtnPrint_Click" />
                          </div></div></div>
              
+<<<<<<< HEAD
                         <div class="col-md-12 col-sm-12 col-xm-12">
                             <div class="card">
                                 <div class="card-header">
@@ -354,6 +379,24 @@
                                 <div class="card-body" style="display:none">
                                     <asp:Panel ID="Panel2" runat="server">
                       <asp:Panel ID="Panel1" runat="server">
+=======
+                <div  style="text-align: right; width: 50%;">
+                    <asp:Panel ID="Panel2" runat="server" Height="30px" BackColor="#5D7B9D" Width="99.5%"
+                        Direction="LeftToRight" ForeColor="#FFFF99">
+                        <div style="padding: 5px; cursor: pointer; vertical-align: middle;">
+                            <div style="float: left;">
+                                Attach Files</div>
+                            <div style="float: left; margin-right: 20px;">
+                                <asp:Label ID="Label34" runat="server">(Show Details...)</asp:Label>
+                            </div>
+                            <div style="float: right; vertical-align: middle;">
+                                <asp:ImageButton ID="Image1" runat="server" ImageUrl="~/images/expand_blue.jpg" AlternateText="(Show Details...)" />
+                            </div>
+                        </div>
+                    </asp:Panel>
+                    <asp:Panel ID="Panel1" runat="server" Height="0" BackColor="#FFFFCC" Width="99.3%"
+                        BorderColor="Maroon">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                         <asp:GridView ID="grdAttach" runat="server" CellPadding="4" ForeColor="#333333"
                             ShowHeader="False" GridLines="None" AutoGenerateColumns="False" DataKeyNames="FNo"
                             Width="100%" OnRowDeleting="grdAttach_RowDeleting">
@@ -390,6 +433,7 @@
                         ImageControlID="Image1" ExpandedText="(Hide Details)" CollapsedText="(Show Details)"
                         ExpandDirection="Vertical" ExpandedImage="~/images/collapse.jpg" CollapsedImage="~/images/expand.jpg"
                         SuppressPostBack="true" />
+<<<<<<< HEAD
                     </asp:Panel>
                                         <div class="form-row">
                             
@@ -410,5 +454,10 @@
                            
         </div></div></div></div>
  </div>
+=======
+                </div>               
+        </div></div></div></div>
+ 
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
 </asp:Content>
 

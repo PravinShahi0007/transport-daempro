@@ -59,11 +59,19 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<<<<<<< HEAD
    <div class="col-md-12  col-sm-12 col-xs-12">
       <div class="card card-body">
           
                 <h3 align="center" >
                    [ Delivery Note ]</h3>
+=======
+  
+          <div class="ColorRounded4Corners col-md-12 col-sm-12 col-xs-12">
+          
+                <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
+                    <b>[ Delivery Note ]</b></legend>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                 <div class="box box-info" align="right">
                 <div class="body">
                     <div class="row">
@@ -100,11 +108,17 @@
                           <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="form-group form-float">
                                 <div class="form-line">
+<<<<<<< HEAD
 
                             <asp:Label ID="Label6" runat="server" Text="Document No."></asp:Label>
                 
                             <asp:TextBox ID="txtRefNo" MaxLength="10" runat="server" CssClass="form-control"></asp:TextBox>
                                     <br />
+=======
+                            <asp:Label ID="Label6" runat="server" Text="Document No."></asp:Label>
+                
+                            <asp:TextBox ID="txtRefNo" MaxLength="10" runat="server" CssClass="form-control"></asp:TextBox>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                             <asp:DropDownList ID="ddlRefType" CssClass="form-control" runat="server">
                                 <asp:ListItem Selected="True" Value="0">Purchase Order</asp:ListItem>
                                 <asp:ListItem Value="1">Issue Note (Transfer)</asp:ListItem>
@@ -125,7 +139,11 @@
                             <asp:HyperLink ID="BtnAdd" target="_blank" Visible="false" runat="server" Text= "+ معالجة الزيادة"></asp:HyperLink>
                        </div></div></div>
         
+<<<<<<< HEAD
             <div class="table table-responsive table-hover text-center">
+=======
+            <div style="width: 100%; overflow: none; overflow-x: auto; border: 1px solid #800000;">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                 <asp:GridView ID="grdCodes" runat="server" CellPadding="4" Width="99.95%" ForeColor="#333333"
                     ShowFooter="True" ViewStateMode="Enabled" GridLines="None" AutoGenerateColumns="False"
                     DataKeyNames="FNo" AllowPaging="True" PageSize="200" OnPageIndexChanging="grdCodes_PageIndexChanging"
@@ -288,6 +306,7 @@
                         </asp:TextBox>
                         <asp:Label ID="Label27" runat="server" Text="* Required Fields"></asp:Label>
                 </div></div></div>
+<<<<<<< HEAD
                         <div class="form-group">
                             <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
                         </div>
@@ -295,6 +314,12 @@
                             <div class="form-group form-float">
                                 <div class="form-line">
                         
+=======
+                          <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                        <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                    
                         <asp:ImageButton ID="BtnNew" runat="server" AlternateText="New" CommandName="New"
                             ImageUrl="~/images/data add.png" CssClass="ops" ToolTip="Add New Delivery Note"
@@ -319,6 +344,7 @@
                             ImageUrl="~/images/print.png" ValidationGroup="1" CssClass="ops" ToolTip="Print Delivery Note"
                             OnClick="BtnPrint_Click" />
                    </div></div></div>
+<<<<<<< HEAD
       <div class="col-md-12 col-sm-12 col-xm-12">
           <div class="card">
               <div class="card-header">
@@ -336,6 +362,24 @@
                   <asp:Panel ID="Panel2" runat="server">
                     <asp:Panel ID="Panel1" runat="server" >
                     <div class="table table-responsive table-hover text-center">
+=======
+            <div style="text-align: right; width: 50%;">
+                <asp:Panel ID="Panel2" runat="server" Height="30px" BackColor="#5D7B9D" Width="99.5%"
+                    Direction="LeftToRight" ForeColor="#FFFF99">
+                    <div style="padding: 5px; cursor: pointer; vertical-align: middle;">
+                        <div style="float: left;">
+                            Attach Files</div>
+                        <div style="float: left; margin-right: 20px;">
+                            <asp:Label ID="Label34" runat="server">(Show Details...)</asp:Label>
+                        </div>
+                        <div style="float: right; vertical-align: middle;">
+                            <asp:ImageButton ID="Image1" runat="server" ImageUrl="~/images/expand_blue.jpg" AlternateText="(Show Details...)" />
+                        </div>
+                    </div>
+                </asp:Panel>
+                <asp:Panel ID="Panel1" runat="server" Height="0" BackColor="#FFFFCC" Width="99.3%"
+                    BorderColor="Maroon">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                     <asp:GridView ID="grdAttach" runat="server" CellPadding="4" ForeColor="#333333"
                         ShowHeader="False" GridLines="None" AutoGenerateColumns="False" DataKeyNames="FNo"
                         Width="100%" OnRowDeleting="grdAttach_RowDeleting">
@@ -395,8 +439,13 @@
         
         </div>
       
+<<<<<<< HEAD
               <h3 align="center">
                     <b>[  أعتماد مدير الصيانة ]</b></h3>
+=======
+              <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
+                    <b>[  أعتماد مدير الصيانة ]</b></legend>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
               
                      <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="form-group form-float">
@@ -404,7 +453,14 @@
                                         <asp:Label ID="lblRemark9" runat="server" Text="ملاحظات"></asp:Label>
                                
                                         <asp:TextBox ID="txtAgreeRemark1" MaxLength="100" TextMode="MultiLine" CssClass="form-control" Height="100px" runat="server"></asp:TextBox>
+<<<<<<< HEAD
                                
+=======
+                                  </div></div></div>\
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                               
                                         <asp:CheckBox ID="chkAgree1" runat="server" Text="تم الأعتماد" 
                                             AutoPostBack="True" oncheckedchanged="chkAgree1_CheckedChanged" />
@@ -426,15 +482,27 @@
             </div>
          
            
+<<<<<<< HEAD
               <h3 align="center">
                    [  أعتماد الإدارة المالية ]</h3>
+=======
+              <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
+                    <b>[  أعتماد الإدارة المالية ]</b></legend>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                 <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="form-group form-float">
                                 <div class="form-line">
                                         <asp:Label ID="Label11" runat="server" Text="ملاحظات"></asp:Label>
                                    
                                         <asp:TextBox ID="txtAgreeRemark2" MaxLength="100" TextMode="MultiLine" CssClass="form-control" Height="100px" runat="server"></asp:TextBox>
+<<<<<<< HEAD
                                  
+=======
+                                    </div></div></div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                         <asp:CheckBox ID="chkAgree2" runat="server" Text="تم الأعتماد" 
                                             oncheckedchanged="chkAgree2_CheckedChanged" AutoPostBack="True" />
                                  </div></div></div>
@@ -453,5 +521,9 @@
                                         <asp:TextBox ID="txtAgreeUserDate2" runat="server" BackColor="#E8E8E8" ReadOnly="false" CssClass="form-control"></asp:TextBox>
                                     </div></div></div></div></div>
         </div>          
+<<<<<<< HEAD
   </div>
+=======
+  
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
 </asp:Content>

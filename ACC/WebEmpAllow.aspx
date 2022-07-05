@@ -3,6 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    
+<<<<<<< HEAD
        <div class="card">
            
      
@@ -13,6 +14,15 @@
                             </h4>
                     </div>
                       <div class="card-body box box-info" align="right">
+=======
+       <div class="ColorRounded4Corners col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+           
+     
+                <fieldset class="Rounded4CornersNoShadow" >
+                    <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
+                       كشف مستحقات الموظفين</legend>
+                      <div class="box box-info" align="right">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                 <div class="body">
                     <div class="row">
                          <div class="col-md-6 col-sm-12 col-xs-12" >
@@ -33,9 +43,15 @@
                                     ImageUrl="~/images/sheet.png" ToolTip="'طباعة بيانات التقرير" OnClientClick="aspnetForm.target ='_blank';"
                                     OnClick="BtnExcel_Click" />
                                 <asp:ImageButton ID="BtnPostJv" runat="server" AlternateText="ترحيل قيد المستحقات" ValidationGroup="1" OnClientClick='return confirm("هل أنت متاكد من ترحيل قيد المستحقات؟")'
+<<<<<<< HEAD
                                 ImageUrl="~/images/server.png" ToolTip="ترحيل قيد المستحقات" OnClick="BtnPostJv_Click" />
                          </div></div></div>
                           <div class="col-md-6 col-sm-12 col-xs-12">
+=======
+                                ImageUrl="~/images/JVPost_642.png" ToolTip="ترحيل قيد المستحقات" OnClick="BtnPostJv_Click" />
+                         </div></div></div>
+                          <div class="col-md-6 col-sm-12 col-xs-12" >
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                             <div class="form-group form-float">
                                 <div class="form-line">
                                 <asp:CheckBox ID="ChkFDate" Text="من بداية الفترة" Checked="true" 

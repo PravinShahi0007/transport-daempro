@@ -37,7 +37,11 @@
                             <asp:DropDownList ID="ddlCity" CssClass="form-control" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlCity_SelectedIndexChanged">
                             </asp:DropDownList>
                       </div></div></div>
+<<<<<<< HEAD
              <div class="table table-hover table-responsive">
+=======
+             <div class="table-responsive">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                     <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="False"
                         GridLines="None" AutoGenerateColumns="False" DataKeyNames="FromCode,ToCode" AllowPaging="True"
                         PageSize="10" Width="99.9%" OnRowUpdating="grdCodes_RowUpdating" OnPageIndexChanging="grdCodes_PageIndexChanging"

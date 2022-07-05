@@ -3,6 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    
+<<<<<<< HEAD
       <div class="card">
            
                 <fieldset>
@@ -12,6 +13,14 @@
                             </h4>
                     </div>
                         <div class="card-body box box-info" align="right">
+=======
+      <div class="ColorRounded4Corners col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+           
+                <fieldset class="Rounded4CornersNoShadow" >
+                    <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
+                        كشف المرتبات</legend>
+                        <div class="box box-info" align="right">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                 <div class="body">
                     <div class="row">
                          <div class="col-md-6 col-sm-12 col-xs-12" >

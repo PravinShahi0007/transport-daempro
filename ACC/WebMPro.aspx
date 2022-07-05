@@ -116,9 +116,15 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<<<<<<< HEAD
    <div class="col-md-12  col-sm-12 col-xs-12">
         <div class="card card-body">
             <h3 align="center" >[ التشغيل الشهري ]</h3>
+=======
+    <div class="ColorRounded4Corners col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+        <fieldset class="Rounded4CornersNoShadow">
+            <legend align="right" style="font-size: 18px; color: #800000; text-align: center;"><b>[ التشغيل الشهري ]</b></legend>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
             <div class="box box-info" align="right">
                 <div class="body">
                     <div class="row">
@@ -131,7 +137,11 @@
                                     </asp:DropDownList>
 
 
+<<<<<<< HEAD
                                     <asp:ImageButton ID="BtnProcess" runat="server" AlternateText="تشغيل" ImageUrl="~/images/setting.png"
+=======
+                                    <asp:ImageButton ID="BtnProcess" runat="server" AlternateText="تشغيل" ImageUrl="~/images/Process.png"
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                         ToolTip="التشغيل الشهري للمرتبات" OnClick="BtnProcess_Click" />
                                 </div>
                             </div>
@@ -173,7 +183,11 @@
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
                     <%-- *********************Ankur kumar  *********************** --%>
+=======
+                    <%-- *********************  *********************** --%>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="form-group form-float">
                             <div class="form-line">
@@ -230,7 +244,11 @@
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
                     <div class="table-responsive table">
+=======
+                    <div class="table-responsive">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                         <asp:GridView ID="grdActiveTran" CellPadding="4" AutoGenerateColumns="False" runat="server" AllowPaging="false"
                             ForeColor="#333333" GridLines="None" PageSize="20" DataKeyNames="Section" Width="99.9%">
                             <AlternatingRowStyle BackColor="White" />
@@ -280,7 +298,11 @@
                                 </div>
                             </div>
                         </asp:Panel>
+<<<<<<< HEAD
                         <div class="table-responsive table">
+=======
+                        <div class="table-responsive">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                             <asp:Panel ID="Panel1" runat="server" Height="0" BackColor="#FFFFCC" Width="99.3%"
                                 BorderColor="Maroon">
                                 <asp:GridView ID="grdAttach" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="false"
@@ -325,7 +347,11 @@
                                 ExpandDirection="Vertical" ExpandedImage="~/images/collapse.jpg" CollapsedImage="~/images/expand.jpg"
                                 SuppressPostBack="true" />
                         </div>
+<<<<<<< HEAD
                         <div class="table-responsive table">
+=======
+                        <div class="table-responsive">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                             <asp:GridView ID="grvData" runat="server" ForeColor="#333333" GridLines="None">
                                 <AlternatingRowStyle BackColor="White" />
                                 <EditRowStyle BackColor="#2461BF" />
@@ -345,6 +371,11 @@
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
      
     </div></div>
+=======
+        </fieldset>
+    </div>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
 </asp:Content>

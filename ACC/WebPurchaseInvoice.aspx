@@ -61,11 +61,18 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   
+<<<<<<< HEAD
       <div class="col-md-12  col-sm-12 col-xs-12">
       <div class="card card-body">
           
                 <h3 align="center">
                     <b>[ Purchase Invoice ]</b></h3>
+=======
+          <div class="ColorRounded4Corners col-md-12 col-sm-12 col-xs-12">
+          
+                <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
+                    <b>[ Purchase Invoice ]</b></legend>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                  <div class="box box-info" align="right">
                 <div class="body">
                     <div class="row">
@@ -89,7 +96,11 @@
                                 <div class="form-line">
                             <asp:Label ID="Label2" runat="server" Text="Date"></asp:Label>
                          
+<<<<<<< HEAD
                             <asp:TextBox ID="txtVouDate"  runat="server" CssClass="form-control"></asp:TextBox>
+=======
+                            <asp:TextBox ID="txtVouDate" MaxLength="10" runat="server" CssClass="form-control"></asp:TextBox>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtVouDate"
                                 Display="Dynamic" ErrorMessage="You Should Select Invoice Date" ForeColor="Red"
                                 SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
@@ -105,7 +116,11 @@
                                 <div class="form-line">
                             <asp:Label ID="Label6" runat="server" Text="Delivery Note No."></asp:Label>
                    
+<<<<<<< HEAD
                             <asp:TextBox ID="txtRefNo"  runat="server" CssClass="form-control"></asp:TextBox>
+=======
+                            <asp:TextBox ID="txtRefNo" MaxLength="10" runat="server" CssClass="form-control"></asp:TextBox>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                             <asp:ImageButton ID="BtnFind2" runat="server" ValidationGroup="55" ImageUrl="~/images/zoom_16.png"
                                 ToolTip="Search for Purchase Order Data" OnClick="BtnFind2_Click" />
                     </div></div></div>
@@ -129,7 +144,11 @@
                                 ServicePath="AutoComplete.asmx" ServiceMethod="GetCompletionList" OnClientItemSelected="acc1_itemSelected"
                                 MinimumPrefixLength="1" CompletionInterval="500" EnableCaching="true" CompletionSetCount="30"
                                 CompletionListCssClass="autocomplete_completionListElement" CompletionListItemCssClass="autocomplete_listItem"
+<<<<<<< HEAD
                                 CompletionListHighlightedItemCssClass="autocomplete_highlightedListItem" /><br />
+=======
+                                CompletionListHighlightedItemCssClass="autocomplete_highlightedListItem" />
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                             <asp:TextBox ID="txtName" MaxLength="100" CssClass="form-control" runat="server"></asp:TextBox>
                             <ajax:AutoCompleteExtender ID="AutoCompleteExtender2" runat="server" TargetControlID="txtName"
                                 ServicePath="AutoComplete.asmx" ServiceMethod="GetCompletionList2" OnClientItemSelected="acc1_itemSelected"
@@ -149,8 +168,13 @@
                             </asp:RadioButtonList>
                        </div></div></div>
           
+<<<<<<< HEAD
                 <div class="table table-responsive table-hove text-center">
                 <asp:GridView ID="grdCodes" runat="server" CellPadding="4" Width="100%" ForeColor="#333333"
+=======
+                <div class="table-responsive">
+                <asp:GridView ID="grdCodes" runat="server" CellPadding="4" Width="99.95%" ForeColor="#333333"
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                     ShowFooter="True" ViewStateMode="Enabled" GridLines="None" AutoGenerateColumns="False"
                     DataKeyNames="FNo" AllowPaging="True" PageSize="100" OnPageIndexChanging="grdCodes_PageIndexChanging"
                     OnRowCancelingEdit="grdCodes_RowCancelingEdit" OnRowCommand="grdCodes_RowCommand"
@@ -341,16 +365,29 @@
                         <asp:TextBox CssClass="form-control" ID="txtExpRef"  runat="server"></asp:TextBox>
               
                         <asp:Label ID="Label18" runat="server" Text="Total:"></asp:Label>
+<<<<<<< HEAD
               
                         <asp:Label ID="LblTotNet" runat="server" CssClass="form-control" Text=""></asp:Label>
                   </div></div></div>
+=======
+                    </td>
+                    <td style="width: 16%;">
+                        <asp:Label ID="LblTotNet" runat="server" Text=""></asp:Label>
+                    </td>
+                </tr>
+            </table>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
             <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="form-group form-float">
                                 <div class="form-line">
                         <asp:Label ID="Label14" runat="server" Text="User Name"></asp:Label>
                  
 
+<<<<<<< HEAD
                         <asp:TextBox ID="txtUserName" CssClass="form-control" runat="server" 
+=======
+                        <asp:TextBox ID="txtUserName" CssClass="form-control" runat="server" MaxLength="50" BackColor="#E8E8E8"
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                             Enabled="false"></asp:TextBox>
                   </div></div></div>
                          <div class="col-md-6 col-sm-12 col-xs-12">
@@ -358,7 +395,11 @@
                                 <div class="form-line">
                         <asp:Label ID="Label15" runat="server" Text="Date"></asp:Label>
                 
+<<<<<<< HEAD
                         <asp:TextBox ID="txtUserDate" CssClass="form-control" runat="server" 
+=======
+                        <asp:TextBox ID="txtUserDate" CssClass="form-control" runat="server" MaxLength="50" BackColor="#E8E8E8"
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                             Enabled="false">                                                               
                         </asp:TextBox>
                         <asp:Label ID="Label27" runat="server" Text="* Required Fields"></asp:Label>
@@ -389,6 +430,7 @@
                             ImageUrl="~/images/print.png" ValidationGroup="1" CssClass="ops" ToolTip="Print Purchase Invoice"
                             OnClick="BtnPrint_Click" />
                  </div></div></div>
+<<<<<<< HEAD
 
                         <div class="col-md-12 col-sm-12 col-xm-12">
                             <div class="card">
@@ -406,6 +448,24 @@
                                 <div class="card-body" style="display:none;">
                                     <asp:Panel ID="Panel2" runat="server">
                     <asp:Panel ID="Panel1" runat="server">
+=======
+            <div style="text-align: right; width: 50%;">
+                <asp:Panel ID="Panel2" runat="server" Height="30px" BackColor="#5D7B9D" Width="99.5%"
+                    Direction="LeftToRight" ForeColor="#FFFF99">
+                    <div style="padding: 5px; cursor: pointer; vertical-align: middle;">
+                        <div style="float: left;">
+                            Attach Files</div>
+                        <div style="float: left; margin-right: 20px;">
+                            <asp:Label ID="Label34" runat="server">(Show Details...)</asp:Label>
+                        </div>
+                        <div style="float: right; vertical-align: middle;">
+                            <asp:ImageButton ID="Image1" runat="server" ImageUrl="~/images/expand_blue.jpg" AlternateText="(Show Details...)" />
+                        </div>
+                    </div>
+                </asp:Panel>
+                <asp:Panel ID="Panel1" runat="server" Height="0" BackColor="#FFFFCC" Width="99.3%"
+                    BorderColor="Maroon">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                     <asp:GridView ID="grdAttach" runat="server" CellPadding="4" ForeColor="#333333"
                         ShowHeader="False" GridLines="None" AutoGenerateColumns="False" DataKeyNames="FNo"
                         Width="100%" OnRowDeleting="grdAttach_RowDeleting">
@@ -443,6 +503,7 @@
                     ImageControlID="Image1" ExpandedText="(Hide Details)" CollapsedText="(Show Details)"
                     ExpandDirection="Vertical" ExpandedImage="~/images/collapse.jpg" CollapsedImage="~/images/expand.jpg"
                     SuppressPostBack="true" />
+<<<<<<< HEAD
                 </asp:Panel>
                  <div class="form-row">
                    
@@ -464,4 +525,9 @@
            
         </div></div></div></div>
           </div>
+=======
+            </div>
+        </div></div></div></div>
+
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
 </asp:Content>

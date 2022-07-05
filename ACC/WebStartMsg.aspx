@@ -13,8 +13,13 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   
       
+<<<<<<< HEAD
             <div class="card">
                     <div class="box box-info card-body">
+=======
+            <div class="ColorRounded4Corners">
+                    <div class="box box-info">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
      <div class="body">
                                     <div class="row">
                                           <div class="col-md-6 col-sm-12 col-xs-12" align="center">
@@ -34,7 +39,11 @@
                     </asp:DropDownList>
                 
               </div></div></div>
+<<<<<<< HEAD
                 <div class="table table-responsive table-hover text-center">
+=======
+                <div class="table-responsive">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                     <asp:GridView ID="grdCodes" runat="server" CssClass="table table-hover"  ShowFooter="false" 
                         GridLines="None" AutoGenerateColumns="false" DataKeyNames="FType,FNo"  AllowPaging="false"
                         >
@@ -42,7 +51,11 @@
                         <Columns>
                             <asp:TemplateField HeaderText="البند 1" SortExpression="Fd1" ItemStyle-HorizontalAlign="Center">
                                 <ItemTemplate>
+<<<<<<< HEAD
                                     <asp:TextBox ID="txtFd1" MaxLength="100" Text='<%# Bind("Fd1") %>' runat="server" CssClass="form-control" />
+=======
+                                    <asp:TextBox ID="txtFd1" MaxLength="100" Text='<%# Bind("Fd1") %>' runat="server"  />
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                 </ItemTemplate>
                                 <ControlStyle Width="175px" />
                                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
@@ -94,7 +107,11 @@
                
                                     <asp:ImageButton ID="BtnEdit" runat="server" 
                     AlternateText="Edit" CommandName="Edit"
+<<<<<<< HEAD
                                     ImageUrl="~/images/edit2.png" CssClass="ops" ToolTip="Edit Stock Item Inventory"
+=======
+                                    ImageUrl="~/images/draw_pen_641.png" CssClass="ops" ToolTip="Edit Stock Item Inventory"
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                     Width="64px" onclick="BtnEdit_Click"/></div>
                                         </div></div></div>
                                 

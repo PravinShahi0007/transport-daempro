@@ -3,22 +3,36 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   
+<<<<<<< HEAD
          <div class="col-md-12  col-sm-12 col-xs-12">
         <div class="card card-body">
                 <h3 align="right" >
                     [ أنواع المركبات ]</h3>
+=======
+        <div class="Round4Courner div1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12" >
+            <fieldset class="Rounded4CornersNoShadow" >
+                <legend align="right" style="font-size: 18px; color: #800000; text-align: center;"><b>
+                    [ أنواع المركبات ]</b></legend>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
            
                 
                       <div class="box box-info" align="right">
                 <div class="body">
                     <div class="row">
+<<<<<<< HEAD
                         <!--editing by chanda -->
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                          <div class="col-md-6 col-sm-12 col-xs-12" >
                             <div class="form-group form-float">
                                 <div class="form-line">
                                   <asp:Label ID="LblCode" runat="server" Text="تسلسل"></asp:Label>
                                 <asp:TextBox ID="txtCode" CssClass="form-control" runat="server" MaxLength="5"></asp:TextBox>
+<<<<<<< HEAD
                                 <asp:ImageButton ID="BtnFind" runat="server" ValidationGroup="55" style="margin:-17px" ImageUrl="~/images/search2.png"
+=======
+                                <asp:ImageButton ID="BtnFind" runat="server" ValidationGroup="55" style="margin:-17px" ImageUrl="~/images/zoom_16.png"
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                     ToolTip="البحث عن نوع مركبة" OnClick="BtnSearch_Click" />
                                 <asp:RequiredFieldValidator ID="ValCode" runat="server"  ControlToValidate="txtCode"
                                     ErrorMessage="يجب إدخال التسلسل" ForeColor="Red" Display="Dynamic" SetFocusOnError="True"
@@ -71,7 +85,11 @@
                                     ImageUrl="~/images/data search.png"   ToolTip="البحث عن بيانات نوع"
                                     OnClick="BtnSearch_Click" />
                           </div></div></div>
+<<<<<<< HEAD
                       <div class="table table-responsive text-center">
+=======
+                      <div class="table-responsive">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                         <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                             GridLines="None" AutoGenerateColumns="False" DataKeyNames="Code" AllowPaging="True"
                             PageSize="20" Width="100%" EmptyDataText="لا توجد بيانات" OnPageIndexChanging="grdCodes_PageIndexChanging"
@@ -114,7 +132,12 @@
                     </div>
                   
              </div></div></div>
+<<<<<<< HEAD
            
         </div></div>
+=======
+            </fieldset>
+        </div>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
       
 </asp:Content>

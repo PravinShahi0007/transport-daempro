@@ -37,12 +37,22 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<<<<<<< HEAD
    <div class="col-md-12  col-sm-12 col-xs-12">
       <div class="card card-body">
             <h3 id="leg1" runat="server" align="<%$ Resources:Resource, dir2 %> center" ><b>
                     <asp:Literal ID="Literal2" Text="Manual Inventory Data Entry" runat="server"></asp:Literal>
                     <!-- [ بيانات الأصناف ] -->
                 </b></h3>
+=======
+    <div class="ColorRounded4Corners col-md-12 col-sm-12 col-xs-12">
+        <fieldset class="Rounded4CornersNoShadow" >
+            <legend id="leg1" runat="server" align="<%$ Resources:Resource, dir2 %>" style="font-size: 18px;
+                color: #800000; text-align: center;"><b>
+                    <asp:Literal ID="Literal2" Text="Manual Inventory Data Entry" runat="server"></asp:Literal>
+                    <!-- [ بيانات الأصناف ] -->
+                </b></legend>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
         
                 <div class="box box-info" align="right">
                 <div class="body">
@@ -87,7 +97,11 @@
                                 <asp:ListItem Value="3">Addition</asp:ListItem>
                             </asp:DropDownList>
                       </div></div></div>
+<<<<<<< HEAD
               <div class="table-responsive table">
+=======
+              <div class="table-responsive">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                     <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                         GridLines="None" AutoGenerateColumns="False" AllowPaging="true" PageSize="50"
                         DataKeyNames="Code" Width="99.9%" OnPageIndexChanging="grdCodes_PageIndexChanging">
@@ -248,6 +262,7 @@
                                         ImageControlID="Image1" ExpandedText="(أخفاء التفاصيل)" CollapsedText="(عرض التفاصيل)"
                                         ExpandDirection="Vertical" ExpandedImage="~/images/collapse.jpg" CollapsedImage="~/images/expand.jpg"
                                         SuppressPostBack="true" />
+<<<<<<< HEAD
                                     </asp:Panel>
                                   <div class="form-row">
                                            
@@ -267,4 +282,9 @@
                  </div>
  </div></div>
     </div></div>
+=======
+                                </div></div></div>
+        </fieldset>
+    </div>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
 </asp:Content>

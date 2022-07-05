@@ -6,15 +6,26 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<<<<<<< HEAD
   <div class="col-md-12  col-sm-12 col-xs-12">
       <div class="card card-body">
                 <h3 align="center" >
                     [بطاقة صنف / التطبيق ]</h3>
+=======
+ <div class="ColorRounded4Corners col-md-12 col-sm-12 col-xs-12">
+            <fieldset class="Rounded4CornersNoShadow" >
+                <legend align="right" style="font-size: 18px; color: #800000; text-align: center;"><b>
+                    [بطاقة صنف / التطبيق ]</b></legend>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
               
                  <div class="box box-info" align="right">
                 <div class="body">
                     <div class="row">
+<<<<<<< HEAD
                         <!--Ankur Kumar-->
+=======
+
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                         <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="form-group form-float">
                                 <div class="form-line">
@@ -36,7 +47,11 @@
                           <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="form-group form-float">
                                 <div class="form-line">
+<<<<<<< HEAD
                                     <br />
+=======
+
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                 <asp:TextBox ID="txtSearch" MaxLength="10" CssClass="form-control" placeholder="بحث" runat="server"></asp:TextBox>
                                 <asp:ImageButton ID="BtnFind" runat="server" ValidationGroup="55" ImageUrl="~/images/zoom_16.png"
                                     ToolTip="البحث عن بيانات الصنف" OnClick="BtnFind_Click"  Text="بحث"/>
@@ -93,7 +108,11 @@
                         
                                 <asp:TextBox ID="txtstyle" CssClass="form-control" runat="server" MaxLength="50" ></asp:TextBox>
                            </div></div></div>
+<<<<<<< HEAD
 <!--Tst icon pending of delete-->
+=======
+
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
   <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="form-group form-float">
                                 <div class="form-line">
@@ -173,11 +192,19 @@
                                 <asp:ImageButton ID="BtnClear" runat="server" AlternateText="مسح" CommandName="Clear"
                                     ImageUrl="~/images/clear all.png" ToolTip="مسح خانات الشاشة" OnClick="BtnClear_Click" Text="مسح"/>
                                 <asp:ImageButton ID="BtnDelete" runat="server" AlternateText="إلغاء" CommandName="Delete"
+<<<<<<< HEAD
                                     ImageUrl="~/images/delete2.png" ToolTip="إلغاء بيانات الصنف" OnClientClick='return confirm("هل أنت متاكد من الغاء بيانات الصنف؟")' OnClick="BtnDelete_Click" Text="إلغاء"/>
                           </div></div></div>
          
 
               <div class="table-responsive table">
+=======
+                                    ImageUrl="~/images/cut_642.png" ToolTip="إلغاء بيانات الصنف" OnClientClick='return confirm("هل أنت متاكد من الغاء بيانات الصنف؟")' OnClick="BtnDelete_Click" Text="إلغاء"/>
+                          </div></div></div>
+         
+
+              <div class="table-responsive">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                  <!-- edited by hanan3 (update gridview) -->  
                 <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="Black" GridLines="None"
                     AutoGenerateColumns="False" DataKeyNames="FType" Width="99.9%" EmptyDataText="لا توجد بيانات" >
@@ -244,5 +271,9 @@
             </fieldset>
         </div>
     
+<<<<<<< HEAD
       </div>
+=======
+
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
 </asp:Content>

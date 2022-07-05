@@ -6,8 +6,13 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
        
+<<<<<<< HEAD
             <div class="col-md-12  col-sm-12 col-xs-12">
                 <asp:LinkButton ID="LbtnLevel1" runat="server" CssClass="text-center form-control" CommandName="1" Text="أنواع الأصناف"
+=======
+           <div class="ColorRounded4Corners col-md-12 col-sm-12 col-xs-12">
+                <asp:LinkButton ID="LbtnLevel1" runat="server" CommandName="1" Text="أنواع الأصناف"
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                     Visible="true" OnCommand="LbtnLevel1_Command" Font-Size="Larger" />
                 <asp:LinkButton ID="LbtnLevel2" runat="server" CommandName="2" Visible="false" OnCommand="LbtnLevel1_Command"
                     Font-Size="Larger" />
@@ -17,7 +22,11 @@
                     Font-Size="Larger" />
                 <asp:LinkButton ID="LbtnLevel5" runat="server" CommandName="5" Visible="false" OnCommand="LbtnLevel1_Command"
                     Font-Size="Larger" />
+<<<<<<< HEAD
                <div class="table table-responsive table-hover text-center">
+=======
+               <div class="table-responsive">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                     <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                         GridLines="None" AutoGenerateColumns="False" DataKeyNames="FCode;Code" 
                         AllowPaging="True" Width="100%" OnRowUpdating="grdCodes_RowUpdating" OnPageIndexChanging="grdCodes_PageIndexChanging"

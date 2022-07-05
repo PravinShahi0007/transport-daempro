@@ -15,6 +15,7 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<<<<<<< HEAD
 <div class="card">
     <div class=" col-md-12 col-sm-12 col-xs-12">
         <div class="card-header">
@@ -22,6 +23,14 @@
             <asp:Label ID="lblHead" runat="server" Text="[ طلب دفع]"></asp:Label>
         </h4>
             </div>
+=======
+
+    <div class="ColorRounded4Corners col-md-12 col-sm-12 col-xs-12">
+
+        <legend align="right" style="font-size: 18px; color: #800000; text-align: center;"><b>
+            <asp:Label ID="lblHead" runat="server" Text="[ طلب دفع]"></asp:Label>
+        </b></legend>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
         <div class="box box-info" align="right">
             <div class="body">
                 <div class="row">
@@ -43,7 +52,10 @@
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="form-group form-float">
                             <div class="form-line">
+<<<<<<< HEAD
                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                 <asp:TextBox ID="txtSearch" MaxLength="10" CssClass="form-control" placeholder="بحث" runat="server"></asp:TextBox>
                                 <asp:ImageButton ID="BtnFind" runat="server" ValidationGroup="55" ImageUrl="~/images/zoom_16.png"
                                     ToolTip="البحث عن بيانات الطلب" OnClick="BtnFind_Click" />
@@ -80,6 +92,7 @@
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
                    
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="form-group form-float">
@@ -87,6 +100,12 @@
                                  <br />
                                
                                 <asp:RadioButtonList ID="RdoChq" runat="server" AutoPostBack="True" RepeatDirection="Horizontal"
+=======
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <asp:RadioButtonList ID="RdoChq" runat="server" AutoPostBack="True"
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                     OnSelectedIndexChanged="RdoChq_SelectedIndexChanged">
                                     <asp:ListItem Selected="True" Value="0">نقدي</asp:ListItem>
                                     <asp:ListItem Value="1">شيك عادي</asp:ListItem>
@@ -129,15 +148,23 @@
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="form-group form-float">
                             <div class="form-line">
+<<<<<<< HEAD
                                 <asp:Label ID="Label2" runat="server" Text="مدين"></asp:Label>
+=======
+                                <asp:Label ID="Label28" runat="server" Text="الحساب المدين"></asp:Label>
+
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                 <asp:TextBox ID="txtCode" runat="server" CssClass="form-control"></asp:TextBox>
                                 <ajax:AutoCompleteExtender ID="AutoCompleteExtender1" runat="server" TargetControlID="txtCode"
                                     ServicePath="AutoComplete.asmx" ServiceMethod="GetCompletionList" OnClientItemSelected="ace1_itemSelected"
                                     MinimumPrefixLength="1" CompletionInterval="500" EnableCaching="true" CompletionSetCount="12"
                                     CompletionListCssClass="autocomplete_completionListElement" CompletionListItemCssClass="autocomplete_listItem"
                                     CompletionListHighlightedItemCssClass="autocomplete_highlightedListItem" />
+<<<<<<< HEAD
                                 <asp:Label ID="Label28" runat="server" Text="الحساب"></asp:Label>
 
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                 <asp:TextBox ID="txtName" runat="server" CssClass="form-control"></asp:TextBox>
                                 <ajax:AutoCompleteExtender ID="AutoCompleteExtender4" runat="server" TargetControlID="txtName"
                                     ServicePath="AutoComplete.asmx" ServiceMethod="GetCompletionList2" MinimumPrefixLength="1"
@@ -207,6 +234,7 @@
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
                     <div class="form-group">
                          <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
 
@@ -217,6 +245,15 @@
                         <div class="form-group form-float">
                             <div class="form-line">
                                
+=======
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
+
+                                <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ValidationGroup="1" />
+
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
 
                                 <asp:ImageButton ID="BtnNew" runat="server" AlternateText="جديد" CommandName="New"
                                     ImageUrl="~/images/data add.png" ToolTip="أضافة سند جديد" ValidationGroup="1"
@@ -232,10 +269,17 @@
                                 <asp:ImageButton ID="BtnSearch" runat="server" AlternateText="بحث" CommandName="Find"
                                     ImageUrl="~/images/data search.png" ToolTip="البحث عن بيانات الطلب" OnClick="BtnSearch_Click" />
                                 <asp:ImageButton ID="BtnPrint" runat="server" AlternateText="طباعة" CommandName="Print"
+<<<<<<< HEAD
                                     ImageUrl="~/images/print.png" ValidationGroup="1" ToolTip="طباعة الطلب" OnClick="BtnPrint_Click" />
+=======
+                                    ImageUrl="~/images/print_64A.png" ValidationGroup="1" ToolTip="طباعة الطلب" OnClick="BtnPrint_Click" />
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                             </div>
                         </div>
                     </div>
                 </div></div></div></div>
+<<<<<<< HEAD
 </div>
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
 </asp:Content>

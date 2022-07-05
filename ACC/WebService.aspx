@@ -5,11 +5,19 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
+<<<<<<< HEAD
         <div class="col-md-12  col-sm-12 col-xs-12">
       <div class="card card-body">
                 <h3 id="leg1" runat="server" align="<%$ Resources:Resource, dir2 %> center" ><b>
                 <asp:Literal ID="Literal2" Text="<%$ Resources:Header %>" runat="server"></asp:Literal></b></h3>
               <!--By Ankur Kumar-->
+=======
+         <div class="ColorRounded4Corners col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+            <fieldset class="Rounded4CornersNoShadow" >
+                <legend id="leg1" runat="server" align="<%$ Resources:Resource, dir2 %>" style="font-size: 18px; color: #800000; text-align: center;"><b>
+                <asp:Literal ID="Literal2" Text="<%$ Resources:Header %>" runat="server"></asp:Literal></b></legend>
+              
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                   <div class="box box-info" align="right">
                 <div class="body">
                     <div class="row">
@@ -128,7 +136,11 @@
                                     OnClick="BtnSearch_Click" />
                           </div></div></div></div></div></div>
              
+<<<<<<< HEAD
            </div>
+=======
+            </fieldset>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
         </div>
   
 </asp:Content>

@@ -4,17 +4,33 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+<<<<<<< HEAD
       <div class="col-md-12  col-sm-12 col-xs-12">
         <div class="card card-body">
            
            
                     <h3 align="center" >
                         أوامر شراء غير مدرجه في بيان أستلام</h3>
+=======
+         <div class="ColorRounded4Corners col-md-12 col-sm-12 col-xs-12">
+           
+           
+                    <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
+                        أوامر شراء غير مدرجه في بيان أستلام</legend>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                   <div class="box box-info" align="right">
                 <div class="body">
                     <div class="row">
 
+<<<<<<< HEAD
                        
+=======
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                <asp:CheckBox ID="ChkQuan" runat="server" ToolTip="يتم مقارنة كميات الاصناف في امر الشراء مع كميات الاصناف في بيان الاستلام المدرج فية امر الشراء و اذا حدث اي اختلاف سواء بالزيادة او النقص يتم عرض رقم امر الشراء في التقرير" Text="فحص تطابق الكميات" />
+                        </div></div></div>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                        <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="form-group form-float">
                                 <div class="form-line">
@@ -25,8 +41,11 @@
                                 <asp:ImageButton ID="BtnExcel" Visible="false" runat="server" AlternateText="تصدير للإكسل" CommandName="Excel"  
                                     ImageUrl="~/images/sheet.png" ToolTip="'طباعة بيانات التقرير" OnClientClick="aspnetForm.target ='_blank';"
                                     OnClick="BtnExcel_Click" />
+<<<<<<< HEAD
                                        <asp:CheckBox ID="ChkQuan" runat="server" ToolTip="يتم مقارنة كميات الاصناف في امر الشراء مع كميات الاصناف في بيان الاستلام المدرج فية امر الشراء و اذا حدث اي اختلاف سواء بالزيادة او النقص يتم عرض رقم امر الشراء في التقرير" Text="فحص تطابق الكميات" />
                        
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                            </div></div></div>
                <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="form-group form-float">
@@ -55,7 +74,11 @@
                       
           
 
+<<<<<<< HEAD
                      <div class="table table-responsive table-hover text-center">
+=======
+                     <div class="table-responsive">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                     <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                         GridLines="None" AutoGenerateColumns="False" AllowPaging="True" PageSize="20"  EmptyDataText="لا توجد بيانات"
                         Width="100%" OnPageIndexChanging="grdCodes_PageIndexChanging">
@@ -99,6 +122,10 @@
                 </div>
                 <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
              </div></div></div>
+<<<<<<< HEAD
         </div></div>
+=======
+        </div>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
   
 </asp:Content>

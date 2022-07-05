@@ -3,12 +3,21 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <center>
+<<<<<<< HEAD
             <div class="card">
             <fieldset>
                 
                 <div class="card-header"><h4 class="card-title">
                     [ الاجازات الرسمية ]</h4></div>             
                 <div class="card-body table-responsive">
+=======
+            <div class="ColorRounded4Corners">
+            <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 98%;
+                ">
+                <legend align="right" style="font-size: 18px; color: #800000; text-align: center;"><b>
+                    [ الاجازات الرسمية ]</b></legend>             
+                <div style="width: 99%; overflow: auto; border: 1px solid #800000;">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                     <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                         GridLines="None" AutoGenerateColumns="False" DataKeyNames="FNo" PageSize = "100"  
                         AllowPaging="True" Width="100%" OnPageIndexChanging="grdCodes_PageIndexChanging"

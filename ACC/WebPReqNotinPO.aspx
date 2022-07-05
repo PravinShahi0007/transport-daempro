@@ -4,11 +4,19 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+<<<<<<< HEAD
     <div class="col-md-12  col-sm-12 col-xs-12">
         <div class="card card-body">
              
                     <h3 align="center">
                         طلبات شراء غير مدرجه في أوامر شراء</h3>
+=======
+      <div class="ColorRounded4Corners col-md-12 col-sm-12 col-xs-12">
+           
+             
+                    <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
+                        طلبات شراء غير مدرجه في أوامر شراء</legend>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                   <div class="box box-info" align="right">
             <div class="body">
                 <div class="row">
@@ -50,7 +58,11 @@
                                 <asp:Label ID="lblCount" runat="server" Text=""></asp:Label>&nbsp;
                                 <asp:Label ID="Label6" runat="server" Text="سجل"></asp:Label>                            
                                </div></div></div>
+<<<<<<< HEAD
                     <div class="table table-responsive table-hover text-center">
+=======
+                    <div class="table-responsive">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                     <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                         GridLines="None" AutoGenerateColumns="False" AllowPaging="True" PageSize="20"  EmptyDataText="لا توجد بيانات"
                         Width="99.9%" OnPageIndexChanging="grdCodes_PageIndexChanging">
@@ -94,6 +106,10 @@
                 </div>
                 <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
                
+<<<<<<< HEAD
         </div></div></div></div></div>
+=======
+        </div></div></div></div>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
    
 </asp:Content>

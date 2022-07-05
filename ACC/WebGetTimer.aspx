@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<<<<<<< HEAD
        <div class="card">
                 <fieldset>
                     <div class="card-header">
@@ -11,6 +12,14 @@
                             </h4></div>
                        <div class="box box-info" align="right">
                 <div class="body card-body">
+=======
+       <div class="ColorRounded4Corners col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+                <fieldset class="Rounded4CornersNoShadow" >
+                    <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
+                        أستيراد بيانات الحضور و الانصراف</legend>
+                       <div class="box box-info" align="right">
+                <div class="body">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                     <div class="row">
                         <div class="col-md-6 col-sm-12 col-xs-12" >
                             <div class="form-group form-float">

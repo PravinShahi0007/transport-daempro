@@ -3,10 +3,17 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   
+<<<<<<< HEAD
        <div class="col-md-12  col-sm-12 col-xs-12">
         <div class="card card-body">
                 <h3 id="leg1" runat="server" align="<%$ Resources:Resource, dir2 %> center">
                     <asp:Literal ID="Literal2" Text="<%$ Resources:Header %>" runat="server"></asp:Literal></h3>
+=======
+         <div class="ColorRounded4Corners col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+            <fieldset class="Rounded4CornersNoShadow" >
+                <legend id="leg1" runat="server" align="<%$ Resources:Resource, dir2 %>" style="font-size: 18px; color: #800000; text-align: center;"><b>
+                    <asp:Literal ID="Literal2" Text="<%$ Resources:Header %>" runat="server"></asp:Literal></b></legend>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                   <div class="box box-info" align="right">
                 <div class="body">
                     <div class="row">
@@ -105,7 +112,11 @@
                                     ImageUrl="~/images/data search.png" CssClass="ops" ToolTip="<%$ Resources:SearchTechToolTip %>"
                                     OnClick="BtnSearch_Click" />
                           </div></div></div>
+<<<<<<< HEAD
                    <div class="table table-responsive text-center">
+=======
+                   <div class="table-responsive">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                         <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                             GridLines="None" AutoGenerateColumns="False" DataKeyNames="Code" AllowPaging="True"
                             PageSize="20" Width="100%" EmptyDataText="<%$ Resources:NoData %>" OnPageIndexChanging="grdCodes_PageIndexChanging"
@@ -161,8 +172,13 @@
                         </asp:GridView>
                     </div>
                  </div></div></div>
+<<<<<<< HEAD
        
 
         </div></div>
+=======
+            </fieldset>
+        </div>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
        
 </asp:Content>

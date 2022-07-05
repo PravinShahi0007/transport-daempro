@@ -129,6 +129,7 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<<<<<<< HEAD
     <div class="card col-md-12 col-sm-12 col-xs-12">
 
         <div class="card-header">
@@ -138,6 +139,14 @@
                 شحن بضاعة</div>
         <div class="box box-info" align="right">
             <div class="card-body">
+=======
+    <div class="ColorRounded4Corners col-md-12 col-sm-12 col-xs-12">
+
+        <legend align="right" style="font-size: 18px; color: #800000; text-align: center;">أتفاقية
+                شحن بضاعة</legend>
+        <div class="box box-info" align="right">
+            <div class="body">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                 <div class="row">
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="form-group form-float">
@@ -447,7 +456,11 @@
                                 <asp:HyperLink ID="lnkDispTo" Target="_blank" NavigateUrl="WebGetMap.aspx" Visible="false"
                                     runat="server">تحديد الموقع</asp:HyperLink>
 
+<<<<<<< HEAD
                                 <asp:Button ID="btnPlaceTo" runat="server" CssClass="btn btn-primary" Text="حفظ الموقع" Visible="False" OnClick="btnPlaceTo_Click" />
+=======
+                                <asp:Button ID="btnPlaceTo" runat="server" Text="حفظ الموقع" Visible="False" OnClick="btnPlaceTo_Click" />
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
 
                                 <asp:HyperLink ID="lnkTo" Target="_blank" Visible="false" runat="server">عرض الموقع</asp:HyperLink>
                             </div>
@@ -651,14 +664,22 @@
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="وصف الشحنة" SortExpression="Name" ItemStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
+<<<<<<< HEAD
                                         <asp:TextBox ID="txtName" runat="server" MaxLength="200" Text='<%# Bind("Name") %>' CssClass="form-control"></asp:TextBox>
+=======
+                                        <asp:TextBox ID="txtName" runat="server" MaxLength="200" Text='<%# Bind("Name") %>'></asp:TextBox>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                     </ItemTemplate>
                                     <ControlStyle Width="500px"></ControlStyle>
                                     <ItemStyle HorizontalAlign="Center"></ItemStyle>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="العدد" SortExpression="Qty" ItemStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
+<<<<<<< HEAD
                                         <asp:TextBox ID="txtQty" Text='<%# Bind("Qty") %>' MaxLength="10" runat="server" onchange="makesum()" CssClass="form-control"></asp:TextBox>
+=======
+                                        <asp:TextBox ID="txtQty" Text='<%# Bind("Qty") %>' MaxLength="10" runat="server" onchange="makesum()"></asp:TextBox>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                         <asp:CompareValidator ID="ValQty" runat="server" ControlToValidate="txtQty" ErrorMessage="يجب ان تكون القيمة رقمية"
                                             ForeColor="Red" SetFocusOnError="True" Display="Dynamic" Type="Currency" ValidationGroup="1"
                                             Operator="DataTypeCheck">*</asp:CompareValidator>
@@ -669,7 +690,11 @@
                                 <asp:TemplateField HeaderText="السعر" SortExpression="Price" ItemStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
                                         <asp:TextBox ID="txtPrice" Text='<%# Bind("Price") %>' MaxLength="15" runat="server"
+<<<<<<< HEAD
                                             onchange="makesum()" CssClass="form-control"></asp:TextBox>
+=======
+                                            onchange="makesum()"></asp:TextBox>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                         <asp:CompareValidator ID="ValAmount3" runat="server" ControlToValidate="txtPrice"
                                             ErrorMessage="يجب ان تكون القيمة رقمية" ForeColor="Red" SetFocusOnError="True"
                                             Display="Dynamic" Type="Currency" ValidationGroup="1" Operator="DataTypeCheck">*</asp:CompareValidator>
@@ -901,7 +926,11 @@
                                 <asp:ImageButton ID="BtnSearch" runat="server" AlternateText="بحث" CommandName="Find"
                                     ImageUrl="~/images/data search.png" ToolTip="البحث عن بيانات السند" OnClick="BtnSearch_Click" />
                                 <asp:ImageButton ID="BtnPrint" runat="server" AlternateText="طباعة" CommandName="Print"
+<<<<<<< HEAD
                                     ImageUrl="~/images/print.png" ValidationGroup="1" ToolTip="طباعة السند" OnClick="BtnPrint_Click" />
+=======
+                                    ImageUrl="~/images/print_64A.png" ValidationGroup="1" ToolTip="طباعة السند" OnClick="BtnPrint_Click" />
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                             </div>
                         </div>
                     </div>
@@ -919,6 +948,7 @@
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <!--Editing by chanda verma-->
                 <div class="form">
                    <div class="form-row">
@@ -948,12 +978,33 @@
                             </div>
                             <div style="float: right; margin-right: 20px;">
                                
+=======
+
+                   <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                    <asp:Panel ID="Panel2" runat="server" Height="30px" BackColor="#5D7B9D" Width="99.5%"
+                        Direction="RightToLeft" ForeColor="#FFFF99">
+                        <div style="padding: 5px; cursor: pointer; vertical-align: middle;">
+                            <div style="float: right;">
+                                المرفقات
+                            </div>
+                            <div style="float: right; margin-right: 20px;">
+                                <asp:Label ID="Label34" runat="server">(عرض التفاصيل)</asp:Label>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                             </div>
                             <div style="float: left; vertical-align: middle;">
                                 <asp:ImageButton ID="Image1" runat="server" ImageUrl="~/images/expand_blue.jpg" AlternateText="(Show Details...)" />
                             </div>
+<<<<<<< HEAD
                         </div>--%>
                         <asp:Panel ID="Panel1" runat="server">
+=======
+                        </div>
+                    </asp:Panel></div></div></div>
+                    <asp:Panel ID="Panel1" runat="server" Height="0" BackColor="#FFFFCC" Width="99.3%"
+                        BorderColor="Maroon">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                         <asp:GridView ID="grdAttach" runat="server" CellPadding="4" ForeColor="#333333" ShowHeader="False"
                             GridLines="None" AutoGenerateColumns="False" DataKeyNames="FNo" Width="99%" OnRowDeleting="grdAttach_RowDeleting">
                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -984,12 +1035,30 @@
                             <SortedDescendingCellStyle BackColor="#FFFDF8" />
                             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                         </asp:GridView>
+<<<<<<< HEAD
                         
                              <ajax:CollapsiblePanelExtender ID="cpeDemo" runat="Server" TargetControlID="Panel1"
+=======
+                        <table width="100%">
+                            <tr>
+                                <td align="right">
+                                    <asp:FileUpload ID="FileUpload1" runat="server" />
+                                </td>
+                                <td align="left">
+                                    <asp:ImageButton ID="BtnAttach" runat="server" AlternateText="مرفقات" CommandName="Attach"
+                                        ImageUrl="~/images/attach2.png" OnClick="BtnAttach_Click" ToolTip="المرفقات"
+                                        ValidationGroup="1" />
+                                </td>
+                            </tr>
+                        </table>
+                    </asp:Panel>
+                    <ajax:CollapsiblePanelExtender ID="cpeDemo" runat="Server" TargetControlID="Panel1"
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                         ExpandControlID="Panel2" CollapseControlID="Panel2" Collapsed="True" TextLabelID="Label34"
                         ImageControlID="Image1" ExpandedText="(أخفاء التفاصيل)" CollapsedText="(عرض التفاصيل)"
                         ExpandDirection="Vertical" ExpandedImage="~/images/collapse.jpg" CollapsedImage="~/images/expand.jpg"
                         SuppressPostBack="true" />
+<<<<<<< HEAD
                     </asp:Panel>
                         
                         <div class="form-row">
@@ -1013,6 +1082,10 @@
                                 </div>
                                 </div>
                    <!--Editing by chanda verma-->         
+=======
+                </div>
+
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
             </div>
         </div>
     </div>

@@ -4,8 +4,15 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<<<<<<< HEAD
      <div class="col-md-12  col-sm-12 col-xs-12">
         <div class="card card-body">
+=======
+   
+        
+            <div class="ColorRounded4Corners col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+                
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                      <div class="box box-info" align="right">
                 <div class="body">
                     <div class="row">
@@ -14,7 +21,11 @@
                                 <div class="form-line">
                     <asp:Label ID="Label1" runat="server" Font-Size="Larger" meta:resourcekey="Label1"
                         Text=" البند"></asp:Label>
+<<<<<<< HEAD
                   <!--Ankur Kumar-->
+=======
+                  
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                     <asp:DropDownList ID="ddlFtype" runat="server" CssClass="form-control" AutoPostBack="True"
                         OnSelectedIndexChanged="ddlFtype_SelectedIndexChanged">
                         <asp:ListItem Selected="True" Value="1" Text="الجنسية"></asp:ListItem>
@@ -32,7 +43,11 @@
                         <asp:ListItem Value="30" Text="ملحقات الشاحنات"></asp:ListItem>
                     </asp:DropDownList>
          </div></div></div>
+<<<<<<< HEAD
                <div class="table-responsive table text-center">
+=======
+               <div class="table-responsive">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                     <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                         GridLines="None" AutoGenerateColumns="False" DataKeyNames="Code" 
                         AllowPaging="True" Width="100%" OnRowUpdating="grdCodes_RowUpdating" OnPageIndexChanging="grdCodes_PageIndexChanging"
@@ -122,5 +137,9 @@
                
             </div>
        
+<<<<<<< HEAD
     </div></div></div></div>
+=======
+    </div></div></div>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
 </asp:Content>

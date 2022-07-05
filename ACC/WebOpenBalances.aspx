@@ -4,12 +4,21 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<<<<<<< HEAD
     <div class="col-md-12  col-sm-12 col-xs-12">
       <div class="card card-body">
             <h3 id="leg1" runat="server" align="<%$ Resources:Resource, dir2 %> center" ><b>
                 <asp:Literal ID="Literal2" Text="Inventory Data Entry" runat="server"></asp:Literal>
                 <!-- [ بيانات الأصناف ] -->
             </b></h3>
+=======
+    <div class="ColorRounded4Corners col-md-12 col-sm-12 col-xs-12">
+        <fieldset class="Rounded4CornersNoShadow">
+            <legend id="leg1" runat="server" align="<%$ Resources:Resource, dir2 %>" style="font-size: 18px; color: #800000; text-align: center;"><b>
+                <asp:Literal ID="Literal2" Text="Inventory Data Entry" runat="server"></asp:Literal>
+                <!-- [ بيانات الأصناف ] -->
+            </b></legend>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
             <div class="box box-info" align="right">
                 <div class="body">
                     <div class="row">
@@ -31,15 +40,26 @@
 
 
                                     <asp:ImageButton ID="BtnEdit" runat="server" AlternateText="Edit" CommandName="Edit"
+<<<<<<< HEAD
                                         ImageUrl="~/images/edit2.png" CssClass="ops" ToolTip="Edit Stock Item Inventory"
                                         Width="64px" ValidationGroup="1" OnClick="BtnEdit_Click" />
                                     <asp:ImageButton ID="BtnPrint1" ToolTip="Print" CommandName="1" runat="server"
                                         ImageUrl="~/images/print.png" CssClass="ops" OnClientClick="aspnetForm.target ='_blank';"
+=======
+                                        ImageUrl="~/images/draw_pen_641.png" CssClass="ops" ToolTip="Edit Stock Item Inventory"
+                                        Width="64px" ValidationGroup="1" OnClick="BtnEdit_Click" />
+                                    <asp:ImageButton ID="BtnPrint1" ToolTip="Print" CommandName="1" runat="server"
+                                        ImageUrl="~/images/print_64A.png" CssClass="ops" OnClientClick="aspnetForm.target ='_blank';"
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                         OnClick="BtnPrint1_Click" />
                                 </div>
                             </div>
                         </div>
+<<<<<<< HEAD
                         <div class="table-responsive table">
+=======
+                        <div class="table-responsive">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                             <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                                 GridLines="None" AutoGenerateColumns="False" AllowPaging="false" PageSize="2000"
                                 DataKeyNames="Code" Width="99.9%" OnPageIndexChanging="grdCodes_PageIndexChanging">
@@ -121,6 +141,10 @@
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
      </div>
+=======
+        </fieldset>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
     </div>
 </asp:Content>

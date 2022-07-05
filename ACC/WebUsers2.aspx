@@ -49,7 +49,10 @@
                         <td align="left" rowspan="5" style="width: 120px;">
                             <img id="ImgPhoto" runat="server" src="images/123.jpg" alt="Photo" class="img-circle" />
                             <asp:FileUpload ID="FileUpload0" CssClass="form-control" runat="server" />
+<<<<<<< HEAD
                             <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                             <asp:Button ID="BtnLoad0" runat="server" Text="تحميل" OnClick="BtnLoad0_Click" />
                         </td>
                     </tr>
@@ -868,9 +871,12 @@
                                 <asp:ListItem Value="2">جوال المستلم</asp:ListItem>
                                 <asp:ListItem Value="3">جوال السائق</asp:ListItem>
                               </asp:DropDownList>
+<<<<<<< HEAD
                             <br />
                             <br />
                             <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                 <asp:TextBox ID="txtSearch2" MaxLength="20" CssClass="form-control" placeholder="بحث" runat="server"></asp:TextBox>
                                 <asp:ImageButton ID="BtnFind" runat="server" ValidationGroup="55" ImageUrl="~/images/zoom_16.png"
                                     ToolTip="البحث " onclick="BtnFind_Click" style="width: 16px" />

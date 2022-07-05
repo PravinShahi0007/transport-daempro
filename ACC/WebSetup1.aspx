@@ -19,11 +19,20 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <center dir="rtl">
+<<<<<<< HEAD
         <div class="card">
             <fieldset>
                 <div class="card-header"><h4 class="card-title">
                     [ إعدادات النظام ]</h4></div>
 <div class="card-body">
+=======
+        <div class="ColorRounded4Corners div1">
+            <fieldset class="Rounded4CornersNoShadow" style="padding: 2px; margin: 2px; width: 99%;
+                ">
+                <legend align="right" style="font-size: 18px; color: #800000; text-align: center;"><b>
+                    [ إعدادات النظام ]</b></legend>
+                <center>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                     <div class="demo">
                         <%--<div id="tabs" style="visibility:hidden;">--%>
                         <div id="tabs" >
@@ -84,14 +93,20 @@
                                                 <asp:TextBox ID="txtPaper1" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:TextBox ID="txtPaperE1" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>02-
                                                 <asp:TextBox ID="txtPaper2" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:TextBox ID="txtPaperE2" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                         </tr>
@@ -100,14 +115,20 @@
                                                 <asp:TextBox ID="txtPaper3" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:TextBox ID="txtPaperE3" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>04-
                                                 <asp:TextBox ID="txtPaper4" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:TextBox ID="txtPaperE4" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                         </tr>
@@ -116,14 +137,20 @@
                                                 <asp:TextBox ID="txtPaper5" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:TextBox ID="txtPaperE5" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>06-
                                                 <asp:TextBox ID="txtPaper6" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:TextBox ID="txtPaperE6" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                         </tr>
@@ -132,14 +159,20 @@
                                                 <asp:TextBox ID="txtPaper7" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:TextBox ID="txtPaperE7" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>08-
                                                 <asp:TextBox ID="txtPaper8" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:TextBox ID="txtPaperE8" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                         </tr>
@@ -148,14 +181,20 @@
                                                 <asp:TextBox ID="txtPaper9" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:TextBox ID="txtPaperE9" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>10-
                                                 <asp:TextBox ID="txtPaper10" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:TextBox ID="txtPaperE10" MaxLength="20" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                         </tr>
@@ -264,7 +303,10 @@
                                                 <asp:TextBox ID="txtAdd201" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlAdd01" CssClass="form-control" runat="server" >                                                    
                                                 </asp:DropDownList>
                                             </td>
@@ -273,7 +315,10 @@
                                                 <asp:TextBox ID="txtDed201" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlDed01" CssClass="form-control" runat="server">
                                                 </asp:DropDownList>
                                             </td>
@@ -284,7 +329,10 @@
                                                 <asp:TextBox ID="txtAdd202" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlAdd02" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -293,7 +341,10 @@
                                                 <asp:TextBox ID="txtDed202" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlDed02" CssClass="form-control" runat="server" >
                                                 </asp:DropDownList>
                                             </td>                                        
@@ -304,7 +355,10 @@
                                                 <asp:TextBox ID="txtAdd203" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlAdd03" CssClass="form-control" runat="server" >
                                                 </asp:DropDownList>
                                             </td>
@@ -313,7 +367,10 @@
                                                 <asp:TextBox ID="txtDed203" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>                                           
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlDed03" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -324,7 +381,10 @@
                                                 <asp:TextBox ID="txtAdd204" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlAdd04" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -333,7 +393,10 @@
                                                 <asp:TextBox ID="txtDed204" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlDed04" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -344,7 +407,10 @@
                                                 <asp:TextBox ID="txtAdd205" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlAdd05" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -353,7 +419,10 @@
                                                 <asp:TextBox ID="txtDed205" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlDed05" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -364,7 +433,10 @@
                                                 <asp:TextBox ID="txtAdd206" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlAdd06" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -373,7 +445,10 @@
                                                 <asp:TextBox ID="txtDed206" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlDed06" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -384,7 +459,10 @@
                                                 <asp:TextBox ID="txtAdd207" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlAdd07" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -393,7 +471,10 @@
                                                 <asp:TextBox ID="txtDed207" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlDed07" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -404,7 +485,10 @@
                                                 <asp:TextBox ID="txtAdd208" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlAdd08" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -413,7 +497,10 @@
                                                 <asp:TextBox ID="txtDed208" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlDed08" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -424,7 +511,10 @@
                                                 <asp:TextBox ID="txtAdd209" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlAdd09" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -433,7 +523,10 @@
                                                 <asp:TextBox ID="txtDed209" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlDed09" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -444,7 +537,10 @@
                                                 <asp:TextBox ID="txtAdd210" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlAdd10" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -453,7 +549,10 @@
                                                 <asp:TextBox ID="txtDed210" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlDed10" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -464,7 +563,10 @@
                                                 <asp:TextBox ID="txtAdd211" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlAdd11" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -473,7 +575,10 @@
                                                 <asp:TextBox ID="txtDed211" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlDed11" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -484,7 +589,10 @@
                                                 <asp:TextBox ID="txtAdd212" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlAdd12" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -493,7 +601,10 @@
                                                 <asp:TextBox ID="txtDed212" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlDed12" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -504,7 +615,10 @@
                                                 <asp:TextBox ID="txtAdd213" MaxLength="30" CssClass="form-control" Width="75px" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlAdd13" CssClass="form-control" runat="server" >
                                                 </asp:DropDownList>
                                             </td>
@@ -513,7 +627,10 @@
                                                 <asp:TextBox ID="txtDed213" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlDed13" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -524,7 +641,10 @@
                                                 <asp:TextBox ID="txtAdd214" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlAdd14" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -533,7 +653,10 @@
                                                 <asp:TextBox ID="txtDed214" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlDed14" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -544,7 +667,10 @@
                                                 <asp:TextBox ID="txtAdd215" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlAdd15" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -553,7 +679,10 @@
                                                 <asp:TextBox ID="txtDed215" MaxLength="30" CssClass="form-control" runat="server"></asp:TextBox>
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlDed15" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>
@@ -562,7 +691,10 @@
                                             <td align="right">16- الراتب الاساسي                                                
                                             </td>
                                             <td>
+<<<<<<< HEAD
                                                 <br />
+=======
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                                 <asp:DropDownList ID="ddlBasic" runat="server" CssClass="form-control">
                                                 </asp:DropDownList>
                                             </td>

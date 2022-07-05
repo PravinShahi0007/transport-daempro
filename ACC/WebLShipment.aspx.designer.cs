@@ -1472,6 +1472,18 @@ namespace ACC
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox ChkDoubleSide;
 
+<<<<<<< HEAD
+=======
+        /// <summary>
+        /// Panel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel2;
+
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
         /// <summary>
         /// Label34 control.
         /// </summary>
@@ -1488,7 +1500,11 @@ namespace ACC
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
+<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Panel Panel2;
+=======
+        protected global::System.Web.UI.WebControls.ImageButton Image1;
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
 
         /// <summary>
         /// Panel1 control.
@@ -1508,6 +1524,27 @@ namespace ACC
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView grdAttach;
 
+<<<<<<< HEAD
+=======
+        /// <summary>
+        /// FileUpload1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+
+        /// <summary>
+        /// BtnAttach control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton BtnAttach;
+
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
         /// <summary>
         /// cpeDemo control.
         /// </summary>

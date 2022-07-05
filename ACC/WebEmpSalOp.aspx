@@ -17,11 +17,19 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<<<<<<< HEAD
     <div class="col-md-12  col-sm-12 col-xs-12">
         <div class="card card-body">
             <h3 align="center">
                 <asp:Label ID="LblHeader" runat="server" Text="[ مؤثرات الرواتب ]"></asp:Label>
            </h3>
+=======
+    <div style="" class="ColorRounded4Corners col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+        <fieldset class="Rounded4CornersNoShadow">
+            <legend align="right" style="font-size: 18px; color: #800000; text-align: center;"><b>
+                <asp:Label ID="LblHeader" runat="server" Text="[ مؤثرات الرواتب ]"></asp:Label>
+            </b></legend>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
              <div class="box box-info" align="right">
      <div class="body">
                                     <div class="row">
@@ -43,7 +51,11 @@
                         <asp:DropDownList ID="ddlMonth" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlMonth_SelectedIndexChanged">
                         </asp:DropDownList>
                   </div></div></div>
+<<<<<<< HEAD
             <div class="table-responsive table">
+=======
+            <div class="table-responsive">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                 <asp:GridView ID="grdAbs" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                     GridLines="None" AutoGenerateColumns="False" AllowPaging="False" DataKeyNames="EmpCode"
                     PageSize="2000" Width="99.9%">
@@ -348,8 +360,25 @@
                             <SortedDescendingCellStyle BackColor="#FFFDF8" />
                             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                         </asp:GridView></div>
+<<<<<<< HEAD
                         
                         <ajax:CollapsiblePanelExtender ID="cpeDemo" runat="Server" TargetControlID="Panel10"
+=======
+                        <table width="100%">
+                            <tr>
+                                <td align="right">
+                                    <asp:FileUpload ID="FileUpload1" runat="server" />
+                                </td>
+                                <td align="left">
+                                    <asp:ImageButton ID="BtnAttach" runat="server" AlternateText="مرفقات" CommandName="Attach"
+                                        ImageUrl="~/images/attach2.png" OnClick="BtnAttach_Click" ToolTip="المرفقات"
+                                        ValidationGroup="1" />
+                                </td>
+                            </tr>
+                        </table>
+                    </asp:Panel>
+                    <ajax:CollapsiblePanelExtender ID="cpeDemo" runat="Server" TargetControlID="Panel10"
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                         ExpandControlID="Panel20" CollapseControlID="Panel20" Collapsed="True" TextLabelID="Label34"
                         ImageControlID="Image1" ExpandedText="(أخفاء التفاصيل)" CollapsedText="(عرض التفاصيل)"
                         ExpandDirection="Vertical" ExpandedImage="~/images/collapse.jpg" CollapsedImage="~/images/expand.jpg"

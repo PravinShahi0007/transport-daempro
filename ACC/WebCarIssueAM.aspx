@@ -3,12 +3,23 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+<<<<<<< HEAD
         <div class="col-md-12  col-sm-12 col-xs-12">
         <div class="card card-body">
           
                     <h3 align="center">
                         <asp:Label ID="lblHead" runat="server" Text="أجمالي مصروفات الشاحنات" meta:resourcekey="lblHead"></asp:Label>
                     </h3>
+=======
+        <div class="ColorRounded4Corners col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+            <div style="text-align: right; float: right; display: block;">
+            </div>
+          
+                <fieldset class="Rounded4CornersNoShadow">
+                    <legend align="center" style="font-size: 18px; color: #800000; text-align: center;">
+                        <asp:Label ID="lblHead" runat="server" Text="أجمالي مصروفات الشاحنات" meta:resourcekey="lblHead"></asp:Label>
+                    </legend>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                      <div class="box box-info" align="right">
                 <div class="body">
                     <div class="row">
@@ -31,9 +42,20 @@
                                     TargetControlID="txtFDate" Format="dd/MM/yyyy" Animated="true" FirstDayOfWeek="Saturday"
                                     PopupPosition="BottomLeft" />
                         
+<<<<<<< HEAD
                                 
                          </div></div></div>
                         
+=======
+                                <asp:ImageButton ID="BtnPrint" ToolTip="<%$ Resources: PrintTooltip %>" AlternateText="<%$ Resources: Print %>" CommandName="1" runat="server" ImageUrl="<%$ Resources: PrintImage %>"
+                                      OnCommand="BtnPrint1_Command" OnClientClick="aspnetForm.target ='_blank';" />                                    
+                                <asp:ImageButton ID="BtnExcel" runat="server" AlternateText="<%$ Resources: Excel %>" CommandName="Excel"  
+                                    ImageUrl="<%$ Resources: ExcelImage %>" ToolTip="<%$ Resources: ExcelTooltip %>" OnClientClick="aspnetForm.target ='_blank';"
+                                    OnClick="BtnExcel_Click" />
+                                <asp:ImageButton ID="BtnProcess" runat="server" AlternateText="<%$ Resources: Process %>" ValidationGroup="1"   
+                                    ImageUrl="<%$ Resources: ProcessImage %>" ToolTip="<%$ Resources: ProcessTooltip %>" OnClick="BtnProcess_Click" />
+                         </div></div></div>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                           <div class="col-md-6 col-sm-12 col-xs-12" >
                             <div class="form-group form-float">
                                 <div class="form-line">
@@ -69,6 +91,7 @@
                                 &nbsp;
                                 <asp:Label ID="Label6" runat="server" Text="سجل"  meta:resourcekey="Label6"></asp:Label>
                              </div></div></div>
+<<<<<<< HEAD
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="form-row">
                                 <div class="form-group col-md-4 col-sm-12 col-xs-12"></div>
@@ -85,6 +108,9 @@
                             </div>
                         </div>
                   <div class="table table-responsive table-hover text-center">
+=======
+                  <div class="table-responsive">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                     <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                         GridLines="None" AutoGenerateColumns="False" AllowPaging="True" PageSize="20"
                         Width="99.9%" OnPageIndexChanging="grdCodes_PageIndexChanging">
@@ -140,7 +166,12 @@
                 </div>
                 <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
            </div></div></div>
+<<<<<<< HEAD
       
         </div></div>
+=======
+        </fieldset>
+        </div>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
  
 </asp:Content>

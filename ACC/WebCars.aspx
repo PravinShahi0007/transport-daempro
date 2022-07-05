@@ -16,10 +16,17 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    
+<<<<<<< HEAD
          <div class="col-md-12  col-sm-12 col-xs-12">
         <div class="card card-body">
                 <h3 align="center" >
                     [ بيانات الشاحنات ]</h3>
+=======
+         <div class="ColorRounded4Corners col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+            <fieldset class="Rounded4CornersNoShadow" >
+                <legend align="right" style="font-size: 18px; color: #800000; text-align: center;"><b>
+                    [ بيانات الشاحنات ]</b></legend>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                <div class="box box-info" align="right">
                 <div class="body">
                     <div class="row">
@@ -50,7 +57,11 @@
                                 <asp:Label ID="LblCode" runat="server" Text="رقم الشاحنة"></asp:Label>
                           
                                 <asp:TextBox ID="txtCode" CssClass="form-control" runat="server" MaxLength="5"></asp:TextBox>
+<<<<<<< HEAD
                                 <asp:ImageButton ID="BtnFind" runat="server" ValidationGroup="55" ImageUrl="~/images/search2.png"
+=======
+                                <asp:ImageButton ID="BtnFind" runat="server" ValidationGroup="55" ImageUrl="~/images/zoom_16.png"
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                     ToolTip="البحث عن بيانات شاحنة" OnClick="BtnSearch_Click" />
                                 <asp:RequiredFieldValidator ID="ValCode" runat="server" ControlToValidate="txtCode"
                                     ErrorMessage="يجب إدخال رقم الشاحنة" ForeColor="Red" Display="Dynamic" SetFocusOnError="True"
@@ -330,7 +341,11 @@
                                 <div class="form-line">
                                 <asp:Label ID="LblCodesResult" runat="server" ForeColor="#FF0066"></asp:Label>
                            </div></div></div>
+<<<<<<< HEAD
                   <div class="table table-responsive text-center">
+=======
+                  <div class="table-responsive">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                         <asp:GridView ID="grdMan" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                             GridLines="None" AutoGenerateColumns="False" DataKeyNames="CarNo" AllowPaging="false"
                             PageSize="1000" Width="100%" EmptyDataText="لا توجد بيانات">
@@ -408,6 +423,7 @@
                                     ImageUrl="~/images/delete2.png" ToolTip="إلغاء بيانات شاحنة" OnClientClick='return confirm("هل أنت متاكد من الغاء بيانات العميل؟")'
                                     OnClick="BtnDelete_Click" />
                                 <asp:ImageButton ID="BtnSearch" runat="server" AlternateText="بحث" CommandName="Find"
+<<<<<<< HEAD
                                     ImageUrl="~/images/data search.png" ToolTip="البحث عن بيانات شاحنة" OnClick="BtnSearch_Click" />
                          </div></div></div>
                                <br />
@@ -427,6 +443,26 @@
                                 <div class="card-body" style="display: none;">
                                      <asp:Panel ID="Panel2" runat="server">
                                          <asp:Panel ID="Panel1" runat="server">
+=======
+                                    ImageUrl="~/images/binoculars_642.png" ToolTip="البحث عن بيانات شاحنة" OnClick="BtnSearch_Click" />
+                         </div></div></div>
+                                <div style="text-align: left; width: 50%; float: left;">
+                                    <asp:Panel ID="Panel2" runat="server" Height="30px" BackColor="#5D7B9D" Width="99.5%"
+                                        Direction="RightToLeft" ForeColor="#FFFF99">
+                                        <div style="padding: 5px; cursor: pointer; vertical-align: middle;">
+                                            <div style="float: right;">
+                                                المرفقات</div>
+                                            <div style="float: right; margin-right: 20px;">
+                                                <asp:Label ID="Label34" runat="server">(عرض التفاصيل)</asp:Label>
+                                            </div>
+                                            <div style="float: left; vertical-align: middle;">
+                                                <asp:ImageButton ID="Image1" runat="server" ImageUrl="~/images/expand_blue.jpg" AlternateText="(Show Details...)" />
+                                            </div>
+                                        </div>
+                                    </asp:Panel>
+                                    <asp:Panel ID="Panel1" runat="server" Height="0" BackColor="#FFFFCC" Width="99.3%"
+                                        BorderColor="Maroon">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                                         <asp:GridView ID="grdAttach" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="false"
                                             ShowHeader="false" GridLines="None" AutoGenerateColumns="False" DataKeyNames="FNo"
                                             Width="100%" OnRowDeleting="grdAttach_RowDeleting">
@@ -471,6 +507,7 @@
                                         </div>
                                     </asp:Panel>
                                 </div>
+<<<<<<< HEAD
                             </div>
                         </div>
                                    
@@ -478,6 +515,10 @@
                                 </div>
                          
                     <div class="table table-responsive text-center">
+=======
+                         
+                    <div class="table-responsive">
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
                         <asp:GridView ID="grdCodes" runat="server" CellPadding="4" ForeColor="#333333" ShowFooter="True"
                             GridLines="None" AutoGenerateColumns="False" DataKeyNames="Code" AllowPaging="True"
                             PageSize="20" Width="100%" EmptyDataText="لا توجد بيانات" OnPageIndexChanging="grdCodes_PageIndexChanging"
@@ -524,9 +565,15 @@
                             <SortedDescendingCellStyle BackColor="#FFFDF8" />
                             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                         </asp:GridView>
+<<<<<<< HEAD
                     </div></div></div>
                    
           </div>
+=======
+                    </div></div></div></div>
+                   
+            </fieldset>
+>>>>>>> f7d6e6644e253f5297713e7f0e965f9863598ce7
         </div>
        
  
