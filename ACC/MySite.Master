@@ -2167,8 +2167,8 @@
                     </div>
                 </div>--%>
 
-            <div class="page">
-
+            <div class="box box-primary">
+                <div class="box-body">
                 <div id="DivContainer" runat="server" style="<%$ Resources: Resource, container %>">
                     <nav class="row">
                         <div class="span12">
@@ -2194,7 +2194,7 @@
                         </div>
                         <!-- end span12 -->
                     </nav>
-                </div>
+                </div></div>
                 <div class="clear">
                 </div>
                 <div class="main">
